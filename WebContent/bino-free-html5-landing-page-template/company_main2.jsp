@@ -426,10 +426,7 @@ img {
                   </div>
 
                </div>
-               <div class="scrooldown col-xs-pull-6" style = "align:center;">
-                  <a href="pay.jsp">
-                  <i>견적문의</i></a>
-               </div>
+               
             </div>
             
          </div>

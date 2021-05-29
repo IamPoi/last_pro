@@ -167,22 +167,8 @@ ArrayList<String> imgName = new ArrayList<String>();
                            <div class="overlay"></div>
                            <div class="profile-main" style = "height:90%">
                            
-                           <%
-                           String campNum = "";
-                           for (int i = 0; i < imgFileList.size(); i++) {
-                        	   File f = imgFileList.get(i);
 
-                        	   imgName.add(Util.getFileNameNoExt(f.getName()));
-                        	   System.out.println("imgName : " + Util.getFileNameNoExt(f.getName()));
-                        	 
-                        	   if(Util.getFileNameNoExt(f.getName()).equals(campPicture)){
-                        		   campNum = String.valueOf(i);                        	   }
-                        	   
-                        	   System.out.println("campNum : " + campNum);
-                        	}
-                           
-                           %>
-                              <img src="images/<%=campNum %>.jpg" alt="Avatar" style = "height:100%; width:100%">
+                              <img src="images/<%=campPicture %>.jpg" alt="Avatar" style = "height:100%; width:100%">
                               <h3 class="name">광고주(브랜드) 이름??</h3>
                               <span class="online-status status-available">Available</span>
                            </div>

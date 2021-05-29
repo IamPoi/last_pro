@@ -271,78 +271,62 @@ textarea {
 	<!-- WRAPPER -->
 	<div id="wrapper">
 		<!-- NAVBAR -->
-		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="brand">
-				<a href="index.html"><img src="assets/img/logo-dark.png"
-					alt="Klorofil Logo" class="img-responsive logo"></a>
-			</div>
-			<div class="container-fluid">
-				<div class="navbar-btn">
-					<button type="button" class="btn-toggle-fullwidth">
-						<i class="lnr lnr-arrow-left-circle"></i>
-					</button>
-				</div>
-				<form class="navbar-form navbar-left">
-					<div class="input-group">
-						<input type="text" value="" class="form-control"
-							placeholder="Search dashboard..."> <span
-							class="input-group-btn"><button type="button"
-								class="btn btn-primary">Go</button></span>
-					</div>
-				</form>
-				<div class="navbar-btn navbar-btn-right">
-					<a class="btn btn-success update-pro"
-						href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro"
-						title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i>
-						<span>UPGRADE TO PRO</span></a>
-				</div>
-				<div id="navbar-menu">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown"><a href="#"
-							class="dropdown-toggle icon-menu" data-toggle="dropdown"> <i
-								class="lnr lnr-alarm"></i> <span class="badge bg-danger">5</span>
-						</a>
-							<ul class="dropdown-menu notifications">
-								<li><a href="#" class="notification-item"><span
-										class="dot bg-warning"></span>System space is almost full</a></li>
-								<li><a href="#" class="notification-item"><span
-										class="dot bg-danger"></span>You have 9 unfinished tasks</a></li>
-								<li><a href="#" class="notification-item"><span
-										class="dot bg-success"></span>Monthly report is available</a></li>
-								<li><a href="#" class="notification-item"><span
-										class="dot bg-warning"></span>Weekly meeting in 1 hour</a></li>
-								<li><a href="#" class="notification-item"><span
-										class="dot bg-success"></span>Your request has been approved</a></li>
-								<li><a href="#" class="more">See all notifications</a></li>
-							</ul></li>
-						<li class="dropdown"><a href="#" class="dropdown-toggle"
-							data-toggle="dropdown"><i class="lnr lnr-question-circle"></i>
-								<span>Help</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Basic Use</a></li>
-								<li><a href="#">Working With Data</a></li>
-								<li><a href="#">Security</a></li>
-								<li><a href="#">Troubleshooting</a></li>
-							</ul></li>
-						<li class="dropdown"><a href="#" class="dropdown-toggle"
-							data-toggle="dropdown"><img src="assets/img/user.png"
-								class="img-circle" alt="Avatar"> <span>Samuel</span> <i
-								class="icon-submenu lnr lnr-chevron-down"></i></a>
-							<ul class="dropdown-menu">
-								<li><a href="#"><i class="lnr lnr-user"></i> <span>My
-											Profile</span></a></li>
-								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
-								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
-								<li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
-							</ul></li>
-						<!-- <li>
-                     <a class="update-pro" href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
-                  </li> -->
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<!-- END NAVBAR -->
+		<header id="main_menu" class="header navbar-fixed-top" >
+         <div class="main_menu_bg">
+            <div class="container" style = "width : 100%">
+               <div class="row">
+                  <div class="nave_menu">
+                     <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                           <!-- Brand and toggle get grouped for better mobile display -->
+                           <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed"
+                                 data-toggle="collapse"
+                                 data-target="#bs-example-navbar-collapse-1"
+                                 aria-expanded="false">
+                                 <span class="sr-only">Toggle navigation</span> <span
+                                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                                    class="icon-bar"></span>
+                              </button>
+
+
+                              <a class="navbar-brand" href="../bino-free-html5-landing-page-template/firstPage.jsp"> <img
+                                 src="images/logo_high_re.png" width=140px, height=50px style = "margin-left: 30px;">
+                              </a>
+                           </div>
+
+                           <!-- Collect the nav links, forms, and other content for toggling -->
+
+
+
+                           <div class="collapse navbar-collapse"
+                              id="bs-example-navbar-collapse-1">
+
+                              <ul class="nav navbar-nav navbar-right">
+
+                                 <li><a href="">HOME</a></li>
+                                 <!-- 세션값받아와서 influencer/companymain으로 이동 -->
+                                 <li><a href="hashtag.jsp">HASHTAG</a></li>
+                                 <li><a href="">My Page</a></li>
+                                 <!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
+                                 <%if(info == null){ %>
+                                 <li><a href="page-login.jsp">LOGIN</a></li>
+                                 <%} else{ %>
+                                 <li><a href="">LOGOUT</a></li>
+                                 <%} %>
+                              </ul>
+
+
+                           </div>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+
+            </div>
+
+         </div>
+      </header>
 		<!-- LEFT SIDEBAR -->
 		<div id="sidebar-nav" class="sidebar" style='display: none'>
 			<div class="sidebar-scroll">
@@ -483,7 +467,7 @@ textarea {
 												<div class="award-item">
 
 													<img src="images/<%=qList.get(i).getCampaign_Sid()%>.jpg"
-														alt="Avatar"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
+														alt="Avatar" style = "height : 250px;"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
 
 												</div>
 											</div>
@@ -610,12 +594,13 @@ textarea {
 
 
 		<!-- 팝업 될 레이어 -->
-		<div class="modal1">
-			<div class="modal-content" style="width: 50%; height: 70%;">
+		<div class="modal1" data-spy="scroll">
+			<div class="modal-content" style="width: 50%; height: 70%; overflow:scroll">
 				<span class="close-button">&times;</span>
 				<h1 class="title">모든 매칭 캠페인</h1>
 				<div class="table-responsive">
-
+				<!-- 스크롤 구현하기 -->
+					
 					<br> <br>
 					<%
 					for (int i = 0; i < qList.size(); i++) {
@@ -628,7 +613,7 @@ textarea {
 						<div class="award-item">
 
 							<img src="images/<%=qList.get(i).getCampaign_Sid()%>.jpg"
-								alt="Avatar"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
+								alt="Avatar" style = "height : 250px;"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
 
 						</div>
 					</div>
@@ -653,8 +638,8 @@ textarea {
 		<!-- start -->
 
 		<!-- 팝업 될 레이어 -->
-		<div class="modal2">
-			<div class="modal-content" style="width: 50%; height: 70%;">
+		<div class="modal2" style=>
+			<div class="modal-content" style="width: 50%; height: 100%;">
 				<span class="close-button2">&times;</span>
 				<h1 class="title">모든 신청 캠페인</h1>
 				<div class="table-responsive">
@@ -671,7 +656,7 @@ textarea {
 						<div class="award-item">
 
 							<img src="images/<%=qList.get(i).getCampaign_Sid()%>.jpg"
-								alt="Avatar"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
+								alt="Avatar" style = "height : 250px;"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
 
 						</div>
 					</div>

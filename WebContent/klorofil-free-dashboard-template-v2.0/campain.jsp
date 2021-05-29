@@ -94,7 +94,7 @@ ArrayList<String> imgName = new ArrayList<String>();
                                             </button>
                                             
                                             
-                                            <a class="navbar-brand" href="firstPage.jsp">
+                                            <a class="navbar-brand" href="klorofil-free-dashboard-template-v2.0/firstPage.jsp">
                                                 <img src="images/logo_high_re.png" width = 140px, height = 50px  style = "margin-top:20px;">
                                             </a>
                                         </div>
@@ -110,7 +110,11 @@ ArrayList<String> imgName = new ArrayList<String>();
                                                 <li><a href="">HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
                                                 <li><a href="hashtag.jsp">HASGTAG</a></li>
                                                 <li><a href="">My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-                                                <li><a href="page-login.jsp">LOGIN</a></li>
+                                                <%if(info == null){ %>
+                                 <li><a href="page-login.jsp">LOGIN</a></li>
+                                 <%} else{ %>
+                                 <li><a href="">LOGOUT</a></li>
+                                 <%} %>
                                             </ul>
 
 

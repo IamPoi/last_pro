@@ -115,7 +115,11 @@ $('.counter').counterUp({ delay: 10, time: 1000 }); });</script>
                                  <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
                                             <li><a href="hashtag.jsp">HASGTAG</a></li>
                                             <li><a href="../InfluencerMypage?name=inf" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-                                            <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp">LOGIN</a></li>
+                                            <%if(info == null){ %>
+                                 <li><a href="page-login.jsp">LOGIN</a></li>
+                                 <%} else{ %>
+                                 <li><a href="">LOGOUT</a></li>
+                                 <%} %>
                               </ul>
                            </div>
                         </div>

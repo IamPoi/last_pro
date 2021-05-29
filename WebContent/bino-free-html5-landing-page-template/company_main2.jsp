@@ -119,7 +119,7 @@ img {
                                             <li><a href="hashtag.jsp">HASHTAG</a></li>
                                             <li><a href="pay.jsp">PAY</a></li>
                                             <li><a href="../InfluencerMypage?name=adver" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-                                            <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp">LOGIN</a></li>
+                                            <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=adver">LOGIN</a></li>
                                             
                               </ul>
                            </div>

@@ -83,59 +83,51 @@ $('.counter').counterUp({ delay: 10, time: 1000 }); });</script>
 
 
 		<header id="main_menu" class="header navbar-fixed-top">
-			<div class="main_menu_bg">
-				<div class="container" style="width: 90%">
-					<div class="row">
-						<div class="nave_menu">
-							<nav class="navbar navbar-default">
-								<div class="container-fluid">
-									<!-- Brand and toggle get grouped for better mobile display -->
-									<div class="navbar-header">
-										<button type="button" class="navbar-toggle collapsed"
-											data-toggle="collapse"
-											data-target="#bs-example-navbar-collapse-1"
-											aria-expanded="false">
-											<span class="sr-only">Toggle navigation</span> <span
-												class="icon-bar"></span> <span class="icon-bar"></span> <span
-												class="icon-bar"></span>
-										</button>
+         <div class="main_menu_bg" style = "background-color:white;">
+            <div class="container" style = "width:100%;">
+               <div class="row">
+                  <div class="nave_menu">
+                     <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                           <!-- Brand and toggle get grouped for better mobile display -->
+                           <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed"
+                                 data-toggle="collapse"
+                                 data-target="#bs-example-navbar-collapse-1"
+                                 aria-expanded="false">
+                                 <span class="sr-only">Toggle navigation</span> <span
+                                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                                    class="icon-bar"></span>
+                              </button>
 
 
-										<a class="navbar-brand" href="firstPage.jsp"> <img
-											src="images/logo_high_re.png" width=140px, height=50px>
-										</a>
-									</div>
+                              <a class="navbar-brand" href="firstPage.jsp"> <img
+                                 src="images/logo_high_re.png" style = "width:120px; height:50px; margin-left: 30px; margin-top:10px"/>
+                              </a>
+                           </div>
 
-									<!-- Collect the nav links, forms, and other content for toggling -->
+                           <!-- Collect the nav links, forms, and other content for toggling -->
 
+                           <div class="collapse navbar-collapse"
+                              id="bs-example-navbar-collapse-1">
 
+                              <ul class="nav navbar-nav navbar-right">
+                                 <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
+                                            <li><a href="hashtag.jsp">HASGTAG</a></li>
+                                            <li><a href="../InfluencerMypage?name=inf" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
+                                            <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp">LOGIN</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
 
-									<div class="collapse navbar-collapse"
-										id="bs-example-navbar-collapse-1">
+            </div>
 
-										<ul class="nav navbar-nav navbar-right">
-
-											<li><a href="">HOME</a></li>
-											<!-- 세션값받아와서 influencer/companymain으로 이동 -->
-											<li><a href="hashtag.jsp">HASGTAG</a></li>
-											<li><a href="">My Page</a></li>
-											<!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-											<li><a href="page-login.jsp">LOGIN</a></li>
-										</ul>
-
-
-									</div>
-
-								</div>
-							</nav>
-						</div>
-					</div>
-
-				</div>
-
-			</div>
-		</header>
-		<!--End of header -->
+         </div>
+      </header>
+      <!--End of header -->
 		<!-- LEFT SIDEBAR -->
 		<div id="sidebar-nav" class="sidebar" style="display: none">
 			<div class="sidebar-scroll">

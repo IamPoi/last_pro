@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/magnific-popup.css">
         <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
-<link rel="stylesheet" href="assets/css/style.css">
+
 
         <!--For Plugins external css-->
         <link rel="stylesheet" href="assets/css/plugins.css" />
@@ -74,7 +74,7 @@
                                                     <div class="col-sm-12">
                                                         <div class="single_contact_info">
                                                             <div class="single_info_text">
-                                                            	<div align="center"> <img alt="logo" src="images/logo.jpg" style = "width : 200px"> </div>
+                                                            	<div align="center"> <img alt="logo" src="images/logo_high_re.png" style = "width : 200px"> </div>
                                                             	<div style = "display : none">
                                                                 <h3>PROCESS</h3>
                                                                 <h4>과정과정과정과정과정과정과정과정과정과정과정과정과정과정과정과정과정과정과정과정</h4>
@@ -134,8 +134,6 @@
                                                                 <select name = "category">
                                                                 	<option value="not">무관</option>
                                                                 	<option value="fashion">패션</option> 
-                                                                	<option value="pet">동물</option>
-                                                                	<option value="sport">스포츠</option>
                                                                 	<option value="food">음식</option>
                                                                 	<option value="beauty">뷰티</option>
                                                                 </select>
@@ -146,20 +144,46 @@
                                                                 	<option value="woman">여자</option>
                                                                 </select>
                                                                 
-                                                                <br><br>
-                                                                팔로워  :  <input type='number' name = 'rq_follower_min' class = 'follower text'> ~ <input type='number' name = 'rq_follower_max' class = 'follower text'>
+                                                                <select name = "ad_section">
+                                                                	<option value="free">무료</option> 
+                                                                	<option value="pay">유료</option>
+                                                                </select>
                                                                 
+                                                                
+                                                                <table style = "width : 100%; display : none;">
+                                                                
+                                                                <tr>
+                                                                	<td>팔로워</td>
+                                                                	<td><div> </div><td>
+                                                                	<td><input type='number' name = 'rq_follower' class = 'follower text'></td>
+                                                                </tr>
+                                                                <tr>
+                                                                <td>모집 인원<div> </div></td>
+                                                                <td> <td>
+                                                                <td><input type='number' name = 'rcrtmNmbr' class = 'follower text'></td>
+                                                                </tr>
+                                                                <tr>
+                                                                <td>견적</td>
+                                                                <td><div> </div><td>
+                                                                <td><input type='number' name = 'rcrtmNmbr' class = 'follower text'></td>
+                                                                </tr>
+                                                                </table>
+                                                                
+                                                                
+                                                                <div class="form-group" >
+                                                                	<input type="text" class="form-control" name="rq_follower" placeholder="팔로워"style = "width : 30%">
+                                                                	<input type="text" class="form-control" name="rcrtmNmbr" placeholder="모집 인원"style = "width : 30%">
+                                                                	<input type="text" class="form-control" name="ad_estimate" placeholder="견적"style = "width : 30%">
+                                                            	</div>
+                                                            	<textarea class="form-control" name="message" rows="6" placeholder="캠페인 설명"></textarea>
                                                             </div>
                                                         </div>
-                                                    </div>
-
-
-                                                    <div class="form-group">
-                                                        <textarea class="form-control" name="message" rows="7" placeholder="Message"></textarea>
-                                                    </div>
-
-                                                    <div class="">
-                                                        <input type="submit" value="SEND MESSAGE" class="btn btn-lg">
+                                                    
+                                                        
+                                                    
+													</div>
+                                                    <div class="text-center">
+                                                        <input type="submit" value="문의하기" class="btn btn-lg " style = "background:#1E90FF; ">
                                                     </div>
                                                 </div> 
                                             </form>

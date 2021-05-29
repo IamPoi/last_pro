@@ -62,6 +62,12 @@ span.imgTitle {
 
 <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
+<style>
+img {
+    max-width: 100%;
+    margin:auto;
+}
+</style>
 <body data-spy="scroll" data-target=".navbar-collapse">
    <%
    ArrayList<influencerInstaDTO> influencer_allSelect = (ArrayList<influencerInstaDTO>) session
@@ -80,7 +86,7 @@ span.imgTitle {
    </div>
    <div class="culmn">
       <header id="main_menu" class="header navbar-fixed-top">
-         <div class="main_menu_bg">
+         <div class="main_menu_bg" style = "background-color:white;">
             <div class="container">
                <div class="row">
                   <div class="nave_menu">
@@ -98,8 +104,8 @@ span.imgTitle {
                               </button>
 
 
-                              <a class="navbar-brand" href="#home"> <img
-                                 src="assets/images/logo.png" />
+                              <a class="navbar-brand" href="firstPage.jsp"> <img
+                                 src="images/logo_high_re.png" style = "width:140px; height:50px;"/>
                               </a>
                            </div>
 
@@ -108,13 +114,13 @@ span.imgTitle {
                            <div class="collapse navbar-collapse"
                               id="bs-example-navbar-collapse-1">
 
-                              <ul class="nav navbar-nav navbar-right">
-                                 <li><a href="#home">HOME</a></li>
-                                 <li><a href="#history">ABOUT US</a></li>
-                                 <li><a href="#pricing">PRICING</a></li>
-                                 <li><a href="#team">TEAM</a></li>
-                                 <li><a href="#blog">BLOG</a></li>
-                                 <li><a href="../InfluencerMypage?name=adver">My Page</a></li>
+                             <ul class="nav navbar-nav navbar-right">
+                                 <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
+                                            <li><a href="hashtag.jsp">HASHTAG</a></li>
+                                            <li><a href="pay.jsp">PAY</a></li>
+                                            <li><a href="../InfluencerMypage?name=inf" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
+                                            <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp">LOGIN</a></li>
+                                            
                               </ul>
                            </div>
                         </div>
@@ -129,20 +135,20 @@ span.imgTitle {
       <!--End of header -->
 
       <!--home Section -->
-      <section id="home" class="home">
-         <div class="overlay">
+      <section id="home" class="home" style = "background-color:#F0F8FF;">
+         <div class="">
             <div class="home_skew_border">
                <div class="container">
                   <div class="row">
                      <div class="col-sm-12 ">
-                        <div class="main_home_slider text-center">
+                        <div class="main_home_slider text-center" >
 
                            <%
                            //이미지 폴더의 네임들 
                            ArrayList<String> imgName = new ArrayList<String>();
 
                            //   String strImgConFormat = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
-                           //         + "<img width='200' src=\"%s\"/></div>";
+                           //         + "<img width='300' src=\"%s\"/></div>";
 
                            for (int i = 0; i < imgFileList.size(); i++) {
                               File f = imgFileList.get(i);
@@ -171,7 +177,7 @@ span.imgTitle {
                                  //System.out.println("반복횟수 : " + ((influencer_allSelect.size() / 3) + 1));
                            %>
 
-                           <div class="single_home_slider">
+                           <div class="single_home_slider" style = "margin:auto;">
                               <%
                               //System.out.println("마지막 : " + num);
 
@@ -179,11 +185,11 @@ span.imgTitle {
                                  //System.out.println("numList  : " + numList.get(i));
                               %>
                               <div class="main_home wow fadeInUp col-sm-4"
-                                 data-wow-duration="700ms">
+                                 data-wow-duration="700ms" >
                                  <%
                                  // 이미지 파일 넘기기
                                  String strImgConFormatl = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
-                                       + "<a href = \"../CampaignService?id=%s\">  <img width='200' height = '400' src=\"%s\"/></a>" + "</div>";
+                                       + "<a href = \"../CampaignService?id=%s\">  <img width='300' height = '400' src=\"%s\"/></a>" + "</div>";
 
                                  System.out.println("numList.size(): " + (influencer_allSelect.size() - 1));
                                  File f = imgFileList.get(numList.get(i));//
@@ -235,8 +241,9 @@ span.imgTitle {
                      </div>
                   </div>
                </div>
-               <div class="scrooldown">
-                  <a href="#feature"><i class="fa fa-arrow-down"></i></a>
+               <div class="scrooldown col-xs-pull-6" style = "align:center;">
+                  <a href="pay.jsp">
+                  <i>견적문의</i></a>
                </div>
             </div>
          </div>
@@ -268,7 +275,7 @@ span.imgTitle {
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 no-padding">
-                                                <div class="single_blog_text s_b_left">
+                                                <div class="single_blog_text s_b_left" style="height :417px;">
                                                     <p>Fashion</p>
                                                     <h3>여성패션 데일리</h3>
                                                     <div class="separator2"></div>
@@ -292,7 +299,7 @@ span.imgTitle {
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 no-padding">
-                                                <div class="single_blog_text s_b_left">
+                                                <div class="single_blog_text s_b_left" style="height :417px;">
                                                     <p>Food</p>
                                                     <h3>푸드 커피/디저트</h3>
                                                     <div class="separator2"></div>
@@ -316,7 +323,7 @@ span.imgTitle {
                                             </div>
 
                                             <div class="col-sm-6 col-sm-pull-6 no-padding">
-                                                <div class="single_blog_text s_b_right">
+                                                <div class="single_blog_text s_b_right" style="height :417px;">
                                                     <p>Beauty</p>
                                                     <h3>뷰티 화장품 일상</h3>
                                                     <div class="separator2"></div>
@@ -339,7 +346,7 @@ span.imgTitle {
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-sm-pull-6 no-padding">
-                                                <div class="single_blog_text s_b_right">
+                                                <div class="single_blog_text s_b_right" style="height :417px;">
                                                     <p>Fashion</p>
                                                     <h3>남성패션 라이프스타일</h3>
                                                     <div class="separator2"></div>
@@ -349,9 +356,10 @@ span.imgTitle {
                                                     <a href="" class="read_more">Read More >></a>
                                                 </div>
                                             </div>
-
                                         </div>
+                                        
                                     </div>
+                                    
                                 </div>
 
                             </div>
@@ -373,59 +381,62 @@ span.imgTitle {
                   <div class="col-sm-3">
                      <div class="single_feature">
                         <div class="single_feature_icon">
-                           <i class="fa fa-clone"></i>
+                           <i class="fa fa"><img alt="" src="images/as_con.png" style = "width : 45px"></i>
                         </div>
 
-                        <h4>SLEEK DESIGN</h4>
+                        <h4>마켓팅 컨설팅</h4>
                         <div class="separator3"></div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and
-                           typesetting let. Lorem Ipsum has been the industry.</p>
+                        <p>설명</p>
                      </div>
                   </div>
 
                   <div class="col-sm-3">
                      <div class="single_feature">
                         <div class="single_feature_icon">
-                           <i class="fa fa-heart-o"></i>
+                           <i class="fa fa"><img alt="" src="images/as_match.png" style = "width : 45px"></i>
                         </div>
 
-                        <h4>CLEAN CODE</h4>
+                        <h4>인플루언서 모집 및 매칭</h4>
                         <div class="separator3"></div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and
-                           typesetting let. Lorem Ipsum has been the industry.</p>
+                        <p>설명</p>
                      </div>
                   </div>
 
                   <div class="col-sm-3">
                      <div class="single_feature">
                         <div class="single_feature_icon">
-                           <i class="fa fa-lightbulb-o"></i>
+                           <i class="fa fa"><img alt="" src="images/as_cam.png" style = "width : 45px"></i>
                         </div>
-                        <h4>CREATIVE IDEAS</h4>
+                        <h4>캠페인 신청 및 포스팅</h4>
                         <div class="separator3"></div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and
-                           typesetting let. Lorem Ipsum has been the industry.</p>
+                        <p>설명</p>
                      </div>
                   </div>
 
                   <div class="col-sm-3">
                      <div class="single_feature">
                         <div class="single_feature_icon">
-                           <i class="fa fa-comments-o"></i>
+                           <i class="fa fa"><img alt="" src="images/as_report.png" style = "width : 45px"></i>
                         </div>
 
-                        <h4>FREE SUPPORT</h4>
+                        <h4>레포트 제공</h4>
                         <div class="separator3"></div>
-                        <p>Lorem Ipsum is simply dummy text of the printing and
-                           typesetting let. Lorem Ipsum has been the industry.</p>
+                        <p>설명</p>
                      </div>
                   </div>
 
                </div>
+               <div class="scrooldown col-xs-pull-6" style = "align:center;">
+                  <a href="pay.jsp">
+                  <i>견적문의</i></a>
+               </div>
             </div>
+            
          </div>
          <!--End of container -->
+         
       </section>
+      
       <!--End of feature Section -->
 
       <!-- History section -->
@@ -442,18 +453,14 @@ span.imgTitle {
                   <div class="col-sm-6">
                      <div class="single_history_content">
                         <div class="head_title">
-                           <h2>OUR HISTORY</h2>
+                           <h2>About Us</h2>
                         </div>
-                        <p>It is a long established fact that a reader will be
-                           distracted by the readable content of a page when looking at
-                           its layout. The point of using Lorem Ipsum is that it has a
-                           more-or-less normal distribution of letters, as opposed to
-                           using 'Content here, content here', making it look like
-                           readable English. Many desktop publishing packages and web page
-                           editors now use Lorem Ipsum as their default model text, and a
-                           search for 'lorem ipsum'</p>
+                        <p style = "font-size: 15px">마케터스는 인플루언서와 광고주를 위한 서비스를 제공하고 있으며, 제공되는 서비스로는 
+                        인플루언서 마케팅 분석 솔루션(인플루언서 레포트, 해시태그), 광고주&인플루언서 매칭서비스 구축해 서비스를 전개하고 있습니다. 
+                        인플루언서 외 영상 컨텐츠 마케팅과 퍼포먼스 마케팅부분으로 확장해 디지털 전반적인 영역의 광고 대행도 함께 진행하고 있습니다.
+                        </p>
 
-                        <a href="" class="btn btn-lg">BROWSE OUR WORK</a>
+                        <a href="" class="btn btn-lg" style = "display : none">BROWSE OUR WORK</a>
                      </div>
                   </div>
                </div>
@@ -464,30 +471,6 @@ span.imgTitle {
       </section>
       <!--End of history -->
       <hr />
-
-
-      <section id="trial" class="trial text-center wow fadeIn"
-         data-wow-duration="2s" data-wow-dealy="1.5s">
-         <div class="main_trial_area">
-            <div class="video_overlay sections">
-               <div class="container">
-                  <div class="row">
-                     <div class="main_trial">
-                        <div class="col-sm-12">
-                           <h2>
-                              Let's Get Started Now. <span>It's FREE!</span>
-                           </h2>
-                           <h4>30 day free trial. Free plan allows up to 2 projects.
-                              Pay if you need more. Cancel anytime. No catches.</h4>
-                           <a href="" class="btn btn-lg">start free trial</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- End of Trial section -->
 
 
       <!--Footer section-->
@@ -511,9 +494,7 @@ span.imgTitle {
                         <div class="col-sm-6 col-xs-12">
                            <div class="copyright_text">
                               <p class=" wow fadeInRight" data-wow-duration="1s">
-                                 Made with <i class="fa fa-heart"></i> by <a
-                                    href="http://bootstrapthemes.co">Bootstrap Themes</a>2016.
-                                 All Rights Reserved
+                                 Made with <i class="fa fa-heart"></i> by MARKETUS 2021.
                               </p>
                            </div>
                         </div>

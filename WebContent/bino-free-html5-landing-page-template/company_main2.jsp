@@ -241,7 +241,7 @@ img {
                      </div>
                   </div>
                </div>
-               <div class="scrooldown col-xs-pull-6" style = "align:center;">
+               <div class="scrooldown" style = "left : 46%;">
                   <a href="pay.jsp">
                   <i>견적문의</i></a>
                </div>
@@ -279,11 +279,9 @@ img {
                                                     <p>Fashion</p>
                                                     <h3>여성패션 데일리</h3>
                                                     <div class="separator2"></div>
-                                                    <p>안녕 안녕안녕 안녕안녕 안녕안녕 안녕안녕 안녕안녕 안녕안녕 안녕안녕 안녕안녕
-                                                     안녕안녕 안녕안녕 안녕안녕 안녕안녕 안녕안녕 안녕안녕 안녕안녕안녕안녕 안녕안녕 
-                                                     안녕안녕 안녕안녕 안녕안녕 </p>
+                                                    <p>유명 쇼핑몰 S모델. 100만 팔로워를 보유한 명실상부 셀럽! 화보같은 패션으로 브랜디드형 마케팅 인플루언서로 추천!</p>
 
-                                                    <a href="" class="read_more">Read More >></a>
+                                                    <a href="pay.jsp" class="read_more">Read More >></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -303,10 +301,9 @@ img {
                                                     <p>Food</p>
                                                     <h3>푸드 커피/디저트</h3>
                                                     <div class="separator2"></div>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's 
-                                                        standard dummy text ever since the 1500s, an .</p>
+                                                    <p>브런치, 피자, 디저트, 음료, 커피 다양하게 팔아서 오전 오후 언제든 애기와 함께라도 즐기기 좋아서 강추 추대디와 8월의 마지막 데이트는 좋은곳에서 행복하게 마무리해서 좋구만유</p>
 
-                                                    <a href="" class="read_more">Read More >></a>
+                                                    <a href="pay.jsp" class="read_more">Read More >></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -327,9 +324,8 @@ img {
                                                     <p>Beauty</p>
                                                     <h3>뷰티 화장품 일상</h3>
                                                     <div class="separator2"></div>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's 
-                                                        standard dummy text ever since the 1500s, an .</p>
-                                                    <a href="" class="read_more">Read More >></a>
+                                                    <p>얼짱 출신. 약 50만 팔로워를 보유한 셀럽 인플루언서! 공동 구매 진행 가능하여 브릭딜 같은 판매형 마케팅 인플루언서로 추천!</p>
+                                                    <a href="pay.jsp" class="read_more">Read More >></a>
                                                 </div>
                                             </div>
 
@@ -350,10 +346,9 @@ img {
                                                     <p>Fashion</p>
                                                     <h3>남성패션 라이프스타일</h3>
                                                     <div class="separator2"></div>
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indu Stry's 
-                                                        standard dummy text ever since the 1500s, an .</p>
+                                                    <p>뷰티, 패션, 라이프 다양하게 잘 소화하여 48만 인플루언서에게 높은 도달률을 보여주는 인기 인플루언서!</p>
 
-                                                    <a href="" class="read_more">Read More >></a>
+                                                    <a href="pay.jsp" class="read_more">Read More >></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -386,7 +381,7 @@ img {
 
                         <h4>마켓팅 컨설팅</h4>
                         <div class="separator3"></div>
-                        <p>설명</p>
+                        <p></p>
                      </div>
                   </div>
 
@@ -398,7 +393,7 @@ img {
 
                         <h4>인플루언서 모집 및 매칭</h4>
                         <div class="separator3"></div>
-                        <p>설명</p>
+                        <p></p>
                      </div>
                   </div>
 
@@ -409,7 +404,7 @@ img {
                         </div>
                         <h4>캠페인 신청 및 포스팅</h4>
                         <div class="separator3"></div>
-                        <p>설명</p>
+                        <p></p>
                      </div>
                   </div>
 
@@ -421,7 +416,7 @@ img {
 
                         <h4>레포트 제공</h4>
                         <div class="separator3"></div>
-                        <p>설명</p>
+                        <p></p>
                      </div>
                   </div>
 

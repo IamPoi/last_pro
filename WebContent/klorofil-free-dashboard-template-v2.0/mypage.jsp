@@ -135,6 +135,22 @@ textarea {
 	opacity: 0.9;
 }
 
+
+#cancel2 {
+	width: 127px;
+	height: 48px;
+	text-align: center;
+	border: none;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+#cancel2:hover {
+	color: #fff;
+	background-color: #216282;
+	opacity: 0.9;
+}
+
 .modal1 {
 	position: fixed;
 	left: 0;
@@ -149,6 +165,22 @@ textarea {
 		0.25s;
 }
 
+
+.modal2 {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(1.1);
+	transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform
+		0.25s;
+}
+
+
 .modal-content {
 	position: absolute;
 	top: 50%;
@@ -160,7 +192,17 @@ textarea {
 	height: 350px;
 	border-radius: 0.5rem;
 }
-
+.modal2-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 1rem 1.5rem;
+	width: 500px;
+	height: 350px;
+	border-radius: 0.5rem;
+}
 .close-button {
 	float: right;
 	width: 1.5rem;
@@ -175,7 +217,31 @@ textarea {
 	background-color: darkgray;
 }
 
+
+
+.close-button2 {
+	float: right;
+	width: 1.5rem;
+	line-height: 1.5rem;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 0.25rem;
+	background-color: lightgray;
+}
+
+.close-button2:hover {
+	background-color: darkgray;
+}
+
 .show-modal {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1.0);
+	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
+.show-modal2 {
 	opacity: 1;
 	visibility: visible;
 	transform: scale(1.0);
@@ -361,7 +427,7 @@ textarea {
 											<li>계정 타켓층 성별 <span><%=info.getInflu_targetGender() %></span></li>
 											<li>카테고리 <span><%=info.getInflu_category() %></span></li>
 											<li>포인트 <span><%=info.getInflu_point() %></span></li>
-											
+
 										</ul>
 									</div>
 									<div class="profile-info">
@@ -470,7 +536,7 @@ textarea {
 											%>
 										</div>
 										<div class="margin-top-30 text-center">
-											<button class="btn btn-default trigger">모든 신청캠페인 보기</button>
+											<button class="btn btn-default trigger2">모든 신청캠페인 보기</button>
 										</div>
 									</div>
 
@@ -543,7 +609,38 @@ textarea {
 
 
 
+		<!-- 팝업 될 레이어 -->
+		<div class="modal1">
+			<div class="modal-content" style="width: 50%; height: 70%;">
+				<span class="close-button">&times;</span>
+				<h1 class="title">모든 매칭 캠페인</h1>
+				<div class="table-responsive">
 
+					<br> <br>
+					<%
+					for (int i = 0; i < qList.size(); i++) {
+
+						if (qList.get(i).getMatch_ck() == 1) {
+
+							System.out.println("getMatch_ck() : " + qList.get(i).getCampaign_Sid());
+					%>
+					<div class="col-md-3 col-sm-6">
+						<div class="award-item">
+
+							<img src="images/<%=qList.get(i).getCampaign_Sid()%>.jpg"
+								alt="Avatar"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
+
+						</div>
+					</div>
+					<%
+					}
+
+					}
+					%>
+				</div>
+
+			</div>
+		</div>
 
 
 
@@ -556,17 +653,17 @@ textarea {
 		<!-- start -->
 
 		<!-- 팝업 될 레이어 -->
-		<div class="modal1">
+		<div class="modal2">
 			<div class="modal-content" style="width: 50%; height: 70%;">
-				<span class="close-button">&times;</span>
-				<h1 class="title">모든 캠페인</h1>
+				<span class="close-button2">&times;</span>
+				<h1 class="title">모든 신청 캠페인</h1>
 				<div class="table-responsive">
 
 					<br> <br>
 					<%
 					for (int i = 0; i < qList.size(); i++) {
 
-						if (qList.get(i).getMatch_ck() == 1) {
+						if (qList.get(i).getMatch_ck() == 0) {
 
 							System.out.println("getMatch_ck() : " + qList.get(i).getCampaign_Sid());
 					%>
@@ -764,6 +861,63 @@ textarea {
 
 					}); // end am4core.ready()
 		</script>
+
+
+		<script type="text/javascript">
+      var modal = document.querySelector(".modal1");
+      var trigger = document.querySelector(".trigger");
+      var closeButton = document.querySelector(".close-button");
+      var cancelButton = document.querySelector("#cancel");
+
+      //console.log(modal);
+
+      function toggleModal() {
+         modal.classList.toggle("show-modal");
+      }
+
+      function windowOnClick(event) {
+         if (event.target === modal) {
+            toggleModal();
+         }
+      }
+
+      trigger.addEventListener("click", toggleModal);
+      closeButton.addEventListener("click", toggleModal);
+      cancel.addEventListener("click", toggleModal);
+      window.addEventListener("click", windowOnClick);
+   </script>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   		<script type="text/javascript">
+      var modal2 = document.querySelector(".modal2");
+      var trigger2 = document.querySelector(".trigger2");
+      var closeButton2 = document.querySelector(".close-button2");
+      var cancelButton2 = document.querySelector("#cancel2");
+
+      //console.log(modal);
+
+      function toggleModal2() {
+         modal2.classList.toggle("show-modal2");
+      }
+
+      function windowOnClick2(event) {
+         if (event.target === modal2) {
+            toggleModal();
+         }
+      }
+
+      trigger2.addEventListener("click", toggleModal2);
+      closeButton2.addEventListener("click", toggleModal2);
+      cancel2.addEventListener("click", toggleModal2);
+      window2.addEventListener("click", windowOnClick2);
+   </script>
 </body>
 
 </html>

@@ -28,11 +28,11 @@
    <div id="wrapper">
       <div class="vertical-align-wrap">
          <div class="vertical-align-middle">
-            <div class="auth-box ">
-               <div class="left">
+            <div class="auth-box" style = "width : 500px">
+               <div class="left" style = "width : 100%">
                   <div class="content">
                      <div class="header">
-                        <div class="logo text-center"><img src="images/logo.jpg" alt="Klorofil Logo" style = "width : 200px"></div>
+                        <div class="logo text-center"><img src="images/logo.jpg" alt="Klorofil Logo" style = "width : 200px;"></div>
                         <p class="lead" style = "display : none">Login to your account</p>
                         <br><br>
                      </div>
@@ -68,7 +68,7 @@
                      <% %>
                   </div>
                </div>
-               <div class="right">
+               <div class="right" style = "display : none">
                   <div class="overlay"></div>
                   <div class="content text">
                      <h1 class="heading">Free Bootstrap dashboard template</h1>

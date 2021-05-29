@@ -142,15 +142,14 @@ img {
 
 									<div class="collapse navbar-collapse"
 										id="bs-example-navbar-collapse-1">
-
 										<ul class="nav navbar-nav navbar-right">
 											<li><a href="">HOME</a></li>
 											<!-- 세션값받아와서 influencer/companymain으로 이동 -->
-											<li><a href="hashtag.jsp">HASGTAG</a></li>
+											<li><a href="hashtag.jsp">HASHTAG</a></li>
 											<li><a href="../InfluencerMypage?name=inf">My Page</a></li>
 											<!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
 											<li><a
-												href="../klorofil-free-dashboard-template-v2.0/page-login.jsp">LOGIN</a></li>
+												href="../klorofil-free-dashboard-template-v2.0/page-login.jsp/value=adver">LOGIN</a></li>
 										</ul>
 									</div>
 								</div>
@@ -271,14 +270,14 @@ img {
 											<%
 											// 이미지 파일 넘기기
 											String strImgConFormat1 = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
-													+ "<a href = \"../InfluencerCampaignService?id=\"1\"\"><img width='300' height = '400' src=\"%s\"/></a>"
-													+ "</div>";
+													+ "<a href = \"../CampaignService?id=%s\">  <img width='300' height = '400' src=\"%s\"/></a>" + "</div>";
+
 
 											File f = imgFileList.get(i); //numList.get(i)-1
 											String title = "";//Util.getFileNameNoExt(f.getName());
-
+											String id = "1,inf";
 											String url = Util.getImgSrc(f);
-											out.print(String.format(strImgConFormat1, title, url));
+											out.print(String.format(strImgConFormat1, title, id,url));
 											%>
 										</div>
 										<%

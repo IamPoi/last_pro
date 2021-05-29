@@ -1,3 +1,4 @@
+<%@page import="com.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -50,6 +51,8 @@
 
 </style>
 <body data-spy="scroll" data-target=".navbar-collapse">
+
+<%MemberDTO info = (MemberDTO) session.getAttribute("info");%>
    <div class='preloader'>
       <div class='loaded'>&nbsp;</div>
    </div>
@@ -92,7 +95,11 @@
                                  <li><a href="hashtag.jsp">HASGTAG</a></li>
                                  <li><a href="">My Page</a></li>
                                  <!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
+                                 <%if(info == null){ %>
                                  <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp">LOGIN</a></li>
+                                 <%} else{ %>
+                                 <li><a href="">LOGOUT</a></li>
+                                 <%} %>
                               </ul>
 
 

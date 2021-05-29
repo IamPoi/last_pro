@@ -258,11 +258,11 @@ span.imgTitle {
                                 <div class="separator"></div>
                             </div><!-- End off Head_title -->
 
-                            <div class="main_blog_content">
+                            <div class="main_blog_content"  style = "padding : 0 5% 0 5%">
                                 <div class="col-sm-6">
                                     <div class="single_blog_area textwhite">
                                         <div class="row">
-                                            <div class="col-sm-6 no-padding">
+                                            <div class="col-sm-6 no-padding" >
                                                 <div class="single_blog_img">
                                                     <img src="images/libra._.lim.jpg" alt="" />
                                                 </div>

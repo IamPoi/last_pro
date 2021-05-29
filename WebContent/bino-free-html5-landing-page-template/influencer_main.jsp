@@ -91,9 +91,9 @@ img {
       System.out.println("info :" + info.getInflu_gender());
       System.out.println("cList :" + cList.get(0).getRq_gender());
       for (int i = 0; i < cList.size(); i++) {
-
+		//인플루언서 성별 조건 주기
          if (cList.get(i).getRq_gender().equals(info.getInflu_gender())) {
-      numList.add(cList.get(i).getCampaign_Sid());
+      numList.add(cList.get(i).getCampaign_Sid());//numList에는 캠페인 시퀀스 번호 저장
       System.out.println("a " + i);
       k = k + 1;
          } else {
@@ -102,10 +102,15 @@ img {
          }
       }
 
+  
    } else {
       numList = null;
       System.out.println("info = null :");
    }
+   
+ //  for(int i=0; i<numList.size();i++){
+//	   System.out.println("numList :" + numList.get(i));
+//   }
 
    //info.getInflu_gender();
    %>
@@ -170,8 +175,37 @@ img {
                      <div class="col-sm-12 ">
                         <div class="main_home_slider text-center">
 
+							
+
+
                            <%
-                           if (numList != null) {
+                           if (numList != null) {//인플루언서 로그인 후 조건에 따른 사진 나열
+                        	%>
+                        	<%//이미지 네임 가져오기
+							 ArrayList<String> imgName = new ArrayList<String>();
+                           for (int i = 0; i < imgFileList.size(); i++) {
+                              File f = imgFileList.get(i);
+
+                              imgName.add(Util.getFileNameNoExt(f.getName()));
+                              //System.out.println("imgName : " + Util.getFileNameNoExt(f.getName()));
+
+                           }
+                           %>
+                           
+                           <%
+                           ArrayList<Integer> imgNum = new ArrayList<Integer>();
+                           for (int i = 0; i < imgName.size(); i++) {
+                              for (int j = 0; j < numList.size(); j++) {
+                                 if (String.valueOf(numList.get(j)).equals(imgName.get(i))) {
+                                	 imgNum.add(j+1);
+                                	 System.out.println("===========");
+		                              System.out.println("imgNum  : " + imgNum);
+                                 }
+                              }
+                           }
+
+                           %>
+                           <%
                               int num = 3;
                               int s = 0;
                               for (int j = 0; j < ((numList.size() / 3) + 1); j++) {
@@ -190,9 +224,10 @@ img {
                                        + "<a href = \"../CampaignService?id=%s\">  <img width='300' height = '400' src=\"%s\"/></a>" + "</div>";
 
                                  System.out.println("numList.size(): " + numList.get(i));
-                                 File f = imgFileList.get(numList.get(i)); //numList.get(i)-1
+                                 File f = imgFileList.get(imgNum.get(i)); //numList.get(i)-1
                                  String title = "";//Util.getFileNameNoExt(f.getName());
-                                 String id = String.valueOf(numList.get(i));
+                                 String id = String.valueOf(imgNum.get(i)) + ','+"inf";
+                                 System.out.println("id: " + id);
                                  String url = Util.getImgSrc(f);
 
                                  out.print(String.format(strImgConFormat1, title, id, url));
@@ -228,7 +263,8 @@ img {
                            <%
                            }
 
-                           } else {
+                           } else {//인플루언서 로그인 전 모든사진 나열
+                        	   System.out.println("인플루언서 로그인 전 모든사진 나열 ");
                            int num = 3;
                            int s = 0;
                            int end = 13;
@@ -247,14 +283,14 @@ img {
                                  <%
                                  // 이미지 파일 넘기기
                                  String strImgConFormat1 = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
-                                       + "<a href = \"../InfluencerCampaignService?id=\"1\"\"><img width='300' height = '400' src=\"%s\"/></a>"
+                                       + "<a href = \"../CampaignService?id=%s\"><img width='300' height = '400' src=\"%s\"/></a>"
                                        + "</div>";
 
                                  File f = imgFileList.get(i); //numList.get(i)-1
                                  String title = "";//Util.getFileNameNoExt(f.getName());
-
+                                 String id = "1,inf";
                                  String url = Util.getImgSrc(f);
-                                 out.print(String.format(strImgConFormat1, title, url));
+                                 out.print(String.format(strImgConFormat1, title, id, url));
                                  %>
                               </div>
                               <%

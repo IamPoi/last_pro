@@ -1,6 +1,31 @@
 <%@page import="com.model.CampaginDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@page import="common.Util"%>
+<%@page import="java.util.Collections"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="java.io.File"%>    
+<%
+String servletPath = request.getServletPath();
+String ImgDirRealPath = request.getRealPath(servletPath.substring(0, servletPath.lastIndexOf("/") + 1) + "images");
+
+System.out.println(ImgDirRealPath);
+
+File ImgDirObj = new File(ImgDirRealPath);
+//현재 jsp파일이 있는 폴더의 images폴더의 이미지 목록 가져오기
+List<File> imgFileList = Util.getImgFileList(ImgDirObj);
+System.out.println("imgFileList : " + imgFileList.size());
+
+
+
+//이미지 폴더의 네임들 
+ArrayList<String> imgName = new ArrayList<String>();
+
+//   String strImgConFormat = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
+//         + "<img width='200' src=\"%s\"/></div>";
+
+%>
 <!doctype html>
 <html lang="en">
 
@@ -41,10 +66,11 @@
 <%
 
       CampaginDTO info = (CampaginDTO)session.getAttribute("campSelect");
+      String campPicture = (String)session.getAttribute("campPicture");
       
       System.out.println("Campinfo.getAd_estimate() : " + info.getAd_estimate());
       
-   
+      System.out.println("campPicture : " + campPicture);
 
    %>
 
@@ -140,7 +166,23 @@
                         <div class="profile-header" style = "height:100%;">
                            <div class="overlay"></div>
                            <div class="profile-main" style = "height:90%">
-                              <img src="images/1.jpg" alt="Avatar" style = "height:100%; width:100%">
+                           
+                           <%
+                           String campNum = "";
+                           for (int i = 0; i < imgFileList.size(); i++) {
+                        	   File f = imgFileList.get(i);
+
+                        	   imgName.add(Util.getFileNameNoExt(f.getName()));
+                        	   System.out.println("imgName : " + Util.getFileNameNoExt(f.getName()));
+                        	 
+                        	   if(Util.getFileNameNoExt(f.getName()).equals(campPicture)){
+                        		   campNum = String.valueOf(i);                        	   }
+                        	   
+                        	   System.out.println("campNum : " + campNum);
+                        	}
+                           
+                           %>
+                              <img src="images/<%=campNum %>.jpg" alt="Avatar" style = "height:100%; width:100%">
                               <h3 class="name">광고주(브랜드) 이름??</h3>
                               <span class="online-status status-available">Available</span>
                            </div>

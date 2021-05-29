@@ -637,7 +637,7 @@ input::-ms-input-placeholder {
 
 .scrooldown{
     position: absolute;
-    left: 45%;
+    left:45%;
     bottom: -2%;
     width: 150px;
     height:50px;

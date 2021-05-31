@@ -198,7 +198,7 @@
 
                         <div class="pricing_body">
                            <ul>
-                              <li>Competition Analysis Methods</li>
+                              <li>ǥ</li>
                               <li>All Ranked URLs</li>
                               <li>International Support System</li>
                               <li>Social Media Tracking</li>

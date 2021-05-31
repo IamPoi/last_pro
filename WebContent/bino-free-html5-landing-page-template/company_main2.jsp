@@ -129,7 +129,7 @@ img {
                              <ul class="nav navbar-nav navbar-right">
                                  <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
                                             <li><a href="hashtag.jsp">HASHTAG</a></li>
-                                            <li><a href="pay.jsp">PAY</a></li>
+                                            <li><a href="pay.jsp">INQUIRY</a></li>
                                             <li><a href="../InfluencerMypage?name=adver" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
                                             <%
 												if(info != null){
@@ -467,10 +467,10 @@ img {
                         <div class="head_title">
                            <h2>About Us</h2>
                         </div>
-                        <p style = "font-size: 15px">마케터스는 인플루언서와 광고주를 위한 서비스를 제공하고 있으며, 제공되는 서비스로는 
+                        <h3 style ="color: black"  >마케터스는 인플루언서와 광고주를 위한 서비스를 제공하고 있으며, 제공되는 서비스로는 
                         인플루언서 마케팅 분석 솔루션(인플루언서 레포트, 해시태그), 광고주&인플루언서 매칭서비스 구축해 서비스를 전개하고 있습니다. 
                         인플루언서 외 영상 컨텐츠 마케팅과 퍼포먼스 마케팅부분으로 확장해 디지털 전반적인 영역의 광고 대행도 함께 진행하고 있습니다.
-                        </p>
+                        </h3>
 
                         <a href="" class="btn btn-lg" style = "display : none">BROWSE OUR WORK</a>
                      </div>

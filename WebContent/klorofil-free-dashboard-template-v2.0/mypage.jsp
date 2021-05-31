@@ -510,7 +510,7 @@ textarea {
 												<div class="award-item">
 
 													<img src="images/<%=qList.get(i).getCampaign_Sid()%>.jpg"
-														alt="Avatar"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
+														alt="Avatar" style= "height : 250px;"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
 
 												</div>
 											</div>
@@ -544,7 +544,7 @@ textarea {
 											<div class="panel-body">
 												<div class="left" style="width: 60%">
 													<div class="panel-heading">
-														<h3 class="panel-title" align="left">´ñ±Û À¯Çü</h3>
+														<h3 class="panel-title" align="left">Æò±Õ</h3>
 													</div>
 												</div>
 												<div class="panel-body">
@@ -638,8 +638,8 @@ textarea {
 		<!-- start -->
 
 		<!-- ÆË¾÷ µÉ ·¹ÀÌ¾î -->
-		<div class="modal2" style=>
-			<div class="modal-content" style="width: 50%; height: 100%;">
+		<div class="modal2" data-spy="scroll">
+			<div class="modal-content" style="width: 50%; height: 70%; overflow:scroll">
 				<span class="close-button2">&times;</span>
 				<h1 class="title">¸ðµç ½ÅÃ» Ä·ÆäÀÎ</h1>
 				<div class="table-responsive">
@@ -780,8 +780,8 @@ textarea {
 		<%=report.getInflu_inde_real_avg_comment()%>
 			} ]
 
-						createSeries('first', 'The First');
-						createSeries('second', 'The Second');
+						createSeries('first', 'Æò±Õ');
+						createSeries('second', 'È¸¿ø');
 
 						function arrangeColumns() {
 

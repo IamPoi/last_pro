@@ -59,7 +59,7 @@
    <div class="culmn">
       <header id="main_menu" class="header navbar-fixed-top">
          <div class="main_menu_bg">
-            <div class="container">
+            <div class="container" style = "width : 100%">
                <div class="row">
                   <div class="nave_menu">
                      <nav class="navbar navbar-default">
@@ -76,8 +76,8 @@
                               </button>
 
 
-                              <a class="navbar-brand" href="firstPage.jsp"> <img
-                                 src="images/logo_high_re.png" width=140px, height=50px>
+                              <a class="navbar-brand" href="firstPage.jsp" style = "margin-left: 30px;"> <img
+                                 src="images/logo_high_re.png" width=140px, height=50px ma>
                               </a>
                            </div>
 

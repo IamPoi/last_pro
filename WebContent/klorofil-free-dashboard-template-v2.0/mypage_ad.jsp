@@ -1,98 +1,274 @@
+<!-- 최신본 -->
+<%@page import="com.model.MatchingDTO"%>
+<%@page import="com.model.MemberDTO"%>
 <%@page import="com.model.AdvertiserDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@page import="common.Util"%>
+<%@page import="java.util.Collections"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="java.io.File"%>
 <!doctype html>
 <html lang="en">
 
-<head>
+<!-- 기존의 head 코드 start -->
+<!-- <head>
    <title>Profile | Klorofil - Free Bootstrap Dashboard Template</title>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-   <!-- VENDOR CSS -->
+   VENDOR CSS
    
    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
    <link rel="stylesheet" href="assets/vendor/linearicons/style.css">
-   <!-- MAIN CSS -->
+   MAIN CSS
    <link rel="stylesheet" href="assets/css/main.css">
-   <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+   FOR DEMO PURPOSES ONLY. You should remove this in your project
    <link rel="stylesheet" href="assets/css/demo.css">
-   <!-- GOOGLE FONTS -->
+   GOOGLE FONTS
    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-   <!-- ICONS -->
+   ICONS
    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
    <link rel="stylesheet" href="assets/css/style.css">
+</head> -->
+<!-- 기존의 head코드 end -->
+
+
+<!-- 새로운 head + style 코드 start  -->
+<head>
+<title>Profile | Klorofil - Free Bootstrap Dashboard Template</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+   content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!-- VENDOR CSS -->
+
+<!-- 문제 css -->
+<link rel="stylesheet"
+   href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<!-- 문제 css -->
+
+
+<link rel="stylesheet"
+   href="assets/vendor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/main.css">
+<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+<link rel="stylesheet" href="assets/css/demo.css">
+<!-- GOOGLE FONTS -->
+<link
+   href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700"
+   rel="stylesheet">
+<!-- ICONS -->
+<link rel="apple-touch-icon" sizes="76x76"
+   href="assets/img/apple-icon.png">fz
+<link rel="icon" type="image/png" sizes="96x96"
+   href="assets/img/favicon.png">
+   <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
+
+
+<style type="text/css">
+body {
+   text-align: center;
+   display: block;
+   margin: 0 auto;
+   font-size: 16px;
+   color: #999;
+}
+
+h1 {
+   font-family: 'Oswald', sans-serif;
+   font-size: 30px;
+   color: #216182;
+}
+
+label {
+   display: block;
+   margin-top: 20px;
+   letter-spacing: 2px;
+}
+
+form {
+   margin: 0 auto;
+   width: 459px;
+}
+
+input, textarea {
+   width: 439px;
+   height: 27px;
+   background-color: #efefef;
+   border-radius: 6px;
+   border: 1px solid #dedede;
+   padding: 10px;
+   margin-top: 3px;
+   font-size: 0.9em;
+   color: #3a3a3a;
+}
+
+input:focus, textarea:focus {
+   border: 1px solid #97d6eb;
+}
+
+textarea {
+   height: 60px;
+   background-color: #efefef;
+}
+
+#submit {
+   width: 127px;
+   height: 48px;
+   text-align: center;
+   border: none;
+   margin-top: 20px;
+   cursor: pointer;
+}
+
+#submit:hover {
+   color: #fff;
+   background-color: #216282;
+   opacity: 0.9;
+}
+
+#cancel {
+   width: 127px;
+   height: 48px;
+   text-align: center;
+   border: none;
+   margin-top: 20px;
+   cursor: pointer;
+}
+
+#cancel:hover {
+   color: #fff;
+   background-color: #216282;
+   opacity: 0.9;
+}
+
+.modal1 {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   opacity: 0;
+   visibility: hidden;
+   transform: scale(1.1);
+   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform
+      0.25s;
+}
+
+.modal-content {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: white;
+   padding: 1rem 1.5rem;
+   width: 500px;
+   height: 350px;
+   border-radius: 0.5rem;
+}
+
+.close-button {
+   float: right;
+   width: 1.5rem;
+   line-height: 1.5rem;
+   text-align: center;
+   cursor: pointer;
+   border-radius: 0.25rem;
+   background-color: lightgray;
+}
+
+.close-button:hover {
+   background-color: darkgray;
+}
+
+.show-modal {
+   opacity: 1;
+   visibility: visible;
+   transform: scale(1.0);
+   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+</style>
+<!-- 새로운 head + style 코드 end -->
 
 <body>
 <%
 AdvertiserDTO info = (AdvertiserDTO) session.getAttribute("info");
 %>
 
+<%
+String servletPath = request.getServletPath();
+String ImgDirRealPath = request.getRealPath(servletPath.substring(0, servletPath.lastIndexOf("/") + 1) + "images");
+
+System.out.println(ImgDirRealPath);
+
+File ImgDirObj = new File(ImgDirRealPath);
+//현재 jsp파일이 있는 폴더의 images폴더의 이미지 목록 가져오기
+List<File> imgFileList = Util.getImgFileList(ImgDirObj);
+System.out.println("imgFileList : " + imgFileList.size());
+%>
+
    <!-- WRAPPER -->
    <div id="wrapper">
       <!-- NAVBAR -->
-      <nav class="navbar navbar-default navbar-fixed-top">
-         <div class="brand">
-            <a href="index.html"><img src="assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
-         </div>
-         <div class="container-fluid">
-            <div class="navbar-btn">
-               <button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
-            </div>
-            <form class="navbar-form navbar-left">
-               <div class="input-group">
-                  <input type="text" value="" class="form-control" placeholder="Search dashboard...">
-                  <span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
+      <header id="main_menu" class="header navbar-fixed-top">
+         <div class="main_menu_bg" style = "background-color:white;">
+            <div class="container" style = "width : 100%">
+               <div class="row">
+                  <div class="nave_menu">
+                     <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                           <!-- Brand and toggle get grouped for better mobile display -->
+                           <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed"
+                                 data-toggle="collapse"
+                                 data-target="#bs-example-navbar-collapse-1"
+                                 aria-expanded="false">
+                                 <span class="sr-only">Toggle navigation</span> <span
+                                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                                    class="icon-bar"></span>
+                              </button>
+
+
+                              <a class="navbar-brand" href="firstPage.jsp"> <img
+                                 src="images/logo_high_re.png" style = "width:140px; height:50px; margin-left: 30px; ">
+                              </a>
+                           </div>
+
+                           <!-- Collect the nav links, forms, and other content for toggling -->
+
+                           <div class="collapse navbar-collapse"
+                              id="bs-example-navbar-collapse-1">
+
+                             <ul class="nav navbar-nav navbar-right">
+                                 <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
+                                            <li><a href="../bino-free-html5-landing-page-template/hashtag.jsp">HASHTAG</a></li>
+                                            <li><a href="../bino-free-html5-landing-page-template/pay.jsp">PAY</a></li>
+                                            <li><a href="../InfluencerMypage?name=adver" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
+                                            <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=adver">LOGIN</a></li>
+                                            
+                              </ul>
+                           </div>
+                        </div>
+                     </nav>
+                  </div>
                </div>
-            </form>
-            <div class="navbar-btn navbar-btn-right">
-               <a class="btn btn-success update-pro" href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
+
             </div>
-            <div id="navbar-menu">
-               <ul class="nav navbar-nav navbar-right">
-                  <li class="dropdown">
-                     <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
-                        <i class="lnr lnr-alarm"></i>
-                        <span class="badge bg-danger">5</span>
-                     </a>
-                     <ul class="dropdown-menu notifications">
-                        <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>System space is almost full</a></li>
-                        <li><a href="#" class="notification-item"><span class="dot bg-danger"></span>You have 9 unfinished tasks</a></li>
-                        <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Monthly report is available</a></li>
-                        <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Weekly meeting in 1 hour</a></li>
-                        <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your request has been approved</a></li>
-                        <li><a href="#" class="more">See all notifications</a></li>
-                     </ul>
-                  </li>
-                  <li class="dropdown">
-                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle"></i> <span>Help</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
-                     <ul class="dropdown-menu">
-                        <li><a href="#">Basic Use</a></li>
-                        <li><a href="#">Working With Data</a></li>
-                        <li><a href="#">Security</a></li>
-                        <li><a href="#">Troubleshooting</a></li>
-                     </ul>
-                  </li>
-                  <li class="dropdown">
-                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
-                     <ul class="dropdown-menu">
-                        <li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
-                        <li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
-                        <li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
-                        <li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
-                     </ul>
-                  </li>
-                  <!-- <li>
-                     <a class="update-pro" href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
-                  </li> -->
-               </ul>
-            </div>
+
          </div>
-      </nav>
+      </header>
       <!-- END NAVBAR -->
+      
+      
       <!-- LEFT SIDEBAR -->
       <div id="sidebar-nav" class="sidebar" style = 'display : none'>
          <div class="sidebar-scroll">
@@ -124,6 +300,18 @@ AdvertiserDTO info = (AdvertiserDTO) session.getAttribute("info");
       <!-- MAIN -->
       <div class="main" style = "width : 100%">
          <!-- MAIN CONTENT -->
+         
+<%
+   AdvertiserDTO img = (AdvertiserDTO) session.getAttribute("adverMypage");
+   System.out.println("인포값 : "+info);
+   System.out.println("인포값1 : "+img);
+   ArrayList<MatchingDTO> qList = (ArrayList<MatchingDTO>) session.getAttribute("adverMypageMatching");
+   System.out.println("인포값2 : "+qList);
+
+   System.out.println("info.getInflu_instaAddr() : " + img.getAdver_mbr());
+   System.out.println("qList.size() : " + qList.size());
+   %>         
+         
          <%
          String name = info.getName();
          String phone = info.getPhone();
@@ -134,7 +322,7 @@ AdvertiserDTO info = (AdvertiserDTO) session.getAttribute("info");
                <div class="panel panel-profile">
                   <div class="clearfix">
                      <!-- LEFT COLUMN -->
-                     <div class="profile-left">
+                     <div class="profile-left" style="text-align: left">
                         <!-- PROFILE HEADER -->
                         <div class="profile-header">
                            <div class="overlay"></div>
@@ -291,7 +479,7 @@ AdvertiserDTO info = (AdvertiserDTO) session.getAttribute("info");
                               </div>
                            </div>
                            <br><br>
-                           <div class="text-center"><a href="#" class="btn btn-default">모든 캠페인 보기</a></div>
+                           <div class="text-center"><button class="btn btn-default trigger">모든 캠페인 보기</button></div>
                         </div>
                         <!-- END TABBED CONTENT -->
                      </div>
@@ -311,12 +499,79 @@ AdvertiserDTO info = (AdvertiserDTO) session.getAttribute("info");
          </div>
       </footer>
    </div>
+
+         <!-- 팝업 될 레이어 -->
+   <div class="modal1">
+      <div class="modal-content" style = "width : 50%; height : 70%;">
+         <span class="close-button">&times;</span>
+         <h1 class="title">모든 캠페인</h1>
+         <div class="table-responsive">
+            
+            <br> <br>
+            <%
+                                 
+                                 for (int i = 0; i < qList.size(); i++) {
+
+                                    
+                                    if (qList.get(i).getMatch_ck() == 1) {
+                                       
+                                       System.out.println("getMatch_ck() : " + qList.get(i).getCampaign_Sid());
+                                 %>
+                                 <div class="col-md-3 col-sm-6">
+                                    <div class="award-item">
+
+                                       <img src="images/<%=qList.get(i).getCampaign_Sid()%>.jpg"
+                                          alt="Avatar"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
+
+                                    </div>
+                                 </div>
+                                 <%
+                                 }
+                                    
+                                 }
+                                 %>
+         </div>
+         
+      </div>
+   </div>
+      
+   
    <!-- END WRAPPER -->
    <!-- Javascript -->
-   <script src="assets/vendor/jquery/jquery.min.js"></script>
+      <script src="assets/vendor/jquery/jquery.min.js"></script>
    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
    <script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
    <script src="assets/scripts/klorofil-common.js"></script>
+   <script type="text/javascript">
+      var modal = document.querySelector(".modal1");
+      var trigger = document.querySelector(".trigger");
+      var closeButton = document.querySelector(".close-button");
+      var cancelButton = document.querySelector("#cancel");
+
+      //console.log(modal);
+
+      function toggleModal() {
+         console.log("ㅎㅇ");
+         modal.classList.toggle("show-modal");
+      }
+
+      function windowOnClick(event) {
+         if (event.target === modal) {
+            toggleModal();
+         }
+      }
+
+      trigger.addEventListener("click", toggleModal);
+      closeButton.addEventListener("click", toggleModal);
+      cancel.addEventListener("click", toggleModal);
+      window.addEventListener("click", windowOnClick);
+   </script>
+   
+   
+<!--    <script src="assets/vendor/jquery/jquery.min.js"></script>
+   <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+   <script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+   <script src="assets/scripts/klorofil-common.js"></script> -->
 </body>
 
 </html>

@@ -25,12 +25,14 @@ public class LoginService extends HttpServlet {
 
       request.setCharacterEncoding("EUC-KR");
       PrintWriter out = response.getWriter();
+      System.out.println("------로그인 Service 확인-------");
+
       
       String Id = request.getParameter("id");
       String Password = request.getParameter("pw");
       
       String value = request.getParameter("value");
-      System.out.println("넘어오는 값 확인 :"+value);
+      System.out.println("request value 확인 : :"+value);
       
       
       if(value.equals("adver")) {
@@ -44,6 +46,10 @@ public class LoginService extends HttpServlet {
            ArrayList<CampaginDTO> camp_dto = new ArrayList<CampaginDTO>(); 
            camp_dto = campdao.CampaginAllSelect();
            
+           System.out.println("광고주 정보 확인 : "+Id+" "+Password);
+
+           System.out.println("광고주 로그인 확인 : "+user);
+           
            if (user != null) { 
               
               System.out.println("로그인 성공");
@@ -51,7 +57,6 @@ public class LoginService extends HttpServlet {
               session.setAttribute("info", user); 
               session.setAttribute("campAll", camp_dto);
               response.sendRedirect("bino-free-html5-landing-page-template/company_main2.jsp");
-           
            } else {
            
               System.out.println("로그인 실패");
@@ -63,7 +68,7 @@ public class LoginService extends HttpServlet {
          MemberDTO dto = new MemberDTO(Id, Password);
 
          MemberDTO user = dao.login(dto);
-         System.out.println("확인 : ");
+         System.out.println("인플루 로그인 확인 : "+user);
         // System.out.println(user.getInflu_age());
 
          CampaginDAO c_dao = new CampaginDAO();

@@ -202,6 +202,13 @@ textarea {
 <body>
 <%
 AdvertiserDTO info = (AdvertiserDTO) session.getAttribute("info");
+System.out.println("광고주 로그인 user session 값 : "+info);
+
+if (info != null) {
+	System.out.println("광고주 정보 user 확인용 mail:" + info.getPhone());
+} else {
+	System.out.println("광고주 정보 가져오기 실패 user = null");
+}
 %>
 
 <%
@@ -253,7 +260,15 @@ System.out.println("imgFileList : " + imgFileList.size());
                                             <li><a href="../bino-free-html5-landing-page-template/hashtag.jsp">HASHTAG</a></li>
                                             <li><a href="../bino-free-html5-landing-page-template/pay.jsp">PAY</a></li>
                                             <li><a href="../InfluencerMypage?name=adver" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-                                            <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=adver">LOGIN</a></li>
+                                             <%
+												if(info != null){
+											 %>
+											<li><a
+												href="../LogoutService">LOGOUT</a></li>
+											<% }else{ %>
+											<li><a
+												href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=adver">LOGIN</a></li>
+											<% } %>
                                             
                               </ul>
                            </div>

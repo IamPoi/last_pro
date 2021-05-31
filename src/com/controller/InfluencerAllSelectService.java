@@ -25,8 +25,10 @@ public class InfluencerAllSelectService extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		request.setCharacterEncoding("EUC-KR");
-		String id = request.getParameter("name");
-	     System.out.println(id);
+
+		HttpSession session = request.getSession();
+		String name = request.getParameter("value");
+	    System.out.println(name);
 
 	      
 		MemberDAO c_dao = new MemberDAO();
@@ -40,19 +42,18 @@ public class InfluencerAllSelectService extends HttpServlet {
 		
 		 if (qua_dto != null) {
 	           //인플루언서 계정정보 테이블 내의 전체 데이터 선택 후 session에 담아 전달
-	           HttpSession session = request.getSession();
 	           session.setAttribute("influencer_instaSelect", qua_dto);
 	          
 	         
 	         
-	         if(id.equals("inf")) {
+	         if(name.equals("inf")) {
 	            response.sendRedirect("./bino-free-html5-landing-page-template/influencer_main.jsp");
-	         } else if(id.equals("adv")){
+	         } else if(name.equals("adv")){
 	            response.sendRedirect("./bino-free-html5-landing-page-template/company_main2.jsp");
 	         
 	         }   
 	         
-	      }else {
+	      } else {
 	         System.out.println("전송실패!");
 	         
 	      }

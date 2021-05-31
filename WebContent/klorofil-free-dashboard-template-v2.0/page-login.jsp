@@ -36,10 +36,12 @@
                         <p class="lead" style = "display : none">Login to your account</p>
                         <br><br>
                      </div>
-                     <% String name = request.getParameter("value"); 
-                           System.out.println("페이지 로그인 화면 name 확인 : " + name);
+                     <% 	String name = request.getParameter("value"); 
                      
+                         	System.out.println("페이지 로그인 화면 name 확인 : " + name);
+                         	
                      %>
+                     
                      <% if(name.equals("inf")){ %>
                      <form method="post" class="form-auth-small" action="../LoginService?value=inf">
                      

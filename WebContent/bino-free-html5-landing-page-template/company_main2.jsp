@@ -1,3 +1,4 @@
+<%@page import="com.model.AdvertiserDTO"%>
 <%@page import="com.model.influencerInstaDTO"%>
 <%@page import="com.model.CampaginDTO"%>
 <%@page import="com.model.MemberDTO"%>
@@ -79,6 +80,17 @@ img {
    System.out.println("1 :" + influencer_allSelect.get(0).getInflu_id());
    System.out.println("2 :" + influencer_allSelect.get(1).getInflu_id());
    //info.getInflu_gender();
+   String name = (String)session.getAttribute("value");
+   System.out.println("광고주 인플루 구분 name값 : "+name);
+   
+   AdvertiserDTO info = (AdvertiserDTO) session.getAttribute("info");
+	System.out.println("광고주 로그인 user session 값 : "+info);
+	
+	if (info != null) {
+		System.out.println("광고주 정보 user 확인용 mail:" + info.getMail());
+	} else {
+		System.out.println("광고주 정보 가져오기 실패 user = null");
+	}
    %>
 
    <div class='preloader'>
@@ -119,7 +131,15 @@ img {
                                             <li><a href="hashtag.jsp">HASHTAG</a></li>
                                             <li><a href="pay.jsp">PAY</a></li>
                                             <li><a href="../InfluencerMypage?name=adver" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-                                            <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=adver">LOGIN</a></li>
+                                            <%
+												if(info != null){
+											 %>
+											<li><a
+												href="../LogoutService">LOGOUT</a></li>
+											<% }else{ %>
+											<li><a
+												href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=adver">LOGIN</a></li>
+											<% } %>
                                             
                               </ul>
                            </div>

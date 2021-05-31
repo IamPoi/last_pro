@@ -45,7 +45,7 @@ public class ReportService extends HttpServlet {
 
 				session.setAttribute("report", rdto); 
 
-				response.sendRedirect("./klorofil-free-dashboard-template-v2.0/report.jsp");
+				response.sendRedirect("./klorofil-free-dashboard-template-v2.0/loading.jsp");
 
 			} else {
 				System.out.println("전송실패!");

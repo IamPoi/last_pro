@@ -148,9 +148,25 @@ img {
 											<li><a href="hashtag.jsp">HASHTAG</a></li>
 											<li><a href="../InfluencerMypage?name=inf">My Page</a></li>
 											<!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
+											
+											<%
+												if(info != null){
+											%>
 											<li><a
-												href="../klorofil-free-dashboard-template-v2.0/page-login.jsp/value=adver">LOGIN</a></li>
-										</ul>
+												href="../LogoutService">LOGOUT</a></li>
+										
+											<%
+												}else{
+													
+											%>
+											<li><a
+												href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
+										
+											<%		
+												}
+											
+											%>
+											</ul>
 									</div>
 								</div>
 							</nav>

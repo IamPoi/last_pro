@@ -105,10 +105,11 @@ public class MemberDAO {
 				String influ_targetGender = rs.getString(10);
 				String influ_category = rs.getString(11);
 				int influ_matchingCamp = rs.getInt(12);
+				int influence_score = rs.getInt(13);
 				
 				/* 반환해야 하는 정보가 여러개이기 때문에 캡슐화를 씀-- 나중에 쓸 수도 있으니 우선 넘겨주기로..,, */
 				loginDto = new MemberDTO(influ_id, influ_pw, influ_name, influ_age, influ_gender, influ_instaAddr,
-						influ_point, influ_phone, influ_targetAge, influ_targetGender,influ_category,influ_matchingCamp);
+						influ_point, influ_phone, influ_targetAge, influ_targetGender,influ_category,influ_matchingCamp,influence_score);
 			}
 
 		} catch (SQLException e) {
@@ -145,10 +146,10 @@ public class MemberDAO {
 	            String influ_targetGender = rs.getString(10);
 	            String influ_category = rs.getString(11);
 	            int influ_login_ck = rs.getInt(12);
-	            
+	            int influence_score = rs.getInt(13);
 	            /* 반환해야 하는 정보가 여러개이기 때문에 캡슐화를 씀-- 나중에 쓸 수도 있으니 우선 넘겨주기로..,, */
 	            dto = new MemberDTO(influ_id, influ_pw, influ_name, influ_age, influ_gender, influ_instaAddr,
-	                  influ_point, influ_phone, influ_targetAge, influ_targetGender,influ_category,influ_login_ck);
+	                  influ_point, influ_phone, influ_targetAge, influ_targetGender,influ_category,influ_login_ck,influence_score);
 	            
 	            
 	         }

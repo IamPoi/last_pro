@@ -14,7 +14,7 @@ public class MemberDTO {
 	private String influ_targetGender;
 	private String influ_category;
 	private int login_ck;
-
+	private int influence_score;
 
 	
 	
@@ -30,7 +30,7 @@ public class MemberDTO {
 
 	public MemberDTO(String influ_id, String influ_pw, String influ_name, int influ_age, String influ_gender,
 			String influ_instaAddr, int influ_point, String influ_phone, int influ_targetAge, String influ_targetGender,
-			String influ_category, int login_ck) {
+			String influ_category, int login_ck, int influence_score) {
 		super();
 		this.influ_id = influ_id;
 		this.influ_pw = influ_pw;
@@ -44,6 +44,7 @@ public class MemberDTO {
 		this.influ_targetGender = influ_targetGender;
 		this.influ_category = influ_category;
 		this.login_ck = login_ck;
+		this.influence_score = influence_score;
 	}
 
 
@@ -188,6 +189,14 @@ public class MemberDTO {
 
 	public void setLogin_ck(int login_ck) {
 		this.login_ck = login_ck;
+	}
+
+	public int getInfluence_score() {
+		return influence_score;
+	}
+
+	public void setInfluence_score(int influence_score) {
+		this.influence_score = influence_score;
 	}
 
 

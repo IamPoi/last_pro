@@ -29,6 +29,12 @@ span.imgTitle {
    display: block;
    margin: 15px;
 }
+
+img.inf {
+	width : 250px;
+	height : 250px;
+}
+
 </style>
 
 <head>
@@ -99,7 +105,7 @@ img {
    <div class="culmn">
       <header id="main_menu" class="header navbar-fixed-top">
          <div class="main_menu_bg" style = "background-color:white;">
-            <div class="container">
+            <div class="container" style = "width : 100%">
                <div class="row">
                   <div class="nave_menu">
                      <nav class="navbar navbar-default">
@@ -116,7 +122,7 @@ img {
                               </button>
 
 
-                              <a class="navbar-brand" href="firstPage.jsp"> <img
+                              <a class="navbar-brand" href="firstPage.jsp" style = "margin-left: 30px;"> <img
                                  src="images/logo_high_re.png" style = "width:140px; height:50px;"/>
                               </a>
                            </div>
@@ -168,7 +174,7 @@ img {
                            ArrayList<String> imgName = new ArrayList<String>();
 
                               String strImgConFormat = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
-                                    + "<img width='400' height = '400' src=\""+"images/%s.jpg\"/" +"class=\"img-circle\"></div>";
+                                    + "<img width='400' height = '400' src=\""+"images/%s.jpg\"/" +"class=\"img-circle inf\"></div>";
                                     
                                     
                            for (int i = 0; i < imgFileList.size(); i++) {
@@ -265,9 +271,9 @@ img {
                      </div>
                   </div>
                </div>
-               <div class="scrooldown" style = "left : 46%;">
+               <div class="scrooldown" style = "left : 46%; background-color: #FAEBD7" >
                   <a href="pay.jsp">
-                  <i>견적문의</i></a>
+                  <i style = "color: black; font-style: normal; font-weight: bold;" >견적문의</i></a>
                </div>
             </div>
          </div>

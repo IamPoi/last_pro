@@ -167,9 +167,10 @@ img {
                            //이미지 폴더의 네임들 
                            ArrayList<String> imgName = new ArrayList<String>();
 
-                           //   String strImgConFormat = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
-                           //         + "<img width='300' src=\"%s\"/></div>";
-
+                              String strImgConFormat = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
+                                    + "<img width='400' height = '400' src=\""+"images/%s.jpg\"/" +"class=\"img-circle\"></div>";
+                                    
+                                    
                            for (int i = 0; i < imgFileList.size(); i++) {
                               File f = imgFileList.get(i);
 
@@ -208,20 +209,23 @@ img {
                                  data-wow-duration="700ms" >
                                  <%
                                  // 이미지 파일 넘기기
-                                 String strImgConFormatl = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
-                                       + "<a href = \"../CampaignService?id=%s\">  <img width='300' height = '400' src=\"%s\"/></a>" + "</div>";
+                               //  String strImgConFormatl = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
+                               //        + "<a href = \"../CampaignService?id=%s\">  <img width='300' height = '400' src=\"%s\"/></a>" + "</div>";
 
                                  System.out.println("numList.size(): " + (influencer_allSelect.size() - 1));
                                  File f = imgFileList.get(numList.get(i));//
                                  String title = "";//Util.getFileNameNoExt(f.getName());
-
+                                 
+                                 Util.getFileNameNoExt(f.getName());
+                                 
                                  System.out.println("I : " + i);
                                  System.out.println("influencer_allSelect.get(i).getInflu_id() : " + influencer_allSelect.get(i).getInflu_id());
 
                                  String id = influencer_allSelect.get(i).getInflu_id();
                                  String url = Util.getImgSrc(f);
 
-                                 out.print(String.format(strImgConFormatl, title, id, url));
+//                                 out.print(String.format(strImgConFormatl, title, id, url));
+                                 out.print(String.format(strImgConFormat, title, id, url));
                                  %>
                               </div>
                               <%

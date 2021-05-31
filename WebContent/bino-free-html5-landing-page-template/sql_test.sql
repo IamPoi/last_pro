@@ -105,3 +105,48 @@ Insert into matching_camp values(13,13,'king13','mmm','ad13',1,100);
 CREATE SEQUENCE matching_camp_SEQ
 START WITH 1
 INCREMENT BY 1;
+
+CREATE TABLE campaign
+(
+    campaign_Sid          NUMBER          NOT NULL, 
+    advertiser_ID         VARCHAR2(200)    NOT NULL, 
+    ad_section            VARCHAR2(200)    NOT NULL, 
+    ad_estimate           NUMBER          NOT NULL, 
+    rq_follower             NUMBER         NOT NULL, 
+    rq_gender             VARCHAR2(10)    NOT NULL, 
+    category              VARCHAR2(100)    NOT NULL, 
+    campaign_title        VARCHAR2(200)    NOT NULL, 
+    campaign_sub          VARCHAR2(500)    NOT NULL, 
+    rcrtmNmbr             NUMBER          NOT NULL,     
+    application_num    NUMBER          NOT NULL,     
+    campaign_start            DATE          NOT NULL,     
+    campaign_end             DATE          NOT NULL,     
+    campaign_status    NUMBER          NOT NULL, 
+
+    CONSTRAINT CAMPAIGN_PK PRIMARY KEY (campaign_Sid),
+    CONSTRAINT CAMPAIGN_FK FOREIGN KEY (advertiser_ID)  
+    REFERENCES  advertiser_mbr(adver_mbr),
+    CONSTRAINT CAMPAIGN_CK CHECK(RQ_GENDER IN('M','F')),
+    CONSTRAINT CAMPAIGN_CK_TWO CHECK(CATEGORY IN('FS','BT','FD','ST')),
+    CONSTRAINT CAMPAIGN_CK_THREE CHECK(campaign_status IN('0', '1', '2')),
+    CONSTRAINT CAMPAIGN_CK_FOUR CHECK(ad_section IN('P', 'F'))
+    );
+
+CREATE SEQUENCE campaign_SEQ
+START WITH 1
+INCREMENT BY 1;
+    FS	FD	ST	BT 
+ramyeon
+    INSERT INTO campaign VALUES(1, 'ad1', 'P', 1000000, 1700, 'F', 'FS', 'ZARA', '본문', 15, 0, '210516', '210608', 1);
+    INSERT INTO campaign VALUES(2, 'ad2', 'F', 500000, 1200, 'M', 'FD', 'Yeopgi.Tteok.Bokki', '본문', 10, 0, '210517', '210609', 1);
+    INSERT INTO campaign VALUES(3, 'ad3', 'P', 1500000, 1000, 'A', 'FD', 'VIPS', '본문', 20, 0, '210518', '210610', 1);
+    INSERT INTO campaign VALUES(4, 'ad4', 'F', 800000, 1200, 'A', 'FD', '7th.Pizza', '본문', 16, 0, '210519', '210611', 1);
+    INSERT INTO campaign VALUES(5, 'ad5', 'P', 900000, 1300, 'M', 'FS', 'TOP.TEN.MANS', '본문', 13, 0, '210520', '210612', 1);
+    INSERT INTO campaign VALUES(6, 'ad6', 'F', 700000, 2000, 'F', 'BT', 'ROMnND', '본문', 15, 0, '210521', '210613', 1);
+    INSERT INTO campaign VALUES(7, 'ad7', 'P', 800000, 1800, 'F', 'BT', 'STYLENANDA', '본문', 12, 0, '210522', '210614', 1);
+    INSERT INTO campaign VALUES(8, 'ad8', 'F', 600000, 1800, 'F', 'BT', 'MAC', '본문', 13, 0, '210523', '210615', 1);
+	INSERT INTO campaign VALUES(9, 'ad9', 'P', 900000, 1800, 'F', 'BT', 'INNISFREE', '본문', 15, 0, '210524', '210616', 1);
+    INSERT INTO campaign VALUES(10, 'ad10', 'F', 1000000, 2200, 'F', 'BT', 'BANILA.CO', '본문', 19, 0, '210525', '210617', 1);
+    INSERT INTO campaign VALUES(11, 'ad11', 'P', 800000, 1500, 'F', 'FS', 'EFF.Fashion', '본문', 14, 0, '210526', '210618', 1);
+    INSERT INTO campaign VALUES(12, 'ad12', 'P', 1200000, 1400, 'A', 'FS', 'JUST.DO.IT', '본문', 20, 0, '210527', '210619', 1);
+    INSERT INTO campaign VALUES(13, 'ad13', 'F', 500000, 1400, 'A', 'FD', 'Ramyeon.Secret', '본문', 11, 0, '210528', '210620', 1);

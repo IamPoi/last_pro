@@ -1,3 +1,4 @@
+<%@page import="com.model.MemberDTO"%>
 <%@page import="com.model.CampaginDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -65,12 +66,14 @@ ArrayList<String> imgName = new ArrayList<String>();
 <body>
 <%
 
-      CampaginDTO info = (CampaginDTO)session.getAttribute("campSelect");
-      String campPicture = (String)session.getAttribute("campPicture");
+      CampaginDTO info = (CampaginDTO)session.getAttribute("campSelect"); // 선택한 캠페인 세션정보
+      String campPicture = (String)session.getAttribute("campPicture"); // 선택한 캠페인 이름 정보
       
-      System.out.println("Campinfo.getAd_estimate() : " + info.getAd_estimate());
+      MemberDTO info_login = (MemberDTO) session.getAttribute("info"); //로그인한 멤머 세션 정보
       
-      System.out.println("campPicture : " + campPicture);
+
+
+      
 
    %>
 
@@ -172,20 +175,20 @@ ArrayList<String> imgName = new ArrayList<String>();
                            <div class="profile-main" style = "height:90%">
                            
 
-                              <img src="images/<%=campPicture %>.jpg" alt="Avatar" style = "height:100%; width:100%">
+                              <img src="images/<%=info.getCampaign_Sid() %>.jpg" alt="Avatar" style = "height:100%; width:100%">
                               <h3 class="name">광고주(브랜드) 이름??</h3>
                               <span class="online-status status-available">Available</span>
                            </div>
                            <div class="profile-stat" style = "height:10%">
                               <div class="row">
                                  <div class="col-md-4 stat-item">
-                                    캠페인 유형 <span>무료, 유료</span>
+                                    캠페인 유형 <span><%=info.getAd_section() %></span>
                                  </div>
                                  <div class="col-md-4 stat-item">
-                                    신청 가능 인원<span>30명</span>
+                                    신청 가능 인원<span><%=info.getRcrtmNmbr() %>명</span>
                                  </div>
                                  <div class="col-md-4 stat-item">
-                                    신청한 인원 <span>0명</span>
+                                    신청한 인원 <span><%=info.getApplication_num() %>명</span>
                                  </div>
                               </div>
                            </div>
@@ -196,7 +199,7 @@ ArrayList<String> imgName = new ArrayList<String>();
                      <!-- END LEFT COLUMN -->
                      <!-- RIGHT COLUMN -->
                      <div class="profile-right">
-                        <h4 class="heading">캠페인 이름</h4>
+                        <h4 class="heading"><%=info.getCampaign_title() %></h4>
                         <!-- AWARDS -->
                         <div class="awards" style="margin-bottom: 15px;">
                            <div class="row">
@@ -255,21 +258,21 @@ ArrayList<String> imgName = new ArrayList<String>();
                               <ul class="list-unstyled activity-timeline">
                                  <li>
                                     <i class="fa fa-comment activity-icon"></i>
-                                    <p>캠페인 설명 <a href="#">?</a> <span class="timestamp">2 minutes ago</span></p>
+                                    <p><%=info.getCampaign_title() %> <a href="#">?</a> 
+                                    <span class="timestamp"><%=info.getCampaign_sub() %></span></p>
                                  </li>
-                                 <li>
-                                    <i class="fa fa-cloud-upload activity-icon"></i>
-                                    <p>캠페인 설명 <a href="#">?</a><span class="timestamp">7 hours ago</span></p>
+
                               </ul>
                               
                               <div class="profile-detail" >
                            <div class="profile-info">
                               <h4 class="heading">광고주 요구사항</h4>
                               <ul class="list-unstyled list-justify">
-                                 <li>Birthdate <span>24 Aug, 2016</span></li>
-                                 <li>Mobile <span>(124) 823409234</span></li>
-                                 <li>Email <span>samuel@mydomain.com</span></li>
-                                 <li>Website <span><a href="https://www.themeineed.com">www.themeineed.com</a></span></li>
+                                 <li>요구 팔로워 수 <span><%=info.getRq_follower() %></span></li>
+                                 <li>요구 성별 <span><%=info.getRq_gender() %></span></li>
+                                 <li>요구 카테고리<span><%=info.getCategory() %></span></li>
+                                 <li>캠페인 시작 <span><%=info.getCampaign_start() %></span></li>
+                                 <li>캠페인 종료 <span><%=info.getCampaign_end() %></span></li>
                               </ul>
                            </div>
                            <div class="profile-info" style = 'display : none'>
@@ -287,7 +290,14 @@ ArrayList<String> imgName = new ArrayList<String>();
                            </div>
                            <div class="text-center" style = 'display : none'><a href="#" class="btn btn-primary">Edit Profile</a></div>
                         </div>
-                        <div class="text-center"><a href="#" class="btn btn-primary">신청하기</a></div>
+                        
+                           
+      
+      <%
+      		session.setAttribute("camp_Info", info);
+		  session.setAttribute("info_login", info_login);
+      %>
+                        <div class="text-center"><a href="../CampaignMatchingService?value=inf" class="btn btn-primary">신청하기</a></div>
                            <%} else{%>
                            
                            <div class="tab-pane fade in active" id="tab-bottom-left2">

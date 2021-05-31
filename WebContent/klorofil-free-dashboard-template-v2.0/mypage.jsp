@@ -638,8 +638,13 @@ textarea {
 		<!-- start -->
 
 		<!-- 팝업 될 레이어 -->
+<<<<<<< HEAD
 		<div class="modal2" data-spy="scroll">
 			<div class="modal-content" style="width: 50%; height: 70%; overflow:scroll">
+=======
+		<div class="modal2" style=>
+			<div class="modal-content" style="width: 50%; height: 100%;">
+>>>>>>> branch 'master' of https://github.com/poi803/last_pro.git
 				<span class="close-button2">&times;</span>
 				<h1 class="title">모든 신청 캠페인</h1>
 				<div class="table-responsive">

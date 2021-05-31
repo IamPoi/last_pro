@@ -38,7 +38,6 @@ public class CampaignService extends HttpServlet {
 		System.out.println("array[0] : " + array[0]);
 		System.out.println("array[1] : " + array[1]);
 		PrintWriter out = response.getWriter();
-		request.setCharacterEncoding("EUC-KR");
 
 		id = array[0];
 		String name = array[1];

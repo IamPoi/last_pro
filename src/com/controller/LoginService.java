@@ -64,7 +64,7 @@ public class LoginService extends HttpServlet {
 
          MemberDTO user = dao.login(dto);
          System.out.println("»Æ¿Œ : ");
-         System.out.println(user.getInflu_age());
+        // System.out.println(user.getInflu_age());
 
          CampaginDAO c_dao = new CampaginDAO();
          ArrayList<CampaginDTO> qua_dto = new ArrayList<CampaginDTO>();

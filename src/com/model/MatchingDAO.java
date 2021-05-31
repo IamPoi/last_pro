@@ -13,7 +13,7 @@ public class MatchingDAO {
    ResultSet rs = null;
    MatchingDTO info = null;
    ArrayList<MatchingDTO> list = null;
-
+   int cnt=0;
    public void conn() {
       try {
          Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -117,6 +117,34 @@ public class MatchingDAO {
       return list;
 
    }   
+   
+   
+   
+	public int applyCamp(CampaginDTO camp_info, MemberDTO info_login) {
+		conn();
+		
+		
+		try {
+			String sql="insert into matching_camp values(matching_camp_SEQ.nextval,?,?,?,?,?,?)";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, camp_info.getCampaign_Sid());
+			psmt.setString(2, camp_info.getCampaign_title());
+			psmt.setString(3, info_login.getInflu_id());
+			psmt.setString(4, camp_info.getAdver_mbr());
+			psmt.setInt(5, 0);
+			psmt.setInt(5, info_login.getInfluence_score());
+			cnt=psmt.executeUpdate();
+			 
+		} catch (SQLException e) {		
+			e.printStackTrace();
+		}
+		finally {
+			close();
+		}
+		return cnt;
+		
+	}
+   
    
 
 }

@@ -37,7 +37,8 @@
 <body data-spy="scroll" data-target=".navbar-collapse">
    <%
    
-   String data = request.getParameter("search");
+   //String data = request.getParameter("search");
+   String data = (String)session.getAttribute("search");
       
     String[] array = data.split("/");
     String search = array[0];

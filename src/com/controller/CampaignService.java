@@ -68,6 +68,7 @@ public class CampaignService extends HttpServlet {
 				matList = matDao.MatchingAllSelect_ad(info.getAdver_mbr());
 
 				if (list != null) {
+					//session.setAttribute("check", "adver");
 					session.setAttribute("adverMypage", list);
 					session.setAttribute("adverMypageMatching", matList);
 					response.sendRedirect("./klorofil-free-dashboard-template-v2.0/mypage_ad.jsp");
@@ -106,7 +107,8 @@ public class CampaignService extends HttpServlet {
 				if (qua_dto != null) {
 					session.setAttribute("campSelect", qua_dto);
 					session.setAttribute("campPicture", id);
-					response.sendRedirect("./klorofil-free-dashboard-template-v2.0/campain.jsp");
+					session.setAttribute("check", "inf");
+					response.sendRedirect("./klorofil-free-dashboard-template-v2.0/campain_inf.jsp");
 				} else {
 					System.out.println("전송실패!");
 				}

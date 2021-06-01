@@ -28,7 +28,7 @@ public class InfluencerCampaignService extends HttpServlet {
 		HttpSession session = request.getSession(); // 세션 가져오기
 
 		MemberDTO info = (MemberDTO) session.getAttribute("info"); // 회원 세션 가져오기
-
+		
 		// 로그인 세션 정보가 없으면 로그인 페이지로 이동
 		if (info == null) {
 			out.println(
@@ -37,15 +37,13 @@ public class InfluencerCampaignService extends HttpServlet {
 		} else {
 			CampaginDAO mdao = new CampaginDAO();
 
-			CampaginDTO mdto = mdao.campaignSelect(1);// info.getMem_id()
+			CampaginDTO mdto = mdao.campaignSelect(1);// 캠페인 id
 
 			if (mdto != null) {
 				System.out.println("SUCCESS InfluencerCampaignService");
 
 				session.setAttribute("selectCampaign", mdto); 
 
-				
-				session.setAttribute("selectCampaign", mdto);
 
 				response.sendRedirect("./klorofil-free-dashboard-template-v2.0/campain.jsp");
 

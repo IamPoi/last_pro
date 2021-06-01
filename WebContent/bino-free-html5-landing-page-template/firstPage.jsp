@@ -9,7 +9,6 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="stylesheet" href="assets/css/iconfont.css">
 <link rel="stylesheet" href="assets/css/slick/slick.css">
@@ -21,14 +20,10 @@
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/magnific-popup.css">
 <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
-
-
 <!--For Plugins external css-->
 <link rel="stylesheet" href="assets/css/plugins.css" />
-
 <!--Theme custom css -->
 <link rel="stylesheet" href="assets/css/style.css">
-
 <!--Theme Responsive css-->
 <link rel="stylesheet" href="assets/css/responsive.css" />
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -140,9 +135,6 @@ html, body {
 
 	</div>
 
-
-
-
 	<hr />
 
 
@@ -169,13 +161,13 @@ html, body {
 	<script src="assets/js/main.js"></script>
 
 	<script type="text/javascript">
-    $('.adver').click(function(){
-         location.href = '../InfluencerAllSelectService?name=adv'
-      });
-    $('.inf').click(function(){
-         location.href = '../InfluencerAllSelectService?name=inf'
-      });
-   </script>
+		$('.adver').click(function() {
+			location.href = '../InfluencerAllSelectService?name=adv'
+		});
+		$('.inf').click(function() {
+			location.href = '../InfluencerAllSelectService?name=inf'
+		});
+	</script>
 
 
 

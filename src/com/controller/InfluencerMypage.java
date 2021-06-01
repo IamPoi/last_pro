@@ -13,6 +13,8 @@ import javax.servlet.http.HttpSession;
 
 import com.model.AdvertiserDAO;
 import com.model.AdvertiserDTO;
+import com.model.CampaginDAO;
+import com.model.CampaginDTO;
 import com.model.MatchingDAO;
 import com.model.MatchingDTO;
 import com.model.MemberDAO;
@@ -36,14 +38,20 @@ public class InfluencerMypage extends HttpServlet {
 			System.out.println("광고주 마이페이로 이동");
 
 			HttpSession session = request.getSession(); // 세션 가져오기
-
+			session.removeAttribute("matchingadv12345");
+			
+			
+			
 			AdvertiserDTO info = (AdvertiserDTO) session.getAttribute("info"); // 회원 세션 가져오기
 
 			AdvertiserDAO mdao = new AdvertiserDAO();
 			AdvertiserDTO list = new AdvertiserDTO();
+			CampaginDAO cdao = new CampaginDAO();
+			CampaginDTO cdto = new CampaginDTO();
 
 			ArrayList<MatchingDTO> matList = new ArrayList<MatchingDTO>();
 			MatchingDAO matDao = new MatchingDAO();
+			ArrayList<CampaginDTO> arrList = new ArrayList<CampaginDTO>();
 
 			// 로그인 세션 정보가 없으면 로그인 페이지로 이동
 			if (info == null) {
@@ -54,11 +62,14 @@ public class InfluencerMypage extends HttpServlet {
 
 				list = mdao.myPage(info.getAdver_mbr());// info.getMem_id()
 				matList = matDao.MatchingAllSelect_ad(info.getAdver_mbr());
+				arrList = cdao.campaign_adver_Select(info.getAdver_mbr());
 
 				if (list != null) {
 					session.setAttribute("adverMypage", list);
 					session.setAttribute("adverMypageMatching", matList);
+					session.setAttribute("adverCampaignSelect", arrList);
 					response.sendRedirect("./klorofil-free-dashboard-template-v2.0/mypage_ad.jsp");
+
 				} else {
 					System.out.println("전송실패!");
 				}

@@ -501,6 +501,8 @@ textarea {
 
 											<%
 											for (int i = 0; i < qList.size(); i++) {
+												System.out.println("======================");
+												System.out.println("qList.size() : " + qList.size());
 												if (i == 4) {
 													break;
 												}

@@ -63,8 +63,8 @@
                            </label>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
-                        <div class="bottom" style = "display : none">
-                           <span class="helper-text"><i class="fa fa-lock"></i> <a href="#">Forgot password?</a></span>
+                        <div class="bottom">
+                           <span class="helper-text"><i class="fa fa"></i> <a href="#">아직 회원이 아니신가요??</a></span>
                         </div>
                      </form>
                      <% %>

@@ -1190,6 +1190,7 @@ ul.activity-list > li {
   .profile-header .profile-main {
     position: relative;
     padding: 20px;
+    background-color: #F0FFFF;
     background-image: url("../../assets/img/profile-bg.png");
     background-repeat: no-repeat;
     background-size: cover; }

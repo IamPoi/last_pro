@@ -62,6 +62,26 @@ ArrayList<String> imgName = new ArrayList<String>();
     padding: 0px;
     background-image: none; !important;
     background-color:white; }
+    
+    .col-md-4{
+    	color:black;
+    	background-color: white;
+    	font-weight: bold;
+    }
+    
+    .profile-header .profile-stat .stat-item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: black;
+}
+    
+    
+    
    </style>
 </head>
 
@@ -71,9 +91,20 @@ ArrayList<String> imgName = new ArrayList<String>();
 	System.out.println("캠페인 페이지 : " + check);
 	ArrayList<MatchingDTO> matList2 = null;
 	ArrayList<MatchingDTO> matList = (ArrayList<MatchingDTO>)session.getAttribute("applyAllInfluencer");
+	String category = null;
 	
 	
 	CampaginDTO camList = (CampaginDTO)session.getAttribute("camDto");
+	String a = camList.getCategory();
+	System.out.println("category : "+a);
+	
+	if(a.equals("fashion")){
+		category = "shirt";
+	}else if(a.equals("food")){
+		category = "dinner";
+	}else{
+		category = "magic-wand";
+	}
 	
 	
 
@@ -103,58 +134,55 @@ ArrayList<String> imgName = new ArrayList<String>();
 
    <!-- WRAPPER -->
    <div id="wrapper">
-      <header id="main_menu" class="header navbar-fixed-top" >            
-                <div class="main_menu_bg">
-                    <div class="container" style = "width:90%">
-                        <div class="row" >
-                            <div class="nave_menu">
-                                <nav class="navbar navbar-default">
-                                    <div class="container-fluid" style = "height:75px">
-                                        <!-- Brand and toggle get grouped for better mobile display -->
-                                        <div class="navbar-header">
-                                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                                <span class="sr-only">Toggle navigation</span>
-                                                <span class="icon-bar"></span>
-                                                <span class="icon-bar"></span>
-                                                <span class="icon-bar"></span>
-                                            </button>
-                                            
-                                            
-                                            <a class="navbar-brand" href="klorofil-free-dashboard-template-v2.0/firstPage.jsp">
-                                                <img src="images/logo_high_re.png" width = 140px, height = 50px  style = "margin-top:20px;">
-                                            </a>
-                                        </div>
-
-                                        <!-- Collect the nav links, forms, and other content for toggling -->
+      <header id="main_menu" class="header navbar-fixed-top">
+         <div class="main_menu_bg" style = "background-color:white;">
+            <div class="container" style = "width : 100%">
+               <div class="row">
+                  <div class="nave_menu">
+                     <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                           <!-- Brand and toggle get grouped for better mobile display -->
+                           <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed"
+                                 data-toggle="collapse"
+                                 data-target="#bs-example-navbar-collapse-1"
+                                 aria-expanded="false">
+                                 <span class="sr-only">Toggle navigation</span> <span
+                                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                                    class="icon-bar"></span>
+                              </button>
 
 
+                              <a class="navbar-brand" href="../bino-free-html5-landing-page-template/firstPage.jsp"> <img
+                                 src="images/logo_high_re.png" style = "width:140px; height:50px; margin-left: 30px; ">
+                              </a>
+                           </div>
 
-                                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                           <!-- Collect the nav links, forms, and other content for toggling -->
 
-                                            <ul class="nav navbar-nav navbar-right">
-                                        
-                                                <li><a href="">HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
-                                                <li><a href="hashtag.jsp">HASGTAG</a></li>
-                                                <li><a href="">My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-                                                
-                                 <li><a href="page-login.jsp">LOGIN</a></li>
+                           <div class="collapse navbar-collapse"
+                              id="bs-example-navbar-collapse-1">
+
+                             <ul class="nav navbar-nav navbar-right">
+                                 <li><a href="../bino-free-html5-landing-page-template/company_main2.jsp" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
+                                            <li><a href="../bino-free-html5-landing-page-template/hashtag.jsp">HASHTAG</a></li>
+                                            <li><a href="../bino-free-html5-landing-page-template/pay.jsp">INQUIRUY</a></li>
+                                            <li><a href="../InfluencerMypage?name=adver" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
+                                 			<li><a href="../LogoutService">LOGOUT</a></li>
                                
-                                 <li><a href="">LOGOUT</a></li>
-                               
-                                            </ul>
-
-
-                                        </div>
-
-                                    </div>
-                                </nav>
-                            </div>   
+                                            
+                              </ul>
+                           </div>
                         </div>
+                     </nav>
+                  </div>
+               </div>
 
-                    </div>
+            </div>
 
-                </div>
-            </header> <!--End of header -->
+         </div>
+      </header>
+      <!-- END NAVBAR -->
       <!-- LEFT SIDEBAR -->
       <div id="sidebar-nav" class="sidebar">
          <div class="sidebar-scroll">
@@ -203,7 +231,7 @@ ArrayList<String> imgName = new ArrayList<String>();
                               <span class="online-status status-available">Available</span>
                            </div>
                            <div class="profile-stat" style = "height:10%">
-                              <div class="row">
+                              <div class="row abs" >
                                  <div class="col-md-4 stat-item">
                                     캠페인 유형 <span><%=camList.getAd_section()%></span>
                                  </div>
@@ -229,25 +257,40 @@ ArrayList<String> imgName = new ArrayList<String>();
                               <div class="col-md-3 col-sm-6">
                                  <div class="award-item">
                                     <div class="hexagon">
-                                       <span class="lnr lnr-sun award-icon"></span>
+                                       <span class="lnr lnr-<%=category %> award-icon"></span>
                                     </div>
                                     <span>카테고리</span>
                                  </div>
                               </div>
                               <div class="col-md-3 col-sm-6">
                                  <div class="award-item">
-                                    <div class="hexagon">
-                                       <span class="lnr lnr-clock award-icon"></span>
+                                    <div class="hexagon" style="font-size: 35px;font-weight: bold;">
+                                    <%String b = camList.getRq_gender();
+                                    if(b.equals("male")){%>
+                                    <span>남자</span>
+                                    <%}else if(b.equals("fmale")){%>
+                                    <span>여자</span>
+                                    <%}else{ %>
+                                    <span>무관</span>
+                                    <%}%>
+                                       <span class="lnr  award-icon"></span>
                                     </div>
-                                    <span>타겟층</span>
+                                       <span>카테고리</span>
+                                    
+                                    
                                  </div>
                               </div>
                               <div class="col-md-3 col-sm-6">
                                  <div class="award-item">
-                                    <div class="hexagon">
-                                       <span class="lnr lnr-magic-wand award-icon"></span>
+                                    <div class="hexagon" >
+                                    <%int c = camList.getAd_estimate();
+                                    
+                                    %>
+                                       <span style="font-size: 35px;font-weight: bold;"><%=c/1000 %></span><br>
+                                       
                                     </div>
-                                    <span>견적 비용</span>
+                                    <span>견적 비용</span><br><span style = "font-size: 8px;">단위 : 천</span>
+                                    
                                  </div>
                               </div>
                               <div class="col-md-3 col-sm-6" style = 'display : none'>
@@ -391,8 +434,7 @@ ArrayList<String> imgName = new ArrayList<String>();
                                           <td><input type = checkbox name="ck" value=<%=n %>></td>
                                        </tr>
                                        <%} %>
-                                       <input type="submit">
-                                       </form>
+                                       
                                        
                                        
                                        
@@ -452,12 +494,14 @@ ArrayList<String> imgName = new ArrayList<String>();
                                     </tbody>
                                  </table>
                               </div>
-                              <div class="margin-top-30 text-center"><a href="#" class="btn btn-default">매칭하기</a></div>
+                              <input type="submit" value="매칭하기" class = "btn btn-lg text-center" >
+                                       </form>
+                              <div class="margin-top-30 text-center" style = "display: none; "><a href="#" class="btn btn-default">매칭하기</a></div>
                            </div>
                              
                         		   
                         		   
-                        		   //매칭 캠페인
+                        		   
                         	   <%}else{ %>
                                     <div class="tab-pane fade in active" id="tab-bottom-left2">
                               <div class="table-responsive">

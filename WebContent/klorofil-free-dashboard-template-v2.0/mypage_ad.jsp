@@ -256,11 +256,15 @@ System.out.println("imgFileList : " + imgFileList.size());
                               id="bs-example-navbar-collapse-1">
 
                              <ul class="nav navbar-nav navbar-right">
-                                 <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
+                                 <li><a href="../bino-free-html5-landing-page-template/company_main2.jsp" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
                                             <li><a href="../bino-free-html5-landing-page-template/hashtag.jsp">HASHTAG</a></li>
-                                            <li><a href="../bino-free-html5-landing-page-template/pay.jsp">PAY</a></li>
+                                            <li><a href="../bino-free-html5-landing-page-template/pay.jsp">INQUIRUY</a></li>
                                             <li><a href="../InfluencerMypage?name=adver" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-                                            <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=adver">LOGIN</a></li>
+                                             <%if(info == null){ %>
+                                 <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
+                                 <%} else{ %>
+                                 <li><a href="../LogoutService">LOGOUT</a></li>
+                                 <%} %>
                                             
                               </ul>
                            </div>
@@ -332,13 +336,13 @@ System.out.println("imgFileList : " + imgFileList.size());
                <div class="panel panel-profile">
                   <div class="clearfix">
                      <!-- LEFT COLUMN -->
-                     <div class="profile-left" style="text-align: left">
+                     <div class="profile-left" style="text-align: left;">
                         <!-- PROFILE HEADER -->
                         <div class="profile-header">
                            <div class="overlay"></div>
-                           <div class="profile-main">
-                              <img src="assets/img/3.48kg.jpg" class="img-circle" alt="Avatar">
-                              <h3 class="name"><%=name %></h3>
+                           <div class="profile-main" style = "background-image: none; background-color: #F5F5F5">
+                              <img src="assets/img/3.48kg.jpg" class="img-circle" alt="Avatar" >
+                              <h3 class="name" style = "color: black"><%=name %></h3>
                               <span class="online-status status-available"></span>
                            </div>
                            <div class="profile-stat" style = "display : none">
@@ -382,7 +386,7 @@ System.out.println("imgFileList : " + imgFileList.size());
                               <h4 class="heading">About</h4>
                               <p>Interactively fashion excellent information after distinctive outsourcing.</p>
                            </div>
-                           <div class="text-center"><a href="#" class="btn btn-primary">정보 수정</a></div>
+                           <div class="text-center"><a href="#" class="btn btn-lg">정보 수정</a></div>
                         </div>
                         <!-- END PROFILE DETAIL -->
                      </div>
@@ -537,7 +541,7 @@ System.out.println("imgFileList : " + imgFileList.size());
                                  %>
                            </div>
                            <br><br>
-                           <div class="text-center"><button class="btn btn-default trigger">모든 캠페인 보기</button></div>
+                           <div class="text-center"><button class="btn btn-lg trigger">모든 캠페인 보기</button></div>
                         </div>
                         <!-- END TABBED CONTENT -->
                      </div>

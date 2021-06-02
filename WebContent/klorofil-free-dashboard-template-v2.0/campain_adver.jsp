@@ -79,7 +79,10 @@ ArrayList<String> imgName = new ArrayList<String>();
     height: 100%;
     background-color: black;
 }
-    
+    .profile-header .profile-stat {
+    position: relative;
+    background-color: white;
+}
     
     
    </style>
@@ -302,7 +305,7 @@ ArrayList<String> imgName = new ArrayList<String>();
                                  </div>
                               </div>
                            </div>
-                           <div class="text-center" style = 'display : none'><a href="#" class="btn btn-default">See all awards</a></div>
+                           <div class="text-center" style = 'display : none'><a href="#" class="btn btn-lg">See all awards</a></div>
                         </div>
                         <!-- END AWARDS -->
                         <!-- TABBED CONTENT -->
@@ -367,7 +370,7 @@ ArrayList<String> imgName = new ArrayList<String>();
                               <h4 class="heading">About</h4>
                               <p>Interactively fashion excellent information after distinctive outsourcing.</p>
                            </div>
-                           <div class="text-center" style = 'display : none'><a href="#" class="btn btn-primary">Edit Profile</a></div>
+                           <div class="text-center" style = 'display : none'><a href="#" class="btn btn-lg">Edit Profile</a></div>
                         </div>
                         
                            
@@ -376,7 +379,7 @@ ArrayList<String> imgName = new ArrayList<String>();
 					      	 // session.setAttribute("camp_Info", info);
 							//  session.setAttribute("info_login", info_login);
 					      %>
-                        <div class="text-center"><a href="../CampaignMatchingService?ck=inf" class="btn btn-primary">신청하기</a></div>
+                        <div class="text-center"><a href="../CampaignMatchingService?ck=inf" class="btn btn-lg">신청하기</a></div>
                            <%} else if(check.equals("adver")){
                         	   if(camList.getCampaign_status() == 0){
                         		  // 
@@ -494,9 +497,9 @@ ArrayList<String> imgName = new ArrayList<String>();
                                     </tbody>
                                  </table>
                               </div>
-                              <input type="submit" value="매칭하기" class = "btn btn-lg text-center" >
+                              <input type="submit" value="매칭하기" class = "btn btn-lg" >
                                        </form>
-                              <div class="margin-top-30 text-center" style = "display: none; "><a href="#" class="btn btn-default">매칭하기</a></div>
+                              <div class="margin-top-30 text-center" style = "display: none; "><a href="#" class="btn btn-lg">매칭하기</a></div>
                            </div>
                              
                         		   
@@ -615,7 +618,7 @@ ArrayList<String> imgName = new ArrayList<String>();
                                     </tbody>
                                  </table>
                               </div>
-                              <div class="margin-top-30 text-center"><a href="#" class="btn btn-default">매칭하기</a></div>
+                              <div class="margin-top-30 text-center"><a href="#" class="btn btn-lg">매칭하기</a></div>
                            </div>
                            
                         		   

@@ -245,7 +245,7 @@ System.out.println("imgFileList : " + imgFileList.size());
                               </button>
 
 
-                              <a class="navbar-brand" href="firstPage.jsp"> <img
+                              <a class="navbar-brand" href="../bino-free-html5-landing-page-template/firstPage.jsp"> <img
                                  src="images/logo_high_re.png" style = "width:140px; height:50px; margin-left: 30px; ">
                               </a>
                            </div>
@@ -259,7 +259,7 @@ System.out.println("imgFileList : " + imgFileList.size());
                                  <li><a href="../bino-free-html5-landing-page-template/company_main2.jsp" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
                                             <li><a href="../bino-free-html5-landing-page-template/hashtag.jsp">HASHTAG</a></li>
                                             <li><a href="../bino-free-html5-landing-page-template/pay.jsp">INQUIRUY</a></li>
-                                            <li><a href="../InfluencerMypage?name=adver" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
+                                            <li><a href="../InfluencerMypage?name=adver" >MY PAGE</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
                                              <%if(info == null){ %>
                                  <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
                                  <%} else{ %>
@@ -398,7 +398,7 @@ System.out.println("imgFileList : " + imgFileList.size());
                      
                      <%
                                  int k=0;
-                                 int j = 0;
+                                 int j = 4;
                                  for (int i = 0; i < campignList.size(); i++) {
                                     System.out.println("campignList.size() : " + campignList.size());
                                     if (k == 4) {
@@ -406,26 +406,23 @@ System.out.println("imgFileList : " + imgFileList.size());
                                     }else{
 
                                     if (campignList.get(i).getCampaign_status() == 0 || campignList.get(i).getCampaign_status() == 1) {
+                                    	j--;
                                        k++;
                                        System.out.println("getCampaign_status() : " + campignList.get(i).getCampaign_status());
                                  %>
                                  <div class="col-md-3 col-sm-6">
                                     <div class="award-item">
-	
-									
                                        <img src="images/<%=campignList.get(i).getCampaign_Sid()%>.jpg"
                                           alt="Avatar"> <br> <br> <span><a href = ../CampaignMatchingService?ck=adver&&camnum=<%=campignList.get(i).getCampaign_Sid() + "," + campignList.get(i).getCampaign_status()%>><%=campignList.get(i).getCampaign_title()%></a></span>
-                                        
-
                                     </div>
                                  </div>
                                  <%
-                                          j++;
                                  }
                                     }
                                  }
                                  %>
                                  <% 
+                                 System.out.print("j : "+j);
                                  for (int z = 0; z < j ; z++){
                                     %>
                                     <div class="col-md-3 col-sm-6">

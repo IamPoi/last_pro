@@ -64,22 +64,24 @@ public class CampaginDAO {
 				 String ad_section = rs.getString(3);
 				 int ad_estimate = rs.getInt(4);
 				 int rq_follower = rs.getInt(5);
-				 String rq_gender = rs.getString(6);
-				 String category = rs.getString(7);
-				 String campaign_title = rs.getString(8);
-				 String campaign_sub = rs.getString(9);
-				 int rcrtmNmbr = rs.getInt(10);
-				 int application_num = rs.getInt(11);
-				 String campaign_start = rs.getString(12);
-				 String campaign_end = rs.getString(13);
-				 int campaign_status = rs.getInt(14);
+				 int rq_age = rs.getInt(6);
+				 String rq_gender = rs.getString(7);
+				 String category = rs.getString(8);
+				 String campaign_title = rs.getString(9);
+				 String campaign_sub = rs.getString(10);
+				 int rcrtmNmbr = rs.getInt(11);
+				 int application_num = rs.getInt(12);
+				 String campaign_start = rs.getString(13);
+				 String campaign_end = rs.getString(14);
+				 int campaign_status = rs.getInt(15);
 				
 				
 				
 				info=new CampaginDTO(
-						campaign_Sid,adver_mbr,ad_section,ad_estimate,rq_follower,rq_gender,category,campaign_title
+						campaign_Sid,adver_mbr,ad_section,ad_estimate,rq_follower,rq_age,rq_gender,category,campaign_title
 						,campaign_sub,rcrtmNmbr,application_num,campaign_start,campaign_end,campaign_status
 						);
+				
 				
 				list.add(info);
 			}
@@ -112,22 +114,24 @@ public class CampaginDAO {
 					 String ad_section = rs.getString(3);
 					 int ad_estimate = rs.getInt(4);
 					 int rq_follower = rs.getInt(5);
-					 String rq_gender = rs.getString(6);
-					 String category = rs.getString(7);
-					 String campaign_title = rs.getString(8);
-					 String campaign_sub = rs.getString(9);
-					 int rcrtmNmbr = rs.getInt(10);
-					 int application_num = rs.getInt(11);
-					 String campaign_start = rs.getString(12);
-					 String campaign_end = rs.getString(13);
-					 int campaign_status = rs.getInt(14);
+					 int rq_age = rs.getInt(6);
+					 String rq_gender = rs.getString(7);
+					 String category = rs.getString(8);
+					 String campaign_title = rs.getString(9);
+					 String campaign_sub = rs.getString(10);
+					 int rcrtmNmbr = rs.getInt(11);
+					 int application_num = rs.getInt(12);
+					 String campaign_start = rs.getString(13);
+					 String campaign_end = rs.getString(14);
+					 int campaign_status = rs.getInt(15);
 					
 					
 					
 					info=new CampaginDTO(
-							campaign_Sid,adver_mbr,ad_section,ad_estimate,rq_follower,rq_gender,category,campaign_title
+							campaign_Sid,adver_mbr,ad_section,ad_estimate,rq_follower,rq_age,rq_gender,category,campaign_title
 							,campaign_sub,rcrtmNmbr,application_num,campaign_start,campaign_end,campaign_status
 							);
+					
 					
 				
 				}
@@ -153,26 +157,29 @@ public class CampaginDAO {
 	            rs = psmt.executeQuery();
 	         
 	            while (rs.next()) {
-	               
-	               int campaign_Sid = Integer.parseInt(rs.getString(1)) ;
-	               String advertiser_ID = rs.getString(2);
-	               String ad_section = rs.getString(3);
-	               int ad_estimate = Integer.parseInt(rs.getString(4)) ;
-	               int rq_follower = Integer.parseInt(rs.getString(5)) ;
-	               String rq_gender = rs.getString(6);
-	               String category = rs.getString(7);
-	               String campaign_title = rs.getString(8);
-	               String campaign_sub = rs.getString(9);
-	               int rcrtmNmbr = Integer.parseInt(rs.getString(10)) ;
-	               int application_num = Integer.parseInt(rs.getString(11)) ;
-	               String campaign_start = rs.getString(12);
-	               String campaign_end = rs.getString(13);
-	               int campaign_status = Integer.parseInt(rs.getString(14)); 
-	               
-	               
-	               info=new CampaginDTO(campaign_Sid, advertiser_ID, ad_section, ad_estimate, rq_follower, rq_gender, 
-	                     category, campaign_title, campaign_sub, rcrtmNmbr, application_num, campaign_start, campaign_end, campaign_status);
-	               
+	            	 int campaign_Sid = rs.getInt(1);
+					 String adver_mbr = rs.getString(2);
+					 String ad_section = rs.getString(3);
+					 int ad_estimate = rs.getInt(4);
+					 int rq_follower = rs.getInt(5);
+					 int rq_age = rs.getInt(6);
+					 String rq_gender = rs.getString(7);
+					 String category = rs.getString(8);
+					 String campaign_title = rs.getString(9);
+					 String campaign_sub = rs.getString(10);
+					 int rcrtmNmbr = rs.getInt(11);
+					 int application_num = rs.getInt(12);
+					 String campaign_start = rs.getString(13);
+					 String campaign_end = rs.getString(14);
+					 int campaign_status = rs.getInt(15);
+					
+					
+					
+					info=new CampaginDTO(
+							campaign_Sid,adver_mbr,ad_section,ad_estimate,rq_follower,rq_age,rq_gender,category,campaign_title
+							,campaign_sub,rcrtmNmbr,application_num,campaign_start,campaign_end,campaign_status
+							);
+					 
 	               list.add(info);
 	            
 	            }
@@ -207,22 +214,24 @@ public class CampaginDAO {
 					 String ad_section = rs.getString(3);
 					 int ad_estimate = rs.getInt(4);
 					 int rq_follower = rs.getInt(5);
-					 String rq_gender = rs.getString(6);
-					 String category = rs.getString(7);
-					 String campaign_title = rs.getString(8);
-					 String campaign_sub = rs.getString(9);
-					 int rcrtmNmbr = rs.getInt(10);
-					 int application_num = rs.getInt(11);
-					 String campaign_start = rs.getString(12);
-					 String campaign_end = rs.getString(13);
-					 int campaign_status = rs.getInt(14);
+					 int rq_age = rs.getInt(6);
+					 String rq_gender = rs.getString(7);
+					 String category = rs.getString(8);
+					 String campaign_title = rs.getString(9);
+					 String campaign_sub = rs.getString(10);
+					 int rcrtmNmbr = rs.getInt(11);
+					 int application_num = rs.getInt(12);
+					 String campaign_start = rs.getString(13);
+					 String campaign_end = rs.getString(14);
+					 int campaign_status = rs.getInt(15);
 					
 					
 					
 					info=new CampaginDTO(
-							campaign_Sid,adver_mbr,ad_section,ad_estimate,rq_follower,rq_gender,category,campaign_title
+							campaign_Sid,adver_mbr,ad_section,ad_estimate,rq_follower,rq_age,rq_gender,category,campaign_title
 							,campaign_sub,rcrtmNmbr,application_num,campaign_start,campaign_end,campaign_status
 							);
+					
 					
 				
 				}

@@ -6,6 +6,7 @@ public class CampaginDTO {
 	private String ad_section;
 	private int ad_estimate;
 	private int rq_follower;
+	private int rq_age;
 	private String rq_gender;
 	private String category;
 	private String campaign_title;
@@ -28,7 +29,7 @@ public class CampaginDTO {
 
 
 
-	public CampaginDTO(int campaign_Sid, String adver_mbr, String ad_section, int ad_estimate, int rq_follower,
+	public CampaginDTO(int campaign_Sid, String adver_mbr, String ad_section, int ad_estimate, int rq_follower,int rq_age,
 			String rq_gender, String category, String campaign_title, String campaign_sub, int rcrtmNmbr,
 			int application_num, String campaign_start, String campaign_end, int campaign_status) {
 		super();
@@ -37,6 +38,7 @@ public class CampaginDTO {
 		this.ad_section = ad_section;
 		this.ad_estimate = ad_estimate;
 		this.rq_follower = rq_follower;
+		this.rq_age = rq_age;
 		this.rq_gender = rq_gender;
 		this.category = category;
 		this.campaign_title = campaign_title;
@@ -46,6 +48,16 @@ public class CampaginDTO {
 		this.campaign_start = campaign_start;
 		this.campaign_end = campaign_end;
 		this.campaign_status = campaign_status;
+	}
+
+
+	public int getRq_age() {
+		return rq_age;
+	}
+
+
+	public void setRq_age(int rq_age) {
+		this.rq_age = rq_age;
 	}
 
 

@@ -86,7 +86,7 @@
                                                         <div class="single_contact_info">
                                                             <div class="single_info_text">
                                                                 <h3>CALL US</h3>
-                                                                <h4>010-0000-0000</h4>
+                                                                <h4>010-1234-5678</h4>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -94,7 +94,7 @@
                                                         <div class="single_contact_info">
                                                             <div class="single_info_text">
                                                                 <h3>EMAIL US</h3>
-                                                                <h4>smhrd@naver.com</h4>
+                                                                <h4>marketus@naver.com</h4>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -144,10 +144,7 @@
                                                                 	<option value="woman">여자</option>
                                                                 </select>
                                                                 
-                                                                <select name = "ad_section">
-                                                                	<option value="free">무료</option> 
-                                                                	<option value="pay">유료</option>
-                                                                </select>
+                                                                
                                                                 
                                                                 
                                                                 <table style = "width : 100%; display : none;">

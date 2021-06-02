@@ -248,6 +248,28 @@ textarea {
 	transform: scale(1.0);
 	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
+
+    .col-md-4{
+    	color:black;
+    	background-color: white;
+    	font-weight: bold;
+    }
+    
+    .profile-header .profile-stat .stat-item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: black;
+}
+
+.profile-header .profile-stat {
+    position: relative;
+    background-color: white;
+}
 </style>
 
 <body>
@@ -308,7 +330,7 @@ textarea {
                                  <li><a href="">HOME</a></li>
                                  <!-- 세션값받아와서 influencer/companymain으로 이동 -->
                                  <li><a href="hashtag.jsp">HASHTAG</a></li>
-                                 <li><a href="">My Page</a></li>
+                                 <li><a href="">MY PAGE</a></li>
                                  <!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
                                  <%if(info == null){ %>
                                  <li><a href="page-login.jsp">LOGIN</a></li>
@@ -421,13 +443,13 @@ textarea {
 											<h2>10000 p</h2>
 										</ul>
 									</div>
-									<div class="profile-info">
+									<div class="profile-info" style = "display : none">
 										<h4 class="heading">About</h4>
 										<p>Interactively fashion excellent information after
 											distinctive outsourcing.</p>
 									</div>
-									<div class="text-center">
-										<a href="#" class="btn btn-primary">정보 수정</a>
+									<div class="text-center" style = "display : none">
+										<a href="#" class="btn btn-lg">정보 수정</a>
 									</div>
 								</div>
 								<!-- END PROFILE DETAIL -->
@@ -641,13 +663,8 @@ textarea {
 		<!-- start -->
 
 		<!-- 팝업 될 레이어 -->
-<<<<<<< HEAD
 		<div class="modal2" data-spy="scroll">
 			<div class="modal-content" style="width: 50%; height: 70%; overflow:scroll">
-=======
-		<div class="modal2" style=>
-			<div class="modal-content" style="width: 50%; height: 100%;">
->>>>>>> branch 'master' of https://github.com/poi803/last_pro.git
 				<span class="close-button2">&times;</span>
 				<h1 class="title">모든 신청 캠페인</h1>
 				<div class="table-responsive">

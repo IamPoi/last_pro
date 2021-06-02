@@ -325,7 +325,7 @@ textarea {
                            <div class="collapse navbar-collapse"
                               id="bs-example-navbar-collapse-1">
 
-                              <ul class="nav navbar-nav navbar-right">
+                              <ul class="nav navbar-nav navbar-right" style = "font-size: 20px;">
 
                                  <li><a href="">HOME</a></li>
                                  <!-- 세션값받아와서 influencer/companymain으로 이동 -->
@@ -398,7 +398,7 @@ textarea {
 								<!-- PROFILE HEADER -->
 								<div class="profile-header">
 									<div class="overlay"></div>
-									<div class="profile-main">
+									<div class="profile-main" style = "background-image: url('assets/img/profile-bg02.jpg');">
 										<%
 										String x = "3.48kg";
 										%>
@@ -595,6 +595,7 @@ textarea {
 										<a href="../ReportService" class="btn btn-default">레포트
 												자세히보기</a>
 											<%} %>
+
 										</div>
 
 										<div class="text-center" style="display: none">

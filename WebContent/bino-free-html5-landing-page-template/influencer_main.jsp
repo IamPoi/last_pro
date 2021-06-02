@@ -153,7 +153,7 @@ img {
                                             <%if(info == null){ %>
                                  <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
                                  <%} else{ %>
-                                 <li><a href="">LOGOUT</a></li>
+                                 <li><a href="../LogoutService">LOGOUT</a></li>
                                  <%} %>
                               </ul>
                            </div>
@@ -208,6 +208,7 @@ img {
 									%>
 								<div class="single_home_slider">
 									<%
+
 										System.out.println("¸¶Áö¸· : " + num);
 										for (int i = s; i < num; i++) {
 										%>

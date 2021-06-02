@@ -40,17 +40,42 @@ $('.counter').counterUp({ delay: 10, time: 1000 }); });</script>
 	href="assets/img/favicon.png">
 <link rel="stylesheet" href="assets/css/style.css">
 <style type="text/css">
+
 .col-md-4-1 {
 	width: 50%;
+	font-weight: bold;
 }
 
 .col-md-3-1 {
 	width: 50%;
+	font-weight: bold;
 }
+
+.col-md-4 {
+	font-weight: bold;
+}
+
+.col-md-3 {
+	font-weight: bold;
+}
+
 
 .pro {
 	width: 30%
 }
+
+.col{
+	font-weight: bold;
+}
+
+.panel{
+	font-weight: bold;
+}
+
+h3.panel-title{
+	font-weight: bold;
+}
+
 </style>
 </head>
 
@@ -198,7 +223,7 @@ $('.counter').counterUp({ delay: 10, time: 1000 }); });</script>
 								<div class="right">
 
 									<div style="padding-right: 200px">
-										<h1 class="counter">100000</h1>
+										<h1 class="counter" style="color: black">100000</h1>
 										<script
 											src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 										<script src="jquery.counterup.min.js"></script>

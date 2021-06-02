@@ -92,7 +92,7 @@
 
                                  <li><a href="">HOME</a></li>
                                  <!-- 세션값받아와서 influencer/companymain으로 이동 -->
-                                 <li><a href="hashtag.jsp">HASGTAG</a></li>
+                                 <li><a href="hashtag.jsp">HASHTAG</a></li>
                                  <li><a href="">My Page</a></li>
                                  <!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
                                  <%if(info == null){ %>
@@ -125,7 +125,7 @@
             <div class="row sections">
                <div class="col-sm-12 text-center head_title">
                   <br> <br> <br> <br> <br>
-                  <h2>'HASHTAG'</h2>
+                  <h2>HASHTAG LAB</h2>
                   <br>
                   <form action="http://121.147.185.66:8088/hashtag" method="get" accept-charset="UTF-8">
                      <h2>

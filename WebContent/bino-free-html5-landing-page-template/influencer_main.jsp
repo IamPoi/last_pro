@@ -116,7 +116,7 @@ img {
 	<div class="culmn">
 		<header id="main_menu" class="header navbar-fixed-top">
 			<div class="main_menu_bg" style="background-color: white;">
-				<div class="container" style = "width : 100%">
+				<div class="container" style="width: 100%">
 					<div class="row">
 						<div class="nave_menu">
 							<nav class="navbar navbar-default">
@@ -133,7 +133,8 @@ img {
 										</button>
 
 
-										<a class="navbar-brand" href="firstPage.jsp" style = "margin-left: 30px;"> <img
+										<a class="navbar-brand" href="firstPage.jsp"
+											style="margin-left: 30px;"> <img
 											src="images/logo_high_re.png"
 											style="width: 140px; height: 50px;" />
 										</a>
@@ -141,38 +142,40 @@ img {
 
 									<!-- Collect the nav links, forms, and other content for toggling -->
 
-                              <ul class="nav navbar-nav navbar-right">
-                                 <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
-                                            <li><a href="hashtag.jsp">HASGTAG</a></li>
-                                            <li><a href="../InfluencerMypage?name=inf" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-                                            <%if(info == null){ %>
-                                 <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
-                                 <%} else{ %>
-                                 <li><a href="">LOGOUT</a></li>
-                                 <%} %>
-                              </ul>
-                           </div>
-                        </div>
-                     </nav>
-                  </div>
-               </div>
-
+									<ul class="nav navbar-nav navbar-right">
+										<li><a href="">HOME</a></li>
+										<!-- 세션값받아와서 influencer/companymain으로 이동 -->
+										<li><a href="hashtag.jsp">HASGTAG</a></li>
+										<li><a href="../InfluencerMypage?name=inf">My Page</a></li>
+										<!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
+										<%if(info == null){ %>
+										<li><a
+											href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
+										<%} else{ %>
+										<li><a href="">LOGOUT</a></li>
+										<%} %>
+									</ul>
+								</div>
+						</div>
+						</nav>
+					</div>
 				</div>
 
 			</div>
-		</header>
-		<!--End of header -->
+	</div>
+	</header>
+	<!--End of header -->
 
-		<!--home Section -->
-		<section id="home" class="home" style="background-color: #F0F8FF;">
-			<div class="">
-				<div class="home_skew_border">
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-12 ">
-								<div class="main_home_slider text-center">
+	<!--home Section -->
+	<section id="home" class="home" style="background-color: #F0F8FF;">
+		<div class="">
+			<div class="home_skew_border">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 ">
+							<div class="main_home_slider text-center">
 
-									<%
+								<%
 									if (numList != null) {
 
 										//이미지 폴더의 네임들 
@@ -200,14 +203,14 @@ img {
 										for (int j = 0; j < ((numList.size() / 3) + 1); j++) {
 											System.out.println("반복횟수 : " + ((numList.size() / 3) + 1));
 									%>
-									<div class="single_home_slider">
-										<%
+								<div class="single_home_slider">
+									<%
 										System.out.println("마지막 : " + num);
 										for (int i = s; i < num; i++) {
 										%>
-										<div class="main_home wow fadeInUp col-sm-4"
-											data-wow-duration="700ms">
-											<%
+									<div class="main_home wow fadeInUp col-sm-4"
+										data-wow-duration="700ms">
+										<%
 											// 이미지 파일 넘기기
 											String strImgConFormat1 = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
 													+ "<a href = \"../CampaignService?id=%s\">  <img width='300' height = '400' src=\"%s\"/></a>" + "</div>";
@@ -220,8 +223,8 @@ img {
 
 											out.print(String.format(strImgConFormat1, title, id, url));
 											%>
-										</div>
-										<%
+									</div>
+									<%
 										}
 
 										if (numList.size() >= 6) {
@@ -247,8 +250,8 @@ img {
 
 										s = s + 3;
 										%>
-									</div>
-									<%
+								</div>
+								<%
 									}
 
 									} else {
@@ -258,16 +261,16 @@ img {
 									for (int j = 0; j < ((end / 3) + 1); j++) {
 									System.out.println("반복횟수 : " + ((end / 3) + 1));
 									%>
-									<div class="single_home_slider">
-										<%
+								<div class="single_home_slider">
+									<%
 										System.out.println("마지막 : " + num);
 										for (int i = s; i < num; i++) {
 											System.out.println("s : " + s);
 											System.out.println("num : " + num);
 										%>
-										<div class="main_home wow fadeInUp col-sm-4"
-											data-wow-duration="700ms">
-											<%
+									<div class="main_home wow fadeInUp col-sm-4"
+										data-wow-duration="700ms">
+										<%
 											// 이미지 파일 넘기기
 											String strImgConFormat1 = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
 													+ "<a href = \"../CampaignService?id=%s\">  <img width='300' height = '400' src=\"%s\"/></a>" + "</div>";
@@ -279,8 +282,8 @@ img {
 											String url = Util.getImgSrc(f);
 											out.print(String.format(strImgConFormat1, title, id,url));
 											%>
-										</div>
-										<%
+									</div>
+									<%
 										}
 
 										if (num >= end) {
@@ -311,157 +314,157 @@ img {
 
 										s = s + 3;
 										%>
-									</div>
-									<%
+								</div>
+								<%
 									}
 
 									}
 									%>
 
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="scrooldown">
-						<a href="#feature"><i class="fa fa-arrow-down"></i></a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--End of home section -->
-
-		<!--feature section -->
-		<section id="feature" class="feature sections">
-			<div class="container">
-				<div class="row">
-					<div class="main_feature text-center">
-
-						<div class="col-sm-3">
-							<div class="single_feature">
-								<div class="single_feature_icon">
-									<i class="fa fa"><img alt="" src="images/as_con.png"
-										style="width: 45px"></i>
-								</div>
-
-								<h4>마켓팅 컨설팅</h4>
-								<div class="separator3"></div>
-								<p> </p>
-							</div>
-						</div>
-
-						<div class="col-sm-3">
-							<div class="single_feature">
-								<div class="single_feature_icon">
-									<i class="fa fa"><img alt="" src="images/as_match.png"
-										style="width: 45px"></i>
-								</div>
-
-								<h4>인플루언서 모집 및 매칭</h4>
-								<div class="separator3"></div>
-								<p> </p>
-							</div>
-						</div>
-
-						<div class="col-sm-3">
-							<div class="single_feature">
-								<div class="single_feature_icon">
-									<i class="fa fa"><img alt="" src="images/as_cam.png"
-										style="width: 45px"></i>
-								</div>
-								<h4>캠페인 신청 및 포스팅</h4>
-								<div class="separator3"></div>
-								<p> </p>
-							</div>
-						</div>
-
-						<div class="col-sm-3">
-							<div class="single_feature">
-								<div class="single_feature_icon">
-									<i class="fa fa"><img alt="" src="images/as_report.png"
-										style="width: 45px"></i>
-								</div>
-
-								<h4>레포트 제공</h4>
-								<div class="separator3"></div>
-								<p> </p>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-			<!--End of container -->
-		</section>
-		<!--End of feature Section -->
-
-		<!-- History section -->
-		<section id="history" class="history sections">
-			<div class="container">
-				<div class="row">
-					<div class="main_history">
-						<div class="col-sm-6">
-							<div class="single_history_img">
-								<img src="assets/images/img/connect.png" alt="" />
-							</div>
-						</div>
-
-						<div class="col-sm-6">
-							<div class="single_history_content">
-								<div class="head_title">
-									<h2>About Us</h2>
-								</div>
-								<h3 style ="color: black">마케터스는 인플루언서와 광고주를 위한 서비스를 제공하고
-									있으며, 제공되는 서비스로는 인플루언서 마케팅 분석 솔루션(인플루언서 레포트, 해시태그), 광고주&인플루언서
-									매칭서비스 구축해 서비스를 전개하고 있습니다. 인플루언서 외 영상 컨텐츠 마케팅과 퍼포먼스 마케팅부분으로 확장해
-									디지털 전반적인 영역의 광고 대행도 함께 진행하고 있습니다.</h3>
-
-								<a href="" class="btn btn-lg" style="display: none">BROWSE
-									OUR WORK</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!--End of row -->
+				<div class="scrooldown">
+					<a href="#feature"><i class="fa fa-arrow-down"></i></a>
+				</div>
 			</div>
-			<!--End of container -->
-		</section>
-		<!--End of history -->
-		<hr />
+		</div>
+	</section>
+	<!--End of home section -->
+
+	<!--feature section -->
+	<section id="feature" class="feature sections">
+		<div class="container">
+			<div class="row">
+				<div class="main_feature text-center">
+
+					<div class="col-sm-3">
+						<div class="single_feature">
+							<div class="single_feature_icon">
+								<i class="fa fa"><img alt="" src="images/as_con.png"
+									style="width: 45px"></i>
+							</div>
+
+							<h4>마켓팅 컨설팅</h4>
+							<div class="separator3"></div>
+							<p></p>
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="single_feature">
+							<div class="single_feature_icon">
+								<i class="fa fa"><img alt="" src="images/as_match.png"
+									style="width: 45px"></i>
+							</div>
+
+							<h4>인플루언서 모집 및 매칭</h4>
+							<div class="separator3"></div>
+							<p></p>
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="single_feature">
+							<div class="single_feature_icon">
+								<i class="fa fa"><img alt="" src="images/as_cam.png"
+									style="width: 45px"></i>
+							</div>
+							<h4>캠페인 신청 및 포스팅</h4>
+							<div class="separator3"></div>
+							<p></p>
+						</div>
+					</div>
+
+					<div class="col-sm-3">
+						<div class="single_feature">
+							<div class="single_feature_icon">
+								<i class="fa fa"><img alt="" src="images/as_report.png"
+									style="width: 45px"></i>
+							</div>
+
+							<h4>레포트 제공</h4>
+							<div class="separator3"></div>
+							<p></p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!--End of container -->
+	</section>
+	<!--End of feature Section -->
+
+	<!-- History section -->
+	<section id="history" class="history sections">
+		<div class="container">
+			<div class="row">
+				<div class="main_history">
+					<div class="col-sm-6">
+						<div class="single_history_img">
+							<img src="assets/images/img/connect.png" alt="" />
+						</div>
+					</div>
+
+					<div class="col-sm-6">
+						<div class="single_history_content">
+							<div class="head_title">
+								<h2>About Us</h2>
+							</div>
+							<h3 style="color: black">마케터스는 인플루언서와 광고주를 위한 서비스를 제공하고 있으며,
+								제공되는 서비스로는 인플루언서 마케팅 분석 솔루션(인플루언서 레포트, 해시태그), 광고주&인플루언서 매칭서비스
+								구축해 서비스를 전개하고 있습니다. 인플루언서 외 영상 컨텐츠 마케팅과 퍼포먼스 마케팅부분으로 확장해 디지털
+								전반적인 영역의 광고 대행도 함께 진행하고 있습니다.</h3>
+
+							<a href="" class="btn btn-lg" style="display: none">BROWSE
+								OUR WORK</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--End of row -->
+		</div>
+		<!--End of container -->
+	</section>
+	<!--End of history -->
+	<hr />
 
 
 
-		<!--Footer section-->
-		<section class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						<div class="main_footer">
-							<div class="row">
-								<div class="col-sm-6 col-xs-12">
-									<div class="flowus">
-										<a href=""><i class="fa fa-facebook"></i></a> <a href=""><i
-											class="fa fa-twitter"></i></a> <a href=""><i
-											class="fa fa-google-plus"></i></a> <a href=""><i
-											class="fa fa-instagram"></i></a> <a href=""><i
-											class="fa fa-youtube"></i></a> <a href=""><i
-											class="fa fa-dribbble"></i></a>
-									</div>
+	<!--Footer section-->
+	<section class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="main_footer">
+						<div class="row">
+							<div class="col-sm-6 col-xs-12">
+								<div class="flowus">
+									<a href=""><i class="fa fa-facebook"></i></a> <a href=""><i
+										class="fa fa-twitter"></i></a> <a href=""><i
+										class="fa fa-google-plus"></i></a> <a href=""><i
+										class="fa fa-instagram"></i></a> <a href=""><i
+										class="fa fa-youtube"></i></a> <a href=""><i
+										class="fa fa-dribbble"></i></a>
 								</div>
+							</div>
 
-								<div class="col-sm-6 col-xs-12">
-									<div class="copyright_text">
-										<p class=" wow fadeInRight" data-wow-duration="1s">
-											Made with <i class="fa fa-heart"></i> by MARKETUS 2021.
-										</p>
-									</div>
+							<div class="col-sm-6 col-xs-12">
+								<div class="copyright_text">
+									<p class=" wow fadeInRight" data-wow-duration="1s">
+										Made with <i class="fa fa-heart"></i> by MARKETUS 2021.
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<!-- End off footer Section-->
+		</div>
+	</section>
+	<!-- End off footer Section-->
 
 
 

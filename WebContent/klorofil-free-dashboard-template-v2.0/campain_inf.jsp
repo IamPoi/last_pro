@@ -1,9 +1,10 @@
+<%@page import="com.common.Util"%>
 <%@page import="com.model.MatchingDTO"%>
 <%@page import="com.model.MemberDTO"%>
 <%@page import="com.model.CampaginDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-<%@page import="com.common.Util"%>
+
 <%@page import="java.util.Collections"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>

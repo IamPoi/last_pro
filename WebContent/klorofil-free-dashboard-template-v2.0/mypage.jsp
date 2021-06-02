@@ -582,8 +582,19 @@ textarea {
 										</div>
 
 										<div class="margin-top-30 text-center">
-											<a href="../ReportService" class="btn btn-default">레포트
+										
+										<%
+										if(info.getPaidMember() == 0){
+											
+										
+										%>
+											<a href="void(0);" onclick="alert('유료회원만 접근 가능합니다.');return false;"  class="btn btn-default">레포트
 												자세히보기</a>
+												
+										<%}else{ %>
+										<a href="../ReportService" class="btn btn-default">레포트
+												자세히보기</a>
+											<%} %>
 										</div>
 
 										<div class="text-center" style="display: none">

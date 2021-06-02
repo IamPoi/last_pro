@@ -91,12 +91,15 @@ img {
 		System.out.println("info :" + info.getInflu_gender());
 		System.out.println("cList :" + cList.get(0).getRq_gender());
 		for (int i = 0; i < cList.size(); i++) {
-
-			if (cList.get(i).getRq_gender().equals(info.getInflu_gender())) {
-		numList.add(cList.get(i).getCampaign_Sid());
-		System.out.println("a " + i);
-		k = k + 1;
-			} else {
+			if(cList.get(i).getRq_age() == 0 || cList.get(i).getRq_age() == info.getInflu_targetAge()){ //요구 20대 -> 20 <= 25 >= 30
+				if (cList.get(i).getRq_gender().equals(info.getInflu_gender())) {
+					if(cList.get(i).getCategory().equals(info.getInflu_category())){
+						numList.add(cList.get(i).getCampaign_Sid());
+						System.out.println("a " + i);
+						k = k + 1;
+					}
+				}
+			}else {
 		System.out.println("b " + i);
 		m = m + 1;
 			}
@@ -142,23 +145,23 @@ img {
 
 									<!-- Collect the nav links, forms, and other content for toggling -->
 
-									<ul class="nav navbar-nav navbar-right">
-										<li><a href="">HOME</a></li>
-										<!-- 세션값받아와서 influencer/companymain으로 이동 -->
-										<li><a href="hashtag.jsp">HASGTAG</a></li>
-										<li><a href="../InfluencerMypage?name=inf">My Page</a></li>
-										<!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-										<%if(info == null){ %>
-										<li><a
-											href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
-										<%} else{ %>
-										<li><a href="">LOGOUT</a></li>
-										<%} %>
-									</ul>
-								</div>
-						</div>
-						</nav>
-					</div>
+
+                              <ul class="nav navbar-nav navbar-right">
+                                 <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
+                                            <li><a href="hashtag.jsp">HASHTAG</a></li>
+                                            <li><a href="../InfluencerMypage?name=inf" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
+                                            <%if(info == null){ %>
+                                 <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
+                                 <%} else{ %>
+                                 <li><a href="">LOGOUT</a></li>
+                                 <%} %>
+                              </ul>
+                           </div>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+
 				</div>
 
 			</div>

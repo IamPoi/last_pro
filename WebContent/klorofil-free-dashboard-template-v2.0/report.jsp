@@ -69,6 +69,7 @@ $('.counter').counterUp({ delay: 10, time: 1000 }); });</script>
 }
 
 .panel{
+	font-size: 20px;
 	font-weight: bold;
 }
 
@@ -138,7 +139,7 @@ h3.panel-title{
 
                               <ul class="nav navbar-nav navbar-right">
                                  <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
-                                            <li><a href="hashtag.jsp">HASGTAG</a></li>
+                                            <li><a href="hashtag.jsp">HASHTAG</a></li>
                                             <li><a href="../InfluencerMypage?name=inf" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
                                             <%if(info == null){ %>
                                  <li><a href="page-login.jsp">LOGIN</a></li>
@@ -210,31 +211,30 @@ h3.panel-title{
 							<div>
 								<br> <br>
 
-								<div class=" left row">
-									<img alt="" src="assets/img/3.48kg.jpg" class="img-circle"
-										style="visibility: hidden" style="height : 120px"> <img
-										alt="" src="assets/img/3.48kg.jpg" class="img-circle"
-										style="visibility: hidden" style="height : 120px"> <img
-										alt="" src="assets/img/3.48kg.jpg" class="img-circle"
-										style="height: 150px">
+								<div class="row">
+								<div class = "left" >
+								<img alt="" src="assets/img/3.48kg.jpg" class="img-circle" style="height: 150px; visibility: hidden">
+										<img alt="" src="assets/img/3.48kg.jpg" class="img-circle" style="height: 150px;">
+										</div>
+										<div class="right" style = "padding-right: 60px; ">
 
-								</div>
-								<br>
-								<div class="right">
-
-									<div style="padding-right: 200px">
-										<h1 class="counter" style="color: black">100000</h1>
+									<div>
+										<h2 class="" style="position:absolute !important; right : 100px !important; bottom : 200px !important; color: black; text-align: right; ">100000 점</h2><br>
 										<script
 											src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 										<script src="jquery.counterup.min.js"></script>
 									</div>
 
 									<div>
-										<h4 style="padding-left: 100px;">(영향력)</h4>
+										<h6 style="padding-left: 100px; text-align: center; margin-bottom: 100px" ><b>영향력의 의미는 인플루언서의 정보를 바탕으로<br> 광고를 게시했을때 나타날수있는 예상값</b></h6>
 									</div>
 
 								</div>
-								<br> <br>
+										
+
+								</div>
+								<br>
+																<br> <br>
 								<div class="panel-body">
 
 									<div class="col-md-3 col-md-3-1 pro">
@@ -248,7 +248,6 @@ h3.panel-title{
 									</div>
 									<div class="col-md-3 col-md-3-1 pro">
 										<div class="metric">
-											<span class="icon"><i class="fa fa-shopping-bag"></i></span>
 											<p>
 												<span class="number"><%=report.getFake_follower()%></span> <span
 													class="title">팔로워</span>
@@ -356,7 +355,7 @@ h3.panel-title{
 						<div class="panel">
 							<div class="left" style="width: 60%">
 								<div class="panel-heading">
-									<h3 class="panel-title">댓글 유형</h3>
+									<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: right;">댓글 유형</h3>
 
 								</div>
 								<ul class="list-unstyled list-justify">
@@ -389,7 +388,7 @@ h3.panel-title{
 						<div class="panel">
 							<div class="left" style="width: 60%">
 								<div class="panel-heading">
-									<h3 class="panel-title">카테고리</h3>
+									<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: right;">카테고리</h3>
 
 								</div>
 							</div>
@@ -416,9 +415,9 @@ h3.panel-title{
 						<!-- TASKS -->
 						<!-- 원형 -->
 						<div class="panel">
-							<div class="left" style="width: 60%">
+							<div class="left" style="width: 100%">
 								<div class="panel-heading">
-									<h3 class="panel-title">진짜 / 가짜 팔로워</h3>
+									<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">진짜 / 가짜 팔로워</h3>
 
 								</div>
 
@@ -480,9 +479,9 @@ h3.panel-title{
 						<!-- TASKS -->
 						<!-- 원형 -->
 						<div class="panel">
-							<div class="left" style="width: 60%">
+							<div class="left" style="width: 100%">
 								<div class="panel-heading">
-									<h3 class="panel-title">진짜 / 가짜 댓글</h3>
+									<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">진짜 / 가짜 댓글</h3>
 
 								</div>
 							</div>
@@ -546,7 +545,7 @@ h3.panel-title{
 				<div class="panel">
 					<div class="left" style="width: 60%">
 						<div class="panel-heading">
-							<h3 class="panel-title">단골 댓글</h3>
+							<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: right;">단골 댓글</h3>
 						</div>
 					</div>
 					<div class="panel-body">
@@ -564,7 +563,7 @@ h3.panel-title{
 				<div class="panel">
 					<div class="left" style="width: 60%">
 						<div class="panel-heading">
-							<h3 class="panel-title">단골 좋아요</h3>
+							<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: right;">단골 좋아요</h3>
 
 						</div>
 					</div>
@@ -588,7 +587,7 @@ h3.panel-title{
 				<!-- MULTI CHARTS -->
 				<div class="panel">
 					<div class="panel-heading">
-						<h3 class="panel-title">좋아요 변화율</h3>
+						<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">좋아요 변화율</h3>
 
 					</div>
 
@@ -617,7 +616,7 @@ h3.panel-title{
 				<!-- VISIT CHART -->
 				<div class="panel">
 					<div class="panel-heading">
-						<h3 class="panel-title">요일별 포스트 성향</h3>
+						<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">요일별 포스트 성향</h3>
 
 					</div>
 					<div class="panel-body">
@@ -637,8 +636,8 @@ h3.panel-title{
 
 				<!-- VISIT CHART -->
 				<div class="panel">
-					<div class="panel-heading">
-						<h3 class="panel-title">시간별 포스트 성향</h3>
+					<div class="panel-heading" >
+						<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">시간별 포스트 성향</h3>
 
 					</div>
 
@@ -666,7 +665,7 @@ h3.panel-title{
 				<!-- VISIT CHART -->
 				<div class="panel">
 					<div class="panel-heading">
-						<h3 class="panel-title">좋아요 반응</h3>
+						<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">좋아요 반응</h3>
 
 					</div>
 					<div class="panel-body">
@@ -1551,8 +1550,8 @@ chart.data = [
 ]
 
 
-createSeries('first', 'The First');
-createSeries('second', 'The Second');
+createSeries('first', '평균');
+createSeries('second', '회원');
 
 function arrangeColumns() {
 

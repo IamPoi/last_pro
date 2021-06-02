@@ -148,7 +148,7 @@ img {
                                             <%if(info == null){ %>
                                  <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
                                  <%} else{ %>
-                                 <li><a href="">LOGOUT</a></li>
+                                 <li><a href="../LogoutService">LOGOUT</a></li>
                                  <%} %>
                               </ul>
                            </div>
@@ -200,6 +200,7 @@ img {
 										for (int j = 0; j < ((numList.size() / 3) + 1); j++) {
 											System.out.println("반복횟수 : " + ((numList.size() / 3) + 1));
 									%>
+								
 									<div class="single_home_slider">
 										<%
 										System.out.println("마지막 : " + num);

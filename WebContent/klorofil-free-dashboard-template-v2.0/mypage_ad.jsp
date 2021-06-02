@@ -340,8 +340,9 @@ System.out.println("imgFileList : " + imgFileList.size());
                         <!-- PROFILE HEADER -->
                         <div class="profile-header">
                            <div class="overlay"></div>
-                           <div class="profile-main" style = "background-image: none; background-color: #F5F5F5">
-                              <img src="assets/img/3.48kg.jpg" class="img-circle" alt="Avatar" >
+                           <div class="profile-main" style = "background-image: url('assets/img/profile-bg.jpg');">
+                           <img src="assets/img/<%="innisfree"%>.png" class="img" alt="Avatar" style  = "width : 220px; height : 160px;">
+                              <!--  <img src="assets/img/<%=info.getName() %>.png" class="img" alt="Avatar" >-->
                               <h3 class="name" style = "color: black"><%=name %></h3>
                               <span class="online-status status-available"></span>
                            </div>

@@ -59,7 +59,7 @@
    <div class="culmn">
       <header id="main_menu" class="header navbar-fixed-top">
          <div class="main_menu_bg">
-            <div class="container">
+            <div class="container" style = "width : 100%">
                <div class="row">
                   <div class="nave_menu">
                      <nav class="navbar navbar-default">
@@ -76,8 +76,8 @@
                               </button>
 
 
-                              <a class="navbar-brand" href="firstPage.jsp"> <img
-                                 src="images/logo_high_re.png" width=140px, height=50px>
+                              <a class="navbar-brand" href="firstPage.jsp" style = "margin-left: 30px;"> <img
+                                 src="images/logo_high_re.png" width=140px, height=50px ma>
                               </a>
                            </div>
 
@@ -127,7 +127,7 @@
                   <br> <br> <br> <br> <br>
                   <h2>'HASHTAG'</h2>
                   <br>
-                  <form action="http://222.102.43.163:8086/hashtag" method="get" accept-charset="UTF-8">
+                  <form action="http://121.147.185.66:8088/hashtag" method="get" accept-charset="UTF-8">
                      <h2>
                         <label for="tm_name">#</label> <input type="text" required
                            name="hashtag" placeholder="분석할 해시태그 입력"
@@ -198,7 +198,7 @@
 
                         <div class="pricing_body">
                            <ul>
-                              <li>Competition Analysis Methods</li>
+                              <li>표</li>
                               <li>All Ranked URLs</li>
                               <li>International Support System</li>
                               <li>Social Media Tracking</li>

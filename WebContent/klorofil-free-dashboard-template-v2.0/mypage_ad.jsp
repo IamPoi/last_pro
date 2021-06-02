@@ -1,10 +1,11 @@
 <!-- ÃÖ½Åº» -->
+<%@page import="com.common.Util"%>
 <%@page import="com.model.MatchingDTO"%>
 <%@page import="com.model.MemberDTO"%>
 <%@page import="com.model.AdvertiserDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<%@page import="common.Util"%>
+
 <%@page import="java.util.Collections"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
@@ -400,7 +401,7 @@ System.out.println("imgFileList : " + imgFileList.size());
                                        break;
                                     }else{
 
-                                    if (campignList.get(i).getCampaign_status() == 0) {
+                                    if (campignList.get(i).getCampaign_status() == 0 || campignList.get(i).getCampaign_status() == 1) {
                                        k++;
                                        System.out.println("getCampaign_status() : " + campignList.get(i).getCampaign_status());
                                  %>
@@ -409,7 +410,7 @@ System.out.println("imgFileList : " + imgFileList.size());
 	
 									
                                        <img src="images/<%=campignList.get(i).getCampaign_Sid()%>.jpg"
-                                          alt="Avatar"> <br> <br> <span><a href = ../CampaignMatchingService?ck=adver&&camnum=<%=campignList.get(i).getCampaign_Sid()%>><%=campignList.get(i).getCampaign_title()%></a></span>
+                                          alt="Avatar"> <br> <br> <span><a href = ../CampaignMatchingService?ck=adver&&camnum=<%=campignList.get(i).getCampaign_Sid() + "," + campignList.get(i).getCampaign_status()%>><%=campignList.get(i).getCampaign_title()%></a></span>
                                         
 
                                     </div>
@@ -423,7 +424,7 @@ System.out.println("imgFileList : " + imgFileList.size());
                                  <% 
                                  for (int z = 0; z < j ; z++){
                                     %>
-                                                                     <div class="col-md-3 col-sm-6">
+                                    <div class="col-md-3 col-sm-6">
                                      <div class="award-item" style = "visibility: hidden;">
 
                                         <img src="images/<%=campignList.get(z).getCampaign_Sid()%>.jpg"
@@ -517,7 +518,7 @@ System.out.println("imgFileList : " + imgFileList.size());
                                        break;
                                     }else{
 
-                                    if (campignList.get(i).getCampaign_status() == 1 || campignList.get(i).getCampaign_status() == 2) {
+                                    if (campignList.get(i).getCampaign_status() == 2) {
                                        k1++;
                                        System.out.println("getCampaign_status() : " + campignList.get(i).getCampaign_status());
                                  %>
@@ -570,7 +571,7 @@ System.out.println("imgFileList : " + imgFileList.size());
                                  for (int i = 0; i < campignList.size(); i++) {
 
                                     
-                                    if (campignList.get(i).getCampaign_status() == 1 || campignList.get(i).getCampaign_status() == 2) {
+                                    if (campignList.get(i).getCampaign_status() == 2) {
                                        
                                        System.out.println("getMatch_ck() : " + campignList.get(i).getCampaign_Sid());
                                  %>

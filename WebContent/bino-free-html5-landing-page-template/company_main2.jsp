@@ -1,9 +1,11 @@
+<%@page import="com.common.Util"%>
+<%@page import="com.model.AdvertiserDTO"%>
 <%@page import="com.model.influencerInstaDTO"%>
 <%@page import="com.model.CampaginDTO"%>
 <%@page import="com.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
    pageEncoding="EUC-KR"%>
-<%@page import="common.Util"%>
+
 <%@page import="java.util.Collections"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
@@ -28,6 +30,12 @@ span.imgTitle {
    display: block;
    margin: 15px;
 }
+
+img.inf {
+	width : 250px;
+	height : 250px;
+}
+
 </style>
 
 <head>
@@ -79,6 +87,17 @@ img {
    System.out.println("1 :" + influencer_allSelect.get(0).getInflu_id());
    System.out.println("2 :" + influencer_allSelect.get(1).getInflu_id());
    //info.getInflu_gender();
+   String name = (String)session.getAttribute("value");
+   System.out.println("광고주 인플루 구분 name값 : "+name);
+   
+   AdvertiserDTO info = (AdvertiserDTO) session.getAttribute("info");
+	System.out.println("광고주 로그인 user session 값 : "+info);
+	
+	if (info != null) {
+		System.out.println("광고주 정보 user 확인용 mail:" + info.getMail());
+	} else {
+		System.out.println("광고주 정보 가져오기 실패 user = null");
+	}
    %>
 
    <div class='preloader'>
@@ -87,7 +106,7 @@ img {
    <div class="culmn">
       <header id="main_menu" class="header navbar-fixed-top">
          <div class="main_menu_bg" style = "background-color:white;">
-            <div class="container">
+            <div class="container" style = "width : 100%">
                <div class="row">
                   <div class="nave_menu">
                      <nav class="navbar navbar-default">
@@ -104,7 +123,7 @@ img {
                               </button>
 
 
-                              <a class="navbar-brand" href="firstPage.jsp"> <img
+                              <a class="navbar-brand" href="firstPage.jsp" style = "margin-left: 30px;"> <img
                                  src="images/logo_high_re.png" style = "width:140px; height:50px;"/>
                               </a>
                            </div>
@@ -117,9 +136,17 @@ img {
                              <ul class="nav navbar-nav navbar-right">
                                  <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
                                             <li><a href="hashtag.jsp">HASHTAG</a></li>
-                                            <li><a href="pay.jsp">PAY</a></li>
+                                            <li><a href="pay.jsp">INQUIRY</a></li>
                                             <li><a href="../InfluencerMypage?name=adver" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-                                            <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=adver">LOGIN</a></li>
+                                            <%
+												if(info != null){
+											 %>
+											<li><a
+												href="../LogoutService">LOGOUT</a></li>
+											<% }else{ %>
+											<li><a
+												href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=adver">LOGIN</a></li>
+											<% } %>
                                             
                               </ul>
                            </div>
@@ -147,9 +174,10 @@ img {
                            //이미지 폴더의 네임들 
                            ArrayList<String> imgName = new ArrayList<String>();
 
-                           //   String strImgConFormat = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
-                           //         + "<img width='300' src=\"%s\"/></div>";
-
+                              String strImgConFormat = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
+                                    + "<img width='400' height = '400' src=\""+"images/%s.jpg\"/" +"class=\"img-circle inf\"></div>";
+                                    
+                                    
                            for (int i = 0; i < imgFileList.size(); i++) {
                               File f = imgFileList.get(i);
 
@@ -188,20 +216,23 @@ img {
                                  data-wow-duration="700ms" >
                                  <%
                                  // 이미지 파일 넘기기
-                                 String strImgConFormatl = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
-                                       + "<a href = \"../CampaignService?id=%s\">  <img width='300' height = '400' src=\"%s\"/></a>" + "</div>";
+                               //  String strImgConFormatl = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
+                               //        + "<a href = \"../CampaignService?id=%s\">  <img width='300' height = '400' src=\"%s\"/></a>" + "</div>";
 
                                  System.out.println("numList.size(): " + (influencer_allSelect.size() - 1));
                                  File f = imgFileList.get(numList.get(i));//
                                  String title = "";//Util.getFileNameNoExt(f.getName());
-
+                                 
+                                 Util.getFileNameNoExt(f.getName());
+                                 
                                  System.out.println("I : " + i);
                                  System.out.println("influencer_allSelect.get(i).getInflu_id() : " + influencer_allSelect.get(i).getInflu_id());
 
                                  String id = influencer_allSelect.get(i).getInflu_id();
                                  String url = Util.getImgSrc(f);
 
-                                 out.print(String.format(strImgConFormatl, title, id, url));
+//                                 out.print(String.format(strImgConFormatl, title, id, url));
+                                 out.print(String.format(strImgConFormat, title, id, url));
                                  %>
                               </div>
                               <%
@@ -241,9 +272,9 @@ img {
                      </div>
                   </div>
                </div>
-               <div class="scrooldown" style = "left : 46%;">
+               <div class="scrooldown" style = "left : 46%; background-color: #FAEBD7" >
                   <a href="pay.jsp">
-                  <i>견적문의</i></a>
+                  <i style = "color: black; font-style: normal; font-weight: bold;" >견적문의</i></a>
                </div>
             </div>
          </div>
@@ -447,10 +478,10 @@ img {
                         <div class="head_title">
                            <h2>About Us</h2>
                         </div>
-                        <p style = "font-size: 15px">마케터스는 인플루언서와 광고주를 위한 서비스를 제공하고 있으며, 제공되는 서비스로는 
+                        <h3 style ="color: black"  >마케터스는 인플루언서와 광고주를 위한 서비스를 제공하고 있으며, 제공되는 서비스로는 
                         인플루언서 마케팅 분석 솔루션(인플루언서 레포트, 해시태그), 광고주&인플루언서 매칭서비스 구축해 서비스를 전개하고 있습니다. 
                         인플루언서 외 영상 컨텐츠 마케팅과 퍼포먼스 마케팅부분으로 확장해 디지털 전반적인 영역의 광고 대행도 함께 진행하고 있습니다.
-                        </p>
+                        </h3>
 
                         <a href="" class="btn btn-lg" style = "display : none">BROWSE OUR WORK</a>
                      </div>

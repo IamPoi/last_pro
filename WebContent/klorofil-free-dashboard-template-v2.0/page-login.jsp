@@ -36,10 +36,12 @@
                         <p class="lead" style = "display : none">Login to your account</p>
                         <br><br>
                      </div>
-                     <% String name = request.getParameter("value"); 
-                           System.out.println("페이지 로그인 화면 name 확인 : " + name);
+                     <% 	String name = request.getParameter("value"); 
                      
+                         	System.out.println("페이지 로그인 화면 name 확인 : " + name);
+                         	
                      %>
+                     
                      <% if(name.equals("inf")){ %>
                      <form method="post" class="form-auth-small" action="../LoginService?value=inf">
                      
@@ -61,8 +63,8 @@
                            </label>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
-                        <div class="bottom" style = "display : none">
-                           <span class="helper-text"><i class="fa fa-lock"></i> <a href="#">Forgot password?</a></span>
+                        <div class="bottom">
+                           <span class="helper-text"><i class="fa fa"></i> <a href="#">아직 회원이 아니신가요??</a></span>
                         </div>
                      </form>
                      <% %>

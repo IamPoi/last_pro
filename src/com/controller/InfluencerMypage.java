@@ -29,6 +29,7 @@ public class InfluencerMypage extends HttpServlet {
 
 		PrintWriter out = response.getWriter();
 		request.setCharacterEncoding("EUC-KR");
+		System.out.println("------마이페이지 서비스 확인-------");
 
 		String name = request.getParameter("name");
 
@@ -43,6 +44,7 @@ public class InfluencerMypage extends HttpServlet {
 			
 			
 			AdvertiserDTO info = (AdvertiserDTO) session.getAttribute("info"); // 회원 세션 가져오기
+			System.out.println("광고주 정보 전달"+info);
 
 			AdvertiserDAO mdao = new AdvertiserDAO();
 			AdvertiserDTO list = new AdvertiserDTO();
@@ -63,7 +65,7 @@ public class InfluencerMypage extends HttpServlet {
 				list = mdao.myPage(info.getAdver_mbr());// info.getMem_id()
 				matList = matDao.MatchingAllSelect_ad(info.getAdver_mbr());
 				arrList = cdao.campaign_adver_Select(info.getAdver_mbr());
-
+				
 				if (list != null) {
 					session.setAttribute("adverMypage", list);
 					session.setAttribute("adverMypageMatching", matList);

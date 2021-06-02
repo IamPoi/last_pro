@@ -237,6 +237,29 @@ public class CampaginDAO {
 
 		}
 		
+				int cnt=0;
+		
+		// 광고주가 체크한 인플루언서
+				public int CampaignUpdate(int camp_id) {
+					conn();
+					
+					
+					try {
+						String sql="update campaign set campaign_status = 1 where campaign_Sid = ?";
+						psmt = conn.prepareStatement(sql);
+						psmt.setInt(1, camp_id);
+						cnt=psmt.executeUpdate();
+						 
+					} catch (SQLException e) {		
+						e.printStackTrace();
+					}
+					finally {
+						close();
+					}
+					return cnt;
+					
+				}
+		
 		
 		
 }

@@ -101,7 +101,7 @@ $('.counter').counterUp({ delay: 10, time: 1000 }); });</script>
                               </button>
 
 
-                              <a class="navbar-brand" href="firstPage.jsp"> <img
+                              <a class="navbar-brand" href="../bino-free-html5-landing-page-template/firstPage.jsp"> <img
                                  src="images/logo_high_re.png" style = "width:120px; height:50px; margin-left: 30px; margin-top:10px"/>
                               </a>
                            </div>

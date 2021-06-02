@@ -1,4 +1,5 @@
-<%@page import="common.Util"%>
+
+<%@page import="com.common.Util"%>
 <%@page import="com.model.influencerInstaDTO"%>
 <%@page import="com.model.CampaginDTO"%>
 <%@page import="com.model.MemberDTO"%>

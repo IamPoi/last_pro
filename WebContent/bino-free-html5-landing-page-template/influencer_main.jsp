@@ -1,8 +1,9 @@
+<%@page import="com.common.Util"%>
 <%@page import="com.model.CampaginDTO"%>
 <%@page import="com.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-<%@page import="common.Util"%>
+%>
 <%@page import="java.util.Collections"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
@@ -115,7 +116,7 @@ img {
 	<div class="culmn">
 		<header id="main_menu" class="header navbar-fixed-top">
 			<div class="main_menu_bg" style="background-color: white;">
-				<div class="container">
+				<div class="container" style = "width : 100%">
 					<div class="row">
 						<div class="nave_menu">
 							<nav class="navbar navbar-default">
@@ -132,7 +133,7 @@ img {
 										</button>
 
 
-										<a class="navbar-brand" href="firstPage.jsp"> <img
+										<a class="navbar-brand" href="firstPage.jsp" style = "margin-left: 30px;"> <img
 											src="images/logo_high_re.png"
 											style="width: 140px; height: 50px;" />
 										</a>
@@ -140,38 +141,21 @@ img {
 
 									<!-- Collect the nav links, forms, and other content for toggling -->
 
-									<div class="collapse navbar-collapse"
-										id="bs-example-navbar-collapse-1">
-										<ul class="nav navbar-nav navbar-right">
-											<li><a href="">HOME</a></li>
-											<!-- 세션값받아와서 influencer/companymain으로 이동 -->
-											<li><a href="hashtag.jsp">HASHTAG</a></li>
-											<li><a href="../InfluencerMypage?name=inf">My Page</a></li>
-											<!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-											
-											<%
-												if(info != null){
-											%>
-											<li><a
-												href="../LogoutService">LOGOUT</a></li>
-										
-											<%
-												}else{
-													
-											%>
-											<li><a
-												href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
-										
-											<%		
-												}
-											
-											%>
-											</ul>
-									</div>
-								</div>
-							</nav>
-						</div>
-					</div>
+                              <ul class="nav navbar-nav navbar-right">
+                                 <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
+                                            <li><a href="hashtag.jsp">HASGTAG</a></li>
+                                            <li><a href="../InfluencerMypage?name=inf" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
+                                            <%if(info == null){ %>
+                                 <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
+                                 <%} else{ %>
+                                 <li><a href="">LOGOUT</a></li>
+                                 <%} %>
+                              </ul>
+                           </div>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
 
 				</div>
 
@@ -361,7 +345,7 @@ img {
 
 								<h4>마켓팅 컨설팅</h4>
 								<div class="separator3"></div>
-								<p>설명</p>
+								<p> </p>
 							</div>
 						</div>
 
@@ -374,7 +358,7 @@ img {
 
 								<h4>인플루언서 모집 및 매칭</h4>
 								<div class="separator3"></div>
-								<p>설명</p>
+								<p> </p>
 							</div>
 						</div>
 
@@ -386,7 +370,7 @@ img {
 								</div>
 								<h4>캠페인 신청 및 포스팅</h4>
 								<div class="separator3"></div>
-								<p>설명</p>
+								<p> </p>
 							</div>
 						</div>
 
@@ -399,7 +383,7 @@ img {
 
 								<h4>레포트 제공</h4>
 								<div class="separator3"></div>
-								<p>설명</p>
+								<p> </p>
 							</div>
 						</div>
 
@@ -426,10 +410,10 @@ img {
 								<div class="head_title">
 									<h2>About Us</h2>
 								</div>
-								<p style="font-size: 15px">마케터스는 인플루언서와 광고주를 위한 서비스를 제공하고
+								<h3 style ="color: black">마케터스는 인플루언서와 광고주를 위한 서비스를 제공하고
 									있으며, 제공되는 서비스로는 인플루언서 마케팅 분석 솔루션(인플루언서 레포트, 해시태그), 광고주&인플루언서
 									매칭서비스 구축해 서비스를 전개하고 있습니다. 인플루언서 외 영상 컨텐츠 마케팅과 퍼포먼스 마케팅부분으로 확장해
-									디지털 전반적인 영역의 광고 대행도 함께 진행하고 있습니다.</p>
+									디지털 전반적인 영역의 광고 대행도 함께 진행하고 있습니다.</h3>
 
 								<a href="" class="btn btn-lg" style="display: none">BROWSE
 									OUR WORK</a>

@@ -64,9 +64,10 @@ public class MatchingDAO {
             String ad_section = rs.getString(5);
             int match_ck = Integer.parseInt(rs.getString(6));
             int influ_affect = Integer.parseInt(rs.getString(7));
-
+            int camp_ck = Integer.parseInt(rs.getString(8));
+	           
             info = new MatchingDTO(campaign_index,campaign_Sid,campaign_title
-                  ,influ_id,ad_section,match_ck,influ_affect);
+                  ,influ_id,ad_section,match_ck,influ_affect,camp_ck);
                   
                   
             list.add(info);
@@ -101,9 +102,9 @@ public class MatchingDAO {
             String ad_section = rs.getString(5);
             int match_ck = Integer.parseInt(rs.getString(6));
             int influ_affect = Integer.parseInt(rs.getString(7));
-
+            int camp_ck = Integer.parseInt(rs.getString(8));
             info = new MatchingDTO(campaign_index,campaign_Sid,campaign_title
-                  ,influ_id,ad_section,match_ck,influ_affect);
+                  ,influ_id,ad_section,match_ck,influ_affect,camp_ck);
                   
                   
             list.add(info);
@@ -140,9 +141,10 @@ public class MatchingDAO {
 	            String ad_section = rs.getString(5);
 	            int match_ck = Integer.parseInt(rs.getString(6));
 	            int influ_affect = Integer.parseInt(rs.getString(7));
-
+	            int camp_ck = Integer.parseInt(rs.getString(8));
+	            
 	            info = new MatchingDTO(campaign_index,campaign_Sid,campaign_title
-	                  ,influ_id,ad_section,match_ck,influ_affect);
+	                  ,influ_id,ad_section,match_ck,influ_affect,camp_ck);
 	                  
 	                  
 	            list.add(info);
@@ -180,9 +182,10 @@ public class MatchingDAO {
 	            String ad_section = rs.getString(5);
 	            int match_ck = Integer.parseInt(rs.getString(6));
 	            int influ_affect = Integer.parseInt(rs.getString(7));
-
+	            int camp_ck = Integer.parseInt(rs.getString(8));
+	           
 	            info = new MatchingDTO(campaign_index,campaign_Sid,campaign_title
-	                  ,influ_id,ad_section,match_ck,influ_affect);
+	                  ,influ_id,ad_section,match_ck,influ_affect,camp_ck);
 	                  
 	                  
 	            list.add(info);

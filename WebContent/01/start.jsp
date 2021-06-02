@@ -1,4 +1,4 @@
-<%@page import="common.Util"%>
+<%@page import="com.common.Util"%>
 <%@page import="java.util.Collections"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>

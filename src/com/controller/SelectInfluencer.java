@@ -29,8 +29,20 @@ public class SelectInfluencer extends HttpServlet {
 		 
 		 PrintWriter out = response.getWriter();
 		 String [] sizes = request.getParameterValues("ck");
-
-		  
+		 String[] array = null;
+		 for(int i=0; i<sizes.length; i++) {
+		 
+			 System.out.println("SelectInfluencer : " + sizes[i]);
+			 array = sizes[i].split(",");
+			 
+		 }
+		
+	
+		 for(int i=0; i<array.length;i++) {
+			 System.out.println("array : " + array[i]);
+		 }
+		 
+		 
 		 MatchingDAO matDao = new MatchingDAO();
 		 MatchingDTO matDto = new MatchingDTO();
 		 
@@ -38,15 +50,26 @@ public class SelectInfluencer extends HttpServlet {
 		
 		 
 		 
-		 
+		
 
-		 for(int x=0;x<sizes.length;x++) {
-			 matDao.MachingUpdate(sizes[x]);
-			 System.out.println("SelectInfluencer 페이지 인플루언서 업데이트: ");
-		 }
+		 for(int x=0;x<array.length;x++) {
+			 if(x%2 == 0) {
+				 matDao.MachingUpdate(array[x]);
+				 System.out.println("SelectInfluencer 페이지 인플루언서 업데이트: ");
+			 }
+			 }
 		
 		 
-		 
+			CampaginDAO cdao = new CampaginDAO();
+			CampaginDTO cdto = new CampaginDTO();
+			
+		 for(int i=0; i<array.length; i++) {
+			 
+			 if(i%2 != 0) {
+				 cdao.CampaignUpdate(Integer.parseInt(array[i]));
+			 }
+			 
+		 }
 		 
 		 
 		 
@@ -64,8 +87,7 @@ public class SelectInfluencer extends HttpServlet {
 
 			AdvertiserDAO mdao = new AdvertiserDAO();
 			AdvertiserDTO list = new AdvertiserDTO();
-			CampaginDAO cdao = new CampaginDAO();
-			CampaginDTO cdto = new CampaginDTO();
+
 
 			ArrayList<MatchingDTO> matList = new ArrayList<MatchingDTO>();
 			ArrayList<CampaginDTO> arrList = new ArrayList<CampaginDTO>();
@@ -80,7 +102,7 @@ public class SelectInfluencer extends HttpServlet {
 				list = mdao.myPage(info.getAdver_mbr());// info.getMem_id()
 				matList = matDao.MachingInfluencerSuccess(2);
 				arrList = cdao.campaign_adver_Select(info.getAdver_mbr());
-
+				
 				System.out.println("확인 : ============== " + matList.get(0).getInflu_id());
 				if (list != null) {
 					System.out.println("확인 : 0000 ");

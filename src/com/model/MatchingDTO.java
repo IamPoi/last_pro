@@ -11,6 +11,7 @@ public class MatchingDTO {
    String ad_section;
    int match_ck;
    int influ_affect;
+   int camp_ck;
  
  
  
@@ -21,7 +22,7 @@ public class MatchingDTO {
 
 
 public MatchingDTO(int campaign_index, int campaign_Sid, String campaign_title, String influ_id, String ad_section,
-		int match_ck, int influ_affect) {
+		int match_ck, int influ_affect,int camp_ck) {
 	super();
 	this.campaign_index = campaign_index;
 	this.campaign_Sid = campaign_Sid;
@@ -30,6 +31,21 @@ public MatchingDTO(int campaign_index, int campaign_Sid, String campaign_title, 
 	this.ad_section = ad_section;
 	this.match_ck = match_ck;
 	this.influ_affect = influ_affect;
+	this.camp_ck = camp_ck;
+}
+
+
+
+
+public int getCamp_ck() {
+	return camp_ck;
+}
+
+
+
+
+public void setCamp_ck(int camp_ck) {
+	this.camp_ck = camp_ck;
 }
 
 

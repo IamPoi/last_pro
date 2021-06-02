@@ -104,7 +104,7 @@ html, body {
 					가장 빠른 인플루언서 매칭 완료<br> 상세한 실시간 성과분석 리포트
 				</h3>
 				<div class="home_btn text-center">
-					<a href="../InfluencerAllSelectService?name=adv"
+					<a href="../InfluencerAllSelectService?value=adv"
 						class="btn btn-lg m_t_10" style="font-size: 20px">MARKETERS</a>
 				</div>
 			</div>
@@ -126,7 +126,7 @@ html, body {
 					내가 원하는 브랜드 협찬!<br> 당신을 위한 협찬 매니저
 				</h3>
 				<div class="home_btn text-center">
-					<a href="../InfluencerAllSelectService?name=inf"
+					<a href="../InfluencerAllSelectService?value=inf"
 						class="btn btn-lg m_t_10" style="font-size: 20px">INFLUENCERS</a>
 				</div>
 			</div>
@@ -161,13 +161,14 @@ html, body {
 	<script src="assets/js/main.js"></script>
 
 	<script type="text/javascript">
-		$('.adver').click(function() {
-			location.href = '../InfluencerAllSelectService?name=adv'
-		});
-		$('.inf').click(function() {
-			location.href = '../InfluencerAllSelectService?name=inf'
-		});
-	</script>
+
+    $('.adver').click(function(){
+         location.href = '../InfluencerAllSelectService?value=adv'
+      });
+    $('.inf').click(function(){
+         location.href = '../InfluencerAllSelectService?value=inf'
+      });
+   </script>
 
 
 

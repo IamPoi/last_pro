@@ -3,7 +3,7 @@
 <%@page import="com.model.CampaginDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-<%@page import="common.Util"%>
+<%@page import="com.common.Util"%>
 <%@page import="java.util.Collections"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>

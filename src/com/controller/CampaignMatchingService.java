@@ -32,8 +32,14 @@ public class CampaignMatchingService extends HttpServlet {
 		System.out.println("CampaignMatchingService페이지");
 		HttpSession session = request.getSession(); // 세션 가져오기
 		String camnum = request.getParameter("camnum");
-		System.out.println("=====================================" + camnum);
-		int camnum2 = Integer.parseInt(camnum);
+		String[] array = camnum.split(",");
+		System.out.println("=====================================" + array[0]); //캠페인 시퀀스 넘버
+		System.out.println("=====================================" + array[1]); // 캠페인 상태 0모집중 1모집완료 2종료
+		
+		
+		int camnum2 = Integer.parseInt(array[0]);
+		int camStatus = Integer.parseInt(array[1]);
+		
 		String name = request.getParameter("ck");  // inf / adver
 		System.out.println("value페이지 : " + name);
 	
@@ -49,22 +55,50 @@ public class CampaignMatchingService extends HttpServlet {
 			CampaginDAO camDao = new CampaginDAO();
 			CampaginDTO camDto = new CampaginDTO();
 			
+			
+			
 			matList = matDao.MachingInfluencer(camnum2);// 캠페인 아이디 값 임시로 ㄴ2 넣어줌
+			
+			System.out.println("matList :" +matList.size());
 			camDto = camDao.campaignSelect(camnum2); // 해당 캠페인 정보들 가져오기
 			System.out.println("camDTO : " + camDto.getCampaign_Sid());
 			//matList 매칭여부 :0 -> 매칭 전 신청한 인플루언서 && 해당 캠페인 id, 
-			if(matList == null) {
-				System.out.println("켐페인페이지 확인 : " + matList.get(0).getAd_section());
-				// ㅇㅖ외처리 해줘야함
-				
-				session.setAttribute("check", "adver");
-				response.sendRedirect("klorofil-free-dashboard-template-v2.0/campain_adver.jsp");
-			}else {
-				session.setAttribute("camDto", camDto);
-				session.setAttribute("check", "adver");
-				session.setAttribute("applyAllInfluencer", matList);
-				response.sendRedirect("klorofil-free-dashboard-template-v2.0/campain_adver.jsp");
+			
+			
+			
+			int camp_ck = 0;
+			for(int i=0; i<matList.size(); i++) {
+				if(matList.get(i).getCamp_ck() == 0) {
+					camp_ck = 0;
+					break;
+				}else {
+					camp_ck = 1;
+				}
 			}
+			
+			System.out.println("캠페인 매칭 서비스 : match_ck" + camp_ck);
+			
+			
+			
+			
+		
+				if(matList.size() == 0) {
+					System.out.println("켐페인페이지 확인 ");
+					session.setAttribute("camDto", camDto);
+					session.setAttribute("check", "adver");
+					session.setAttribute("applyAllInfluencer", matList);
+					response.sendRedirect("klorofil-free-dashboard-template-v2.0/campain_adver.jsp");
+				}else {
+					System.out.println("else켐페인페이지 확인 ");
+					session.setAttribute("camDto", camDto);
+					session.setAttribute("check", "adver");
+					session.setAttribute("camp_ck",String.valueOf(camp_ck));
+					session.setAttribute("applyAllInfluencer", matList);
+					response.sendRedirect("klorofil-free-dashboard-template-v2.0/campain_adver.jsp");
+				}
+				
+			
+			
 			
 			
 		} else if (name.equals("inf")) {

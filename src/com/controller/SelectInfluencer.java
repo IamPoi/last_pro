@@ -30,16 +30,29 @@ public class SelectInfluencer extends HttpServlet {
 		 PrintWriter out = response.getWriter();
 		 String [] sizes = request.getParameterValues("ck");
 		 String[] array = null;
+		 ArrayList<String> arr = new ArrayList<String>();
+		 
+		 int k=0;
+		 int kk=1;
 		 for(int i=0; i<sizes.length; i++) {
 		 
 			 System.out.println("SelectInfluencer : " + sizes[i]);
 			 array = sizes[i].split(",");
+			 arr.add(array[0]);
+			 arr.add(array[1]);
 			 
-		 }
+			 
+			 
+			 k = k+ 2;
+			 kk = 1+k;
 		
+		 }
+		 
+		 
+		 System.out.println("array : " + arr.size());
 	
-		 for(int i=0; i<array.length;i++) {
-			 System.out.println("array : " + array[i]);
+		 for(int i=0; i<arr.size();i++) {
+			 System.out.println("array : " + arr.get(i));
 		 }
 		 
 		 
@@ -52,9 +65,9 @@ public class SelectInfluencer extends HttpServlet {
 		 
 		
 
-		 for(int x=0;x<array.length;x++) {
+		 for(int x=0;x<arr.size();x++) {
 			 if(x%2 == 0) {
-				 matDao.MachingUpdate(array[x]);
+				 matDao.MachingUpdate(arr.get(x));
 				 System.out.println("SelectInfluencer 페이지 인플루언서 업데이트: ");
 			 }
 			 }
@@ -63,10 +76,10 @@ public class SelectInfluencer extends HttpServlet {
 			CampaginDAO cdao = new CampaginDAO();
 			CampaginDTO cdto = new CampaginDTO();
 			
-		 for(int i=0; i<array.length; i++) {
+		 for(int i=0; i<arr.size(); i++) {
 			 
 			 if(i%2 != 0) {
-				 cdao.CampaignUpdate(Integer.parseInt(array[i]));
+				 cdao.CampaignUpdate(Integer.parseInt(arr.get(i)));
 			 }
 			 
 		 }
@@ -100,10 +113,15 @@ public class SelectInfluencer extends HttpServlet {
 			} else {
 
 				list = mdao.myPage(info.getAdver_mbr());// info.getMem_id()
-				matList = matDao.MachingInfluencerSuccess(2);
+				
+				
+				matList = matDao.MachingInfluencerSuccess(Integer.parseInt(arr.get(1)));
+				
+				
+				
 				arrList = cdao.campaign_adver_Select(info.getAdver_mbr());
 				
-				System.out.println("확인 : ============== " + matList.get(0).getInflu_id());
+				System.out.println("확인 : ============== " + matList.size());
 				if (list != null) {
 					System.out.println("확인 : 0000 ");
 					session.setAttribute("matchingadv12345", "matching"); 

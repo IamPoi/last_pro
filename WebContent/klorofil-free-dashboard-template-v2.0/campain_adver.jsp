@@ -93,7 +93,7 @@ ArrayList<String> imgName = new ArrayList<String>();
 		//	 matching = "other";
  			//System.out.println("matching : ");
 		 //}else{
-			// matList2 = (ArrayList<MatchingDTO>)session.getAttribute("adverMypageMatching2");
+			
   		    // System.out.println("matList2 확인 : " + matList2.get(0).getInflu_id());
 			 //matching = "matching";
 		// }
@@ -458,7 +458,12 @@ ArrayList<String> imgName = new ArrayList<String>();
                         		   
                         		   
                         		   //매칭 캠페인
-                        	   <%}else{ %>
+                        	   <%}else{ 
+                        	    matList2 = (ArrayList<MatchingDTO>)session.getAttribute("MachingInfluencerSuccess");
+                        	    System.out.println("확인 : " + matList2.get(0).getInflu_id());
+                        	    System.out.println("확인2 : " + matList2.size());
+                        	    %>
+                        	   
                                     <div class="tab-pane fade in active" id="tab-bottom-left2">
                               <div class="table-responsive">
                                  <table class="table project-table">
@@ -476,30 +481,23 @@ ArrayList<String> imgName = new ArrayList<String>();
                                     <!-- 신청한 인플루언서 중 선택한 인플루언서만 매칭으로 이용하기 -->
                                     
                                     
-                                    <form action="../SelectInfluencer" method=post>
-                                    <%for(int i = 0; i < matList.size(); i++){ %>
+                                  
+                                    <%for(int i = 0; i < matList2.size(); i++){ %>
                                        <tr>
                                           <td><span class="label label-success"><%=i+1 %></span></td>
-                                          <td><a href="#"><%=matList.get(i).getInflu_id() %></a></td>
+                                          <td><a href="#"><%=matList2.get(i).getInflu_id() %></a></td>
                                           <td>
                                              <div>
                                                 <div>
-                                                   <span><%=matList.get(i).getInflu_affect() %></span>
+                                                   <span><%=matList2.get(i).getInflu_affect() %></span>
                                                 </div>
                                              </div>
                                           </td>
                                           <td><img src="assets/img/3.48kg.jpg" alt="Avatar" class="avatar img-circle"> <a href="https://www.instagram.com/3.48kg" target= ”_blank”>3.48kg</a></td>
-                                        <%
-                                        
-                                        String n = matList.get(i).getInflu_id() + "," + matList.get(i).getCampaign_Sid();
-                                        
-                                        %>
-                                        
-                                          <td><input type = checkbox name="ck" value=<%=n %>></td>
                                        </tr>
                                        <%} %>
-                                       <input type="submit">
-                                       </form>
+                         
+                                   
                                        
                                        
                                        

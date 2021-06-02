@@ -79,6 +79,11 @@ public class CampaignMatchingService extends HttpServlet {
 			System.out.println("Ä·ÆäÀÎ ¸ÅÄª ¼­ºñ½º : match_ck" + camp_ck);
 			
 			
+				MatchingDAO matDao2 = new MatchingDAO();
+			 
+				ArrayList<MatchingDTO> matList2 = new ArrayList<MatchingDTO>();
+				matList2 = matDao2.MachingInfluencerSuccess(camnum2);
+				
 			
 			
 		
@@ -94,6 +99,7 @@ public class CampaignMatchingService extends HttpServlet {
 					session.setAttribute("check", "adver");
 					session.setAttribute("camp_ck",String.valueOf(camp_ck));
 					session.setAttribute("applyAllInfluencer", matList);
+					session.setAttribute("MachingInfluencerSuccess", matList2);
 					response.sendRedirect("klorofil-free-dashboard-template-v2.0/campain_adver.jsp");
 				}
 				

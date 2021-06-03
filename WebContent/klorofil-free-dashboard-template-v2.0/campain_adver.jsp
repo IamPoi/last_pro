@@ -33,7 +33,7 @@ ArrayList<String> imgName = new ArrayList<String>();
 <html lang="en">
 
 <head>
-   <title>Profile | Klorofil - Free Bootstrap Dashboard Template</title>
+   <title>마켓어스 | MARKETUS</title>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -168,7 +168,7 @@ ArrayList<String> imgName = new ArrayList<String>();
 
                              <ul class="nav navbar-nav navbar-right">
                                  <li><a href="../bino-free-html5-landing-page-template/company_main2.jsp" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
-                                            <li><a href="../bino-free-html5-landing-page-template/hashtag.jsp">HASHTAG</a></li>
+                                            <li><a href="../bino-free-html5-landing-page-template/hashtag.jsp">HASHTAG LAB</a></li>
                                             <li><a href="../bino-free-html5-landing-page-template/pay.jsp">INQUIRUY</a></li>
                                             <li><a href="../InfluencerMypage?name=adver" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
                                  			<li><a href="../LogoutService">LOGOUT</a></li>
@@ -320,12 +320,12 @@ ArrayList<String> imgName = new ArrayList<String>();
                            		
                         
                            			%>
-                           			 <li><a href="#tab-bottom-left2" role="tab" data-toggle="tab">매칭 인플루언서 <span class="badge"></span></a></li>
+                           			 <li><a href="#tab-bottom-left2" role="tab" data-toggle="tab" style ="font-weight: bold;">매칭 인플루언서 <span class="badge"></span></a></li>
                              		
                            			<%}else{
                                  			System.out.println("matching없음/신청인플루언서");
                            				%>
-                              <li><a href="#tab-bottom-left2" role="tab" data-toggle="tab">신청 인플루언서 <span class="badge"></span></a></li>
+                              <li><a href="#tab-bottom-left2" role="tab" data-toggle="tab" style ="font-weight: bold;">신청 인플루언서 <span class="badge"></span></a></li>
                            			<%
                            		}
                            		
@@ -388,7 +388,7 @@ ArrayList<String> imgName = new ArrayList<String>();
                             	   //System.out.println("matList2 결과1 : " + matList.get(0).getInflu_id());
                         	   %>
                         		   
-                        		  <div class="tab-pane fade in active" id="tab-bottom-left2">
+                        		  <div class="tab-pane fade in active" id="tab-bottom-left2" style = "text-align: center;">
                               <div class="table-responsive">
                                  <table class="table project-table">
                                     <thead>
@@ -497,14 +497,13 @@ ArrayList<String> imgName = new ArrayList<String>();
                                     </tbody>
                                  </table>
                               </div>
-                              <input type="submit" value="매칭하기" class = "btn btn-lg" >
-                                       </form>
-                              <div class="margin-top-30 text-center" style = "display: none; "><a href="#" class="btn btn-lg">매칭하기</a></div>
+                              <input type="submit" value="매칭하기" class = "btn btn-lg" style = "text-align: center">
+                            </form>
                            </div>
                              
                         		   
                         		   
-                        		   //매칭 캠페인
+                        		   
                         	   <%}else{ 
                         	    matList2 = (ArrayList<MatchingDTO>)session.getAttribute("MachingInfluencerSuccess");
                         	    System.out.println("확인 : " + matList2.get(0).getInflu_id());

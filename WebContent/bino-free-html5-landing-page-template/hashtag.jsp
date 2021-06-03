@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>hashtag_search</title>
+<title>마켓어스 | MARKETUS</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -54,8 +54,8 @@
 <body data-spy="scroll" data-target=".navbar-collapse">
 
 
-<%MemberDTO info = (MemberDTO) session.getAttribute("info");
-
+<%
+MemberDTO info = (MemberDTO) session.getAttribute("info");
 %>
 
    <div class='preloader'>
@@ -96,14 +96,10 @@
                               <ul class="nav navbar-nav navbar-right">
                                  <li><a href="influencer_main.jsp">HOME</a></li>
                                  <!-- 세션값받아와서 influencer/companymain으로 이동 -->
-                                 <li><a href="hashtag.jsp">HASHTAG</a></li>
+                                 <li><a href="hashtag.jsp">HASHTAG LAB</a></li>
                                  <li><a href="">My Page</a></li>
                                  <!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-                                 <%if(info == null){ %>
-                                 <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
-                                 <%} else{ %>
-                                 <li><a href="">LOGOUT</a></li>
-                                 <%} %>
+                                 
                               </ul>
 
 
@@ -177,9 +173,11 @@
                         <div class="pricing_body">
                            <ul>
                               <li>최근 사용 해시태그 클라우드</li>
+                              <div style = "display : none">
                               <li>All Ranked URLs</li>
                               <li>International Support System</li>
                               <li>Social Media Tracking</li>
+                              </div>
                            </ul>
 
                         </div>
@@ -203,9 +201,11 @@
                         <div class="pricing_body">
                            <ul>
                               <li>표</li>
+                              <div style = "display : none">
                               <li>All Ranked URLs</li>
                               <li>International Support System</li>
                               <li>Social Media Tracking</li>
+                              </div>
                            </ul>
 
                         </div>

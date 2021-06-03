@@ -41,7 +41,7 @@
 
 <!-- 새로운 head + style 코드 start  -->
 <head>
-<title>Profile | Klorofil - Free Bootstrap Dashboard Template</title>
+<title>마켓어스 | MARKETUS</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport"
@@ -257,7 +257,7 @@ System.out.println("imgFileList : " + imgFileList.size());
 
                              <ul class="nav navbar-nav navbar-right">
                                  <li><a href="../bino-free-html5-landing-page-template/company_main2.jsp" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
-                                            <li><a href="../bino-free-html5-landing-page-template/hashtag.jsp">HASHTAG</a></li>
+                                            <li><a href="../bino-free-html5-landing-page-template/hashtag.jsp">HASHTAG LAB</a></li>
                                             <li><a href="../bino-free-html5-landing-page-template/pay.jsp">INQUIRUY</a></li>
                                             <li><a href="../InfluencerMypage?name=adver" >MY PAGE</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
                                              <%if(info == null){ %>

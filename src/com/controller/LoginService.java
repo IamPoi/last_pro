@@ -60,7 +60,9 @@ public class LoginService extends HttpServlet {
            } else {
            
               System.out.println("로그인 실패");
-         
+//              response.sendRedirect("klorofil-free-dashboard-template-v2.0/page-login.jsp?value=adver");
+              out.println("<script>alert('Fail'); location.href='klorofil-free-dashboard-template-v2.0/page-login.jsp?value=adver'; </script>");
+              out.flush();
            }
       }else if(value.equals("inf")) {
          
@@ -86,9 +88,9 @@ public class LoginService extends HttpServlet {
          } else {
             
             System.out.println("로그인 실패");
-            
-            //out.println("<script>alert('로그인 실패'); location.href='main.jsp'; </script>");
-            //out.flush();
+//            response.sendRedirect("klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf");
+            out.println("<script>alert('Fail'); location.href='klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf'; </script>");
+            out.flush();
          }
          
       }

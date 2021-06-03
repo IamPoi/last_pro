@@ -41,7 +41,7 @@ img.inf {
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Bino html5 free Template</title>
+<title>마켓어스 | MARKETUS</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -135,7 +135,7 @@ img {
 
                              <ul class="nav navbar-nav navbar-right">
                                  <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
-                                            <li><a href="hashtag.jsp">HASHTAG</a></li>
+                                            <li><a href="hashtag.jsp">HASHTAG LAB</a></li>
                                             <li><a href="pay.jsp">INQUIRY</a></li>
                                             <li><a href="../InfluencerMypage?name=adver" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
                                             <%

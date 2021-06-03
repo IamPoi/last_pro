@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>hashtag_report</title>
+<title>마켓어스 | MARKETUS</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -92,7 +92,7 @@
 
                                  <li><a href="">HOME</a></li>
                                  <!-- 세션값받아와서 influencer/companymain으로 이동 -->
-                                 <li><a href="hashtag.jsp">HASGTAG</a></li>
+                                 <li><a href="hashtag.jsp">HASGTAG LAB</a></li>
                                  <li><a href="">My Page</a></li>
                                  <!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
                                  <li><a href="page-login.jsp">LOGIN</a></li>

@@ -181,7 +181,7 @@
 													</div>
                                                     <div class="text-center">
                                                     
-                                                        <a href = "company_main2.jsp"class = "btn btn-lg">문의하기<input type="submit" value="문의하기" class="btn btn-lg " style = "background:#1E90FF; display : none"></a>
+                                                        <a href = "company_main2.jsp"class = "btn btn-lg" onclick="alert('문의가 완료되었습니다.');">문의하기<input type="submit" value="문의하기" class="btn btn-lg " style = "background:#1E90FF; display : none"></a>
 
                                                     </div>
                                                 </div> 

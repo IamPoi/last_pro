@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>마켓어스 | MARKETUS</title>
 
 <style type="text/css">
 

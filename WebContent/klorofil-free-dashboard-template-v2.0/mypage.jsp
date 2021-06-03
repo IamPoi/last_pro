@@ -601,7 +601,7 @@ textarea {
                                  <%
                                  } else {
                                  %>
-                                 <a href="../ReportService" class="btn btn-default">레포트
+                                 <a href="../ReportService?info_adver=0,0" class="btn btn-default">레포트
                                     자세히보기</a>
                                  <%
                                  }

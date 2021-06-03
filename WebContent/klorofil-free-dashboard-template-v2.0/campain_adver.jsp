@@ -83,7 +83,12 @@ ArrayList<String> imgName = new ArrayList<String>();
     position: relative;
     background-color: white;
 }
-    
+    tr{
+		text-align: center;    
+    }
+    th{
+    	text-align: center;
+    }
     
    </style>
 </head>
@@ -396,7 +401,6 @@ ArrayList<String> imgName = new ArrayList<String>();
                                           <th>랭킹</th>
                                           <th>인플루언서</th>
                                           <th>영향력</th>
-                                          <th>Leader</th>
                                           <th> </th>
                                        </tr>
                                     </thead>
@@ -405,13 +409,13 @@ ArrayList<String> imgName = new ArrayList<String>();
                                     <!-- 신청한 인플루언서 중 선택한 인플루언서만 매칭으로 이용하기 -->
                                     
                                     
-                                    
+                                    <%int j = 14; %>
                                     
                                     <form action="../SelectInfluencer" method=post>
                                     <%for(int i = 0; i < matList.size(); i++){ %>
                                        <tr>
                                           <td><span class="label label-success"><%=i+1 %></span></td>
-                                          <td><a href="#"><%=matList.get(i).getInflu_id() %></a></td>
+                                          <td><a href="../ReportService?info_adver=<%=matList.get(i).getInflu_id()+","+"adver" %>"><%=matList.get(i).getInflu_id() %></a></td>
                                           <td>
                                              <div>
                                                 <div>
@@ -419,7 +423,7 @@ ArrayList<String> imgName = new ArrayList<String>();
                                                 </div>
                                              </div>
                                           </td>
-                                          <td><img src="assets/img/3.48kg.jpg" alt="Avatar" class="avatar img-circle"> <a href="https://www.instagram.com/3.48kg" target= ”_blank”>3.48kg</a></td>
+                                          <td style = "display : none"><img src="assets/img/<%=matList.get(i).getInflu_id()  %>.jpg" alt="Avatar" class="avatar img-circle" style ="display : none"> <a href="https://www.instagram.com/3.48kg" target= ”_blank”><%=matList.get(i).getInflu_id()  %></a></td>
                                    
                                         
                                         
@@ -436,64 +440,23 @@ ArrayList<String> imgName = new ArrayList<String>();
                                         
                                           <td><input type = checkbox name="ck" value=<%=n %>></td>
                                        </tr>
+                                       <%
+                                       j--;} %>
+                                       
+                                       
+                                       
+                                        <%for(int z = 0; z < j; z++){ %>
+                                       <tr style = "visibility: hidden;">
+                                       <td></td>
+                                       <td></td>
+                                       <td></td>
+                                       <td></td>
+                                       </tr>
                                        <%} %>
                                        
                                        
                                        
                                        
-                                       
-                                       
-                                       
-                                       <tr style = 'display : none'>
-                                       <td><span class="label label-success">3</span></td>
-                                          <td><a href="#">인플루언서 3</a></td>
-                                          <td>
-                                             <div>
-                                                <div>
-                                                   <span>50000</span>
-                                                </div>
-                                             </div>
-                                          </td>
-                                          <td><img src="assets/img/user1.png" alt="Avatar" class="avatar img-circle"> <a href="#">3.48kg</a></td>
-                                          <td><input type = "checkbox"></td>
-                                       </tr>
-                                       <tr style = 'display : none'>
-                                       <td><span class="label label-success">1</span></td>
-                                          <td><a href="#">인플루언서 4</a></td>
-                                          <td>
-                                             <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-                                                   <span>75%</span>
-                                                </div>
-                                             </div>
-                                          </td>
-                                          <td><img src="assets/img/user2.png" alt="Avatar" class="avatar img-circle"> <a href="#">Michael</a></td>
-                                          <td><span class="label label-success">ACTIVE</span></td>
-                                       </tr>
-                                       <tr style = 'display : none'>
-                                          <td><a href="#">인플루언서 5</a></td>
-                                          <td>
-                                             <div class="progress">
-                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                                   <span>100%</span>
-                                                </div>
-                                             </div>
-                                          </td>
-                                          <td><img src="assets/img/user1.png" alt="Avatar" class="avatar img-circle" /> <a href="#">Antonius</a></td>
-                                          <td><span class="label label-default">CLOSED</span></td>
-                                       </tr>
-                                       <tr style = 'display : none'>
-                                          <td><a href="#">Redesign Landing Page</a></td>
-                                          <td>
-                                             <div class="progress">
-                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                                   <span>100%</span>
-                                                </div>
-                                             </div>
-                                          </td>
-                                          <td><img src="assets/img/user5.png" alt="Avatar" class="avatar img-circle" /> <a href="#">Jason</a></td>
-                                          <td><span class="label label-default">CLOSED</span></td>
-                                       </tr>
                                     </tbody>
                                  </table>
                               </div>
@@ -526,7 +489,7 @@ ArrayList<String> imgName = new ArrayList<String>();
                                     
                                     <!-- 신청한 인플루언서 중 선택한 인플루언서만 매칭으로 이용하기 -->
                                     
-                                    
+                                   
                                   
                                     <%for(int i = 0; i < matList2.size(); i++){ %>
                                        <tr>
@@ -539,79 +502,14 @@ ArrayList<String> imgName = new ArrayList<String>();
                                                 </div>
                                              </div>
                                           </td>
-                                          <td><img src="assets/img/3.48kg.jpg" alt="Avatar" class="avatar img-circle"> <a href="https://www.instagram.com/3.48kg" target= ”_blank”>3.48kg</a></td>
+                                          <td><img src="assets/img/<%=matList.get(i).getInflu_id() %>.jpg" alt="Avatar" class="avatar img-circle"> <a href="https://www.instagram.com/3.48kg" target= ”_blank”>3.48kg</a></td>
                                        </tr>
-                                       <%} %>
-                         
-                                   
+                                       <%
                                        
+                                    } %>
                                        
+                                      
                                        
-                                       
-                                       
-                                       <tr style = 'display : none'>
-                                       <td><span class="label label-success">2</span></td>
-                                          <td><a href="#">인플루언서 2</a></td>
-                                          <td>
-                                             <div>
-                                                <div>
-                                                   <span>100000</span>
-                                                </div>
-                                             </div>
-                                          </td>
-                                          <td><img src="assets/img/user1.png" alt="Avatar" class="avatar img-circle"> <a href="report.jsp">3.48kg</a></td>
-                                          <td><input type = "checkbox"></td>
-                                       </tr>
-                                       <tr style = 'display : none'>
-                                       <td><span class="label label-success">3</span></td>
-                                          <td><a href="#">인플루언서 3</a></td>
-                                          <td>
-                                             <div>
-                                                <div>
-                                                   <span>50000</span>
-                                                </div>
-                                             </div>
-                                          </td>
-                                          <td><img src="assets/img/user1.png" alt="Avatar" class="avatar img-circle"> <a href="#">3.48kg</a></td>
-                                          <td><input type = "checkbox"></td>
-                                       </tr>
-                                       <tr style = 'display : none'>
-                                       <td><span class="label label-success">1</span></td>
-                                          <td><a href="#">인플루언서 4</a></td>
-                                          <td>
-                                             <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-                                                   <span>75%</span>
-                                                </div>
-                                             </div>
-                                          </td>
-                                          <td><img src="assets/img/user2.png" alt="Avatar" class="avatar img-circle"> <a href="#">Michael</a></td>
-                                          <td><span class="label label-success">ACTIVE</span></td>
-                                       </tr>
-                                       <tr style = 'display : none'>
-                                          <td><a href="#">인플루언서 5</a></td>
-                                          <td>
-                                             <div class="progress">
-                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                                   <span>100%</span>
-                                                </div>
-                                             </div>
-                                          </td>
-                                          <td><img src="assets/img/user1.png" alt="Avatar" class="avatar img-circle" /> <a href="#">Antonius</a></td>
-                                          <td><span class="label label-default">CLOSED</span></td>
-                                       </tr>
-                                       <tr style = 'display : none'>
-                                          <td><a href="#">Redesign Landing Page</a></td>
-                                          <td>
-                                             <div class="progress">
-                                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
-                                                   <span>100%</span>
-                                                </div>
-                                             </div>
-                                          </td>
-                                          <td><img src="assets/img/user5.png" alt="Avatar" class="avatar img-circle" /> <a href="#">Jason</a></td>
-                                          <td><span class="label label-default">CLOSED</span></td>
-                                       </tr>
                                     </tbody>
                                  </table>
                               </div>

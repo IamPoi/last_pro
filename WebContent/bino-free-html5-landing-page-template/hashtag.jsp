@@ -1,3 +1,4 @@
+<%@page import="com.model.AdvertiserDTO"%>
 <%@page import="com.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
    pageEncoding="EUC-KR"%>
@@ -52,7 +53,11 @@
 </style>
 <body data-spy="scroll" data-target=".navbar-collapse">
 
-<%MemberDTO info = (MemberDTO) session.getAttribute("info");%>
+
+<%MemberDTO info = (MemberDTO) session.getAttribute("info");
+
+%>
+
    <div class='preloader'>
       <div class='loaded'>&nbsp;</div>
    </div>
@@ -89,14 +94,13 @@
                               id="bs-example-navbar-collapse-1">
 
                               <ul class="nav navbar-nav navbar-right">
-
-                                 <li><a href="">HOME</a></li>
+                                 <li><a href="influencer_main.jsp">HOME</a></li>
                                  <!-- 세션값받아와서 influencer/companymain으로 이동 -->
                                  <li><a href="hashtag.jsp">HASHTAG</a></li>
                                  <li><a href="">My Page</a></li>
                                  <!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
                                  <%if(info == null){ %>
-                                 <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp">LOGIN</a></li>
+                                 <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
                                  <%} else{ %>
                                  <li><a href="">LOGOUT</a></li>
                                  <%} %>

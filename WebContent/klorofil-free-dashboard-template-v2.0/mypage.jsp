@@ -329,7 +329,7 @@ textarea {
 
                                  <li><a href="">HOME</a></li>
                                  <!-- 세션값받아와서 influencer/companymain으로 이동 -->
-                                 <li><a href="hashtag.jsp">HASHTAG</a></li>
+                                 <li><a href="../bino-free-html5-landing-page-template/hashtag.jsp">HASHTAG</a></li>
                                  <li><a href="">MY PAGE</a></li>
                                  <!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
                                  <%if(info == null){ %>

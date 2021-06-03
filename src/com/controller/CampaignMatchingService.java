@@ -31,14 +31,7 @@ public class CampaignMatchingService extends HttpServlet {
 		
 		System.out.println("CampaignMatchingService페이지");
 		HttpSession session = request.getSession(); // 세션 가져오기
-		String camnum = request.getParameter("camnum");
-		String[] array = camnum.split(",");
-		System.out.println("=====================================" + array[0]); //캠페인 시퀀스 넘버
-		System.out.println("=====================================" + array[1]); // 캠페인 상태 0모집중 1모집완료 2종료
 		
-		
-		int camnum2 = Integer.parseInt(array[0]);
-		int camStatus = Integer.parseInt(array[1]);
 		
 		String name = request.getParameter("ck");  // inf / adver
 		System.out.println("value페이지 : " + name);
@@ -46,6 +39,18 @@ public class CampaignMatchingService extends HttpServlet {
 		MemberDAO mdao = new MemberDAO();
 					
 		if (name.equals("adver")) {
+			
+			
+			String camnum = request.getParameter("camnum");
+			String[] array = camnum.split(",");
+			System.out.println("=====================================" + array[0]); //캠페인 시퀀스 넘버
+			System.out.println("=====================================" + array[1]); // 캠페인 상태 0모집중 1모집완료 2종료
+			
+			
+			int camnum2 = Integer.parseInt(array[0]);
+			int camStatus = Integer.parseInt(array[1]);
+			
+			
 			System.out.println("광고주-캠페인 매칭 서비스 서블릿 파일");
 			System.out.println("Integer.parseInt(camnum)) :" +camnum2);
 		
@@ -117,14 +122,18 @@ public class CampaignMatchingService extends HttpServlet {
 	
 			ArrayList<MatchingDTO> matList = new ArrayList<MatchingDTO>();
 			MatchingDAO matDao = new MatchingDAO();
+			MatchingDTO matDto = new MatchingDTO();
 			int cnt = matDao.applyCamp(camp_info,info_login);
 			
+			matDto = matDao.selectapplyCamp(camp_info, info_login);
+			
+			System.out.println("==== " + matDto.getCamp_ck());
 			if(cnt > 0) {
 				System.out.println("캠페인 신청 성공!");
 			}else {
 				System.out.println("캠페인 신청 실패!");
 			}
-			
+			session.setAttribute("matDto", matDto);
 			//신청완료 띄우기
 			response.sendRedirect("klorofil-free-dashboard-template-v2.0/campain_inf.jsp");
 		}

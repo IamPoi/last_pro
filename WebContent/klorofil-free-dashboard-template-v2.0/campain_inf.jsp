@@ -366,10 +366,28 @@ ArrayList<String> imgName = new ArrayList<String>();
 										session.setAttribute("camp_Info", info);
 										session.setAttribute("info_login", info_login);
 										%>
+										
+										<%
+										
+										MatchingDTO session2 = (MatchingDTO) session.getAttribute("matDto"); // 선택한 캠페인 세션정보
+											
+										System.out.print(session2.getCamp_ck());
+											
+											
+											if(session2.getCamp_ck() == 0){
+										%>
+									
 										<div class="text-center">
 											<a href="../CampaignMatchingService?ck=inf"
 												class="btn btn-lg">신청하기</a>
 										</div>
+										
+										<%}else{ %>
+										<div class="text-center">
+											<a href="../CampaignMatchingService?ck=inf"
+												class="btn btn-lg" style = "visibility: hidden">신청하기</a>
+										</div>
+										<%} %>
 										<%
 										} else if (check.equals("adver")) {
 										%>

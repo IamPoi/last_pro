@@ -561,8 +561,8 @@ System.out.println("imgFileList : " + imgFileList.size());
    </div>
 
          <!-- 팝업 될 레이어 -->
-   <div class="modal1">
-      <div class="modal-content" style = "width : 50%; height : 70%;">
+   <div class="modal1" data-spy="scroll">
+      <div class="modal-content" style = "width : 50%; height : 70%; overflow: scroll"">
          <span class="close-button">&times;</span>
          <h1 class="title">모든 캠페인</h1>
          <div class="table-responsive">

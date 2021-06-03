@@ -209,6 +209,25 @@ img {
 										imgName2.add(SList[numList.get(j)]);
 
 									}
+									
+									
+									for(int i=0; i<imgName2.size();i++){
+										System.out.println("imgName2 : " + imgName2.get(i));
+									}
+									
+									int[] nList = new int[numList.size()];
+									for (int i = 0; i < imgName.size(); i++) {
+										for(int j=0; j< numList.size(); j++){
+											if(imgName.get(i).equals(String.valueOf(numList.get(j)))){
+												nList[j] = i;
+												System.out.println("nList[i] : " + i);
+											}
+											
+										}
+									}
+
+									
+									
 
 									int num = 3;
 									int s = 0;
@@ -227,14 +246,16 @@ img {
 										String strImgConFormat1 = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
 												+ "<a href = \"../CampaignService?id=%s\">  <img width='300' height = '400' src=\"%s\"/></a>" + "</div>";
 
-										System.out.println("numList.size(): " + numList.get(i));
-										File f = imgFileList.get(numList.get(i)); //numList.get(i)-1
+										System.out.println("imgName2.size(): " + imgName2.get(i));
+										File f = imgFileList.get(nList[i]); //numList.get(i)-1
 										String title = "";//Util.getFileNameNoExt(f.getName());
-										String id = imgName2.get(i) + ",inf";
+										String id = numList.get(i) + ",inf";
 										String url = Util.getImgSrc(f);
 
 										out.print(String.format(strImgConFormat1, title, id, url));
+										
 										%>
+										
 									</div>
 									<%
 									}

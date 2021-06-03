@@ -68,26 +68,26 @@ ArrayList<String> imgName = new ArrayList<String>();
 	background-color: white;
 }
 
-    .col-md-4{
-    	color:black;
-    	background-color: white;
-    	font-weight: bold;
-    }
-    
-    .profile-header .profile-stat .stat-item:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 1px;
-    height: 100%;
-    background-color: black;
+.col-md-4 {
+	color: black;
+	background-color: white;
+	font-weight: bold;
+}
+
+.profile-header .profile-stat .stat-item:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 100%;
+	background-color: black;
 }
 
 .profile-header .profile-stat {
-    position: relative;
-    background-color: white;
+	position: relative;
+	background-color: white;
 }
 </style>
 </head>
@@ -96,75 +96,81 @@ ArrayList<String> imgName = new ArrayList<String>();
 
 
 	<%
-		String check = (String) session.getAttribute("check");
-		System.out.println("캠페인 페이지 : " + check);
-		String category = null;
-		
-		CampaginDTO info = (CampaginDTO) session.getAttribute("campSelect"); // 선택한 캠페인 세션정보
-		String campPicture = (String) session.getAttribute("campPicture"); // 선택한 캠페인 이름 정보
-		MemberDTO info_login = (MemberDTO) session.getAttribute("info"); //로그인한 멤머 세션 정보
-		ArrayList<MatchingDTO> applyAllInfluencer = (ArrayList<MatchingDTO>) session.getAttribute("applyAllInfluencer"); // 모든신청 인플ㄹ루언서 세션
-		String a = info.getCategory();
-		System.out.println("category : "+a);
-		
-		if(a.equals("fashion")){
-			category = "shirt";
-		}else if(a.equals("food")){
-			category = "dinner";
-		}else{
-			category = "magic-wand";
-		}
+	String check = (String) session.getAttribute("check");
+	System.out.println("캠페인 페이지 : " + check);
+	String category = null;
+
+	CampaginDTO info = (CampaginDTO) session.getAttribute("campSelect"); // 선택한 캠페인 세션정보
+	String campPicture = (String) session.getAttribute("campPicture"); // 선택한 캠페인 이름 정보
+	MemberDTO info_login = (MemberDTO) session.getAttribute("info"); //로그인한 멤머 세션 정보
+	ArrayList<MatchingDTO> applyAllInfluencer = (ArrayList<MatchingDTO>) session.getAttribute("applyAllInfluencer"); // 모든신청 인플ㄹ루언서 세션
+	String a = info.getCategory();
+	System.out.println("category : " + a);
+
+	if (a.equals("fashion")) {
+		category = "shirt";
+	} else if (a.equals("food")) {
+		category = "dinner";
+	} else {
+		category = "magic-wand";
+	}
 	%>
-	
+
 	<!-- WRAPPER -->
 	<div id="wrapper">
 		<header id="main_menu" class="header navbar-fixed-top">
-         <div class="main_menu_bg" style = "background-color:white;">
-            <div class="container" style = "width : 100%">
-               <div class="row">
-                  <div class="nave_menu">
-                     <nav class="navbar navbar-default">
-                        <div class="container-fluid">
-                           <!-- Brand and toggle get grouped for better mobile display -->
-                           <div class="navbar-header">
-                              <button type="button" class="navbar-toggle collapsed"
-                                 data-toggle="collapse"
-                                 data-target="#bs-example-navbar-collapse-1"
-                                 aria-expanded="false">
-                                 <span class="sr-only">Toggle navigation</span> <span
-                                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                                    class="icon-bar"></span>
-                              </button>
+			<div class="main_menu_bg" style="background-color: white;">
+				<div class="container" style="width: 100%">
+					<div class="row">
+						<div class="nave_menu">
+							<nav class="navbar navbar-default">
+								<div class="container-fluid">
+									<!-- Brand and toggle get grouped for better mobile display -->
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle collapsed"
+											data-toggle="collapse"
+											data-target="#bs-example-navbar-collapse-1"
+											aria-expanded="false">
+											<span class="sr-only">Toggle navigation</span> <span
+												class="icon-bar"></span> <span class="icon-bar"></span> <span
+												class="icon-bar"></span>
+										</button>
 
 
-                              <a class="navbar-brand" href="../bino-free-html5-landing-page-template/firstPage.jsp"> <img
-                                 src="images/logo_high_re.png" style = "width:140px; height:50px; margin-left: 30px; ">
-                              </a>
-                           </div>
+										<a class="navbar-brand"
+											href="../bino-free-html5-landing-page-template/firstPage.jsp">
+											<img src="images/logo_high_re.png"
+											style="width: 140px; height: 50px; margin-left: 30px;">
+										</a>
+									</div>
 
-                           <!-- Collect the nav links, forms, and other content for toggling -->
+									<!-- Collect the nav links, forms, and other content for toggling -->
 
-                           <div class="collapse navbar-collapse"
-                              id="bs-example-navbar-collapse-1">
+									<div class="collapse navbar-collapse"
+										id="bs-example-navbar-collapse-1">
 
-                             <ul class="nav navbar-nav navbar-right">
-                                 <li><a href="../bino-free-html5-landing-page-template/influencer_main.jsp" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
-                                            <li><a href="../bino-free-html5-landing-page-template/hashtag.jsp">HASHTAG</a></li>
-                                            <li><a href="../InfluencerMypage?name=inf" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-                                 			<li><a href="../LogoutService">LOGOUT</a></li>
-                               
-                                            
-                              </ul>
-                           </div>
-                        </div>
-                     </nav>
-                  </div>
-               </div>
+										<ul class="nav navbar-nav navbar-right">
+											<li><a
+												href="../bino-free-html5-landing-page-template/influencer_main.jsp">HOME</a></li>
+											<!-- 세션값받아와서 influencer/companymain으로 이동 -->
+											<li><a
+												href="../bino-free-html5-landing-page-template/hashtag.jsp">HASHTAG</a></li>
+											<li><a href="../InfluencerMypage?name=inf">My Page</a></li>
+											<!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
+											<li><a href="../LogoutService">LOGOUT</a></li>
 
-            </div>
 
-         </div>
-      </header>
+										</ul>
+									</div>
+								</div>
+							</nav>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</header>
 		<!--End of header -->
 		<!-- LEFT SIDEBAR -->
 		<div id="sidebar-nav" class="sidebar">
@@ -202,9 +208,9 @@ ArrayList<String> imgName = new ArrayList<String>();
 			</div>
 		</div>
 		<!-- END LEFT SIDEBAR -->
-		
-		
-		
+
+
+
 		<!-- MAIN -->
 		<div class="main" style="width: 100%">
 			<!-- MAIN CONTENT -->
@@ -213,14 +219,14 @@ ArrayList<String> imgName = new ArrayList<String>();
 					<div class="panel panel-profile">
 						<div class="clearfix">
 							<!-- LEFT COLUMN -->
-							
+
 							<div class="profile-left">
 								<!-- PROFILE HEADER -->
 								<div class="profile-header" style="height: 100%;">
 									<div class="overlay"></div>
 									<div class="profile-main" style="height: 90%">
-										<img src="images/<%=info.getCampaign_Sid()%>.jpg"
-											alt="Avatar" style="height: 100%; width: 100%">
+										<img src="images/<%=info.getCampaign_Sid()%>.jpg" alt="Avatar"
+											style="height: 100%; width: 100%">
 										<h3 class="name">광고주(브랜드) 이름??</h3>
 										<span class="online-status status-available">Available</span>
 									</div>
@@ -240,124 +246,172 @@ ArrayList<String> imgName = new ArrayList<String>();
 								</div>
 								<!-- END PROFILE HEADER -->
 							</div>
-							
-							
+
+
 							<!-- END LEFT COLUMN -->
 							<!-- RIGHT COLUMN -->
 							<div class="profile-right">
 								<h4 class="heading"><%=info.getCampaign_title()%></h4>
 								<!-- AWARDS -->
 								<div class="awards" style="margin-bottom: 15px;">
-                           <div class="row">
-                              <div class="col-md-3 col-sm-6">
-                                 <div class="award-item">
-                                    <div class="hexagon">
-                                       <span class="lnr lnr-<%=category %> award-icon"></span>
-                                    </div>
-                                    <span>카테고리</span>
-                                 </div>
-                              </div>
-                              <div class="col-md-3 col-sm-6">
-                                 <div class="award-item">
-                                    <div class="hexagon" style="font-size: 35px;font-weight: bold;">
-                                    <%String b = info.getRq_gender();
-                                    if(b.equals("male")){%>
-                                    <span>남자</span>
-                                    <%}else if(b.equals("fmale")){%>
-                                    <span>여자</span>
-                                    <%}else{ %>
-                                    <span>무관</span>
-                                    <%}%>
-                                       <span class="lnr  award-icon"></span>
-                                    </div>
-                                       <span>카테고리</span>
-                                    
-                                    
-                                 </div>
-                              </div>
-                              <div class="col-md-3 col-sm-6">
-                                 <div class="award-item">
-                                    <div class="hexagon" >
-                                    <%int c = info.getAd_estimate();
-                                    
-                                    %>
-                                       <span style="font-size: 35px;font-weight: bold;"><%=c/1000 %></span><br>
-                                       
-                                    </div>
-                                    <span>견적 비용</span><br><span style = "font-size: 8px;">단위 : 천</span>
-                                    
-                                 </div>
-                              </div>
-									<div class="text-center" style='display: none'>
-										<a href="#" class="btn btn-default">See all awards</a>
+									<div class="row">
+										<div class="col-md-3 col-sm-6">
+											<div class="award-item">
+												<div class="hexagon">
+													<span class="lnr lnr-<%=category%> award-icon"></span>
+												</div>
+												<span>카테고리</span>
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-6">
+											<div class="award-item">
+												<div class="hexagon"
+													style="font-size: 35px; font-weight: bold;">
+													<%
+													String b = info.getRq_gender();
+													if (b.equals("male")) {
+													%>
+													<span>남자</span>
+													<%
+													} else if (b.equals("fmale")) {
+													%>
+													<span>여자</span>
+													<%
+													} else {
+													%>
+													<span>무관</span>
+													<%
+													}
+													%>
+													<span class="lnr  award-icon"></span>
+												</div>
+												<span>카테고리</span>
+
+
+											</div>
+										</div>
+										<div class="col-md-3 col-sm-6">
+											<div class="award-item">
+												<div class="hexagon">
+													<%
+													int c = info.getAd_estimate();
+													%>
+													<span style="font-size: 35px; font-weight: bold;"><%=c / 1000%></span><br>
+
+												</div>
+												<span>견적 비용</span><br> <span style="font-size: 8px;">단위
+													: 천</span>
+
+											</div>
+										</div>
+										<div class="text-center" style='display: none'>
+											<a href="#" class="btn btn-default">See all awards</a>
+										</div>
 									</div>
-								</div>
-								<!-- END AWARDS -->
-								<!-- TABBED CONTENT -->
-								<!-- 이쪽 수정 -->
-								<div class="custom-tabs-line tabs-line-bottom left-aligned">
-									<ul class="nav" role="tablist">
+									<!-- END AWARDS -->
+									<!-- TABBED CONTENT -->
+									<!-- 이쪽 수정 -->
+									<div class="custom-tabs-line tabs-line-bottom left-aligned">
+										<ul class="nav" role="tablist">
+											<%
+											if (check.equals("inf")) {
+											%>
+											<li class="active"><a href="#tab-bottom-left1"
+												role="tab" data-toggle="tab">캠페인 설명</a></li>
+											<%
+											} else if (check.equals("adver")) {
+											%>
+											<li><a href="#tab-bottom-left2" role="tab"
+												data-toggle="tab">신청 인플푸언서 <span class="badge"></span></a></li>
+											<%
+											}
+											%>
+
+										</ul>
+									</div>
+									<div class="tab-content">
 										<%
 										if (check.equals("inf")) {
 										%>
-										<li class="active"><a href="#tab-bottom-left1" role="tab"
-											data-toggle="tab">캠페인 설명</a></li>
-										<%
-										} else if (check.equals("adver")) {
-										%>
-										<li><a href="#tab-bottom-left2" role="tab"
-											data-toggle="tab">신청 인플푸언서 <span class="badge"></span></a></li>
-										<%
-										}
-										%>
+										<div class="tab-pane fade in active" id="tab-bottom-left1">
+											<ul class="list-unstyled activity-timeline">
+												<li><i class="fa fa-comment activity-icon"></i>
+													<p><%=info.getCampaign_title()%>
+														<a href="#">?</a> <span class="timestamp"><%=info.getCampaign_sub()%></span>
+													</p></li>
 
-									</ul>
-								</div>
-								<div class="tab-content">
-									<%
-									if (check.equals("inf")) {
-									%>
-									<div class="tab-pane fade in active" id="tab-bottom-left1">
-										<ul class="list-unstyled activity-timeline">
-											<li><i class="fa fa-comment activity-icon"></i>
-												<p><%=info.getCampaign_title()%>
-													<a href="#">?</a> <span class="timestamp"><%=info.getCampaign_sub()%></span>
-												</p></li>
+											</ul>
 
-										</ul>
+											<div class="profile-detail">
+												<div class="profile-info">
+													<h4 class="heading">광고주 요구사항</h4>
+													<ul class="list-unstyled list-justify">
+														<li>요구 팔로워 수 <span><%=info.getRq_follower()%></span></li>
+														<li>요구 성별 <span><%=info.getRq_gender()%></span></li>
+														<li>요구 카테고리<span><%=info.getCategory()%></span></li>
+														<li>캠페인 시작 <span><%=info.getCampaign_start()%></span></li>
+														<li>캠페인 종료 <span><%=info.getCampaign_end()%></span></li>
+													</ul>
+												</div>
+												<div class="profile-info" style='display: none'>
+													<h4 class="heading">Social</h4>
+													<ul class="list-inline social-icons">
+														<li><a href="#" class="facebook-bg"><i
+																class="fa fa-facebook"></i></a></li>
+														<li><a href="#" class="twitter-bg"><i
+																class="fa fa-twitter"></i></a></li>
+														<li><a href="#" class="google-plus-bg"><i
+																class="fa fa-google-plus"></i></a></li>
+														<li><a href="#" class="github-bg"><i
+																class="fa fa-github"></i></a></li>
+													</ul>
+												</div>
+												<div class="profile-info" style='display: none'>
+													<h4 class="heading">About</h4>
+													<p>Interactively fashion excellent information after
+														distinctive outsourcing.</p>
+												</div>
+												<div class="text-center" style='display: none'>
+													<a href="#" class="btn btn-primary">Edit Profile</a>
+												</div>
+											</div>
 
-										<div class="profile-detail">
-											<div class="profile-info">
-												<h4 class="heading">광고주 요구사항</h4>
-												<ul class="list-unstyled list-justify">
-													<li>요구 팔로워 수 <span><%=info.getRq_follower()%></span></li>
-													<li>요구 성별 <span><%=info.getRq_gender()%></span></li>
-													<li>요구 카테고리<span><%=info.getCategory()%></span></li>
-													<li>캠페인 시작 <span><%=info.getCampaign_start()%></span></li>
-													<li>캠페인 종료 <span><%=info.getCampaign_end()%></span></li>
-												</ul>
+
+
+											<%
+											session.setAttribute("camp_Info", info);
+											session.setAttribute("info_login", info_login);
+
+											MatchingDTO matDto = (MatchingDTO) session.getAttribute("matDto"); //로그인한 멤머 세션 정보
+
+											if (matDto == null) {
+											%>
+											<div class="text-center">
+
+
+
+												<a href="../CampaignMatchingService?ck=inf"
+													class="btn btn-lg" onclick="alert('신청완료 되었습니다.');">신청하기</a>
 											</div>
-											<div class="profile-info" style='display: none'>
-												<h4 class="heading">Social</h4>
-												<ul class="list-inline social-icons">
-													<li><a href="#" class="facebook-bg"><i
-															class="fa fa-facebook"></i></a></li>
-													<li><a href="#" class="twitter-bg"><i
-															class="fa fa-twitter"></i></a></li>
-													<li><a href="#" class="google-plus-bg"><i
-															class="fa fa-google-plus"></i></a></li>
-													<li><a href="#" class="github-bg"><i
-															class="fa fa-github"></i></a></li>
-												</ul>
+											<%
+											System.out.println("매칭되었음 : ");
+											} else {
+											%>
+											<div class="text-center">
+												<a href="../CampaignMatchingService?ck=inf"
+													class="btn btn-lg" style="visibility: hidden">신청하기</a>
 											</div>
-											<div class="profile-info" style='display: none'>
-												<h4 class="heading">About</h4>
-												<p>Interactively fashion excellent information after
-													distinctive outsourcing.</p>
-											</div>
-											<div class="text-center" style='display: none'>
-												<a href="#" class="btn btn-primary">Edit Profile</a>
-											</div>
+
+											<%
+											}
+											}
+											%>
+
+
+
+											<!-- PROFILE DETAIL -->
+
+											<!-- END PROFILE DETAIL -->
 										</div>
 
 
@@ -527,34 +581,32 @@ ArrayList<String> imgName = new ArrayList<String>();
 
 										<!-- END PROFILE DETAIL -->
 									</div>
-
+									<!-- END TABBED CONTENT -->
 								</div>
-								<!-- END TABBED CONTENT -->
+								<!-- END RIGHT COLUMN -->
 							</div>
-							<!-- END RIGHT COLUMN -->
 						</div>
 					</div>
 				</div>
+				<!-- END MAIN CONTENT -->
 			</div>
-			<!-- END MAIN CONTENT -->
+			<!-- END MAIN -->
+			<div class="clearfix"></div>
+			<footer>
+				<div class="container-fluid">
+					<p class="copyright">
+						Shared by <i class="fa fa-love"></i><a
+							href="https://bootstrapthemes.co">BootstrapThemes</a>
+					</p>
+				</div>
+			</footer>
 		</div>
-		<!-- END MAIN -->
-		<div class="clearfix"></div>
-		<footer>
-			<div class="container-fluid">
-				<p class="copyright">
-					Shared by <i class="fa fa-love"></i><a
-						href="https://bootstrapthemes.co">BootstrapThemes</a>
-				</p>
-			</div>
-		</footer>
-	</div>
-	<!-- END WRAPPER -->
-	<!-- Javascript -->
-	<script src="assets/vendor/jquery/jquery.min.js"></script>
-	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-	<script src="assets/scripts/klorofil-common.js"></script>
+		<!-- END WRAPPER -->
+		<!-- Javascript -->
+		<script src="assets/vendor/jquery/jquery.min.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+		<script src="assets/scripts/klorofil-common.js"></script>
 </body>
 
 </html>

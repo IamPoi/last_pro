@@ -161,14 +161,13 @@ html, body {
 	<script src="assets/js/main.js"></script>
 
 	<script type="text/javascript">
-
-    $('.adver').click(function(){
-         location.href = '../InfluencerAllSelectService?value=adv'
-      });
-    $('.inf').click(function(){
-         location.href = '../InfluencerAllSelectService?value=inf'
-      });
-   </script>
+		$('.adver').click(function() {
+			location.href = '../InfluencerAllSelectService?value=adv'
+		});
+		$('.inf').click(function() {
+			location.href = '../InfluencerAllSelectService?value=inf'
+		});
+	</script>
 
 
 

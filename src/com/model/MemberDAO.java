@@ -207,7 +207,42 @@ public class MemberDAO {
 
 	}
 	
-	
+	public MatchingDTO selectapplyCamp(CampaginDTO camp_info, MemberDTO info_login) {
+		MatchingDTO info = new MatchingDTO();
+        conn();
+        try {
+           String sql = "select * from matching_camp where campaign_Sid = ? and influ_id = ?";
+
+           psmt = conn.prepareStatement(sql);
+           psmt.setInt(1, camp_info.getCampaign_Sid());
+           psmt.setString(2, info_login.getInflu_id());
+           rs = psmt.executeQuery();
+
+           if (rs.next()) {
+        	   
+              int campaign_index = Integer.parseInt(rs.getString(1));
+              int campaign_Sid = Integer.parseInt(rs.getString(2));
+              String campaign_title = rs.getString(3);
+              String influ_id = rs.getString(4);
+              String ad_section = rs.getString(5);
+              int match_ck = Integer.parseInt(rs.getString(6));
+              int influ_affect = Integer.parseInt(rs.getString(7));
+              int camp_ck = Integer.parseInt(rs.getString(8));
+             
+              info = new MatchingDTO(campaign_index,campaign_Sid,campaign_title
+                    ,influ_id,ad_section,match_ck,influ_affect,camp_ck);
+                    
+                    
+      
+           }
+
+        } catch (Exception e) {
+           e.printStackTrace();
+        } finally {
+           close();
+        }
+        return info;
+  }
 
 //	public ArrayList<MemberDTO> select() {
 //		ArrayList<MemberDTO> memberList = new ArrayList<MemberDTO>();

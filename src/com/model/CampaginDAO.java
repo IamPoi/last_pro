@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-
 public class CampaginDAO {
 	Connection conn = null;
 	PreparedStatement psmt = null;
@@ -46,8 +45,6 @@ public class CampaginDAO {
 		}
 	} // close close();
 
-
-
 	public ArrayList<CampaginDTO> CampaginAllSelect() {
 		list = new ArrayList<CampaginDTO>();
 		conn();
@@ -58,31 +55,27 @@ public class CampaginDAO {
 			rs = psmt.executeQuery();
 
 			while (rs.next()) {
-				
-				 int campaign_Sid = rs.getInt(1);
-				 String adver_mbr = rs.getString(2);
-				 String ad_section = rs.getString(3);
-				 int ad_estimate = rs.getInt(4);
-				 int rq_follower = rs.getInt(5);
-				 int rq_age = rs.getInt(6);
-				 String rq_gender = rs.getString(7);
-				 String category = rs.getString(8);
-				 String campaign_title = rs.getString(9);
-				 String campaign_sub = rs.getString(10);
-				 int rcrtmNmbr = rs.getInt(11);
-				 int application_num = rs.getInt(12);
-				 String campaign_start = rs.getString(13);
-				 String campaign_end = rs.getString(14);
-				 int campaign_status = rs.getInt(15);
-				
-				
-				
-				info=new CampaginDTO(
-						campaign_Sid,adver_mbr,ad_section,ad_estimate,rq_follower,rq_age,rq_gender,category,campaign_title
-						,campaign_sub,rcrtmNmbr,application_num,campaign_start,campaign_end,campaign_status
-						);
-				
-				
+
+				int campaign_Sid = rs.getInt(1);
+				String adver_mbr = rs.getString(2);
+				String ad_section = rs.getString(3);
+				int ad_estimate = rs.getInt(4);
+				int rq_follower = rs.getInt(5);
+				int rq_age = rs.getInt(6);
+				String rq_gender = rs.getString(7);
+				String category = rs.getString(8);
+				String campaign_title = rs.getString(9);
+				String campaign_sub = rs.getString(10);
+				int rcrtmNmbr = rs.getInt(11);
+				int application_num = rs.getInt(12);
+				String campaign_start = rs.getString(13);
+				String campaign_end = rs.getString(14);
+				int campaign_status = rs.getInt(15);
+
+				info = new CampaginDTO(campaign_Sid, adver_mbr, ad_section, ad_estimate, rq_follower, rq_age, rq_gender,
+						category, campaign_title, campaign_sub, rcrtmNmbr, application_num, campaign_start,
+						campaign_end, campaign_status);
+
 				list.add(info);
 			}
 
@@ -92,183 +85,157 @@ public class CampaginDAO {
 			close();
 		}
 		return list;
-		
 
 	}
-	
-	
+
 	// 인플루언서 - 캠페인 조회
-		public CampaginDTO campaignSelect(int campaignSelect) {
-			conn();
-			try {
-				String sql = "select * from campaign where campaign_Sid = ?"; 
-				psmt = conn.prepareStatement(sql);
-				psmt.setInt(1, campaignSelect);
-				rs = psmt.executeQuery();
-			
-				if (rs.next()) {
-					
-					
-					 int campaign_Sid = rs.getInt(1);
-					 String adver_mbr = rs.getString(2);
-					 String ad_section = rs.getString(3);
-					 int ad_estimate = rs.getInt(4);
-					 int rq_follower = rs.getInt(5);
-					 int rq_age = rs.getInt(6);
-					 String rq_gender = rs.getString(7);
-					 String category = rs.getString(8);
-					 String campaign_title = rs.getString(9);
-					 String campaign_sub = rs.getString(10);
-					 int rcrtmNmbr = rs.getInt(11);
-					 int application_num = rs.getInt(12);
-					 String campaign_start = rs.getString(13);
-					 String campaign_end = rs.getString(14);
-					 int campaign_status = rs.getInt(15);
-					
-					
-					
-					info=new CampaginDTO(
-							campaign_Sid,adver_mbr,ad_section,ad_estimate,rq_follower,rq_age,rq_gender,category,campaign_title
-							,campaign_sub,rcrtmNmbr,application_num,campaign_start,campaign_end,campaign_status
-							);
-					
-					
-				
-				}
+	public CampaginDTO campaignSelect(int campaignSelect) {
+		conn();
+		try {
+			String sql = "select * from campaign where campaign_Sid = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, campaignSelect);
+			rs = psmt.executeQuery();
 
-			} catch (SQLException e) {
-				System.out.println("check");
-				e.printStackTrace();
-			} finally {
-				close();
+			if (rs.next()) {
+
+				int campaign_Sid = rs.getInt(1);
+				String adver_mbr = rs.getString(2);
+				String ad_section = rs.getString(3);
+				int ad_estimate = rs.getInt(4);
+				int rq_follower = rs.getInt(5);
+				int rq_age = rs.getInt(6);
+				String rq_gender = rs.getString(7);
+				String category = rs.getString(8);
+				String campaign_title = rs.getString(9);
+				String campaign_sub = rs.getString(10);
+				int rcrtmNmbr = rs.getInt(11);
+				int application_num = rs.getInt(12);
+				String campaign_start = rs.getString(13);
+				String campaign_end = rs.getString(14);
+				int campaign_status = rs.getInt(15);
+
+				info = new CampaginDTO(campaign_Sid, adver_mbr, ad_section, ad_estimate, rq_follower, rq_age, rq_gender,
+						category, campaign_title, campaign_sub, rcrtmNmbr, application_num, campaign_start,
+						campaign_end, campaign_status);
+
 			}
-			return info;
 
+		} catch (SQLException e) {
+			System.out.println("check");
+			e.printStackTrace();
+		} finally {
+			close();
 		}
-		
-		
-		public ArrayList<CampaginDTO> campaign_adver_Select(String adver_id) {
-	         list = new ArrayList<CampaginDTO>();
-	         conn();
-	         try {
-	            String sql = "select * from campaign where adver_mbr = ?"; 
-	            psmt = conn.prepareStatement(sql);
-	            psmt.setString(1, adver_id);
-	            rs = psmt.executeQuery();
-	         
-	            while (rs.next()) {
-	            	 int campaign_Sid = rs.getInt(1);
-					 String adver_mbr = rs.getString(2);
-					 String ad_section = rs.getString(3);
-					 int ad_estimate = rs.getInt(4);
-					 int rq_follower = rs.getInt(5);
-					 int rq_age = rs.getInt(6);
-					 String rq_gender = rs.getString(7);
-					 String category = rs.getString(8);
-					 String campaign_title = rs.getString(9);
-					 String campaign_sub = rs.getString(10);
-					 int rcrtmNmbr = rs.getInt(11);
-					 int application_num = rs.getInt(12);
-					 String campaign_start = rs.getString(13);
-					 String campaign_end = rs.getString(14);
-					 int campaign_status = rs.getInt(15);
-					
-					
-					
-					info=new CampaginDTO(
-							campaign_Sid,adver_mbr,ad_section,ad_estimate,rq_follower,rq_age,rq_gender,category,campaign_title
-							,campaign_sub,rcrtmNmbr,application_num,campaign_start,campaign_end,campaign_status
-							);
-					 
-	               list.add(info);
-	            
-	            }
+		return info;
 
-	         } catch (SQLException e) {
-	            System.out.println("check");
-	            e.printStackTrace();
-	         } finally {
-	            close();
-	         }
-	         return list;
+	}
 
-	      }
-		
-		
-		
-		
-		
-		public CampaginDTO campMaching(int campMaching) {
-			conn();
-			try {
-				String sql = "select * from campaign where campaign_Sid = ?"; 
-				psmt = conn.prepareStatement(sql);
-				psmt.setInt(1, campMaching);
-				rs = psmt.executeQuery();
-			
-				if (rs.next()) {
-					
-					
-					 int campaign_Sid = rs.getInt(1);
-					 String adver_mbr = rs.getString(2);
-					 String ad_section = rs.getString(3);
-					 int ad_estimate = rs.getInt(4);
-					 int rq_follower = rs.getInt(5);
-					 int rq_age = rs.getInt(6);
-					 String rq_gender = rs.getString(7);
-					 String category = rs.getString(8);
-					 String campaign_title = rs.getString(9);
-					 String campaign_sub = rs.getString(10);
-					 int rcrtmNmbr = rs.getInt(11);
-					 int application_num = rs.getInt(12);
-					 String campaign_start = rs.getString(13);
-					 String campaign_end = rs.getString(14);
-					 int campaign_status = rs.getInt(15);
-					
-					
-					
-					info=new CampaginDTO(
-							campaign_Sid,adver_mbr,ad_section,ad_estimate,rq_follower,rq_age,rq_gender,category,campaign_title
-							,campaign_sub,rcrtmNmbr,application_num,campaign_start,campaign_end,campaign_status
-							);
-					
-					
-				
-				}
+	public ArrayList<CampaginDTO> campaign_adver_Select(String adver_id) {
+		list = new ArrayList<CampaginDTO>();
+		conn();
+		try {
+			String sql = "select * from campaign where adver_mbr = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, adver_id);
+			rs = psmt.executeQuery();
 
-			} catch (SQLException e) {
-				System.out.println("check");
-				e.printStackTrace();
-			} finally {
-				close();
+			while (rs.next()) {
+				int campaign_Sid = rs.getInt(1);
+				String adver_mbr = rs.getString(2);
+				String ad_section = rs.getString(3);
+				int ad_estimate = rs.getInt(4);
+				int rq_follower = rs.getInt(5);
+				int rq_age = rs.getInt(6);
+				String rq_gender = rs.getString(7);
+				String category = rs.getString(8);
+				String campaign_title = rs.getString(9);
+				String campaign_sub = rs.getString(10);
+				int rcrtmNmbr = rs.getInt(11);
+				int application_num = rs.getInt(12);
+				String campaign_start = rs.getString(13);
+				String campaign_end = rs.getString(14);
+				int campaign_status = rs.getInt(15);
+
+				info = new CampaginDTO(campaign_Sid, adver_mbr, ad_section, ad_estimate, rq_follower, rq_age, rq_gender,
+						category, campaign_title, campaign_sub, rcrtmNmbr, application_num, campaign_start,
+						campaign_end, campaign_status);
+
+				list.add(info);
+
 			}
-			return info;
 
+		} catch (SQLException e) {
+			System.out.println("check");
+			e.printStackTrace();
+		} finally {
+			close();
 		}
-		
-				int cnt=0;
-		
-		// 광고주가 체크한 인플루언서
-				public int CampaignUpdate(int camp_id) {
-					conn();
-					
-					
-					try {
-						String sql="update campaign set campaign_status = 1 where campaign_Sid = ?";
-						psmt = conn.prepareStatement(sql);
-						psmt.setInt(1, camp_id);
-						cnt=psmt.executeUpdate();
-						 
-					} catch (SQLException e) {		
-						e.printStackTrace();
-					}
-					finally {
-						close();
-					}
-					return cnt;
-					
-				}
-		
-		
-		
+		return list;
+
+	}
+
+	public CampaginDTO campMaching(int campMaching) {
+		conn();
+		try {
+			String sql = "select * from campaign where campaign_Sid = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, campMaching);
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+
+				int campaign_Sid = rs.getInt(1);
+				String adver_mbr = rs.getString(2);
+				String ad_section = rs.getString(3);
+				int ad_estimate = rs.getInt(4);
+				int rq_follower = rs.getInt(5);
+				int rq_age = rs.getInt(6);
+				String rq_gender = rs.getString(7);
+				String category = rs.getString(8);
+				String campaign_title = rs.getString(9);
+				String campaign_sub = rs.getString(10);
+				int rcrtmNmbr = rs.getInt(11);
+				int application_num = rs.getInt(12);
+				String campaign_start = rs.getString(13);
+				String campaign_end = rs.getString(14);
+				int campaign_status = rs.getInt(15);
+
+				info = new CampaginDTO(campaign_Sid, adver_mbr, ad_section, ad_estimate, rq_follower, rq_age, rq_gender,
+						category, campaign_title, campaign_sub, rcrtmNmbr, application_num, campaign_start,
+						campaign_end, campaign_status);
+
+			}
+
+		} catch (SQLException e) {
+			System.out.println("check");
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return info;
+
+	}
+
+	int cnt = 0;
+
+	// 광고주가 체크한 인플루언서
+	public int CampaignUpdate(int camp_id) {
+		conn();
+
+		try {
+			String sql = "update campaign set campaign_status = 1 where campaign_Sid = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, camp_id);
+			cnt = psmt.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return cnt;
+
+	}
+
 }

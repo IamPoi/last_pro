@@ -136,7 +136,6 @@ textarea {
 	opacity: 0.9;
 }
 
-
 #cancel2 {
 	width: 127px;
 	height: 48px;
@@ -166,7 +165,6 @@ textarea {
 		0.25s;
 }
 
-
 .modal2 {
 	position: fixed;
 	left: 0;
@@ -181,7 +179,6 @@ textarea {
 		0.25s;
 }
 
-
 .modal-content {
 	position: absolute;
 	top: 50%;
@@ -193,6 +190,7 @@ textarea {
 	height: 350px;
 	border-radius: 0.5rem;
 }
+
 .modal2-content {
 	position: absolute;
 	top: 50%;
@@ -204,6 +202,7 @@ textarea {
 	height: 350px;
 	border-radius: 0.5rem;
 }
+
 .close-button {
 	float: right;
 	width: 1.5rem;
@@ -217,8 +216,6 @@ textarea {
 .close-button:hover {
 	background-color: darkgray;
 }
-
-
 
 .close-button2 {
 	float: right;
@@ -241,7 +238,6 @@ textarea {
 	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
-
 .show-modal2 {
 	opacity: 1;
 	visibility: visible;
@@ -249,26 +245,26 @@ textarea {
 	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
-    .col-md-4{
-    	color:black;
-    	background-color: white;
-    	font-weight: bold;
-    }
-    
-    .profile-header .profile-stat .stat-item:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 1px;
-    height: 100%;
-    background-color: black;
+.col-md-4 {
+	color: black;
+	background-color: white;
+	font-weight: bold;
+}
+
+.profile-header .profile-stat .stat-item:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1px;
+	height: 100%;
+	background-color: black;
 }
 
 .profile-header .profile-stat {
-    position: relative;
-    background-color: white;
+	position: relative;
+	background-color: white;
 }
 </style>
 
@@ -294,39 +290,43 @@ textarea {
 	<!-- WRAPPER -->
 	<div id="wrapper">
 		<!-- NAVBAR -->
-		<header id="main_menu" class="header navbar-fixed-top" >
-         <div class="main_menu_bg">
-            <div class="container" style = "width : 100%">
-               <div class="row">
-                  <div class="nave_menu">
-                     <nav class="navbar navbar-default">
-                        <div class="container-fluid">
-                           <!-- Brand and toggle get grouped for better mobile display -->
-                           <div class="navbar-header">
-                              <button type="button" class="navbar-toggle collapsed"
-                                 data-toggle="collapse"
-                                 data-target="#bs-example-navbar-collapse-1"
-                                 aria-expanded="false">
-                                 <span class="sr-only">Toggle navigation</span> <span
-                                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                                    class="icon-bar"></span>
-                              </button>
+		<header id="main_menu" class="header navbar-fixed-top">
+			<div class="main_menu_bg">
+				<div class="container" style="width: 100%">
+					<div class="row">
+						<div class="nave_menu">
+							<nav class="navbar navbar-default">
+								<div class="container-fluid">
+									<!-- Brand and toggle get grouped for better mobile display -->
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle collapsed"
+											data-toggle="collapse"
+											data-target="#bs-example-navbar-collapse-1"
+											aria-expanded="false">
+											<span class="sr-only">Toggle navigation</span> <span
+												class="icon-bar"></span> <span class="icon-bar"></span> <span
+												class="icon-bar"></span>
+										</button>
 
 
-                              <a class="navbar-brand" href="../bino-free-html5-landing-page-template/firstPage.jsp"> <img
-                                 src="images/logo_high_re.png" width=140px, height=50px style = "margin-left: 30px;">
-                              </a>
-                           </div>
+										<a class="navbar-brand"
+											href="../bino-free-html5-landing-page-template/firstPage.jsp">
+											<img src="images/logo_high_re.png" width=140px, height=50px
+											style="margin-left: 30px;">
+										</a>
+									</div>
 
-                           <!-- Collect the nav links, forms, and other content for toggling -->
+									<!-- Collect the nav links, forms, and other content for toggling -->
 
 
 
-                           <div class="collapse navbar-collapse"
-                              id="bs-example-navbar-collapse-1">
+									<div class="collapse navbar-collapse"
+										id="bs-example-navbar-collapse-1">
 
-                              <ul class="nav navbar-nav navbar-right" style = "font-size: 20px;">
+										<ul class="nav navbar-nav navbar-right"
+											style="font-size: 20px;">
 
+<<<<<<< HEAD
                                  <li><a href="">HOME</a></li>
                                  <!-- 세션값받아와서 influencer/companymain으로 이동 -->
                                  <li><a href="../bino-free-html5-landing-page-template/hashtag.jsp">HASHTAG</a></li>
@@ -338,18 +338,37 @@ textarea {
                                  <li><a href="">LOGOUT</a></li>
                                  <%} %>
                               </ul>
+=======
+											<li><a href="">HOME</a></li>
+											<!-- 세션값받아와서 influencer/companymain으로 이동 -->
+											<li><a href="hashtag.jsp">HASHTAG</a></li>
+											<li><a href="">MY PAGE</a></li>
+											<!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
+											<%
+											if (info == null) {
+											%>
+											<li><a href="page-login.jsp">LOGIN</a></li>
+											<%
+											} else {
+											%>
+											<li><a href="">LOGOUT</a></li>
+											<%
+											}
+											%>
+										</ul>
+>>>>>>> branch 'master' of https://github.com/poi803/last_pro.git
 
 
-                           </div>
-                        </div>
-                     </nav>
-                  </div>
-               </div>
+									</div>
+								</div>
+							</nav>
+						</div>
+					</div>
 
-            </div>
+				</div>
 
-         </div>
-      </header>
+			</div>
+		</header>
 		<!-- LEFT SIDEBAR -->
 		<div id="sidebar-nav" class="sidebar" style='display: none'>
 			<div class="sidebar-scroll">
@@ -398,7 +417,8 @@ textarea {
 								<!-- PROFILE HEADER -->
 								<div class="profile-header">
 									<div class="overlay"></div>
-									<div class="profile-main" style = "background-image: url('assets/img/profile-bg02.jpg');">
+									<div class="profile-main"
+										style="background-image: url('assets/img/profile-bg02.jpg');">
 										<%
 										String x = "3.48kg";
 										%>
@@ -427,13 +447,13 @@ textarea {
 									<div class="profile-info">
 										<h4 class="heading">Basic Info</h4>
 										<ul class="list-unstyled list-justify">
-											<li>인스타 주소 <span><%=info.getInflu_instaAddr() %></span></li>
-											<li>연락처 <span><%=info.getInflu_phone() %></span></li>
-											<li>나이 <span><%=info.getInflu_age() %></span></li>
-											<li>계정 타켓층 연령대 <span><%=info.getInflu_targetAge() %></span></li>
-											<li>계정 타켓층 성별 <span><%=info.getInflu_targetGender() %></span></li>
-											<li>카테고리 <span><%=info.getInflu_category() %></span></li>
-											<li>포인트 <span><%=info.getInflu_point() %></span></li>
+											<li>인스타 주소 <span><%=info.getInflu_instaAddr()%></span></li>
+											<li>연락처 <span><%=info.getInflu_phone()%></span></li>
+											<li>나이 <span><%=info.getInflu_age()%></span></li>
+											<li>계정 타켓층 연령대 <span><%=info.getInflu_targetAge()%></span></li>
+											<li>계정 타켓층 성별 <span><%=info.getInflu_targetGender()%></span></li>
+											<li>카테고리 <span><%=info.getInflu_category()%></span></li>
+											<li>포인트 <span><%=info.getInflu_point()%></span></li>
 
 										</ul>
 									</div>
@@ -443,12 +463,12 @@ textarea {
 											<h2>10000 p</h2>
 										</ul>
 									</div>
-									<div class="profile-info" style = "display : none">
+									<div class="profile-info" style="display: none">
 										<h4 class="heading">About</h4>
 										<p>Interactively fashion excellent information after
 											distinctive outsourcing.</p>
 									</div>
-									<div class="text-center" style = "display : none">
+									<div class="text-center" style="display: none">
 										<a href="#" class="btn btn-lg">정보 수정</a>
 									</div>
 								</div>
@@ -490,7 +510,8 @@ textarea {
 												<div class="award-item">
 
 													<img src="images/<%=qList.get(i).getCampaign_Sid()%>.jpg"
-														alt="Avatar" style = "height : 250px;"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
+														alt="Avatar" style="height: 250px;"> <br> <br>
+													<span><%=qList.get(i).getCampaign_title()%></span>
 
 												</div>
 											</div>
@@ -535,7 +556,8 @@ textarea {
 												<div class="award-item">
 
 													<img src="images/<%=qList.get(i).getCampaign_Sid()%>.jpg"
-														alt="Avatar" style= "height : 250px;"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
+														alt="Avatar" style="height: 250px;"> <br> <br>
+													<span><%=qList.get(i).getCampaign_title()%></span>
 
 												</div>
 											</div>
@@ -582,19 +604,22 @@ textarea {
 										</div>
 
 										<div class="margin-top-30 text-center">
-										
-										<%
-										if(info.getPaidMember() == 0){
-											
-										
-										%>
-											<a href="void(0);" onclick="alert('유료회원만 접근 가능합니다.');return false;"  class="btn btn-default">레포트
+
+											<%
+											if (info.getPaidMember() == 0) {
+											%>
+											<a href="void(0);"
+												onclick="alert('유료회원만 접근 가능합니다.');return false;"
+												class="btn btn-default">레포트 자세히보기</a>
+
+											<%
+											} else {
+											%>
+											<a href="../ReportService" class="btn btn-default">레포트
 												자세히보기</a>
-												
-										<%}else{ %>
-										<a href="../ReportService" class="btn btn-default">레포트
-												자세히보기</a>
-											<%} %>
+											<%
+											}
+											%>
 
 										</div>
 
@@ -632,12 +657,13 @@ textarea {
 
 		<!-- 팝업 될 레이어 -->
 		<div class="modal1" data-spy="scroll">
-			<div class="modal-content" style="width: 50%; height: 70%; overflow:scroll">
+			<div class="modal-content"
+				style="width: 50%; height: 70%; overflow: scroll">
 				<span class="close-button">&times;</span>
 				<h1 class="title">모든 매칭 캠페인</h1>
 				<div class="table-responsive">
-				<!-- 스크롤 구현하기 -->
-					
+					<!-- 스크롤 구현하기 -->
+
 					<br> <br>
 					<%
 					for (int i = 0; i < qList.size(); i++) {
@@ -650,7 +676,7 @@ textarea {
 						<div class="award-item">
 
 							<img src="images/<%=qList.get(i).getCampaign_Sid()%>.jpg"
-								alt="Avatar" style = "height : 250px;"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
+								alt="Avatar" style="height: 250px;"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
 
 						</div>
 					</div>
@@ -676,7 +702,8 @@ textarea {
 
 		<!-- 팝업 될 레이어 -->
 		<div class="modal2" data-spy="scroll">
-			<div class="modal-content" style="width: 50%; height: 70%; overflow:scroll">
+			<div class="modal-content"
+				style="width: 50%; height: 70%; overflow: scroll">
 				<span class="close-button2">&times;</span>
 				<h1 class="title">모든 신청 캠페인</h1>
 				<div class="table-responsive">
@@ -693,7 +720,7 @@ textarea {
 						<div class="award-item">
 
 							<img src="images/<%=qList.get(i).getCampaign_Sid()%>.jpg"
-								alt="Avatar" style = "height : 250px;"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
+								alt="Avatar" style="height: 250px;"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
 
 						</div>
 					</div>
@@ -886,60 +913,60 @@ textarea {
 
 
 		<script type="text/javascript">
-      var modal = document.querySelector(".modal1");
-      var trigger = document.querySelector(".trigger");
-      var closeButton = document.querySelector(".close-button");
-      var cancelButton = document.querySelector("#cancel");
+			var modal = document.querySelector(".modal1");
+			var trigger = document.querySelector(".trigger");
+			var closeButton = document.querySelector(".close-button");
+			var cancelButton = document.querySelector("#cancel");
 
-      //console.log(modal);
+			//console.log(modal);
 
-      function toggleModal() {
-         modal.classList.toggle("show-modal");
-      }
+			function toggleModal() {
+				modal.classList.toggle("show-modal");
+			}
 
-      function windowOnClick(event) {
-         if (event.target === modal) {
-            toggleModal();
-         }
-      }
+			function windowOnClick(event) {
+				if (event.target === modal) {
+					toggleModal();
+				}
+			}
 
-      trigger.addEventListener("click", toggleModal);
-      closeButton.addEventListener("click", toggleModal);
-      cancel.addEventListener("click", toggleModal);
-      window.addEventListener("click", windowOnClick);
-   </script>
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   		<script type="text/javascript">
-      var modal2 = document.querySelector(".modal2");
-      var trigger2 = document.querySelector(".trigger2");
-      var closeButton2 = document.querySelector(".close-button2");
-      var cancelButton2 = document.querySelector("#cancel2");
+			trigger.addEventListener("click", toggleModal);
+			closeButton.addEventListener("click", toggleModal);
+			cancel.addEventListener("click", toggleModal);
+			window.addEventListener("click", windowOnClick);
+		</script>
 
-      //console.log(modal);
 
-      function toggleModal2() {
-         modal2.classList.toggle("show-modal2");
-      }
 
-      function windowOnClick2(event) {
-         if (event.target === modal2) {
-            toggleModal();
-         }
-      }
 
-      trigger2.addEventListener("click", toggleModal2);
-      closeButton2.addEventListener("click", toggleModal2);
-      cancel2.addEventListener("click", toggleModal2);
-      window2.addEventListener("click", windowOnClick2);
-   </script>
+
+
+
+
+
+		<script type="text/javascript">
+			var modal2 = document.querySelector(".modal2");
+			var trigger2 = document.querySelector(".trigger2");
+			var closeButton2 = document.querySelector(".close-button2");
+			var cancelButton2 = document.querySelector("#cancel2");
+
+			//console.log(modal);
+
+			function toggleModal2() {
+				modal2.classList.toggle("show-modal2");
+			}
+
+			function windowOnClick2(event) {
+				if (event.target === modal2) {
+					toggleModal();
+				}
+			}
+
+			trigger2.addEventListener("click", toggleModal2);
+			closeButton2.addEventListener("click", toggleModal2);
+			cancel2.addEventListener("click", toggleModal2);
+			window2.addEventListener("click", windowOnClick2);
+		</script>
 </body>
 
 </html>

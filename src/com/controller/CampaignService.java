@@ -33,8 +33,8 @@ public class CampaignService extends HttpServlet {
 		String id = request.getParameter("id");
 		System.out.println("InfluencerCampaignService파일");
 		System.out.println("id : " + id);
-		String[] array  = id.split(",");
-		
+		String[] array = id.split(",");
+
 		System.out.println("array[0] : " + array[0]);
 		System.out.println("array[1] : " + array[1]);
 		PrintWriter out = response.getWriter();
@@ -68,7 +68,7 @@ public class CampaignService extends HttpServlet {
 				matList = matDao.MatchingAllSelect_ad(info.getAdver_mbr());
 
 				if (list != null) {
-					//session.setAttribute("check", "adver");
+					// session.setAttribute("check", "adver");
 					session.setAttribute("adverMypage", list);
 					session.setAttribute("adverMypageMatching", matList);
 					response.sendRedirect("./klorofil-free-dashboard-template-v2.0/mypage_ad.jsp");
@@ -104,10 +104,20 @@ public class CampaignService extends HttpServlet {
 				CampaginDTO qua_dto = new CampaginDTO();
 				qua_dto = c_dao.campaignSelect(Integer.parseInt(id));
 
+				// 매칭 테이블
+				MatchingDAO matDao2 = new MatchingDAO();
+				MatchingDTO matDto = new MatchingDTO();
+				System.out.println(qua_dto.getCampaign_Sid());
+				System.out.println(info.getInflu_id());
+				matDto = matDao2.selectapplyCamp(qua_dto, info);
+
+				// System.out.println("제발 !!! : " + matDto.getInflu_id() );
+
 				if (qua_dto != null) {
 					session.setAttribute("campSelect", qua_dto);
 					session.setAttribute("campPicture", id);
 					session.setAttribute("check", "inf");
+					session.setAttribute("matDto", matDto);
 					response.sendRedirect("./klorofil-free-dashboard-template-v2.0/campain_inf.jsp");
 				} else {
 					System.out.println("전송실패!");

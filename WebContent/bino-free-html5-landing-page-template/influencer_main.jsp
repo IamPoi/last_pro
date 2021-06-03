@@ -91,15 +91,16 @@ img {
 		System.out.println("info :" + info.getInflu_gender());
 		System.out.println("cList :" + cList.get(0).getRq_gender());
 		for (int i = 0; i < cList.size(); i++) {
-			if(cList.get(i).getRq_age() == 0 || cList.get(i).getRq_age() == info.getInflu_targetAge()){ //요구 20대 -> 20 <= 25 >= 30
-				if (cList.get(i).getRq_gender().equals(info.getInflu_gender())) {
-					if(cList.get(i).getCategory().equals(info.getInflu_category())){
-						numList.add(cList.get(i).getCampaign_Sid());
-						System.out.println("a " + i);
-						k = k + 1;
-					}
-				}
-			}else {
+			if (cList.get(i).getRq_age() == 0 || cList.get(i).getRq_age() == info.getInflu_targetAge()) { //요구 20대 -> 20 <= 25 >= 30
+		if (cList.get(i).getRq_gender().equals(info.getInflu_gender())) {
+			if (cList.get(i).getCategory().equals(info.getInflu_category())) {
+				
+				numList.add(cList.get(i).getCampaign_Sid());
+				System.out.println("cList.get(i).getCampaign_Sid() " + cList.get(i).getCampaign_Sid());
+				k = k + 1;
+			}
+		}
+			} else {
 		System.out.println("b " + i);
 		m = m + 1;
 			}
@@ -146,25 +147,33 @@ img {
 									<!-- Collect the nav links, forms, and other content for toggling -->
 
 
-                              <ul class="nav navbar-nav navbar-right">
-                                 <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
-                                            <li><a href="hashtag.jsp">HASHTAG</a></li>
-                                            <li><a href="../InfluencerMypage?name=inf" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
-                                            <%if(info == null){ %>
-                                 <li><a href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
-                                 <%} else{ %>
-                                 <li><a href="../LogoutService">LOGOUT</a></li>
-                                 <%} %>
-                              </ul>
-                           </div>
-                        </div>
-                     </nav>
-                  </div>
-               </div>
-
+									<ul class="nav navbar-nav navbar-right">
+										<li><a href="">HOME</a></li>
+										<!-- 세션값받아와서 influencer/companymain으로 이동 -->
+										<li><a href="hashtag.jsp">HASHTAG</a></li>
+										<li><a href="../InfluencerMypage?name=inf">My Page</a></li>
+										<!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
+										<%
+										if (info == null) {
+										%>
+										<li><a
+											href="../klorofil-free-dashboard-template-v2.0/page-login.jsp?value=inf">LOGIN</a></li>
+										<%
+										} else {
+										%>
+										<li><a href="../LogoutService">LOGOUT</a></li>
+										<%
+										}
+										%>
+									</ul>
+								</div>
+						</div>
+						</nav>
+					</div>
 				</div>
 
 			</div>
+	</div>
 	</div>
 	</header>
 	<!--End of header -->
@@ -179,151 +188,149 @@ img {
 							<div class="main_home_slider text-center">
 
 								<%
-									if (numList != null) {
+								if (numList != null) {
 
-										//이미지 폴더의 네임들 
-										ArrayList<String> imgName = new ArrayList<String>();
-										ArrayList<String> imgName2 = new ArrayList<String>();
-										for (int i = 0; i < imgFileList.size(); i++) {
-											File f = imgFileList.get(i);
-											imgName.add(Util.getFileNameNoExt(f.getName()));
+									//이미지 폴더의 네임들 
+									ArrayList<String> imgName = new ArrayList<String>();
+									ArrayList<String> imgName2 = new ArrayList<String>();
+									for (int i = 0; i < imgFileList.size(); i++) {
+										File f = imgFileList.get(i);
+										imgName.add(Util.getFileNameNoExt(f.getName()));
 
-										}
+									}
 
-										String[] SList = new String[imgFileList.size()];
-										for (int i = 0; i < imgFileList.size(); i++) {
-											SList[i] = imgName.get(i);
+									String[] SList = new String[imgFileList.size()];
+									for (int i = 0; i < imgFileList.size(); i++) {
+										SList[i] = imgName.get(i);
 
-										}
-										for (int j = 0; j < numList.size(); j++) {
+									}
+									for (int j = 0; j < numList.size(); j++) {
 
-											imgName2.add(SList[numList.get(j)]);
+										imgName2.add(SList[numList.get(j)]);
 
-										}
+									}
 
-										int num = 3;
-										int s = 0;
-										for (int j = 0; j < ((numList.size() / 3) + 1); j++) {
-											System.out.println("반복횟수 : " + ((numList.size() / 3) + 1));
-									%>
+									int num = 3;
+									int s = 0;
+									for (int j = 0; j < ((numList.size() / 3) + 1); j++) {
+										System.out.println("반복횟수 : " + ((numList.size() / 3) + 1));
+								%>
 								<div class="single_home_slider">
 									<%
-
-										System.out.println("마지막 : " + num);
-										for (int i = s; i < num; i++) {
-										%>
+									System.out.println("마지막 : " + num);
+									for (int i = s; i < num; i++) {
+									%>
 									<div class="main_home wow fadeInUp col-sm-4"
 										data-wow-duration="700ms">
 										<%
-											// 이미지 파일 넘기기
-											String strImgConFormat1 = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
-													+ "<a href = \"../CampaignService?id=%s\">  <img width='300' height = '400' src=\"%s\"/></a>" + "</div>";
+										// 이미지 파일 넘기기
+										String strImgConFormat1 = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
+												+ "<a href = \"../CampaignService?id=%s\">  <img width='300' height = '400' src=\"%s\"/></a>" + "</div>";
 
-											System.out.println("numList.size(): " + numList.get(i));
-											File f = imgFileList.get(numList.get(i)); //numList.get(i)-1
-											String title = "";//Util.getFileNameNoExt(f.getName());
-											String id = imgName2.get(i) + ",inf";
-											String url = Util.getImgSrc(f);
+										System.out.println("numList.size(): " + numList.get(i));
+										File f = imgFileList.get(numList.get(i)); //numList.get(i)-1
+										String title = "";//Util.getFileNameNoExt(f.getName());
+										String id = imgName2.get(i) + ",inf";
+										String url = Util.getImgSrc(f);
 
-											out.print(String.format(strImgConFormat1, title, id, url));
-											%>
+										out.print(String.format(strImgConFormat1, title, id, url));
+										%>
 									</div>
 									<%
-										}
+									}
 
-										if (numList.size() >= 6) {
-										if (num < numList.size()) {
-											if ((numList.size() - num) >= 3) {
-												num += 3;
-											} else {
-												num = numList.size();
-											}
-
-										} else if (num >= numList.size()) {
+									if (numList.size() >= 6) {
+									if (num < numList.size()) {
+										if ((numList.size() - num) >= 3) {
+											num += 3;
+										} else {
 											num = numList.size();
 										}
-										} else {
-										if (numList.size() == 4) {
-											num += 1;
-										} else if (numList.size() == 5) {
-											num += 2;
-										} else {
-											num = 3;
-										}
-										}
 
-										s = s + 3;
-										%>
+									} else if (num >= numList.size()) {
+										num = numList.size();
+									}
+									} else {
+									if (numList.size() == 4) {
+										num += 1;
+									} else if (numList.size() == 5) {
+										num += 2;
+									} else {
+										num = 3;
+									}
+									}
+
+									s = s + 3;
+									%>
 								</div>
 								<%
+								}
+
+								} else {
+								int num = 3;
+								int s = 0;
+								int end = 13;
+								for (int j = 0; j < ((end / 3) + 1); j++) {
+								System.out.println("반복횟수 : " + ((end / 3) + 1));
+								%>
+								<div class="single_home_slider">
+									<%
+									System.out.println("마지막 : " + num);
+									for (int i = s; i < num; i++) {
+										System.out.println("s : " + s);
+										System.out.println("num : " + num);
+									%>
+									<div class="main_home wow fadeInUp col-sm-4"
+										data-wow-duration="700ms">
+										<%
+										// 이미지 파일 넘기기
+										String strImgConFormat1 = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
+												+ "<a href = \"../CampaignService?id=%s\">  <img width='300' height = '400' src=\"%s\"/></a>" + "</div>";
+
+										File f = imgFileList.get(i); //numList.get(i)-1
+										String title = "";//Util.getFileNameNoExt(f.getName());
+										String id = "1,inf";
+										String url = Util.getImgSrc(f);
+										out.print(String.format(strImgConFormat1, title, id, url));
+										%>
+									</div>
+									<%
+									}
+
+									if (num >= end) {
+
+									if (num < end) {
+										if ((end - num) >= 3) {
+											num += 3;
+										} else {
+											num = end;
+										}
+
+									} else if (num >= end) {
+										num = end;
 									}
 
 									} else {
-									int num = 3;
-									int s = 0;
-									int end = 13;
-									for (int j = 0; j < ((end / 3) + 1); j++) {
-									System.out.println("반복횟수 : " + ((end / 3) + 1));
-									%>
-								<div class="single_home_slider">
-									<%
-										System.out.println("마지막 : " + num);
-										for (int i = s; i < num; i++) {
-											System.out.println("s : " + s);
-											System.out.println("num : " + num);
-										%>
-									<div class="main_home wow fadeInUp col-sm-4"
-										data-wow-duration="700ms">
-										<%
-											// 이미지 파일 넘기기
-											String strImgConFormat1 = "<div class=\"images\">" + "<span class=\"imgTitle\"> %s </span>"
-													+ "<a href = \"../CampaignService?id=%s\">  <img width='300' height = '400' src=\"%s\"/></a>" + "</div>";
-
-
-											File f = imgFileList.get(i); //numList.get(i)-1
-											String title = "";//Util.getFileNameNoExt(f.getName());
-											String id = "1,inf";
-											String url = Util.getImgSrc(f);
-											out.print(String.format(strImgConFormat1, title, id,url));
-											%>
-									</div>
-									<%
-										}
-
-										if (num >= end) {
-
-										if (num < end) {
-											if ((end - num) >= 3) {
-												num += 3;
-											} else {
-												num = end;
-											}
-
-										} else if (num >= end) {
-											num = end;
-										}
-
+									if (num < end) {
+										if ((end - num) >= 3) {
+											num += 3;
 										} else {
-										if (num < end) {
-											if ((end - num) >= 3) {
-												num += 3;
-											} else {
-												num = end;
-											}
-
-										} else if (num >= end) {
 											num = end;
 										}
-										}
 
-										s = s + 3;
-										%>
+									} else if (num >= end) {
+										num = end;
+									}
+									}
+
+									s = s + 3;
+									%>
 								</div>
 								<%
-									}
+								}
 
-									}
-									%>
+								}
+								%>
 
 							</div>
 						</div>

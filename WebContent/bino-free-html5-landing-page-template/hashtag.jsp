@@ -23,7 +23,8 @@
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/magnific-popup.css">
 <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
 
 <!--For Plugins external css-->
 <link rel="stylesheet" href="assets/css/plugins.css" />
@@ -38,6 +39,10 @@
 </head>
 
 <style>
+
+.korean{
+	font-family: 'Noto Sans KR', sans-serif;
+}
 .main_menu_bg .navbar-nav>li>a {
    text-transform: uppercase;
    font-size: 20px;
@@ -59,27 +64,27 @@
    <div class='preloader'>
       <div class='loaded'>&nbsp;</div>
    </div>
-   <div class="culmn">
-      <header id="main_menu" class="header navbar-fixed-top">
-         <div class="main_menu_bg">
-            <div class="container" style = "width : 100%">
-               <div class="row">
-                  <div class="nave_menu">
-                     <nav class="navbar navbar-default">
-                        <div class="container-fluid">
+   <div class = "korean culmn">
+      <header id="main_menu" class = "korean header navbar-fixed-top">
+         <div class = "korean main_menu_bg">
+            <div class = "korean container" style = "width : 100%">
+               <div class = "korean row">
+                  <div class = "korean nave_menu">
+                     <nav class = "korean navbar navbar-default">
+                        <div class = "korean container-fluid">
                            <!-- Brand and toggle get grouped for better mobile display -->
-                           <div class="navbar-header">
-                              <button type="button" class="navbar-toggle collapsed"
+                           <div class = "korean navbar-header">
+                              <button type="button" class = "korean navbar-toggle collapsed"
                                  data-toggle="collapse"
                                  data-target="#bs-example-navbar-collapse-1"
                                  aria-expanded="false">
-                                 <span class="sr-only">Toggle navigation</span> <span
-                                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                                    class="icon-bar"></span>
+                                 <span class = "korean sr-only">Toggle navigation</span> <span
+                                    class = "korean icon-bar"></span> <span class = "korean icon-bar"></span> <span
+                                    class = "korean icon-bar"></span>
                               </button>
 
 
-                              <a class="navbar-brand" href="firstPage.jsp" style = "margin-left: 30px;"> <img
+                              <a class = "korean navbar-brand" href="firstPage.jsp" style = "margin-left: 30px;"> <img
                                  src="images/logo_high_re.png" width=140px, height=50px ma>
                               </a>
                            </div>
@@ -88,10 +93,10 @@
 
 
 
-                           <div class="collapse navbar-collapse"
+                           <div class = "korean collapse navbar-collapse"
                               id="bs-example-navbar-collapse-1">
 
-                              <ul class="nav navbar-nav navbar-right">
+                              <ul class = "korean nav navbar-nav navbar-right">
                                  <li><a href="influencer_main.jsp">HOME</a></li>
                                  <!-- 세션값받아와서 influencer/companymain으로 이동 -->
                                  <li><a href="hashtag.jsp">HASHTAG LAB</a></li>
@@ -116,24 +121,26 @@
 
       <!-- 검색어 입력부분 -->
 
-      <section class="home">
-         <div class="container"
+      <section class = "korean home">
+         <div class = "korean container"
             style="background-image: url(images/ana.jpg); background-repeat: no-repeat; background-position: right; background-color: #e3eeff; 
             width: 100%; height:100%;">
-            <div class="row sections">
-               <div class="col-sm-12 text-center head_title">
+            <div class = "korean row sections">
+               <div class = "korean col-sm-12 text-center head_title">
                   <br> <br> <br> <br> <br>
                   <h2>HASHTAG LAB</h2>
                   <br>
                   <form action="http://121.147.185.66:8088/hashtag" method="get" accept-charset="UTF-8">
                      <h2>
                         <label for="tm_name">#</label> <input type="text" required
-                           name="hashtag" placeholder="분석할 해시태그 입력"
+                           name="hashtag" placeholder=" 분석할 #해시태그 입력"
                            style="width: 300px; height: 50px; font-size: 20px;">
                      </h2>
-                     <div class="home_btn">
-                        <input id="search" type="submit" value="분석시작" class="btn btn-lg"
+                     <div class = "korean home_btn">
+                        <input id="search" type="submit" value="START" class = "korean btn btn-lg"
                            style="font-size: 15px">
+                           <br><br><br>
+                           <div>추천 해시태그: 맛집, 먹방, 코덕, 오오티디</div>
                      </div>
 
                   </form>
@@ -145,36 +152,35 @@
       </section>
 
       <!-- Pricing Section -->
-      <section id="pricing" class="pricing">
-         <div class="container">
-            <div class="row">
-               <div class="main_pricing_area sections">
-                  <div class="head_title text-center">
-                     <h2>HASHTAG</h2>
-                     <div class="subtitle">마케터스 해시태그 LAB이 제공하는 정보는 다음과 같습니다.</div>
-                     <div class="separator"></div>
+      <section id="pricing" class = "korean pricing">
+         <div class = "korean container">
+            <div class = "korean row">
+               <div class = "korean main_pricing_area sections">
+                  <div class = "korean head_title text-center">
+                     <h2>ABOUT HASHTAG LAB</h2>
+                     <h4 class = "korean subtitle"><strong>마케터스 해시태그 LAB</strong>이 제공하는 정보는 다음과 같습니다.</h4>
+                     <div class = "korean separator"></div>
                   </div>
                   <!-- End off Head_title -->
 
-                  <div class="col-md-4 col-sm-6 col-md-push-2">
-                     <div class="single_pricing">
-                        <div class="pricing_head">
-                           <h3>MAP</h3>
-                           <div class="pricing_price">
-                              <div class="p_r text-center">
-                                 <img class="img-circle" src="images/mindmap.png">
+                  <div class = "korean col-md-4 col-sm-6 col-md-push-2">
+                     <div class = "korean single_pricing">
+                        <div class = "korean pricing_head">
+                           <h3>HASHTAG TREE</h3>
+                           <div class = "korean pricing_price">
+                              <div class = "korean p_r text-center">
+                                 <img class = "korean img-circle" src="images/mindmap.png">
                               </div>
 
                            </div>
                         </div>
 
-                        <div class="pricing_body">
+                        <div class = "korean pricing_body">
                            <ul>
-                              <li>최근 사용 해시태그 클라우드</li>
-                              <div style = "display : none">
-                              <li>All Ranked URLs</li>
-                              <li>International Support System</li>
-                              <li>Social Media Tracking</li>
+                              <li>AI 기술로 분석한 해시태그 트리</li>
+                              <div>
+                              <li>연관/추천 해시태그 트리</li>
+                              <li>추천 해시태그로 게시물 도달률 높이기</li>
                               </div>
                            </ul>
 
@@ -183,12 +189,12 @@
                   </div>
                   <!-- End off col-md-4 -->
 
-                  <div class="col-md-4 col-sm-6 col-md-push-2">
-                     <div class="single_pricing pricing_business">
-                        <div class="pricing_head ">
-                           <h3>GRAPH 분석</h3>
-                           <div class="pricing_price">
-                              <div class="p_r text-center">
+                  <div class = "korean col-md-4 col-sm-6 col-md-push-2">
+                     <div class = "korean single_pricing pricing_business">
+                        <div class = "korean pricing_head ">
+                           <h3>HASHTAG RECOMMEND LIST</h3>
+                           <div class = "korean pricing_price">
+                              <div class = "korean p_r text-center">
                                  <img src="images/table.png"
                                     style="width: 100px; height: 100px;">
                               </div>
@@ -196,13 +202,12 @@
                            </div>
                         </div>
 
-                        <div class="pricing_body">
+                        <div class = "korean pricing_body">
                            <ul>
-                              <li>표</li>
-                              <div style = "display : none">
-                              <li>All Ranked URLs</li>
-                              <li>International Support System</li>
-                              <li>Social Media Tracking</li>
+                              <li>AI 기술 이용 해시태그 추천 리스트</li>
+                              <div>
+                              <li>추천 해시태그 랭킹 분석</li>
+                              <li>딥러닝 기술 기반 해시태그 유사도 분석</li>
                               </div>
                            </ul>
 
@@ -378,22 +383,22 @@
    </div>
 
    <section style = "display:none;">
-      <div class="container">
-         <div class="row">
-            <div class="col-sm-12 text-center ">
+      <div class = "korean container">
+         <div class = "korean row">
+            <div class = "korean col-sm-12 text-center ">
                <div>
                   <div>
                      <h3>"연관 태그 top 10"</h3>
                   </div>
                   <!-- BASIC TABLE -->
-                  <div class="panel">
-                     <div class="panel-heading">
-                        <h3 class="panel-title">Basic Table</h3>
+                  <div class = "korean panel">
+                     <div class = "korean panel-heading">
+                        <h3 class = "korean panel-title">Basic Table</h3>
                      </div>
-                     <div class="panel-body">
-                        <table class="table text-center">
+                     <div class = "korean panel-body">
+                        <table class = "korean table text-center">
                            <thead>
-                              <tr class="text-center">
+                              <tr class = "korean text-center">
                                  <th>#</th>
                                  <th>태그명</th>
                                  <th>사용횟수</th>
@@ -433,8 +438,8 @@
 
    <!-- START SCROLL TO TOP  -->
 
-   <!-- <div class="scrollup">
-      <a href="#"><i class="fa fa-chevron-up"></i></a>
+   <!-- <div class = "korean scrollup">
+      <a href="#"><i class = "korean fa fa-chevron-up"></i></a>
    </div> -->
 
    <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>

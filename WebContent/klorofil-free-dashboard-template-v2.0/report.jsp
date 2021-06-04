@@ -30,9 +30,8 @@ $('.counter').counterUp({ delay: 10, time: 1000 }); });</script>
 <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
 <link rel="stylesheet" href="assets/css/demo.css">
 <!-- GOOGLE FONTS -->
-<link
-	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700"
-	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">	
 <!-- ICONS -->
 <link rel="apple-touch-icon" sizes="76x76"
 	href="assets/img/apple-icon.png">
@@ -40,41 +39,46 @@ $('.counter').counterUp({ delay: 10, time: 1000 }); });</script>
 	href="assets/img/favicon.png">
 <link rel="stylesheet" href="assets/css/style.css">
 <style type="text/css">
+.korean{
+	font-family: 'Noto Sans KR', sans-serif;
+}
 
 .col-md-4-1 {
 	width: 50%;
-	font-weight: bold;
+	color: #3a3a3a;
 }
 
 .col-md-3-1 {
 	width: 50%;
-	font-weight: bold;
 }
 
 .col-md-4 {
-	font-weight: bold;
+	color: #3a3a3a;
 }
 
 .col-md-3 {
-	font-weight: bold;
+	color: #3a3a3a;
 }
-
 
 .pro {
 	width: 30%
 }
 
-.col{
-	font-weight: bold;
+.col {
+	color: #3a3a3a;
 }
 
-.panel{
+.panel {
 	font-size: 20px;
-	font-weight: bold;
+	color: #3a3a3a;
 }
 
-h3.panel-title{
-	font-weight: bold;
+h3.panel-title {
+	color: #3a3a3a;
+}
+
+p{
+	font-size: 20px;
 }
 
 </style>
@@ -108,36 +112,36 @@ h3.panel-title{
 
 
 
-		<header id="main_menu" class="header navbar-fixed-top">
-         <div class="main_menu_bg" style = "background-color:white;">
-            <div class="container" style = "width:100%;">
-               <div class="row">
-                  <div class="nave_menu">
-                     <nav class="navbar navbar-default">
-                        <div class="container-fluid">
+		<header id="main_menu" class ="korean header navbar-fixed-top">
+         <div class ="korean main_menu_bg" style = "background-color:white;">
+            <div class ="korean container" style = "width:100%;">
+               <div class ="korean row">
+                  <div class ="korean nave_menu">
+                     <nav class ="korean navbar navbar-default">
+                        <div class ="korean container-fluid">
                            <!-- Brand and toggle get grouped for better mobile display -->
-                           <div class="navbar-header">
-                              <button type="button" class="navbar-toggle collapsed"
+                           <div class ="korean navbar-header">
+                              <button type="button" class ="korean navbar-toggle collapsed"
                                  data-toggle="collapse"
                                  data-target="#bs-example-navbar-collapse-1"
                                  aria-expanded="false">
-                                 <span class="sr-only">Toggle navigation</span> <span
-                                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                                    class="icon-bar"></span>
+                                 <span class ="korean sr-only">Toggle navigation</span> <span
+                                    class ="korean icon-bar"></span> <span class ="korean icon-bar"></span> <span
+                                    class ="korean icon-bar"></span>
                               </button>
 
 
-                              <a class="navbar-brand" href="../bino-free-html5-landing-page-template/firstPage.jsp"> <img
+                              <a class ="korean navbar-brand" href="../bino-free-html5-landing-page-template/firstPage.jsp"> <img
                                  src="images/logo_high_re.png" style = "width:120px; height:50px; margin-left: 30px; margin-top:10px"/>
                               </a>
                            </div>
 
                            <!-- Collect the nav links, forms, and other content for toggling -->
 
-                           <div class="collapse navbar-collapse"
+                           <div class ="korean collapse navbar-collapse"
                               id="bs-example-navbar-collapse-1">
 
-                              <ul class="nav navbar-nav navbar-right">
+                              <ul class ="korean nav navbar-nav navbar-right">
                                  <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
                                             <li><a href="hashtag.jsp">HASHTAG LAB</a></li>
                                             <li><a href="../InfluencerMypage?name=inf" >My Page</a></li><!-- 세션값받아와서 mypage/mypage_ad으로 이동 -->
@@ -159,74 +163,74 @@ h3.panel-title{
       </header>
       <!--End of header -->
 		<!-- LEFT SIDEBAR -->
-		<div id="sidebar-nav" class="sidebar" style="display: none">
-			<div class="sidebar-scroll">
+		<div id="sidebar-nav" class ="korean sidebar" style="display: none">
+			<div class ="korean sidebar-scroll">
 				<nav>
-					<ul class="nav">
-						<li><a href="index.html" class="active"><i
-								class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="elements.html" class=""><i
-								class="lnr lnr-code"></i> <span>Elements</span></a></li>
-						<li><a href="charts.html" class=""><i
-								class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
-						<li><a href="panels.html" class=""><i class="lnr lnr-cog"></i>
+					<ul class ="korean nav">
+						<li><a href="index.html" class ="korean active"><i
+								class ="korean lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="elements.html" class ="korean "><i
+								class ="korean lnr lnr-code"></i> <span>Elements</span></a></li>
+						<li><a href="charts.html" class ="korean "><i
+								class ="korean lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
+						<li><a href="panels.html" class ="korean "><i class ="korean lnr lnr-cog"></i>
 								<span>Panels</span></a></li>
-						<li><a href="notifications.html" class=""><i
-								class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
+						<li><a href="notifications.html" class ="korean "><i
+								class ="korean lnr lnr-alarm"></i> <span>Notifications</span></a></li>
 						<li><a href="#subPages" data-toggle="collapse"
-							class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Pages</span>
-								<i class="icon-submenu lnr lnr-chevron-left"></i></a>
-							<div id="subPages" class="collapse ">
-								<ul class="nav">
-									<li><a href="page-profile.html" class="">Profile</a></li>
-									<li><a href="page-login.html" class="">Login</a></li>
-									<li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
+							class ="korean collapsed"><i class ="korean lnr lnr-file-empty"></i> <span>Pages</span>
+								<i class ="korean icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages" class ="korean collapse ">
+								<ul class ="korean nav">
+									<li><a href="page-profile.html" class ="korean ">Profile</a></li>
+									<li><a href="page-login.html" class ="korean ">Login</a></li>
+									<li><a href="page-lockscreen.html" class ="korean ">Lockscreen</a></li>
 								</ul>
 							</div></li>
-						<li><a href="tables.html" class=""><i
-								class="lnr lnr-dice"></i> <span>Tables</span></a></li>
-						<li><a href="typography.html" class=""><i
-								class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
-						<li><a href="icons.html" class=""><i
-								class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
+						<li><a href="tables.html" class ="korean "><i
+								class ="korean lnr lnr-dice"></i> <span>Tables</span></a></li>
+						<li><a href="typography.html" class ="korean "><i
+								class ="korean lnr lnr-text-format"></i> <span>Typography</span></a></li>
+						<li><a href="icons.html" class ="korean "><i
+								class ="korean lnr lnr-linearicons"></i> <span>Icons</span></a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
-		<div class="main" style="width: 100%">
+		<div class ="korean main" style="width: 100%">
 			<!-- MAIN CONTENT -->
-			<div class="main-content">
-				<div class="container-fluid">
+			<div class ="korean main-content">
+				<div class ="korean container-fluid">
 					<!-- OVERVIEW -->
 
 
 
 					<!-- 사진 게시글 팔로워 팔로잉 -->
-					<div class="col-md-4 col-md-4-1" style="width: 50%">
+					<div class ="korean col-md-4 col-md-4-1" style="width: 50%">
 						<!-- TASKS -->
 						<!-- 원형 -->
-						<div class="panel">
+						<div class ="korean panel">
 							<div>
 								<br> <br>
 
-								<div class="row">
-								<div class = "left" >
-								<img alt="" src="assets/img/3.48kg.jpg" class="img-circle" style="height: 150px; visibility: hidden">
-										<img alt="" src="assets/img/3.48kg.jpg" class="img-circle" style="height: 150px;">
+								<div class ="korean row">
+								<div class ="korean korean left" >
+								<img alt="" src="assets/img/3.48kg.jpg" class ="korean img-circle" style="height: 150px; visibility: hidden">
+										<img alt="" src="assets/img/3.48kg.jpg" class ="korean img-circle" style="height: 150px;">
 										</div>
-										<div class="right" style = "padding-right: 60px; ">
+										<div class ="korean right" style = "padding-right: 60px; ">
 
 									<div>
-										<h2 class="" style="position:absolute !important; right : 100px !important; bottom : 200px !important; color: black; text-align: right; ">100000 점</h2><br>
+										<h2 class ="korean korean" style="position:absolute !important; right : 100px !important; bottom : 200px !important; color: black; text-align: right; ">100000 점</h2><br>
 										<script
 											src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 										<script src="jquery.counterup.min.js"></script>
 									</div>
 
 									<div>
-										<h6 style="padding-left: 100px; text-align: center; margin-bottom: 100px" ><b>영향력의 의미는 인플루언서의 정보를 바탕으로<br> 광고를 게시했을때 나타날수있는 예상값</b></h6>
+										<p class ="korean korean" style="font-size: 15px; padding-left: 100px; text-align: center; margin-bottom: 100px" >영향력의 의미는 인플루언서의 정보를 바탕으로<br> 광고를 게시했을때 나타날수있는 예상값</p>
 									</div>
 
 								</div>
@@ -235,110 +239,110 @@ h3.panel-title{
 								</div>
 								<br>
 																<br> <br>
-								<div class="panel-body">
+								<div class ="korean panel-body">
 
-									<div class="col-md-3 col-md-3-1 pro">
-										<div class="metric">
-											<span class="icon"><i class="fa fa-shopping-bag"></i></span>
+									<div class ="korean col-md-3 col-md-3-1 pro">
+										<div class ="korean metric">
+											<span class ="korean icon"><i class ="korean fa fa-shopping-bag"></i></span>
 											<p>
-												<span class="number"><%=report.getNum_media()%></span> <span
-													class="title">게시글</span>
+												<span class ="korean number"><%=report.getNum_media()%></span> <span
+													class ="korean title">게시글</span>
 											</p>
 										</div>
 									</div>
-									<div class="col-md-3 col-md-3-1 pro">
-										<div class="metric">
+									<div class ="korean col-md-3 col-md-3-1 pro">
+										<div class ="korean metric">
 											<p>
-												<span class="number"><%=report.getFake_follower()%></span> <span
-													class="title">팔로워</span>
+												<span class ="korean number"><%=report.getFake_follower()%></span> <span
+													class ="korean title">팔로워</span>
 											</p>
 										</div>
 									</div>
-									<div class="col-md-3 col-md-3-1 pro">
-										<div class="metric">
-											<span class="icon"><i class="fa fa-shopping-bag"></i></span>
+									<div class ="korean col-md-3 col-md-3-1 pro">
+										<div class ="korean metric">
+											<span class ="korean icon"><i class ="korean fa fa-shopping-bag"></i></span>
 											<p>
-												<span class="number"><%=report.getNum_following()%></span> <span
-													class="title">팔로잉</span>
+												<span class ="korean number"><%=report.getNum_following()%></span> <span
+													class ="korean title">팔로잉</span>
 											</p>
 										</div>
 									</div>
 
 								</div>
 							</div>
-							<div class="right">
-								<div class="panel-body"></div>
+							<div class ="korean right">
+								<div class ="korean panel-body"></div>
 							</div>
 						</div>
 					</div>
 
 					<!-- 다른 정보 -->
-					<div class="col-md-4 col-md-4-1">
+					<div class ="korean col-md-4 col-md-4-1">
 						<!-- TASKS -->
 						<!-- 원형 -->
-						<div class="panel">
+						<div class ="korean panel">
 
-							<div class="panel-body">
+							<div class ="korean panel-body">
 
-								<div class="col-md-3 col-md-3-1">
-									<div class="metric">
-										<span class="icon"><i class="fa fa-shopping-bag"></i></span>
+								<div class ="korean col-md-3 col-md-3-1">
+									<div class ="korean metric">
+										<span class ="korean icon"><i class ="korean fa fa-shopping-bag"></i></span>
 										<p>
-											<span class="number"><%=report.getRank_percent()%>%</span> <span
-												class="title">상위 %</span>
+											<span class ="korean number"><%=report.getRank_percent()%>%</span> <span
+												class ="korean title">상위 %</span>
 										</p>
 									</div>
 								</div>
-								<div class="col-md-3 col-md-3-1">
-									<div class="metric">
-										<span class="icon"><i class="fa fa-shopping-bag"></i></span>
+								<div class ="korean col-md-3 col-md-3-1">
+									<div class ="korean metric">
+										<span class ="korean icon"><i class ="korean fa fa-shopping-bag"></i></span>
 										<p>
-											<span class="number"><%=info.getInflu_category()%></span> <span
-												class="title">카테고리</span>
+											<span class ="korean number"><%=info.getInflu_category()%></span> <span
+												class ="korean title">카테고리</span>
 										</p>
 									</div>
 								</div>
-								<div class="col-md-3 col-md-3-1">
-									<div class="metric">
-										<span class="icon"><i class="fa fa-shopping-bag"></i></span>
+								<div class ="korean col-md-3 col-md-3-1">
+									<div class ="korean metric">
+										<span class ="korean icon"><i class ="korean fa fa-shopping-bag"></i></span>
 										<p>
-											<span class="number"><%=info.getInflu_targetGender()%></span>
-											<span class="title">타겟 성별</span>
+											<span class ="korean number"><%=info.getInflu_targetGender()%></span>
+											<span class ="korean title">타겟 성별</span>
 										</p>
 									</div>
 								</div>
-								<div class="col-md-3 col-md-3-1">
-									<div class="metric">
-										<span class="icon"><i class="fa fa-shopping-bag"></i></span>
+								<div class ="korean col-md-3 col-md-3-1">
+									<div class ="korean metric">
+										<span class ="korean icon"><i class ="korean fa fa-shopping-bag"></i></span>
 										<p>
-											<span class="number"><%=info.getInflu_targetAge()%></span> <span
-												class="title">타겟 연령</span>
+											<span class ="korean number"><%=info.getInflu_targetAge()%></span> <span
+												class ="korean title">타겟 연령</span>
 										</p>
 									</div>
 								</div>
-								<div class="col-md-3 col-md-3-1">
-									<div class="metric">
-										<span class="icon"><i class="fa fa-shopping-bag"></i></span>
+								<div class ="korean col-md-3 col-md-3-1">
+									<div class ="korean metric">
+										<span class ="korean icon"><i class ="korean fa fa-shopping-bag"></i></span>
 										<p>
-											<span class="number"><%=report.getTot_like()%></span> <span
-												class="title">총 좋아요</span>
+											<span class ="korean number"><%=report.getTot_like()%></span> <span
+												class ="korean title">총 좋아요</span>
 										</p>
 									</div>
 								</div>
-								<div class="col-md-3 col-md-3-1">
-									<div class="metric">
-										<span class="icon"><i class="fa fa-shopping-bag"></i></span>
+								<div class ="korean col-md-3 col-md-3-1">
+									<div class ="korean metric">
+										<span class ="korean icon"><i class ="korean fa fa-shopping-bag"></i></span>
 										<p>
-											<span class="number"><%=report.getTot_comment()%></span> <span
-												class="title">총 댓글</span>
+											<span class ="korean number"><%=report.getTot_comment()%></span> <span
+												class ="korean title">총 댓글</span>
 										</p>
 									</div>
 								</div>
 
 							</div>
 						</div>
-						<div class="right">
-							<div class="panel-body"></div>
+						<div class ="korean right">
+							<div class ="korean panel-body"></div>
 						</div>
 					</div>
 
@@ -347,30 +351,30 @@ h3.panel-title{
 				</div>
 
 
-				<div class="row">
+				<div class ="korean row">
 					<!-- 댓글 유형 -->
-					<div class="col-md-4 col-md-4-1">
+					<div class ="korean col-md-4 col-md-4-1">
 						<!-- TASKS -->
 						<!-- 원형 -->
-						<div class="panel">
-							<div class="left" style="width: 60%">
-								<div class="panel-heading">
-									<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: right;">댓글 유형</h3>
+						<div class ="korean panel">
+							<div class ="korean left" style="width: 60%">
+								<div class ="korean panel-heading">
+									<h3 class ="korean panel-title korean" style = "font-weight: bold; font-size: 30px; text-align: right;">댓글 유형</h3>
 
 								</div>
-								<ul class="list-unstyled list-justify">
+								<ul class ="korean list-unstyled list-justify">
 
 								</ul>
 							</div>
 
-							<div class="panel-body">
+							<div class ="korean panel-body">
 								<div id="chartdiv"></div>
 
 							</div>
 
 
 							<br> <br>
-							<ul class="list-unstyled task-list">
+							<ul class ="korean list-unstyled task-list">
 						</div>
 					</div>
 
@@ -382,22 +386,22 @@ h3.panel-title{
 
 
 					<!-- 카테고리 -->
-					<div class="col-md-4 col-md-4-1">
+					<div class ="korean col-md-4 col-md-4-1">
 						<!-- TASKS -->
 						<!-- 원형 -->
-						<div class="panel">
-							<div class="left" style="width: 60%">
-								<div class="panel-heading">
-									<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: right;">카테고리</h3>
+						<div class ="korean panel">
+							<div class ="korean left" style="width: 60%">
+								<div class ="korean panel-heading">
+									<h3 class ="korean panel-title korean" style = "font-weight: bold; font-size: 30px; text-align: right;">카테고리</h3>
 
 								</div>
 							</div>
-							<ul class="list-unstyled list-justify">
-								<div class="panel-body">
+							<ul class ="korean list-unstyled list-justify">
+								<div class ="korean panel-body">
 
 
 									<!-- HTML -->
-									<div class="panel-body">
+									<div class ="korean panel-body">
 										<div id="chartdiv2"></div>
 
 									</div>
@@ -409,56 +413,54 @@ h3.panel-title{
 
 
 
-				<div class="row">
+				<div class ="korean row">
 					<!-- 진짜 가짜 팔로워 -->
-					<div class="col-md-4 col-md-4-1">
+					<div class ="korean col-md-4 col-md-4-1">
 						<!-- TASKS -->
 						<!-- 원형 -->
-						<div class="panel">
-							<div class="left" style="width: 100%">
-								<div class="panel-heading">
-									<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">진짜 / 가짜 팔로워</h3>
+						<div class ="korean panel">
+							<div class ="korean left" style="width: 100%">
+								<div class ="korean panel-heading">
+									<h3 class ="korean panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">진짜 / 가짜 팔로워</h3>
 
 								</div>
 
 							</div>
-							<div class="panel-body">
+							<div class ="korean panel-body">
 
-								<div class="panel-body">
+								<div class ="korean panel-body">
 									<div id="chartdiv3"></div>
 
 								</div>
 
-								<div>
-									<li>
+								<div style = "width : 80%; margin-left: 10%">
+									
 										<p>
-											진짜 팔로워 <span class="label-percent"><%=report.getReal_follower()%>%</span>
+											진짜 팔로워 <span class ="korean label-percent"><%=report.getReal_follower()%>%</span>
 										</p>
-										<div class="progress progress-xs">
-											<div class="progress-bar progress-bar-success"
+										<div class ="korean progress progress-xs">
+											<div class ="korean progress-bar progress-bar-success"
 												role="progressbar" aria-valuenow="80" aria-valuemin="0"
 												aria-valuemax="100"
 												style="width: <%=report.getReal_follower()%>%; background-color: #4AB34A">
-												<span class="sr-only">80% Complete</span>
+												<span class ="korean sr-only">80% Complete</span>
 											</div>
 										</div>
-									</li>
+									
 
 
 
-									<li>
 										<p>
-											가짜 팔로워 <span class="label-percent"><%=report.getFake_follower()%>%</span>
+											가짜 팔로워 <span class ="korean label-percent"><%=report.getFake_follower()%>%</span>
 										</p>
-										<div class="progress progress-xs">
-											<div class="progress-bar progress-bar-danger"
+										<div class ="korean progress progress-xs">
+											<div class ="korean progress-bar progress-bar-danger"
 												role="progressbar" aria-valuenow="23" aria-valuemin="0"
 												aria-valuemax="100"
 												style="width: <%=report.getFake_follower()%>%; background-color: #FF3232">
-												<span class="sr-only">23% Complete</span>
+												<span class ="korean sr-only">23% Complete</span>
 											</div>
 										</div>
-									</li>
 
 
 
@@ -475,52 +477,48 @@ h3.panel-title{
 					</div>
 
 					<!-- 진짜 / 가짜 댓글 -->
-					<div class="col-md-4 col-md-4-1">
+					<div class ="korean col-md-4 col-md-4-1">
 						<!-- TASKS -->
 						<!-- 원형 -->
-						<div class="panel">
-							<div class="left" style="width: 100%">
-								<div class="panel-heading">
-									<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">진짜 / 가짜 댓글</h3>
+						<div class ="korean panel">
+							<div class ="korean left" style="width: 100%">
+								<div class ="korean panel-heading">
+									<h3 class ="korean panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">진짜 / 가짜 댓글</h3>
 
 								</div>
 							</div>
-							<div class="panel-body">
-								<div class="panel-body">
+							<div class ="korean panel-body">
+								<div class ="korean panel-body">
 									<div id="chartdiv4"></div>
 								</div>
 							</div>
 
-							<div>
-								<li>
+							<div style = "width : 80%; margin-left: 10%">
 									<p>
-										진짜 댓글 <span class="label-percent"><%=report.getReal_comment()%>%</span>
+										진짜 댓글 <span class ="korean label-percent"><%=report.getReal_comment()%>%</span>
 									</p>
-									<div class="progress progress-xs">
-										<div class="progress-bar progress-bar-success"
+									<div class ="korean progress progress-xs">
+										<div class ="korean progress-bar progress-bar-success"
 											role="progressbar" aria-valuenow="80" aria-valuemin="0"
 											aria-valuemax="100"
 											style="width: <%=report.getReal_comment()%>%; background-color: #4AB34A">
-											<span class="sr-only">80% Complete</span>
+											<span class ="korean sr-only">80% Complete</span>
 										</div>
 									</div>
-								</li>
 
 
 
-								<li>
 									<p>
-										가짜 댓글 <span class="label-percent"><%=report.getFake_comment()%>%</span>
+										가짜 댓글 <span class ="korean label-percent"><%=report.getFake_comment()%>%</span>
 									</p>
-									<div class="progress progress-xs">
-										<div class="progress-bar progress-bar-danger"
+									<div class ="korean progress progress-xs">
+										<div class ="korean progress-bar progress-bar-danger"
 											role="progressbar" aria-valuenow="23" aria-valuemin="0"
 											aria-valuemax="100"
 											style="width: <%=report.getFake_comment()%>%; background-color: #FF3232">
-											<span class="sr-only">23% Complete</span>
+											<span class ="korean sr-only">23% Complete</span>
 										</div>
 									</div>
-								</li>
 								</ul>
 							</div>
 
@@ -540,36 +538,36 @@ h3.panel-title{
 
 
 			<!-- 요일별 -->
-			<div class="col-md-4 col-md-4-1">
+			<div class ="korean col-md-4 col-md-4-1">
 				<!-- VISIT CHART -->
-				<div class="panel">
-					<div class="left" style="width: 60%">
-						<div class="panel-heading">
-							<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: right;">단골 댓글</h3>
+				<div class ="korean panel">
+					<div class ="korean left" style="width: 60%">
+						<div class ="korean panel-heading">
+							<h3 class ="korean panel-title" style = "font-weight: bold; font-size: 30px; text-align: right;">단골 댓글</h3>
 						</div>
 					</div>
-					<div class="panel-body">
-						<div class="panel-body">
-							<div id="week-chart" class="ct-chart"></div>
+					<div class ="korean panel-body">
+						<div class ="korean panel-body">
+							<div id="week-chart" class ="korean ct-chart"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<!-- 시간별 -->
-			<div class="col-md-4 col-md-4-1">
+			<div class ="korean col-md-4 col-md-4-1">
 				<!-- VISIT CHART -->
 
-				<div class="panel">
-					<div class="left" style="width: 60%">
-						<div class="panel-heading">
-							<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: right;">단골 좋아요</h3>
+				<div class ="korean panel">
+					<div class ="korean left" style="width: 60%">
+						<div class ="korean panel-heading">
+							<h3 class ="korean panel-title" style = "font-weight: bold; font-size: 30px; text-align: right;">단골 좋아요</h3>
 
 						</div>
 					</div>
-					<div class="panel-body">
-						<div class="panel-body">
-							<div id="like-chart" class="ct-chart"></div>
+					<div class ="korean panel-body">
+						<div class ="korean panel-body">
+							<div id="like-chart" class ="korean ct-chart"></div>
 						</div>
 					</div>
 				</div>
@@ -583,15 +581,15 @@ h3.panel-title{
 
 
 			<!-- 좋아요 변화율 -->
-			<div class="col-md-6" style="width: 100%">
+			<div class ="korean col-md-6" style="width: 100%">
 				<!-- MULTI CHARTS -->
-				<div class="panel">
-					<div class="panel-heading">
-						<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">좋아요 변화율</h3>
+				<div class ="korean panel">
+					<div class ="korean panel-heading">
+						<h3 class ="korean panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">좋아요 변화율</h3>
 
 					</div>
 
-					<div class="panel-body">
+					<div class ="korean panel-body">
 
 						<!-- HTML -->
 						<div id="chartdiv5"></div>
@@ -610,16 +608,16 @@ h3.panel-title{
 
 			<!-- END MULTI CHARTS -->
 
-			<div class="col-md-4 col-md-4-1">
+			<div class ="korean col-md-4 col-md-4-1">
 				<!-- 포스트 성향(요일별) -->
 
 				<!-- VISIT CHART -->
-				<div class="panel">
-					<div class="panel-heading">
-						<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">요일별 포스트 성향</h3>
+				<div class ="korean panel">
+					<div class ="korean panel-heading">
+						<h3 class ="korean panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">요일별 포스트 성향</h3>
 
 					</div>
-					<div class="panel-body">
+					<div class ="korean panel-body">
 						<!-- HTML -->
 						<div id="chartdiv6"></div>
 
@@ -632,16 +630,16 @@ h3.panel-title{
 			</div>
 
 			<!-- 포스트 성향(시간별) -->
-			<div class="col-md-4 col-md-4-1">
+			<div class ="korean col-md-4 col-md-4-1">
 
 				<!-- VISIT CHART -->
-				<div class="panel">
-					<div class="panel-heading" >
-						<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">시간별 포스트 성향</h3>
+				<div class ="korean panel">
+					<div class ="korean panel-heading" >
+						<h3 class ="korean panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">시간별 포스트 성향</h3>
 
 					</div>
 
-					<div class="panel-body">
+					<div class ="korean panel-body">
 						<!-- HTML -->
 						<div id="chartdiv7"></div>
 
@@ -659,16 +657,16 @@ h3.panel-title{
 
 
 
-			<div class="col-md-6" style="width: 100%">
+			<div class ="korean col-md-6" style="width: 100%">
 				<!-- 반응 좋아요 & 댓글 -->
 
 				<!-- VISIT CHART -->
-				<div class="panel">
-					<div class="panel-heading">
-						<h3 class="panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">좋아요 반응</h3>
+				<div class ="korean panel">
+					<div class ="korean panel-heading">
+						<h3 class ="korean panel-title" style = "font-weight: bold; font-size: 30px; text-align: center;">좋아요 반응</h3>
 
 					</div>
-					<div class="panel-body">
+					<div class ="korean panel-body">
 						<!-- HTML -->
 						<div id="chartdiv8"></div>
 
@@ -692,11 +690,11 @@ h3.panel-title{
 	<!-- END MAIN CONTENT -->
 	</div>
 	<!-- END MAIN -->
-	<div class="clearfix"></div>
+	<div class ="korean clearfix"></div>
 	<footer>
-		<div class="container-fluid">
-			<p class="copyright">
-				Shared by <i class="fa fa-love"></i><a
+		<div class ="korean container-fluid">
+			<p class ="korean copyright">
+				Shared by <i class ="korean fa fa-love"></i><a
 					href="https://bootstrapthemes.co">BootstrapThemes</a>
 			</p>
 		</div>

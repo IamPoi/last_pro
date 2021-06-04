@@ -1335,7 +1335,7 @@ li .single_team_text p{
 
 
 .main_blog_content .single_blog_area .single_blog_text{
-    background: #e74e3e;
+    background: #92639D;
     padding: 70px 30px 70px 50px;
     position: relative;
 }
@@ -1347,7 +1347,7 @@ li .single_team_text p{
     width: 0;
     height: 0;
     border-top: 30px solid transparent;
-    border-right: 30px solid #e74e3e;;
+    border-right: 30px solid #92639D;;
     border-bottom: 30px solid transparent;
 }
 .main_blog_content .single_blog_area .single_blog_text.s_b_right:after{
@@ -1359,7 +1359,7 @@ li .single_team_text p{
     width: 0;
     height: 0;
     border-top: 30px solid transparent;
-    border-left: 30px solid #e74e3e;;
+    border-left: 30px solid #92639D;;
     border-bottom: 30px solid transparent;
 }
 .main_blog_content .single_blog_area .single_blog_text a.read_more{
@@ -1511,6 +1511,9 @@ li .single_team_text p{
 
 }
 
+.korean{
+	font-family: 'Noto Sans KR', sans-serif;
+}
 
 
 

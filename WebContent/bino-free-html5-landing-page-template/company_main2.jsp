@@ -45,7 +45,8 @@ img.inf {
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/iconfont.css">
 <link rel="stylesheet" href="assets/css/slick/slick.css">
@@ -103,37 +104,37 @@ img {
    <div class='preloader'>
       <div class='loaded'>&nbsp;</div>
    </div>
-   <div class="culmn">
-      <header id="main_menu" class="header navbar-fixed-top">
-         <div class="main_menu_bg" style = "background-color:white;">
-            <div class="container" style = "width : 100%">
-               <div class="row">
-                  <div class="nave_menu">
-                     <nav class="navbar navbar-default">
-                        <div class="container-fluid">
+   <div class = "korean culmn">
+      <header id="main_menu" class = "korean header navbar-fixed-top">
+         <div class = "korean main_menu_bg" style = "background-color:white;">
+            <div class = "korean container" style = "width : 100%">
+               <div class = "korean row">
+                  <div class = "korean nave_menu">
+                     <nav class = "korean navbar navbar-default">
+                        <div class = "korean container-fluid">
                            <!-- Brand and toggle get grouped for better mobile display -->
-                           <div class="navbar-header">
-                              <button type="button" class="navbar-toggle collapsed"
+                           <div class = "korean navbar-header">
+                              <button type="button" class = "korean navbar-toggle collapsed"
                                  data-toggle="collapse"
                                  data-target="#bs-example-navbar-collapse-1"
                                  aria-expanded="false">
-                                 <span class="sr-only">Toggle navigation</span> <span
-                                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                                    class="icon-bar"></span>
+                                 <span class = "korean sr-only">Toggle navigation</span> <span
+                                    class = "korean icon-bar"></span> <span class = "korean icon-bar"></span> <span
+                                    class = "korean icon-bar"></span>
                               </button>
 
 
-                              <a class="navbar-brand" href="firstPage.jsp" style = "margin-left: 30px;"> <img
+                              <a class = "korean navbar-brand" href="firstPage.jsp" style = "margin-left: 30px;"> <img
                                  src="images/logo_high_re.png" style = "width:140px; height:50px;"/>
                               </a>
                            </div>
 
                            <!-- Collect the nav links, forms, and other content for toggling -->
 
-                           <div class="collapse navbar-collapse"
+                           <div class = "korean collapse navbar-collapse"
                               id="bs-example-navbar-collapse-1">
 
-                             <ul class="nav navbar-nav navbar-right">
+                             <ul class = "korean nav navbar-nav navbar-right">
                                  <li><a href="" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
                                             <li><a href="hashtag.jsp">HASHTAG LAB</a></li>
                                             <li><a href="pay.jsp">INQUIRY</a></li>
@@ -162,13 +163,13 @@ img {
       <!--End of header -->
 
       <!--home Section -->
-      <section id="home" class="home" style = "background-color:#F0F8FF;">
-         <div class="">
-            <div class="home_skew_border">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-sm-12 ">
-                        <div class="main_home_slider text-center" >
+      <section id="home" class = "korean home" style = "background-color:#F0F8FF;">
+         <div class = "korean ">
+            <div class = "korean home_skew_border">
+               <div class = "korean container">
+                  <div class = "korean row">
+                     <div class = "korean col-sm-12 ">
+                        <div class = "korean main_home_slider text-center" >
 
                            <%
                            //이미지 폴더의 네임들 
@@ -205,14 +206,14 @@ img {
                                  //System.out.println("반복횟수 : " + ((influencer_allSelect.size() / 3) + 1));
                            %>
 
-                           <div class="single_home_slider" style = "margin:auto;">
+                           <div class = "korean single_home_slider" style = "margin:auto;">
                               <%
                               //System.out.println("마지막 : " + num);
 
                               for (int i = s; i < num; i++) {
                                  //System.out.println("numList  : " + numList.get(i));
                               %>
-                              <div class="main_home wow fadeInUp col-sm-4"
+                              <div class = "korean main_home wow fadeInUp col-sm-4"
                                  data-wow-duration="700ms" >
                                  <%
                                  // 이미지 파일 넘기기
@@ -272,7 +273,7 @@ img {
                      </div>
                   </div>
                </div>
-               <div class="scrooldown" style = "left : 46%; background-color: #FAEBD7" >
+               <div class = "korean scrooldown" style = "left : 46%; background-color: #FAEBD7" >
                   <a href="pay.jsp">
                   <i style = "color: black; font-style: normal; font-weight: bold;" >견적문의</i></a>
                </div>
@@ -284,79 +285,79 @@ img {
 
 
 <!-- Blog Section -->
-            <section id="blog" class="blog">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="main_blog sections">
-                            <div class="head_title text-center">
-                                <h2>Best Review</h2>
-                                <div class="subtitle">
+            <section id="blog" class = "korean blog">
+                <div class = "korean container-fluid">
+                    <div class = "korean row">
+                        <div class = "korean main_blog sections">
+                            <div class = "korean head_title text-center">
+                                <h2>Influencer Review</h2>
+                                <div class = "korean subtitle">
                                     당신의 모든 순간이 하이라이트가 됩니다!
                                 </div>
-                                <div class="separator"></div>
+                                <div class = "korean separator"></div>
                             </div><!-- End off Head_title -->
 
-                            <div class="main_blog_content"  style = "padding : 0 5% 0 5%">
-                                <div class="col-sm-6">
-                                    <div class="single_blog_area textwhite">
-                                        <div class="row">
-                                            <div class="col-sm-6 no-padding" >
-                                                <div class="single_blog_img">
+                            <div class = "korean main_blog_content"  style = "padding : 0 5% 0 5%">
+                                <div class = "korean col-sm-6">
+                                    <div class = "korean single_blog_area textwhite">
+                                        <div class = "korean row">
+                                            <div class = "korean col-sm-6 no-padding" >
+                                                <div class = "korean single_blog_img">
                                                     <img src="images/libra._.lim.jpg" alt="" />
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6 no-padding">
-                                                <div class="single_blog_text s_b_left" style="height :417px;">
+                                            <div class = "korean col-sm-6 no-padding">
+                                                <div class = "korean single_blog_text s_b_left" style="height :417px;">
                                                     <p>Fashion</p>
                                                     <h3>여성패션 데일리</h3>
-                                                    <div class="separator2"></div>
+                                                    <div class = "korean separator2"></div>
                                                     <p>유명 쇼핑몰 S모델. 100만 팔로워를 보유한 명실상부 셀럽! 화보같은 패션으로 브랜디드형 마케팅 인플루언서로 추천!</p>
 
-                                                    <a href="pay.jsp" class="read_more">Read More >></a>
+                                                    <a href="pay.jsp" class = "korean read_more">Read More >></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6">
-                                    <div class="single_blog_area textwhite">
-                                        <div class="row">
-                                            <div class="col-sm-6 no-padding">
-                                                <div class="single_blog_img">
+                                <div class = "korean col-sm-6">
+                                    <div class = "korean single_blog_area textwhite">
+                                        <div class = "korean row">
+                                            <div class = "korean col-sm-6 no-padding">
+                                                <div class = "korean single_blog_img">
                                                     <img src="images/food2.jpg" alt="" />
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6 no-padding">
-                                                <div class="single_blog_text s_b_left" style="height :417px;">
+                                            <div class = "korean col-sm-6 no-padding">
+                                                <div class = "korean single_blog_text s_b_left" style="height :417px;">
                                                     <p>Food</p>
                                                     <h3>푸드 커피/디저트</h3>
-                                                    <div class="separator2"></div>
+                                                    <div class = "korean separator2"></div>
                                                     <p>브런치, 피자, 디저트, 음료, 커피 다양하게 팔아서 오전 오후 언제든 애기와 함께라도 즐기기 좋아서 강추 추대디와 8월의 마지막 데이트는 좋은곳에서 행복하게 마무리해서 좋구만유</p>
 
-                                                    <a href="pay.jsp" class="read_more">Read More >></a>
+                                                    <a href="pay.jsp" class = "korean read_more">Read More >></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="single_blog_area textwhite">
-                                        <div class="row">
+                                <div class = "korean col-sm-6">
+                                    <div class = "korean single_blog_area textwhite">
+                                        <div class = "korean row">
 
-                                            <div class="col-sm-6 col-sm-push-6 no-padding">
-                                                <div class="single_blog_img">
+                                            <div class = "korean col-sm-6 col-sm-push-6 no-padding">
+                                                <div class = "korean single_blog_img">
                                                     <img src="images/moduda_2_.jpg" alt="" />
                                                 </div>
                                             </div>
 
-                                            <div class="col-sm-6 col-sm-pull-6 no-padding">
-                                                <div class="single_blog_text s_b_right" style="height :417px;">
+                                            <div class = "korean col-sm-6 col-sm-pull-6 no-padding">
+                                                <div class = "korean single_blog_text s_b_right" style="height :417px;">
                                                     <p>Beauty</p>
                                                     <h3>뷰티 화장품 일상</h3>
-                                                    <div class="separator2"></div>
+                                                    <div class = "korean separator2"></div>
                                                     <p>얼짱 출신. 약 50만 팔로워를 보유한 셀럽 인플루언서! 공동 구매 진행 가능하여 브릭딜 같은 판매형 마케팅 인플루언서로 추천!</p>
-                                                    <a href="pay.jsp" class="read_more">Read More >></a>
+                                                    <a href="pay.jsp" class = "korean read_more">Read More >></a>
                                                 </div>
                                             </div>
 
@@ -364,22 +365,22 @@ img {
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6">
-                                    <div class="single_blog_area textwhite">
-                                        <div class="row">
-                                            <div class="col-sm-6 col-sm-push-6 no-padding">
-                                                <div class="single_blog_img">
+                                <div class = "korean col-sm-6">
+                                    <div class = "korean single_blog_area textwhite">
+                                        <div class = "korean row">
+                                            <div class = "korean col-sm-6 col-sm-push-6 no-padding">
+                                                <div class = "korean single_blog_img">
                                                     <img src="images/taexxhwanss.jpg" alt="" />
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6 col-sm-pull-6 no-padding">
-                                                <div class="single_blog_text s_b_right" style="height :417px;">
+                                            <div class = "korean col-sm-6 col-sm-pull-6 no-padding">
+                                                <div class = "korean single_blog_text s_b_right" style="height :417px;">
                                                     <p>Fashion</p>
                                                     <h3>남성패션 라이프스타일</h3>
-                                                    <div class="separator2"></div>
+                                                    <div class = "korean separator2"></div>
                                                     <p>뷰티, 패션, 라이프 다양하게 잘 소화하여 48만 인플루언서에게 높은 도달률을 보여주는 인기 인플루언서!</p>
 
-                                                    <a href="pay.jsp" class="read_more">Read More >></a>
+                                                    <a href="pay.jsp" class = "korean read_more">Read More >></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -399,54 +400,54 @@ img {
 
 
       <!--feature section -->
-      <section id="feature" class="feature sections">
-         <div class="container">
-            <div class="row">
-               <div class="main_feature text-center">
+      <section id="feature" class = "korean feature sections">
+         <div class = "korean container">
+            <div class = "korean row">
+               <div class = "korean main_feature text-center">
 
-                  <div class="col-sm-3">
-                     <div class="single_feature">
-                        <div class="single_feature_icon">
-                           <i class="fa fa"><img alt="" src="images/as_con.png" style = "width : 45px"></i>
+                  <div class = "korean col-sm-3">
+                     <div class = "korean single_feature">
+                        <div class = "korean single_feature_icon">
+                           <i class = "korean fa fa"><img alt="" src="images/as_con.png" style = "width : 45px"></i>
                         </div>
 
                         <h4>마켓팅 컨설팅</h4>
-                        <div class="separator3"></div>
+                        <div class = "korean separator3"></div>
                         <p></p>
                      </div>
                   </div>
 
-                  <div class="col-sm-3">
-                     <div class="single_feature">
-                        <div class="single_feature_icon">
-                           <i class="fa fa"><img alt="" src="images/as_match.png" style = "width : 45px"></i>
+                  <div class = "korean col-sm-3">
+                     <div class = "korean single_feature">
+                        <div class = "korean single_feature_icon">
+                           <i class = "korean fa fa"><img alt="" src="images/as_match.png" style = "width : 45px"></i>
                         </div>
 
                         <h4>인플루언서 모집 및 매칭</h4>
-                        <div class="separator3"></div>
+                        <div class = "korean separator3"></div>
                         <p></p>
                      </div>
                   </div>
 
-                  <div class="col-sm-3">
-                     <div class="single_feature">
-                        <div class="single_feature_icon">
-                           <i class="fa fa"><img alt="" src="images/as_cam.png" style = "width : 45px"></i>
+                  <div class = "korean col-sm-3">
+                     <div class = "korean single_feature">
+                        <div class = "korean single_feature_icon">
+                           <i class = "korean fa fa"><img alt="" src="images/as_cam.png" style = "width : 45px"></i>
                         </div>
                         <h4>캠페인 신청 및 포스팅</h4>
-                        <div class="separator3"></div>
+                        <div class = "korean separator3"></div>
                         <p></p>
                      </div>
                   </div>
 
-                  <div class="col-sm-3">
-                     <div class="single_feature">
-                        <div class="single_feature_icon">
-                           <i class="fa fa"><img alt="" src="images/as_report.png" style = "width : 45px"></i>
+                  <div class = "korean col-sm-3">
+                     <div class = "korean single_feature">
+                        <div class = "korean single_feature_icon">
+                           <i class = "korean fa fa"><img alt="" src="images/as_report.png" style = "width : 45px"></i>
                         </div>
 
                         <h4>레포트 제공</h4>
-                        <div class="separator3"></div>
+                        <div class = "korean separator3"></div>
                         <p></p>
                      </div>
                   </div>
@@ -463,19 +464,19 @@ img {
       <!--End of feature Section -->
 
       <!-- History section -->
-      <section id="history" class="history sections">
-         <div class="container">
-            <div class="row">
-               <div class="main_history">
-                  <div class="col-sm-6">
-                     <div class="single_history_img">
+      <section id="history" class = "korean history sections">
+         <div class = "korean container">
+            <div class = "korean row">
+               <div class = "korean main_history">
+                  <div class = "korean col-sm-6">
+                     <div class = "korean single_history_img">
                         <img src="assets/images/img/connect.png" alt="" />
                      </div>
                   </div>
 
-                  <div class="col-sm-6">
-                     <div class="single_history_content">
-                        <div class="head_title">
+                  <div class = "korean col-sm-6">
+                     <div class = "korean single_history_content">
+                        <div class = "korean head_title">
                            <h2>About Us</h2>
                         </div>
                         <h3 style ="color: black"  >마케터스는 인플루언서와 광고주를 위한 서비스를 제공하고 있으며, 제공되는 서비스로는 
@@ -483,7 +484,7 @@ img {
                         인플루언서 외 영상 컨텐츠 마케팅과 퍼포먼스 마케팅부분으로 확장해 디지털 전반적인 영역의 광고 대행도 함께 진행하고 있습니다.
                         </h3>
 
-                        <a href="" class="btn btn-lg" style = "display : none">BROWSE OUR WORK</a>
+                        <a href="" class = "korean btn btn-lg" style = "display : none">BROWSE OUR WORK</a>
                      </div>
                   </div>
                </div>
@@ -497,27 +498,27 @@ img {
 
 
       <!--Footer section-->
-      <section class="footer">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <div class="main_footer">
-                     <div class="row">
-                        <div class="col-sm-6 col-xs-12">
-                           <div class="flowus">
-                              <a href=""><i class="fa fa-facebook"></i></a> <a href=""><i
-                                 class="fa fa-twitter"></i></a> <a href=""><i
-                                 class="fa fa-google-plus"></i></a> <a href=""><i
-                                 class="fa fa-instagram"></i></a> <a href=""><i
-                                 class="fa fa-youtube"></i></a> <a href=""><i
-                                 class="fa fa-dribbble"></i></a>
+      <section class = "korean footer">
+         <div class = "korean container">
+            <div class = "korean row">
+               <div class = "korean col-sm-12">
+                  <div class = "korean main_footer">
+                     <div class = "korean row">
+                        <div class = "korean col-sm-6 col-xs-12">
+                           <div class = "korean flowus">
+                              <a href=""><i class = "korean fa fa-facebook"></i></a> <a href=""><i
+                                 class = "korean fa fa-twitter"></i></a> <a href=""><i
+                                 class = "korean fa fa-google-plus"></i></a> <a href=""><i
+                                 class = "korean fa fa-instagram"></i></a> <a href=""><i
+                                 class = "korean fa fa-youtube"></i></a> <a href=""><i
+                                 class = "korean fa fa-dribbble"></i></a>
                            </div>
                         </div>
 
-                        <div class="col-sm-6 col-xs-12">
-                           <div class="copyright_text">
-                              <p class=" wow fadeInRight" data-wow-duration="1s">
-                                 Made with <i class="fa fa-heart"></i> by MARKETUS 2021.
+                        <div class = "korean col-sm-6 col-xs-12">
+                           <div class = "korean copyright_text">
+                              <p class = "korean  wow fadeInRight" data-wow-duration="1s">
+                                 Made with <i class = "korean fa fa-heart"></i> by MARKETUS 2021.
                               </p>
                            </div>
                         </div>
@@ -543,8 +544,8 @@ img {
 
    <!-- START SCROLL TO TOP  -->
 
-   <div class="scrollup">
-      <a href="#"><i class="fa fa-chevron-up"></i></a>
+   <div class = "korean scrollup">
+      <a href="#"><i class = "korean fa fa-chevron-up"></i></a>
    </div>
 
    <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>

@@ -38,7 +38,8 @@ System.out.println("imgFileList : " + imgFileList.size());
    href="assets/vendor/bootstrap/css/bootstrap.min.css">
 <!-- 문제 css -->
 
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet"
    href="assets/vendor/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="assets/vendor/linearicons/style.css">
@@ -248,7 +249,6 @@ textarea {
 .col-md-4 {
    color: black;
    background-color: white;
-   font-weight: bold;
 }
 
 .profile-header .profile-stat .stat-item:after {
@@ -259,7 +259,7 @@ textarea {
    right: 0;
    width: 1px;
    height: 100%;
-   background-color: black;
+   background-color: #F8F8F8;
 }
 
 .profile-header .profile-stat {
@@ -290,26 +290,26 @@ textarea {
    <!-- WRAPPER -->
    <div id="wrapper">
       <!-- NAVBAR -->
-      <header id="main_menu" class="header navbar-fixed-top">
-         <div class="main_menu_bg">
-            <div class="container" style="width: 100%">
-               <div class="row">
-                  <div class="nave_menu">
-                     <nav class="navbar navbar-default">
-                        <div class="container-fluid">
+      <header id="main_menu" class = "korean korean header navbar-fixed-top">
+         <div class = "korean korean main_menu_bg">
+            <div class = "korean korean container" style="width: 100%">
+               <div class = "korean korean row">
+                  <div class = "korean korean nave_menu">
+                     <nav class = "korean korean navbar navbar-default">
+                        <div class = "korean korean container-fluid">
                            <!-- Brand and toggle get grouped for better mobile display -->
-                           <div class="navbar-header">
-                              <button type="button" class="navbar-toggle collapsed"
+                           <div class = "korean korean navbar-header">
+                              <button type="button" class = "korean korean navbar-toggle collapsed"
                                  data-toggle="collapse"
                                  data-target="#bs-example-navbar-collapse-1"
                                  aria-expanded="false">
-                                 <span class="sr-only">Toggle navigation</span> <span
-                                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                                    class="icon-bar"></span>
+                                 <span class = "korean korean sr-only">Toggle navigation</span> <span
+                                    class = "korean korean icon-bar"></span> <span class = "korean korean icon-bar"></span> <span
+                                    class = "korean korean icon-bar"></span>
                               </button>
 
 
-                              <a class="navbar-brand"
+                              <a class = "korean korean navbar-brand"
                                  href="../bino-free-html5-landing-page-template/firstPage.jsp">
                                  <img src="images/logo_high_re.png" width=140px, height=50px
                                  style="margin-left: 30px;">
@@ -320,10 +320,10 @@ textarea {
 
 
 
-                           <div class="collapse navbar-collapse"
+                           <div class = "korean korean collapse navbar-collapse"
                               id="bs-example-navbar-collapse-1">
 
-                              <ul class="nav navbar-nav navbar-right"
+                              <ul class = "korean korean nav navbar-nav navbar-right"
                                  style="font-size: 20px;">
 
                                  <li><a href="../bino-free-html5-landing-page-template/influencer_main.jsp">HOME</a></li>
@@ -356,83 +356,84 @@ textarea {
          </div>
       </header>
       <!-- LEFT SIDEBAR -->
-      <div id="sidebar-nav" class="sidebar" style='display: none'>
-         <div class="sidebar-scroll">
+      <div id="sidebar-nav" class = "korean korean sidebar" style='display: none'>
+         <div class = "korean korean sidebar-scroll">
             <nav>
-               <ul class="nav">
-                  <li><a href="index.html" class=""><i class="lnr lnr-home"></i>
+               <ul class = "korean korean nav">
+                  <li><a href="index.html" class = "korean korean "><i class = "korean korean lnr lnr-home"></i>
                         <span>Dashboard</span></a></li>
-                  <li><a href="elements.html" class=""><i
-                        class="lnr lnr-code"></i> <span>Elements</span></a></li>
-                  <li><a href="charts.html" class=""><i
-                        class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
-                  <li><a href="panels.html" class=""><i class="lnr lnr-cog"></i>
+                  <li><a href="elements.html" class = "korean korean "><i
+                        class = "korean korean lnr lnr-code"></i> <span>Elements</span></a></li>
+                  <li><a href="charts.html" class = "korean korean "><i
+                        class = "korean korean lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
+                  <li><a href="panels.html" class = "korean korean "><i class = "korean korean lnr lnr-cog"></i>
                         <span>Panels</span></a></li>
-                  <li><a href="notifications.html" class=""><i
-                        class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
-                  <li><a href="#subPages" data-toggle="collapse" class="active"><i
-                        class="lnr lnr-file-empty"></i> <span>Pages</span> <i
-                        class="icon-submenu lnr lnr-chevron-left"></i></a>
-                     <div id="subPages" class="collapse in">
-                        <ul class="nav">
-                           <li><a href="page-profile.html" class="active">Profile</a></li>
-                           <li><a href="page-login.html" class="">Login</a></li>
-                           <li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
+                  <li><a href="notifications.html" class = "korean korean "><i
+                        class = "korean korean lnr lnr-alarm"></i> <span>Notifications</span></a></li>
+                  <li><a href="#subPages" data-toggle="collapse" class = "korean korean active"><i
+                        class = "korean korean lnr lnr-file-empty"></i> <span>Pages</span> <i
+                        class = "korean korean icon-submenu lnr lnr-chevron-left"></i></a>
+                     <div id="subPages" class = "korean korean collapse in">
+                        <ul class = "korean korean nav">
+                           <li><a href="page-profile.html" class = "korean korean active">Profile</a></li>
+                           <li><a href="page-login.html" class = "korean korean ">Login</a></li>
+                           <li><a href="page-lockscreen.html" class = "korean korean ">Lockscreen</a></li>
                         </ul>
                      </div></li>
-                  <li><a href="tables.html" class=""><i
-                        class="lnr lnr-dice"></i> <span>Tables</span></a></li>
-                  <li><a href="typography.html" class=""><i
-                        class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
-                  <li><a href="icons.html" class=""><i
-                        class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
+                  <li><a href="tables.html" class = "korean korean "><i
+                        class = "korean korean lnr lnr-dice"></i> <span>Tables</span></a></li>
+                  <li><a href="typography.html" class = "korean korean "><i
+                        class = "korean korean lnr lnr-text-format"></i> <span>Typography</span></a></li>
+                  <li><a href="icons.html" class = "korean korean "><i
+                        class = "korean korean lnr lnr-linearicons"></i> <span>Icons</span></a></li>
                </ul>
             </nav>
          </div>
       </div>
       <!-- END LEFT SIDEBAR -->
       <!-- MAIN -->
-      <div class="main" style="width: 100%">
+      <div class = "korean korean main" style="width: 100%">
          <!-- MAIN CONTENT -->
-         <div class="main-content">
-            <div class="container-fluid">
-               <div class="panel panel-profile">
-                  <div class="clearfix">
+         <div class = "korean korean main-content">
+            <div class = "korean korean container-fluid">
+               <div class = "korean korean panel panel-profile">
+                  <div class = "korean korean clearfix">
                      <!-- LEFT COLUMN -->
-                     <div class="profile-left">
+                     <div class = "korean korean profile-left">
                         <!-- PROFILE HEADER -->
-                        <div class="profile-header">
-                           <div class="overlay"></div>
-                           <div class="profile-main"
-                              style="background-image: url('assets/img/profile-bg02.jpg');">
+                        <div class = "korean korean profile-header">
+                           <div class = "korean korean overlay"></div>
+                           <div class = "korean korean profile-main"
+                              style="background-color:#92639D">
                               <%
                               String x = "3.48kg";
                               %>
-                              <img src="assets/img/<%=x%>.jpg" class="img-circle"
+                              <img src="assets/img/<%=x%>.jpg" class = "korean korean img-circle"
                                  alt="Avatar">
-                              <h3 class="name">임보라</h3>
-                              <span class="online-status status-available"></span>
+                                 <br>
+                                 <br>
+                              <h3 class = "korean korean name">임보라 | @3.48kg</h3>
                            </div>
-                           <div class="profile-stat">
-                              <div class="row">
-                                 <div class="col-md-4 stat-item">
-                                    45 <span>게시글</span>
+                           <div class = "korean korean profile-stat">
+                              <div class = "korean korean row">
+                                 <div class = "korean korean col-md-4 stat-item">
+                                   <strong>게시글</strong> <span>45</span>
                                  </div>
-                                 <div class="col-md-4 stat-item">
-                                    1500 <span>팔로워</span>
+                                 <div class = "korean korean col-md-4 stat-item">
+                                    <strong>팔로워</strong> <span>1500</span>
                                  </div>
-                                 <div class="col-md-4 stat-item">
-                                    300 <span>팔로잉</span>
+                                 <div class = "korean korean col-md-4 stat-item">
+                                    <strong>팔로잉</strong> <span>300</span>
                                  </div>
                               </div>
                            </div>
                         </div>
                         <!-- END PROFILE HEADER -->
                         <!-- PROFILE DETAIL -->
-                        <div class="profile-detail" style="text-align: left;">
-                           <div class="profile-info">
-                              <h4 class="heading">Basic Info</h4>
-                              <ul class="list-unstyled list-justify">
+                        <div class = "korean korean profile-detail" style="text-align: left;">
+                           <div class = "korean korean profile-info">
+                              <h4 class = "korean korean heading">Basic Info</h4>
+                              <ul class = "korean korean list-unstyled list-justify">
                                  <li>인스타 주소 <span><%=info.getInflu_instaAddr()%></span></li>
                                  <li>연락처 <span><%=info.getInflu_phone()%></span></li>
                                  <li>나이 <span><%=info.getInflu_age()%></span></li>
@@ -443,31 +444,31 @@ textarea {
 
                               </ul>
                            </div>
-                           <div class="profile-info">
-                              <h4 class="heading">포인트</h4>
-                              <ul class="list-inline social-icons">
+                           <div class = "korean korean profile-info">
+                              <h4 class = "korean korean heading">포인트</h4>
+                              <ul class = "korean korean list-inline social-icons">
                                  <h2>10000 p</h2>
                               </ul>
                            </div>
-                           <div class="profile-info" style="display: none">
-                              <h4 class="heading">About</h4>
+                           <div class = "korean korean profile-info" style="display: none">
+                              <h4 class = "korean korean heading">About</h4>
                               <p>Interactively fashion excellent information after
                                  distinctive outsourcing.</p>
                            </div>
-                           <div class="text-center" style="display: none">
-                              <a href="#" class="btn btn-lg">정보 수정</a>
+                           <div class = "korean korean text-center" style="display: none">
+                              <a href="#" class = "korean korean btn btn-lg">정보 수정</a>
                            </div>
                         </div>
                         <!-- END PROFILE DETAIL -->
                      </div>
                      <!-- END LEFT COLUMN -->
                      <!-- RIGHT COLUMN -->
-                     <div class="profile-right">
+                     <div class = "korean korean profile-right">
 
                         <!-- TABBED CONTENT -->
-                        <div class="custom-tabs-line tabs-line-bottom left-aligned">
-                           <ul class="nav" role="tablist">
-                              <li class="active"><a href="#tab-bottom-left1" role="tab"
+                        <div class = "korean korean custom-tabs-line tabs-line-bottom left-aligned">
+                           <ul class = "korean korean nav" role="tablist">
+                              <li class = "korean korean active"><a href="#tab-bottom-left1" role="tab"
                                  data-toggle="tab">매칭된 캠페인</a></li>
                               <li><a href="#tab-bottom-left2" role="tab"
                                  data-toggle="tab">신청한 캠페인</a></li>
@@ -475,9 +476,9 @@ textarea {
                            </ul>
                         </div>
 
-                        <div class="tab-content">
-                           <div class="tab-pane fade in active" id="tab-bottom-left1">
-                              <div class="table-responsive">
+                        <div class = "korean korean tab-content">
+                           <div class = "korean korean tab-pane fade in active" id="tab-bottom-left1">
+                              <div class = "korean korean table-responsive">
                                  <div>매칭된 캠페인</div>
                                  <br> <br>
                                  <%
@@ -492,8 +493,8 @@ textarea {
                                     k++;
                                     System.out.println("getMatch_ck() : " + qList.get(i).getCampaign_Sid());
                                  %>
-                                 <div class="col-md-3 col-sm-6">
-                                    <div class="award-item">
+                                 <div class = "korean korean col-md-3 col-sm-6">
+                                    <div class = "korean korean award-item">
 
                                        <img src="images/<%=qList.get(i).getCampaign_Sid()%>.jpg"
                                           alt="Avatar" style="height: 250px;"> <br> <br>
@@ -508,8 +509,8 @@ textarea {
                                  %>
                               </div>
 
-                              <div class="margin-top-30 text-center">
-                                 <button class="btn btn-default trigger">모든 매칭캠페인 보기</button>
+                              <div class = "korean korean margin-top-30 text-center">
+                                 <button class = "korean korean btn btn-default trigger">모든 매칭캠페인 보기</button>
                               </div>
 
                            </div>
@@ -523,8 +524,8 @@ textarea {
                            <script src="assets/scripts/klorofil-common.js"></script>
 
 
-                           <div class="tab-pane fade" id="tab-bottom-left2">
-                              <div class="table-responsive">
+                           <div class = "korean korean tab-pane fade" id="tab-bottom-left2">
+                              <div class = "korean korean table-responsive">
                                  <div>신청한 캠페인</div>
                                  <br> <br>
 
@@ -538,8 +539,8 @@ textarea {
                                     }
                                     if (qList.get(i).getMatch_ck() == 0) {
                                  %>
-                                 <div class="col-md-3 col-sm-6">
-                                    <div class="award-item">
+                                 <div class = "korean korean col-md-3 col-sm-6">
+                                    <div class = "korean korean award-item">
 
                                        <img src="images/<%=qList.get(i).getCampaign_Sid()%>.jpg"
                                           alt="Avatar" style="height: 250px;"> <br> <br>
@@ -552,8 +553,8 @@ textarea {
                                  }
                                  %>
                               </div>
-                              <div class="margin-top-30 text-center">
-                                 <button class="btn btn-default trigger2">모든 신청캠페인 보기</button>
+                              <div class = "korean korean margin-top-30 text-center">
+                                 <button class = "korean korean btn btn-default trigger2">모든 신청캠페인 보기</button>
                               </div>
                            </div>
 
@@ -561,26 +562,26 @@ textarea {
                         <!-- END TABBED CONTENT -->
 
 
-                        <div class="custom-tabs-line tabs-line-bottom left-aligned">
+                        <div class = "korean korean custom-tabs-line tabs-line-bottom left-aligned">
 
                         </div>
-                        <h4 class="heading" style="display:">레포트</h4>
+                        <h4 class = "korean korean heading" style="display:">레포트</h4>
                         <!-- AWARDS -->
-                        <div class="awards">
-                           <div class="row" id="tab-match">
+                        <div class = "korean korean awards">
+                           <div class = "korean korean row" id="tab-match">
 
                               <!-- 댓글 유형 -->
 
                               <!-- TASKS -->
                               <!-- 원형 -->
-                              <div class="panel">
-                                 <div class="panel-body">
-                                    <div class="left" style="width: 60%">
-                                       <div class="panel-heading">
-                                          <h3 class="panel-title" align="left">평균</h3>
+                              <div class = "korean korean panel">
+                                 <div class = "korean korean panel-body">
+                                    <div class = "korean korean left" style="width: 60%">
+                                       <div class = "korean korean panel-heading">
+                                          <h3 class = "korean korean panel-title" align="left">평균</h3>
                                        </div>
                                     </div>
-                                    <div class="panel-body">
+                                    <div class = "korean korean panel-body">
                                        <!-- HTML -->
                                        <div id="chartdiv8"></div>
 
@@ -589,19 +590,19 @@ textarea {
                                  <!--  end -->
                               </div>
 
-                              <div class="margin-top-30 text-center">
+                              <div class = "korean korean margin-top-30 text-center">
 
                                  <%
                                  if (info.getPaidMember() == 0) {
                                  %>
                                  <a href="void(0);"
                                     onclick="alert('유료회원만 접근 가능합니다.');return false;"
-                                    class="btn btn-default">레포트 자세히보기</a>
+                                    class = "korean korean btn btn-default">레포트 자세히보기</a>
 
                                  <%
                                  } else {
                                  %>
-                                 <a href="../ReportService?info_adver=0,0" class="btn btn-default">레포트
+                                 <a href="../ReportService?info_adver=0,0" class = "korean korean btn btn-default">레포트
                                     자세히보기</a>
                                  <%
                                  }
@@ -609,7 +610,7 @@ textarea {
 
                               </div>
 
-                              <div class="text-center" style="display: none">
+                              <div class = "korean korean text-center" style="display: none">
                                  <form name="frm" method="post">
                                     <input type="button" value="전송" onclick="valuesend()">
                               </div>
@@ -626,11 +627,11 @@ textarea {
             <!-- END MAIN CONTENT -->
          </div>
          <!-- END MAIN -->
-         <div class="clearfix"></div>
+         <div class = "korean korean clearfix"></div>
          <footer>
-            <div class="container-fluid">
-               <p class="copyright">
-                  Shared by <i class="fa fa-love"></i><a
+            <div class = "korean korean container-fluid">
+               <p class = "korean korean copyright">
+                  Shared by <i class = "korean korean fa fa-love"></i><a
                      href="https://bootstrapthemes.co">BootstrapThemes</a>
                </p>
             </div>
@@ -642,12 +643,12 @@ textarea {
 
 
       <!-- 팝업 될 레이어 -->
-      <div class="modal1" data-spy="scroll">
-         <div class="modal-content"
+      <div class = "korean korean modal1" data-spy="scroll">
+         <div class = "korean korean modal-content"
             style="width: 50%; height: 70%; overflow: scroll">
-            <span class="close-button">&times;</span>
-            <h1 class="title">모든 매칭 캠페인</h1>
-            <div class="table-responsive">
+            <span class = "korean korean close-button">&times;</span>
+            <h1 class = "korean korean title">모든 매칭 캠페인</h1>
+            <div class = "korean korean table-responsive">
                <!-- 스크롤 구현하기 -->
 
                <br> <br>
@@ -658,8 +659,8 @@ textarea {
 
                      System.out.println("getMatch_ck() : " + qList.get(i).getCampaign_Sid());
                %>
-               <div class="col-md-3 col-sm-6">
-                  <div class="award-item">
+               <div class = "korean korean col-md-3 col-sm-6">
+                  <div class = "korean korean award-item">
 
                      <img src="images/<%=qList.get(i).getCampaign_Sid()%>.jpg"
                         alt="Avatar" style="height: 250px;"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
@@ -687,12 +688,12 @@ textarea {
       <!-- start -->
 
       <!-- 팝업 될 레이어 -->
-      <div class="modal2" data-spy="scroll">
-         <div class="modal-content"
+      <div class = "korean korean modal2" data-spy="scroll">
+         <div class = "korean korean modal-content"
             style="width: 50%; height: 70%; overflow: scroll">
-            <span class="close-button2">&times;</span>
-            <h1 class="title">모든 신청 캠페인</h1>
-            <div class="table-responsive">
+            <span class = "korean korean close-button2">&times;</span>
+            <h1 class = "korean korean title">모든 신청 캠페인</h1>
+            <div class = "korean korean table-responsive">
 
                <br> <br>
                <%
@@ -702,8 +703,8 @@ textarea {
 
                      System.out.println("getMatch_ck() : " + qList.get(i).getCampaign_Sid());
                %>
-               <div class="col-md-3 col-sm-6">
-                  <div class="award-item">
+               <div class = "korean korean col-md-3 col-sm-6">
+                  <div class = "korean korean award-item">
 
                      <img src="images/<%=qList.get(i).getCampaign_Sid()%>.jpg"
                         alt="Avatar" style="height: 250px;"> <br> <br> <span><%=qList.get(i).getCampaign_title()%></span>
@@ -745,6 +746,10 @@ textarea {
 
 
       <style>
+      
+      .korean{
+	font-family: 'Noto Sans KR', sans-serif;
+}
 #chartdiv8 {
    width: 100%;
    height: 300px;

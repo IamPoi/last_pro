@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!doctype html>
-<html lang="en" class="fullscreen-bg">
+<html lang="en" class = "korean fullscreen-bg">
 
 <head>
    <title>마켓어스 | MARKETUS</title>
@@ -21,19 +21,28 @@
    <!-- ICONS -->
    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+
+<style type="text/css">
+.korean{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+</style>
 </head>
+
 
 <body>
    <!-- WRAPPER -->
    <div id="wrapper">
-      <div class="vertical-align-wrap">
-         <div class="vertical-align-middle">
-            <div class="auth-box" style = "width : 500px">
-               <div class="left" style = "width : 100%">
-                  <div class="content">
-                     <div class="header">
-                        <div class="logo text-center"><img src="images/logo.jpg" alt="Klorofil Logo" style = "width : 200px;"></div>
-                        <p class="lead" style = "display : none">Login to your account</p>
+      <div class = "korean vertical-align-wrap">
+         <div class = "korean vertical-align-middle">
+            <div class = "korean auth-box" style = "width : 500px">
+               <div class = "korean left" style = "width : 100%">
+                  <div class = "korean content">
+                     <div class = "korean header">
+                        <div class = "korean logo text-center"><img src="images/logo.jpg" alt="Klorofil Logo" style = "width : 200px;"></div>
+                        <p class = "korean lead" style = "display : none">Login to your account</p>
                         <br><br>
                      </div>
                      <% 	String name = request.getParameter("value"); 
@@ -43,41 +52,41 @@
                      %>
                      
                      <% if(name.equals("inf")){ %>
-                     <form method="post" class="form-auth-small" action="../LoginService?value=inf">
+                     <form method="post" class = "korean form-auth-small" action="../LoginService?value=inf">
                      
                      <%}else if(name.equals("adver")){ %>
-                     <form method="post" class="form-auth-small" action="../LoginService?value=adver">
+                     <form method="post" class = "korean form-auth-small" action="../LoginService?value=adver">
                      <%} %>
-                        <div class="form-group">
-                           <label for="signin-email" class="control-label sr-only">Email</label>
-                           <input type="text" class="form-control" name = "id" placeholder="Email">
+                        <div class = "korean form-group">
+                           <label for="signin-email" class = "korean control-label sr-only">Email</label>
+                           <input type="text" class = "korean form-control" name = "id" placeholder="Email">
                         </div>
-                        <div class="form-group">
-                           <label for="signin-password" class="control-label sr-only">Password</label>
-                           <input type="password" class="form-control" name = "pw" placeholder="Password">
+                        <div class = "korean form-group">
+                           <label for="signin-password" class = "korean control-label sr-only">Password</label>
+                           <input type="password" class = "korean form-control" name = "pw" placeholder="Password">
                         </div>
-                        <div class="form-group clearfix" style = "display : none">
-                           <label class="fancy-checkbox element-left">
+                        <div class = "korean form-group clearfix" style = "display : none">
+                           <label class = "korean fancy-checkbox element-left">
                               <input type="checkbox">
                               <span>Remember me</span>
                            </label>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
-                        <div class="bottom">
-                           <span class="helper-text"><i class="fa fa"></i> <a href="#">아직 회원이 아니신가요??</a></span>
+                        <button type="submit" class = "korean btn btn-primary btn-lg btn-block">LOGIN</button>
+                        <div class = "korean bottom">
+                           <span class = "korean helper-text"><i class = "korean fa fa"></i> <a href="#">아직 회원이 아니신가요??</a></span>
                         </div>
                      </form>
                      <% %>
                   </div>
                </div>
-               <div class="right" style = "display : none">
-                  <div class="overlay"></div>
-                  <div class="content text">
-                     <h1 class="heading">Free Bootstrap dashboard template</h1>
+               <div class = "korean right" style = "display : none">
+                  <div class = "korean overlay"></div>
+                  <div class = "korean content text">
+                     <h1 class = "korean heading">Free Bootstrap dashboard template</h1>
                      <p>by The Develovers</p>
                   </div>
                </div>
-               <div class="clearfix"></div>
+               <div class = "korean clearfix"></div>
             </div>
          </div>
       </div>

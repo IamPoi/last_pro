@@ -47,6 +47,8 @@ ArrayList<String> imgName = new ArrayList<String>();
 <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
 <link rel="stylesheet" href="assets/css/demo.css">
 <!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
 <link
    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700"
    rel="stylesheet">
@@ -57,6 +59,10 @@ ArrayList<String> imgName = new ArrayList<String>();
    href="assets/img/favicon.png">
 <link rel="stylesheet" href="assets/css/style.css">
 <style type="text/css">
+
+.korean{
+	font-family: 'Noto Sans KR', sans-serif;
+}
 #sidebar-nav {
    display: none;
 }
@@ -69,9 +75,8 @@ ArrayList<String> imgName = new ArrayList<String>();
 }
 
 .col-md-4 {
-   color: black;
+   color: #3A3A3A;
    background-color: white;
-   font-weight: bold;
 }
 
 .profile-header .profile-stat .stat-item:after {
@@ -82,7 +87,7 @@ ArrayList<String> imgName = new ArrayList<String>();
    right: 0;
    width: 1px;
    height: 100%;
-   background-color: black;
+   background-color: #F8F8F8;
 }
 
 .profile-header .profile-stat {
@@ -118,26 +123,26 @@ ArrayList<String> imgName = new ArrayList<String>();
 
    <!-- WRAPPER -->
    <div id="wrapper">
-      <header id="main_menu" class="header navbar-fixed-top">
-         <div class="main_menu_bg" style="background-color: white;">
-            <div class="container" style="width: 100%">
-               <div class="row">
-                  <div class="nave_menu">
-                     <nav class="navbar navbar-default">
-                        <div class="container-fluid">
+      <header id="main_menu" class = "korean header navbar-fixed-top">
+         <div class = "korean main_menu_bg" style="background-color: white;">
+            <div class = "korean container" style="width: 100%">
+               <div class = "korean row">
+                  <div class = "korean nave_menu">
+                     <nav class = "korean navbar navbar-default">
+                        <div class = "korean container-fluid">
                            <!-- Brand and toggle get grouped for better mobile display -->
-                           <div class="navbar-header">
-                              <button type="button" class="navbar-toggle collapsed"
+                           <div class = "korean navbar-header">
+                              <button type="button" class = "korean navbar-toggle collapsed"
                                  data-toggle="collapse"
                                  data-target="#bs-example-navbar-collapse-1"
                                  aria-expanded="false">
-                                 <span class="sr-only">Toggle navigation</span> <span
-                                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                                    class="icon-bar"></span>
+                                 <span class = "korean sr-only">Toggle navigation</span> <span
+                                    class = "korean icon-bar"></span> <span class = "korean icon-bar"></span> <span
+                                    class = "korean icon-bar"></span>
                               </button>
 
 
-                              <a class="navbar-brand"
+                              <a class = "korean navbar-brand"
                                  href="../bino-free-html5-landing-page-template/firstPage.jsp">
                                  <img src="images/logo_high_re.png"
                                  style="width: 140px; height: 50px; margin-left: 30px;">
@@ -146,10 +151,10 @@ ArrayList<String> imgName = new ArrayList<String>();
 
                            <!-- Collect the nav links, forms, and other content for toggling -->
 
-                           <div class="collapse navbar-collapse"
+                           <div class = "korean collapse navbar-collapse"
                               id="bs-example-navbar-collapse-1">
 
-                              <ul class="nav navbar-nav navbar-right">
+                              <ul class = "korean nav navbar-nav navbar-right">
                                  <li><a
                                     href="../bino-free-html5-landing-page-template/influencer_main.jsp">HOME</a></li>
                                  <!-- 세션값받아와서 influencer/companymain으로 이동 -->
@@ -173,36 +178,36 @@ ArrayList<String> imgName = new ArrayList<String>();
       </header>
       <!--End of header -->
       <!-- LEFT SIDEBAR -->
-      <div id="sidebar-nav" class="sidebar">
-         <div class="sidebar-scroll">
+      <div id="sidebar-nav" class = "korean sidebar">
+         <div class = "korean sidebar-scroll">
             <nav>
-               <ul class="nav">
-                  <li><a href="index.html" class=""><i class="lnr lnr-home"></i>
+               <ul class = "korean nav">
+                  <li><a href="index.html" class = "korean "><i class = "korean lnr lnr-home"></i>
                         <span>Dashboard</span></a></li>
-                  <li><a href="elements.html" class=""><i
-                        class="lnr lnr-code"></i> <span>Elements</span></a></li>
-                  <li><a href="charts.html" class=""><i
-                        class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
-                  <li><a href="panels.html" class=""><i class="lnr lnr-cog"></i>
+                  <li><a href="elements.html" class = "korean "><i
+                        class = "korean lnr lnr-code"></i> <span>Elements</span></a></li>
+                  <li><a href="charts.html" class = "korean "><i
+                        class = "korean lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
+                  <li><a href="panels.html" class = "korean "><i class = "korean lnr lnr-cog"></i>
                         <span>Panels</span></a></li>
-                  <li><a href="notifications.html" class=""><i
-                        class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
-                  <li><a href="#subPages" data-toggle="collapse" class="active"><i
-                        class="lnr lnr-file-empty"></i> <span>Pages</span> <i
-                        class="icon-submenu lnr lnr-chevron-left"></i></a>
-                     <div id="subPages" class="collapse in">
-                        <ul class="nav">
-                           <li><a href="page-profile.html" class="active">Profile</a></li>
-                           <li><a href="page-login.html" class="">Login</a></li>
-                           <li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
+                  <li><a href="notifications.html" class = "korean "><i
+                        class = "korean lnr lnr-alarm"></i> <span>Notifications</span></a></li>
+                  <li><a href="#subPages" data-toggle="collapse" class = "korean active"><i
+                        class = "korean lnr lnr-file-empty"></i> <span>Pages</span> <i
+                        class = "korean icon-submenu lnr lnr-chevron-left"></i></a>
+                     <div id="subPages" class = "korean collapse in">
+                        <ul class = "korean nav">
+                           <li><a href="page-profile.html" class = "korean active">Profile</a></li>
+                           <li><a href="page-login.html" class = "korean ">Login</a></li>
+                           <li><a href="page-lockscreen.html" class = "korean ">Lockscreen</a></li>
                         </ul>
                      </div></li>
-                  <li><a href="tables.html" class=""><i
-                        class="lnr lnr-dice"></i> <span>Tables</span></a></li>
-                  <li><a href="typography.html" class=""><i
-                        class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
-                  <li><a href="icons.html" class=""><i
-                        class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
+                  <li><a href="tables.html" class = "korean "><i
+                        class = "korean lnr lnr-dice"></i> <span>Tables</span></a></li>
+                  <li><a href="typography.html" class = "korean "><i
+                        class = "korean lnr lnr-text-format"></i> <span>Typography</span></a></li>
+                  <li><a href="icons.html" class = "korean "><i
+                        class = "korean lnr lnr-linearicons"></i> <span>Icons</span></a></li>
                </ul>
             </nav>
          </div>
@@ -212,34 +217,34 @@ ArrayList<String> imgName = new ArrayList<String>();
 
 
       <!-- MAIN -->
-      <div class="main" style="width: 100%">
+      <div class = "korean main" style="width: 100%">
          <!-- MAIN CONTENT -->
-         <div class="main-content">
-            <div class="container-fluid">
-               <div class="panel panel-profile">
-                  <div class="clearfix">
+         <div class = "korean main-content">
+            <div class = "korean container-fluid">
+               <div class = "korean panel panel-profile">
+                  <div class = "korean clearfix">
                      <!-- LEFT COLUMN -->
 
-                     <div class="profile-left">
+                     <div class = "korean profile-left">
                         <!-- PROFILE HEADER -->
-                        <div class="profile-header" style="height: 100%;">
-                           <div class="overlay"></div>
-                           <div class="profile-main" style="height: 90%">
+                        <div class = "korean profile-header" style="height: 100%;">
+                           <div class = "korean overlay"></div>
+                           <div class = "korean profile-main" style="height: 90%">
                               <img src="images/<%=info.getCampaign_Sid()%>.jpg" alt="Avatar"
-                                 style="height: 100%; width: 100%">
-                              <h3 class="name">광고주(브랜드) 이름??</h3>
-                              <span class="online-status status-available">Available</span>
+                                 style="height: 100%; width: 85%">
+                              <h3 class = "korean name">광고주(브랜드) 이름??</h3>
+                              <span class = "korean online-status status-available">Available</span>
                            </div>
-                           <div class="profile-stat" style="height: 10%">
-                              <div class="row">
-                                 <div class="col-md-4 stat-item">
-                                    캠페인 유형 <span><%=info.getAd_section()%></span>
+                           <div class = "korean profile-stat" style="height: 10%">
+                              <div class = "korean row">
+                                 <div class = "korean col-md-4 stat-item">
+                                    <strong>캠페인 유형</strong> <span><%=info.getAd_section()%></span>
                                  </div>
-                                 <div class="col-md-4 stat-item">
-                                    신청 가능 인원<span><%=info.getRcrtmNmbr()%>명</span>
+                                 <div class = "korean col-md-4 stat-item">
+                                    <strong>신청 가능 인원</strong><span><%=info.getRcrtmNmbr()%>명</span>
                                  </div>
-                                 <div class="col-md-4 stat-item">
-                                    신청한 인원 <span><%=info.getApplication_num()%>명</span>
+                                 <div class = "korean col-md-4 stat-item">
+                                    <strong>신청한 인원</strong> <span><%=info.getApplication_num()%>명</span>
                                  </div>
                               </div>
                            </div>
@@ -250,22 +255,22 @@ ArrayList<String> imgName = new ArrayList<String>();
 
                      <!-- END LEFT COLUMN -->
                      <!-- RIGHT COLUMN -->
-                     <div class="profile-right">
-                        <h4 class="heading"><%=info.getCampaign_title()%></h4>
+                     <div class = "korean profile-right">
+                        <h4 class = "korean heading"><%=info.getCampaign_title()%></h4>
                         <!-- AWARDS -->
-                        <div class="awards" style="margin-bottom: 15px;">
-                           <div class="row">
-                              <div class="col-md-3 col-sm-6">
-                                 <div class="award-item">
-                                    <div class="hexagon">
-                                       <span class="lnr lnr-<%=category%> award-icon"></span>
+                        <div class = "korean awards" style="margin-bottom: 15px;">
+                           <div class = "korean row">
+                              <div class = "korean col-md-3 col-sm-6">
+                                 <div class = "korean award-item">
+                                    <div class = "korean hexagon">
+                                       <span class = "korean lnr lnr-<%=category%> award-icon"></span>
                                     </div>
                                     <span>카테고리</span>
                                  </div>
                               </div>
-                              <div class="col-md-3 col-sm-6">
-                                 <div class="award-item">
-                                    <div class="hexagon"
+                              <div class = "korean col-md-3 col-sm-6">
+                                 <div class = "korean award-item">
+                                    <div class = "korean hexagon"
                                        style="font-size: 35px; font-weight: bold;">
                                        <%
                                        String b = info.getRq_gender();
@@ -283,96 +288,96 @@ ArrayList<String> imgName = new ArrayList<String>();
                                        <%
                                        }
                                        %>
-                                       <span class="lnr  award-icon"></span>
+                                       <span class = "korean lnr  award-icon"></span>
                                     </div>
-                                    <span>카테고리</span>
+                                    <span>인플루언서 성별</span>
 
 
                                  </div>
                               </div>
-                              <div class="col-md-3 col-sm-6">
-                                 <div class="award-item">
-                                    <div class="hexagon">
+                              <div class = "korean col-md-3 col-sm-6">
+                                 <div class = "korean award-item">
+                                    <div class = "korean hexagon">
                                        <%
-                                       int c = info.getAd_estimate();
+                                       int c = info.getRq_follower();
                                        %>
-                                       <span style="font-size: 35px; font-weight: bold;"><%=c / 1000%></span><br>
+                                       <span style="font-size: 35px; font-weight: bold;"><%=c%></span><br>
 
                                     </div>
-                                    <span>견적 비용</span><br> <span style="font-size: 8px;">단위
-                                       : 천</span>
+                                    <span>기본 팔로워 수</span><br>
 
                                  </div>
                               </div>
-                              <div class="text-center" style='display: none'>
-                                 <a href="#" class="btn btn-default">See all awards</a>
+                              <div class = "korean text-center" style='display: none'>
+                                 <a href="#" class = "korean btn btn-default">See all awards</a>
                               </div>
                            </div>
                            <!-- END AWARDS -->
                            <!-- TABBED CONTENT -->
                            <!-- 이쪽 수정 -->
-                           <div class="custom-tabs-line tabs-line-bottom left-aligned">
-                              <ul class="nav" role="tablist">
+                           <div class = "korean custom-tabs-line tabs-line-bottom left-aligned">
+                              <ul class = "korean nav" role="tablist">
                                  <%
                                  if (check.equals("inf")) {
                                  %>
-                                 <li class="active"><a href="#tab-bottom-left1"
+                                 <li class = "korean active"><a href="#tab-bottom-left1" style="border-bottom:#3A3A3A !important;"
                                     role="tab" data-toggle="tab">캠페인 설명</a></li>
                                  <%
                                  } else if (check.equals("adver")) {
                                  %>
                                  <li><a href="#tab-bottom-left2" role="tab"
-                                    data-toggle="tab">신청 인플푸언서 <span class="badge"></span></a></li>
+                                    data-toggle="tab">신청 인플루언서 <span class = "korean badge"></span></a></li>
                                  <%
                                  }
                                  %>
 
                               </ul>
                            </div>
-                           <div class="tab-content">
+                           <div class = "korean tab-content">
                               <%
                               if (check.equals("inf")) {
                               %>
-                              <div class="tab-pane fade in active" id="tab-bottom-left1">
-                                 <ul class="list-unstyled activity-timeline">
-                                    <li><i class="fa fa-comment activity-icon"></i>
+                              <div class = "korean tab-pane fade in active" id="tab-bottom-left1">
+                                 <ul class = "korean list-unstyled activity-timeline">
+                                    <li><i class = "korean fa fa-comment activity-icon" style="background-color: #3A3A3A !important"></i>
                                        <p><%=info.getCampaign_title()%>
-                                          <a href="#">?</a> <span class="timestamp"><%=info.getCampaign_sub()%></span>
+                                          <a href="#">?</a> <span class = "korean timestamp"><%=info.getCampaign_sub()%></span>
                                        </p></li>
 
                                  </ul>
 
-                                 <div class="profile-detail">
-                                    <div class="profile-info">
-                                       <h4 class="heading">광고주 요구사항</h4>
-                                       <ul class="list-unstyled list-justify">
+                                 <div class = "korean profile-detail">
+                                    <div class = "korean profile-info">
+                                       <h4 class = "korean heading">1차 필터링</h4>
+                                       <ul class = "korean list-unstyled list-justify">
                                           <li>요구 팔로워 수 <span><%=info.getRq_follower()%></span></li>
                                           <li>요구 성별 <span><%=info.getRq_gender()%></span></li>
-                                          <li>요구 카테고리<span><%=info.getCategory()%></span></li>
+                                          <li>요구 카테고리<span><%=info.getCategory()%></span></li><br>
+                                          <h4 class = "korean heading">캠페인 일정</h4>
                                           <li>캠페인 시작 <span><%=info.getCampaign_start()%></span></li>
                                           <li>캠페인 종료 <span><%=info.getCampaign_end()%></span></li>
                                        </ul>
                                     </div>
-                                    <div class="profile-info" style='display: none'>
-                                       <h4 class="heading">Social</h4>
-                                       <ul class="list-inline social-icons">
-                                          <li><a href="#" class="facebook-bg"><i
-                                                class="fa fa-facebook"></i></a></li>
-                                          <li><a href="#" class="twitter-bg"><i
-                                                class="fa fa-twitter"></i></a></li>
-                                          <li><a href="#" class="google-plus-bg"><i
-                                                class="fa fa-google-plus"></i></a></li>
-                                          <li><a href="#" class="github-bg"><i
-                                                class="fa fa-github"></i></a></li>
+                                    <div class = "korean profile-info" style='display: none'>
+                                       <h4 class = "korean heading">Social</h4>
+                                       <ul class = "korean list-inline social-icons">
+                                          <li><a href="#" class = "korean facebook-bg"><i
+                                                class = "korean fa fa-facebook"></i></a></li>
+                                          <li><a href="#" class = "korean twitter-bg"><i
+                                                class = "korean fa fa-twitter"></i></a></li>
+                                          <li><a href="#" class = "korean google-plus-bg"><i
+                                                class = "korean fa fa-google-plus"></i></a></li>
+                                          <li><a href="#" class = "korean github-bg"><i
+                                                class = "korean fa fa-github"></i></a></li>
                                        </ul>
                                     </div>
-                                    <div class="profile-info" style='display: none'>
-                                       <h4 class="heading">About</h4>
+                                    <div class = "korean profile-info" style='display: none'>
+                                       <h4 class = "korean heading">About</h4>
                                        <p>Interactively fashion excellent information after
                                           distinctive outsourcing.</p>
                                     </div>
-                                    <div class="text-center" style='display: none'>
-                                       <a href="#" class="btn btn-primary">Edit Profile</a>
+                                    <div class = "korean text-center" style='display: none'>
+                                       <a href="#" class = "korean btn btn-primary">Edit Profile</a>
                                     </div>
                                  </div>
 
@@ -386,20 +391,20 @@ ArrayList<String> imgName = new ArrayList<String>();
 
                                  if (matDto == null) {
                                  %>
-                                 <div class="text-center">
+                                 <div class = "korean text-center">
 
 
 
                                     <a href="../CampaignMatchingService?ck=inf"
-                                       class="btn btn-lg" onclick="alert('신청완료 되었습니다.');">신청하기</a>
+                                       class = "korean btn btn-lg" onclick="alert('신청완료 되었습니다.');">신청하기</a>
                                  </div>
                                  <%
                                  System.out.println("매칭되었음 : ");
                                  } else {
                                  %>
-                                 <div class="text-center">
+                                 <div class = "korean text-center">
                                     <a href="../CampaignMatchingService?ck=inf"
-                                       class="btn btn-lg" style="visibility: hidden">신청하기</a>
+                                       class = "korean btn btn-lg" style="visibility: hidden">신청하기</a>
                                  </div>
 
                                  <%
@@ -425,11 +430,11 @@ ArrayList<String> imgName = new ArrayList<String>();
             <!-- END MAIN CONTENT -->
          </div>
          <!-- END MAIN -->
-         <div class="clearfix"></div>
+         <div class = "korean clearfix"></div>
          <footer>
-            <div class="container-fluid">
-               <p class="copyright">
-                  Shared by <i class="fa fa-love"></i><a
+            <div class = "korean container-fluid">
+               <p class = "korean copyright">
+                  Shared by <i class = "korean fa fa-love"></i><a
                      href="https://bootstrapthemes.co">BootstrapThemes</a>
                </p>
             </div>

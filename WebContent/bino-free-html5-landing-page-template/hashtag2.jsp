@@ -21,7 +21,8 @@
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/magnific-popup.css">
 <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
 
 <!--For Plugins external css-->
 <link rel="stylesheet" href="assets/css/plugins.css" />
@@ -56,27 +57,27 @@
    <div class='preloader'>
       <div class='loaded'>&nbsp;</div>
    </div>
-   <div class="culmn">
-      <header id="main_menu" class="header navbar-fixed-top">
-         <div class="main_menu_bg">
-            <div class="container" style = "width : 100%">
-               <div class="row">
-                  <div class="nave_menu">
-                     <nav class="navbar navbar-default">
-                        <div class="container-fluid">
+   <div class = "korean korean culmn">
+      <header id="main_menu" class = "korean korean header navbar-fixed-top">
+         <div class = "korean korean main_menu_bg">
+            <div class = "korean korean container" style = "width : 100%">
+               <div class = "korean korean row">
+                  <div class = "korean korean nave_menu">
+                     <nav class = "korean korean navbar navbar-default">
+                        <div class = "korean korean container-fluid">
                            <!-- Brand and toggle get grouped for better mobile display -->
-                           <div class="navbar-header">
-                              <button type="button" class="navbar-toggle collapsed"
+                           <div class = "korean korean navbar-header">
+                              <button type="button" class = "korean korean navbar-toggle collapsed"
                                  data-toggle="collapse"
                                  data-target="#bs-example-navbar-collapse-1"
                                  aria-expanded="false">
-                                 <span class="sr-only">Toggle navigation</span> <span
-                                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                                    class="icon-bar"></span>
+                                 <span class = "korean korean sr-only">Toggle navigation</span> <span
+                                    class = "korean korean icon-bar"></span> <span class = "korean korean icon-bar"></span> <span
+                                    class = "korean korean icon-bar"></span>
                               </button>
 
 
-                              <a class="navbar-brand" href="firstPage.jsp" style = "margin-left: 30px;"> <img
+                              <a class = "korean korean navbar-brand" href="firstPage.jsp" style = "margin-left: 30px;"> <img
                                  src="images/logo_high_re.png" width=140px, height=50px>
                               </a>
                            </div>
@@ -85,10 +86,10 @@
 
 
 
-                           <div class="collapse navbar-collapse"
+                           <div class = "korean korean collapse navbar-collapse"
                               id="bs-example-navbar-collapse-1">
 
-                              <ul class="nav navbar-nav navbar-right">
+                              <ul class = "korean korean nav navbar-nav navbar-right">
 
                                  <li><a href="">HOME</a></li>
                                  <!-- 세션값받아와서 influencer/companymain으로 이동 -->
@@ -109,15 +110,17 @@
 
          </div>
       </header>
+      
+     
       <!--End of header -->
 
       <!-- 검색어 입력부분 -->
 
       <!-- 주석주석주석
-   <section class = "home">
-      <div class="container">
-         <div class="row">
-            <div class="col-sm-12 text-center ">
+   <section class = "korean home">
+      <div class = "korean korean container">
+         <div class = "korean korean row">
+            <div class = "korean korean col-sm-12 text-center ">
             <br><br><br><br><br>
                <h2>"해시태그분석"</h2>
                <br>
@@ -127,8 +130,8 @@
                         placeholder="분석할 해시태그 입력" style="width:300px;height:50px;font-size:20px;">
 
                   </h2>
-                  <div class="home_btn">
-                     <a href="" class="btn btn-lg m_t_10"style="font-size:15px;">분석시작</a>
+                  <div class = "korean korean home_btn">
+                     <a href="" class = "korean korean btn btn-lg m_t_10"style="font-size:15px;">분석시작</a>
                   </div>
                </form>
                <br><br><br><br><br>
@@ -138,6 +141,10 @@
    </section>-->
       <!-- Styles -->
       <style>
+      
+      .korean{
+	font-family: 'Noto Sans KR', sans-serif;
+}
 #chartdiv {
    width: 100%;
    height: 550px;
@@ -145,12 +152,13 @@
 }
 </style>
 
+
       <!-- Resources -->
       <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
       <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
       <script src="https://cdn.amcharts.com/lib/4/plugins/forceDirected.js"></script>
       <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-
+      
       <!-- Chart code -->
       <script>
          am4core
@@ -284,24 +292,32 @@
       </script>
 
       <!-- HTML -->
-      <div id="chartdiv"></div>
+       
+      <div id="chartdiv">
+      </div>
+      
    </div>
 
+
    <section>
-      <div class="container">
-         <div class="row">
-            <div class="col-sm-8 col-xs-offset-2 text-center ">
+      <div class = "korean korean container">
+         <div class = "korean korean row">
+            <div class = "korean korean col-sm-8 col-xs-offset-2 text-center ">
                <div>
                   <div>
-                     <h3>"연관 태그 top 10"</h3>
                   </div>
                   <!-- BASIC TABLE -->
-                  <div class="panel">
-                     <div class="panel-heading">
-                        <h3 class="panel-title">Hashtag Table</h3>
+                  <div class = "korean korean panel">
+                     <div class = "korean korean panel-heading">
+                       
                      </div>
-                     <div class="panel-body">
-                        <table class="table text-center">
+                     <div class = "korean korean panel-body">
+                     
+									<h2 style="color: #3A3A3A">HASHTAG LAB</h2>
+		<h3 style="color: #3A3A3A">추천 리스트</h3> <br>
+                        <table class = "korean korean table text-center" style = "text-align: center;">
+                       
+                        
                            <thead>
                               <tr>
                                  <td><b>#</b></td>
@@ -314,7 +330,7 @@
                               <tr>
                                  <td><%= i+1 %></td>
                                  <td><%= hashtag[i] %></td>
-                                 <td><%= score[i] %></td>
+                                 <td><%= score[i] + "%" %></td>
                               </tr>
                            <% } %>
                            </tbody>
@@ -331,8 +347,8 @@
 
    <!-- START SCROLL TO TOP  -->
 
-   <div class="scrollup">
-      <a href="#"><i class="fa fa-chevron-up"></i></a>
+   <div class = "korean korean scrollup">
+      <a href="#"><i class = "korean korean fa fa-chevron-up"></i></a>
    </div>
 
    <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>

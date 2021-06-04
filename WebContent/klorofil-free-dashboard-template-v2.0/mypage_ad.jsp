@@ -71,11 +71,16 @@
 <link rel="icon" type="image/png" sizes="96x96"
    href="assets/img/favicon.png">
    <link rel="stylesheet" href="assets/css/style.css">
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 
 <style type="text/css">
+
+.korean{
+	font-family: 'Noto Sans KR', sans-serif;
+}
 body {
    text-align: center;
    display: block;
@@ -226,36 +231,36 @@ System.out.println("imgFileList : " + imgFileList.size());
    <!-- WRAPPER -->
    <div id="wrapper">
       <!-- NAVBAR -->
-      <header id="main_menu" class="header navbar-fixed-top">
-         <div class="main_menu_bg" style = "background-color:white;">
-            <div class="container" style = "width : 100%">
-               <div class="row">
-                  <div class="nave_menu">
-                     <nav class="navbar navbar-default">
-                        <div class="container-fluid">
+      <header id="main_menu" class = "korean header navbar-fixed-top">
+         <div class = "korean main_menu_bg" style = "background-color:white;">
+            <div class = "korean container" style = "width : 100%">
+               <div class = "korean row">
+                  <div class = "korean nave_menu">
+                     <nav class = "korean navbar navbar-default">
+                        <div class = "korean container-fluid">
                            <!-- Brand and toggle get grouped for better mobile display -->
-                           <div class="navbar-header">
-                              <button type="button" class="navbar-toggle collapsed"
+                           <div class = "korean navbar-header">
+                              <button type="button" class = "korean navbar-toggle collapsed"
                                  data-toggle="collapse"
                                  data-target="#bs-example-navbar-collapse-1"
                                  aria-expanded="false">
-                                 <span class="sr-only">Toggle navigation</span> <span
-                                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                                    class="icon-bar"></span>
+                                 <span class = "korean sr-only">Toggle navigation</span> <span
+                                    class = "korean icon-bar"></span> <span class = "korean icon-bar"></span> <span
+                                    class = "korean icon-bar"></span>
                               </button>
 
 
-                              <a class="navbar-brand" href="../bino-free-html5-landing-page-template/firstPage.jsp"> <img
+                              <a class = "korean navbar-brand" href="../bino-free-html5-landing-page-template/firstPage.jsp"> <img
                                  src="images/logo_high_re.png" style = "width:140px; height:50px; margin-left: 30px; ">
                               </a>
                            </div>
 
                            <!-- Collect the nav links, forms, and other content for toggling -->
 
-                           <div class="collapse navbar-collapse"
+                           <div class = "korean collapse navbar-collapse"
                               id="bs-example-navbar-collapse-1">
 
-                             <ul class="nav navbar-nav navbar-right">
+                             <ul class = "korean nav navbar-nav navbar-right">
                                  <li><a href="../bino-free-html5-landing-page-template/company_main2.jsp" >HOME</a></li><!-- 세션값받아와서 influencer/companymain으로 이동 -->
                                             <li><a href="../bino-free-html5-landing-page-template/hashtag.jsp">HASHTAG LAB</a></li>
                                             <li><a href="../bino-free-html5-landing-page-template/pay.jsp">INQUIRUY</a></li>
@@ -281,35 +286,35 @@ System.out.println("imgFileList : " + imgFileList.size());
       
       
       <!-- LEFT SIDEBAR -->
-      <div id="sidebar-nav" class="sidebar" style = 'display : none'>
-         <div class="sidebar-scroll">
+      <div id="sidebar-nav" class = "korean sidebar" style = 'display : none'>
+         <div class = "korean sidebar-scroll">
             <nav>
-               <ul class="nav">
-                  <li><a href="index.html" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-                  <li><a href="elements.html" class=""><i class="lnr lnr-code"></i> <span>Elements</span></a></li>
-                  <li><a href="charts.html" class=""><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
-                  <li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
-                  <li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
+               <ul class = "korean nav">
+                  <li><a href="index.html" class = "korean "><i class = "korean lnr lnr-home"></i> <span>Dashboard</span></a></li>
+                  <li><a href="elements.html" class = "korean "><i class = "korean lnr lnr-code"></i> <span>Elements</span></a></li>
+                  <li><a href="charts.html" class = "korean "><i class = "korean lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
+                  <li><a href="panels.html" class = "korean "><i class = "korean lnr lnr-cog"></i> <span>Panels</span></a></li>
+                  <li><a href="notifications.html" class = "korean "><i class = "korean lnr lnr-alarm"></i> <span>Notifications</span></a></li>
                   <li>
-                     <a href="#subPages" data-toggle="collapse" class="active"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
-                     <div id="subPages" class="collapse in">
-                        <ul class="nav">
-                           <li><a href="page-profile.html" class="active">Profile</a></li>
-                           <li><a href="page-login.html" class="">Login</a></li>
-                           <li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
+                     <a href="#subPages" data-toggle="collapse" class = "korean active"><i class = "korean lnr lnr-file-empty"></i> <span>Pages</span> <i class = "korean icon-submenu lnr lnr-chevron-left"></i></a>
+                     <div id="subPages" class = "korean collapse in">
+                        <ul class = "korean nav">
+                           <li><a href="page-profile.html" class = "korean active">Profile</a></li>
+                           <li><a href="page-login.html" class = "korean ">Login</a></li>
+                           <li><a href="page-lockscreen.html" class = "korean ">Lockscreen</a></li>
                         </ul>
                      </div>
                   </li>
-                  <li><a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
-                  <li><a href="typography.html" class=""><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
-                  <li><a href="icons.html" class=""><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
+                  <li><a href="tables.html" class = "korean "><i class = "korean lnr lnr-dice"></i> <span>Tables</span></a></li>
+                  <li><a href="typography.html" class = "korean "><i class = "korean lnr lnr-text-format"></i> <span>Typography</span></a></li>
+                  <li><a href="icons.html" class = "korean "><i class = "korean lnr lnr-linearicons"></i> <span>Icons</span></a></li>
                </ul>
             </nav>
          </div>
       </div>
       <!-- END LEFT SIDEBAR -->
       <!-- MAIN -->
-      <div class="main" style = "width : 100%">
+      <div class = "korean main" style = "width : 100%">
          <!-- MAIN CONTENT -->
          
 <%
@@ -331,30 +336,30 @@ System.out.println("imgFileList : " + imgFileList.size());
          String phone = info.getPhone();
          String mail = info.getMail();               
          %>
-         <div class="main-content">
-            <div class="container-fluid">
-               <div class="panel panel-profile">
-                  <div class="clearfix">
+         <div class = "korean main-content">
+            <div class = "korean container-fluid">
+               <div class = "korean panel panel-profile">
+                  <div class = "korean clearfix">
                      <!-- LEFT COLUMN -->
-                     <div class="profile-left" style="text-align: left;">
+                     <div class = "korean profile-left" style="text-align: left;">
                         <!-- PROFILE HEADER -->
-                        <div class="profile-header">
-                           <div class="overlay"></div>
-                           <div class="profile-main" style = "background-image: url('assets/img/profile-bg.jpg');">
-                           <img src="assets/img/<%="innisfree"%>.png" class="img" alt="Avatar" style  = "width : 220px; height : 160px;">
-                              <!--  <img src="assets/img/<%=info.getName() %>.png" class="img" alt="Avatar" >-->
-                              <h3 class="name" style = "color: black"><%=name %></h3>
-                              <span class="online-status status-available"></span>
+                        <div class = "korean profile-header">
+                           <div class = "korean overlay"></div>
+                           <div class = "korean profile-main" style = "background-image: url('assets/img/profile-bg.jpg');">
+                           <img src="assets/img/<%="innisfree"%>.png" class = "korean img" alt="Avatar" style  = "width : 220px; height : 160px;">
+                              <!--  <img src="assets/img/<%=info.getName() %>.png" class = "korean img" alt="Avatar" >-->
+                              <h3 class = "korean name" style = "color: black"><%=name %></h3>
+                              <span class = "korean online-status status-available"></span>
                            </div>
-                           <div class="profile-stat" style = "display : none">
-                              <div class="row">
-                                 <div class="col-md-4 stat-item">
+                           <div class = "korean profile-stat" style = "display : none">
+                              <div class = "korean row">
+                                 <div class = "korean col-md-4 stat-item">
                                     45 <span>게시글</span>
                                  </div>
-                                 <div class="col-md-4 stat-item">
+                                 <div class = "korean col-md-4 stat-item">
                                     1500 <span>팔로워</span>
                                  </div>
-                                 <div class="col-md-4 stat-item">
+                                 <div class = "korean col-md-4 stat-item">
                                     300 <span>팔로잉</span>
                                  </div>
                               </div>
@@ -363,39 +368,39 @@ System.out.println("imgFileList : " + imgFileList.size());
                         <!-- END PROFILE HEADER -->
                         <!-- PROFILE DETAIL -->
                         <br>
-                        <div class="profile-detail">
-                           <div class="profile-info">
-                              <h4 class="heading">Basic Info</h4>
-                              <ul class="list-unstyled list-justify">
+                        <div class = "korean profile-detail">
+                           <div class = "korean profile-info">
+                              <h4 class = "korean heading">Basic Info</h4>
+                              <ul class = "korean list-unstyled list-justify">
                                  <li>핸드폰 <span><%=phone %></span></li>
                                  <li>Email <span><%=mail %></span></li>
                                  
                               </ul>
                            </div>
                            <br>
-                           <div class="profile-info">
-                              <h4 class="heading">Social</h4>
-                              <ul class="list-inline social-icons">
-                                 <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                                 <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                                 <li><a href="#" class="google-plus-bg"><i class="fa fa-google-plus"></i></a></li>
-                                 <li><a href="#" class="github-bg"><i class="fa fa-github"></i></a></li>
+                           <div class = "korean profile-info">
+                              <h4 class = "korean heading">Social</h4>
+                              <ul class = "korean list-inline social-icons">
+                                 <li><a href="#" class = "korean facebook-bg"><i class = "korean fa fa-facebook"></i></a></li>
+                                 <li><a href="#" class = "korean twitter-bg"><i class = "korean fa fa-twitter"></i></a></li>
+                                 <li><a href="#" class = "korean google-plus-bg"><i class = "korean fa fa-google-plus"></i></a></li>
+                                 <li><a href="#" class = "korean github-bg"><i class = "korean fa fa-github"></i></a></li>
                               </ul>
                            </div>
                            <br><br><br>
-                           <div class="profile-info" style = "display : none">
-                              <h4 class="heading">About</h4>
+                           <div class = "korean profile-info" style = "display : none">
+                              <h4 class = "korean heading">About</h4>
                               <p>Interactively fashion excellent information after distinctive outsourcing.</p>
                            </div>
-                           <div class="text-center"><a href="#" class="btn btn-lg">정보 수정</a></div>
+                           <div class = "korean text-center"><a href="#" class = "korean btn btn-lg">정보 수정</a></div>
                         </div>
                         <!-- END PROFILE DETAIL -->
                      </div>
                      <!-- END LEFT COLUMN -->
                      <!-- RIGHT COLUMN -->
                      <!-- START... -->
-                     <div class="profile-right">
-                     <h4 class="heading">진행중인 캠페인</h4>
+                     <div class = "korean profile-right">
+                     <h4 class = "korean heading">진행중인 캠페인</h4>
                      
                      <%
                                  int k=0;
@@ -411,8 +416,8 @@ System.out.println("imgFileList : " + imgFileList.size());
                                        k++;
                                        System.out.println("getCampaign_status() : " + campignList.get(i).getCampaign_status());
                                  %>
-                                 <div class="col-md-3 col-sm-6">
-                                    <div class="award-item">
+                                 <div class = "korean col-md-3 col-sm-6">
+                                    <div class = "korean award-item">
                                        <img src="images/<%=campignList.get(i).getCampaign_Sid()%>.jpg"
                                           alt="Avatar"> <br> <br> <span><a href = ../CampaignMatchingService?ck=adver&&camnum=<%=campignList.get(i).getCampaign_Sid() + "," + campignList.get(i).getCampaign_status()%>><%=campignList.get(i).getCampaign_title()%></a></span>
                                     </div>
@@ -426,8 +431,8 @@ System.out.println("imgFileList : " + imgFileList.size());
                                  System.out.print("j : "+j);
                                  for (int z = 0; z < j ; z++){
                                     %>
-                                    <div class="col-md-3 col-sm-6">
-                                     <div class="award-item" style = "visibility: hidden;">
+                                    <div class = "korean col-md-3 col-sm-6">
+                                     <div class = "korean award-item" style = "visibility: hidden;">
 
                                         <img src="images/<%=campignList.get(z).getCampaign_Sid()%>.jpg"
                                            alt="Avatar"> <br> <br> <span><%=campignList.get(z).getCampaign_title()%></span>
@@ -446,11 +451,11 @@ System.out.println("imgFileList : " + imgFileList.size());
                      
                      
                         
-                  <!--       <div class="awards" style = "display:none">
-                           <div class="row">
+                  <!--       <div class = "korean awards" style = "display:none">
+                           <div class = "korean row">
                               <a href = 'campain.jsp'>
-                              <div class="col-md-3 col-sm-6">
-                                 <div class="award-item">
+                              <div class = "korean col-md-3 col-sm-6">
+                                 <div class = "korean award-item">
                                     <img alt="" src="assets/img/3.48kg.jpg">
                                        <span> </span>
                                     <br><br>
@@ -461,10 +466,10 @@ System.out.println("imgFileList : " + imgFileList.size());
                               
                               
                               <a href = 'campain.jsp'>
-                              <div class="col-md-3 col-sm-6">
-                                 <div class="award-item">
-                                    <div class="hexagon">
-                                       <span class="lnr lnr-clock award-icon"></span>
+                              <div class = "korean col-md-3 col-sm-6">
+                                 <div class = "korean award-item">
+                                    <div class = "korean hexagon">
+                                       <span class = "korean lnr lnr-clock award-icon"></span>
                                     </div>
                                     <span>캠페인 2</span>
                                  </div>
@@ -472,10 +477,10 @@ System.out.println("imgFileList : " + imgFileList.size());
                               </a>
                               
                               <a href = 'campain.jsp'>
-                              <div class="col-md-3 col-sm-6">
-                                 <div class="award-item">
-                                    <div class="hexagon">
-                                       <span class="lnr lnr-magic-wand award-icon"></span>
+                              <div class = "korean col-md-3 col-sm-6">
+                                 <div class = "korean award-item">
+                                    <div class = "korean hexagon">
+                                       <span class = "korean lnr lnr-magic-wand award-icon"></span>
                                     </div>
                                     <span>캠페인 3</span>
                                  </div>
@@ -483,10 +488,10 @@ System.out.println("imgFileList : " + imgFileList.size());
                               </a>
                               
                               <a href = 'campain.jsp'>
-                              <div class="col-md-3 col-sm-6">
-                                 <div class="award-item">
-                                    <div class="hexagon">
-                                       <span class="lnr lnr-heart award-icon"></span>
+                              <div class = "korean col-md-3 col-sm-6">
+                                 <div class = "korean award-item">
+                                    <div class = "korean hexagon">
+                                       <span class = "korean lnr lnr-heart award-icon"></span>
                                     </div>
                                     <span>캠페인 4</span>
                                  </div>
@@ -497,21 +502,21 @@ System.out.println("imgFileList : " + imgFileList.size());
                            <br><br>
                            </div>
                            ...End
-                           <div class="text-center" style = "display : none"><a href="#" class="btn btn-default">모든 캠페인 보기</a></div>
+                           <div class = "korean text-center" style = "display : none"><a href="#" class = "korean btn btn-default">모든 캠페인 보기</a></div>
                         </div> -->
                         <!-- END AWARDS -->
                         <!-- TABBED CONTENT -->
-                        <div class="custom-tabs-line tabs-line-bottom left-aligned">
-                           <ul class="nav" role="tablist" style = "display : none">
-                              <li class="active"><a href="#tab-bottom-left1" role="tab" data-toggle="tab">레포트</a></li>
-                              <li><a href="#tab-bottom-left2" role="tab" data-toggle="tab">포인트 내역 <span class="badge">7</span></a></li>
+                        <div class = "korean custom-tabs-line tabs-line-bottom left-aligned">
+                           <ul class = "korean nav" role="tablist" style = "display : none">
+                              <li class = "korean active"><a href="#tab-bottom-left1" role="tab" data-toggle="tab">레포트</a></li>
+                              <li><a href="#tab-bottom-left2" role="tab" data-toggle="tab">포인트 내역 <span class = "korean badge">7</span></a></li>
                            </ul>
                         </div>
                         <br><br>
-                        <h4 class="heading">이전 캠페인</h4>
+                        <h4 class = "korean heading">이전 캠페인</h4>
                         <!-- AWARDS -->
-                        <div class="awards">
-                           <div class="row">
+                        <div class = "korean awards">
+                           <div class = "korean row">
                         <%
                                  int k1=0;
                                  for (int i = 0; i < campignList.size(); i++) {
@@ -524,8 +529,8 @@ System.out.println("imgFileList : " + imgFileList.size());
                                        k1++;
                                        System.out.println("getCampaign_status() : " + campignList.get(i).getCampaign_status());
                                  %>
-                                 <div class="col-md-3 col-sm-6">
-                                    <div class="award-item">
+                                 <div class = "korean col-md-3 col-sm-6">
+                                    <div class = "korean award-item">
 
                                        <img src="images/<%=campignList.get(i).getCampaign_Sid()%>.jpg"
                                           alt="Avatar"> <br> <br> <span><%=campignList.get(i).getCampaign_title()%></span>
@@ -539,7 +544,7 @@ System.out.println("imgFileList : " + imgFileList.size());
                                  %>
                            </div>
                            <br><br>
-                           <div class="text-center"><button class="btn btn-lg trigger">모든 캠페인 보기</button></div>
+                           <div class = "korean text-center"><button class = "korean btn btn-lg trigger">모든 캠페인 보기</button></div>
                         </div>
                         <!-- END TABBED CONTENT -->
                      </div>
@@ -551,21 +556,21 @@ System.out.println("imgFileList : " + imgFileList.size());
          <!-- END MAIN CONTENT -->
       </div>
       <!-- END MAIN -->
-      <div class="clearfix"></div>
+      <div class = "korean clearfix"></div>
       <footer>
-         <div class="container-fluid">
-            <p class="copyright">Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
+         <div class = "korean container-fluid">
+            <p class = "korean copyright">Shared by <i class = "korean fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
 </p>
          </div>
       </footer>
    </div>
 
          <!-- 팝업 될 레이어 -->
-   <div class="modal1" data-spy="scroll">
-      <div class="modal-content" style = "width : 50%; height : 70%; overflow: scroll"">
-         <span class="close-button">&times;</span>
-         <h1 class="title">모든 캠페인</h1>
-         <div class="table-responsive">
+   <div class = "korean modal1" data-spy="scroll">
+      <div class = "korean modal-content" style = "width : 50%; height : 70%; overflow: scroll"">
+         <span class = "korean close-button">&times;</span>
+         <h1 class = "korean title">모든 캠페인</h1>
+         <div class = "korean table-responsive">
             
             <br> <br>
             <%
@@ -577,8 +582,8 @@ System.out.println("imgFileList : " + imgFileList.size());
                                        
                                        System.out.println("getMatch_ck() : " + campignList.get(i).getCampaign_Sid());
                                  %>
-                                 <div class="col-md-3 col-sm-6">
-                                    <div class="award-item">
+                                 <div class = "korean col-md-3 col-sm-6">
+                                    <div class = "korean award-item">
 
                                        <img src="images/<%=campignList.get(i).getCampaign_Sid()%>.jpg"
                                           alt="Avatar"> <br> <br> <span><%=campignList.get(i).getCampaign_Sid()%></span>

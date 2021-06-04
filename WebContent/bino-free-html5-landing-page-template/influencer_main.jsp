@@ -53,7 +53,8 @@ img {
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/css/iconfont.css">
 <link rel="stylesheet" href="assets/css/slick/slick.css">
@@ -117,27 +118,27 @@ img {
 	<div class='preloader'>
 		<div class='loaded'>&nbsp;</div>
 	</div>
-	<div class="culmn">
-		<header id="main_menu" class="header navbar-fixed-top">
-			<div class="main_menu_bg" style="background-color: white;">
-				<div class="container" style="width: 100%">
-					<div class="row">
-						<div class="nave_menu">
-							<nav class="navbar navbar-default">
-								<div class="container-fluid">
+	<div class = "korean korean culmn">
+		<header id="main_menu" class = "korean korean header navbar-fixed-top">
+			<div class = "korean korean main_menu_bg" style="background-color: white;">
+				<div class = "korean korean container" style="width: 100%">
+					<div class = "korean korean row">
+						<div class = "korean korean nave_menu">
+							<nav class = "korean korean navbar navbar-default">
+								<div class = "korean korean container-fluid">
 									<!-- Brand and toggle get grouped for better mobile display -->
-									<div class="navbar-header">
-										<button type="button" class="navbar-toggle collapsed"
+									<div class = "korean korean navbar-header">
+										<button type="button" class = "korean korean navbar-toggle collapsed"
 											data-toggle="collapse"
 											data-target="#bs-example-navbar-collapse-1"
 											aria-expanded="false">
-											<span class="sr-only">Toggle navigation</span> <span
-												class="icon-bar"></span> <span class="icon-bar"></span> <span
-												class="icon-bar"></span>
+											<span class = "korean korean sr-only">Toggle navigation</span> <span
+												class = "korean korean icon-bar"></span> <span class = "korean korean icon-bar"></span> <span
+												class = "korean korean icon-bar"></span>
 										</button>
 
 
-										<a class="navbar-brand" href="firstPage.jsp"
+										<a class = "korean korean navbar-brand" href="firstPage.jsp"
 											style="margin-left: 30px;"> <img
 											src="images/logo_high_re.png"
 											style="width: 140px; height: 50px;" />
@@ -147,7 +148,7 @@ img {
 									<!-- Collect the nav links, forms, and other content for toggling -->
 
 
-									<ul class="nav navbar-nav navbar-right">
+									<ul class = "korean korean nav navbar-nav navbar-right">
 										<li><a href="">HOME</a></li>
 										<!-- 세션값받아와서 influencer/companymain으로 이동 -->
 										<li><a href="hashtag.jsp">HASHTAG LAB</a></li>
@@ -179,13 +180,13 @@ img {
 	<!--End of header -->
 
 	<!--home Section -->
-	<section id="home" class="home" style="background-color: #F0F8FF;">
-		<div class="">
-			<div class="home_skew_border">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-12 ">
-							<div class="main_home_slider text-center">
+	<section id="home" class = "korean korean home" style="background-color: #F0F8FF;">
+		<div class = "korean korean ">
+			<div class = "korean korean home_skew_border">
+				<div class = "korean korean container">
+					<div class = "korean korean row">
+						<div class = "korean korean col-sm-12 ">
+							<div class = "korean korean main_home_slider text-center">
 
 								<%
 								if (numList != null) {
@@ -234,12 +235,12 @@ img {
 									for (int j = 0; j < ((numList.size() / 3) + 1); j++) {
 										System.out.println("반복횟수 : " + ((numList.size() / 3) + 1));
 								%>
-								<div class="single_home_slider">
+								<div class = "korean korean single_home_slider">
 									<%
 									System.out.println("마지막 : " + num);
 									for (int i = s; i < num; i++) {
 									%>
-									<div class="main_home wow fadeInUp col-sm-4"
+									<div class = "korean korean main_home wow fadeInUp col-sm-4"
 										data-wow-duration="700ms">
 										<%
 										// 이미지 파일 넘기기
@@ -294,14 +295,14 @@ img {
 								for (int j = 0; j < ((end / 3) + 1); j++) {
 								System.out.println("반복횟수 : " + ((end / 3) + 1));
 								%>
-								<div class="single_home_slider">
+								<div class = "korean korean single_home_slider">
 									<%
 									System.out.println("마지막 : " + num);
 									for (int i = s; i < num; i++) {
 										System.out.println("s : " + s);
 										System.out.println("num : " + num);
 									%>
-									<div class="main_home wow fadeInUp col-sm-4"
+									<div class = "korean korean main_home wow fadeInUp col-sm-4"
 										data-wow-duration="700ms">
 										<%
 										// 이미지 파일 넘기기
@@ -357,8 +358,8 @@ img {
 						</div>
 					</div>
 				</div>
-				<div class="scrooldown">
-					<a href="#feature"><i class="fa fa-arrow-down"></i></a>
+				<div class = "korean korean scrooldown">
+					<a href="#feature"><i class = "korean korean fa fa-arrow-down"></i></a>
 				</div>
 			</div>
 		</div>
@@ -366,58 +367,58 @@ img {
 	<!--End of home section -->
 
 	<!--feature section -->
-	<section id="feature" class="feature sections">
-		<div class="container">
-			<div class="row">
-				<div class="main_feature text-center">
+	<section id="feature" class = "korean korean feature sections">
+		<div class = "korean korean container">
+			<div class = "korean korean row">
+				<div class = "korean korean main_feature text-center">
 
-					<div class="col-sm-3">
-						<div class="single_feature">
-							<div class="single_feature_icon">
-								<i class="fa fa"><img alt="" src="images/as_con.png"
+					<div class = "korean korean col-sm-3">
+						<div class = "korean korean single_feature">
+							<div class = "korean korean single_feature_icon">
+								<i class = "korean korean fa fa"><img alt="" src="images/as_con.png"
 									style="width: 45px"></i>
 							</div>
 
 							<h4>마켓팅 컨설팅</h4>
-							<div class="separator3"></div>
+							<div class = "korean korean separator3"></div>
 							<p></p>
 						</div>
 					</div>
 
-					<div class="col-sm-3">
-						<div class="single_feature">
-							<div class="single_feature_icon">
-								<i class="fa fa"><img alt="" src="images/as_match.png"
+					<div class = "korean korean col-sm-3">
+						<div class = "korean korean single_feature">
+							<div class = "korean korean single_feature_icon">
+								<i class = "korean korean fa fa"><img alt="" src="images/as_match.png"
 									style="width: 45px"></i>
 							</div>
 
 							<h4>인플루언서 모집 및 매칭</h4>
-							<div class="separator3"></div>
+							<div class = "korean korean separator3"></div>
 							<p></p>
 						</div>
 					</div>
 
-					<div class="col-sm-3">
-						<div class="single_feature">
-							<div class="single_feature_icon">
-								<i class="fa fa"><img alt="" src="images/as_cam.png"
+					<div class = "korean korean col-sm-3">
+						<div class = "korean korean single_feature">
+							<div class = "korean korean single_feature_icon">
+								<i class = "korean korean fa fa"><img alt="" src="images/as_cam.png"
 									style="width: 45px"></i>
 							</div>
 							<h4>캠페인 신청 및 포스팅</h4>
-							<div class="separator3"></div>
+							<div class = "korean korean separator3"></div>
 							<p></p>
 						</div>
 					</div>
 
-					<div class="col-sm-3">
-						<div class="single_feature">
-							<div class="single_feature_icon">
-								<i class="fa fa"><img alt="" src="images/as_report.png"
+					<div class = "korean korean col-sm-3">
+						<div class = "korean korean single_feature">
+							<div class = "korean korean single_feature_icon">
+								<i class = "korean korean fa fa"><img alt="" src="images/as_report.png"
 									style="width: 45px"></i>
 							</div>
 
 							<h4>레포트 제공</h4>
-							<div class="separator3"></div>
+							<div class = "korean korean separator3"></div>
 							<p></p>
 						</div>
 					</div>
@@ -430,27 +431,27 @@ img {
 	<!--End of feature Section -->
 
 	<!-- History section -->
-	<section id="history" class="history sections">
-		<div class="container">
-			<div class="row">
-				<div class="main_history">
-					<div class="col-sm-6">
-						<div class="single_history_img">
+	<section id="history" class = "korean korean history sections">
+		<div class = "korean korean container">
+			<div class = "korean korean row">
+				<div class = "korean korean main_history">
+					<div class = "korean korean col-sm-6">
+						<div class = "korean korean single_history_img">
 							<img src="assets/images/img/connect.png" alt="" />
 						</div>
 					</div>
 
-					<div class="col-sm-6">
-						<div class="single_history_content">
-							<div class="head_title">
+					<div class = "korean korean col-sm-6">
+						<div class = "korean korean single_history_content">
+							<div class = "korean korean head_title">
 								<h2>About Us</h2>
 							</div>
-							<h3 style="color: black">마케터스는 인플루언서와 광고주를 위한 서비스를 제공하고 있으며,
+							<h4 style="color: black">마케터스는 인플루언서와 광고주를 위한 서비스를 제공하고 있으며,
 								제공되는 서비스로는 인플루언서 마케팅 분석 솔루션(인플루언서 레포트, 해시태그), 광고주&인플루언서 매칭서비스
 								구축해 서비스를 전개하고 있습니다. 인플루언서 외 영상 컨텐츠 마케팅과 퍼포먼스 마케팅부분으로 확장해 디지털
-								전반적인 영역의 광고 대행도 함께 진행하고 있습니다.</h3>
+								전반적인 영역의 광고 대행도 함께 진행하고 있습니다.</h4>
 
-							<a href="" class="btn btn-lg" style="display: none">BROWSE
+							<a href="" class = "korean korean btn btn-lg" style="display: none">BROWSE
 								OUR WORK</a>
 						</div>
 					</div>
@@ -466,27 +467,27 @@ img {
 
 
 	<!--Footer section-->
-	<section class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="main_footer">
-						<div class="row">
-							<div class="col-sm-6 col-xs-12">
-								<div class="flowus">
-									<a href=""><i class="fa fa-facebook"></i></a> <a href=""><i
-										class="fa fa-twitter"></i></a> <a href=""><i
-										class="fa fa-google-plus"></i></a> <a href=""><i
-										class="fa fa-instagram"></i></a> <a href=""><i
-										class="fa fa-youtube"></i></a> <a href=""><i
-										class="fa fa-dribbble"></i></a>
+	<section class = "korean korean footer">
+		<div class = "korean korean container">
+			<div class = "korean korean row">
+				<div class = "korean korean col-sm-12">
+					<div class = "korean korean main_footer">
+						<div class = "korean korean row">
+							<div class = "korean korean col-sm-6 col-xs-12">
+								<div class = "korean korean flowus">
+									<a href=""><i class = "korean korean fa fa-facebook"></i></a> <a href=""><i
+										class = "korean korean fa fa-twitter"></i></a> <a href=""><i
+										class = "korean korean fa fa-google-plus"></i></a> <a href=""><i
+										class = "korean korean fa fa-instagram"></i></a> <a href=""><i
+										class = "korean korean fa fa-youtube"></i></a> <a href=""><i
+										class = "korean korean fa fa-dribbble"></i></a>
 								</div>
 							</div>
 
-							<div class="col-sm-6 col-xs-12">
-								<div class="copyright_text">
-									<p class=" wow fadeInRight" data-wow-duration="1s">
-										Made with <i class="fa fa-heart"></i> by MARKETUS 2021.
+							<div class = "korean korean col-sm-6 col-xs-12">
+								<div class = "korean korean copyright_text">
+									<p class = "korean korean  wow fadeInRight" data-wow-duration="1s">
+										Made with <i class = "korean korean fa fa-heart"></i> by MARKETUS 2021.
 									</p>
 								</div>
 							</div>
@@ -512,8 +513,8 @@ img {
 
 	<!-- START SCROLL TO TOP  -->
 
-	<div class="scrollup">
-		<a href="#"><i class="fa fa-chevron-up"></i></a>
+	<div class = "korean korean scrollup">
+		<a href="#"><i class = "korean korean fa fa-chevron-up"></i></a>
 	</div>
 
 	<script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
